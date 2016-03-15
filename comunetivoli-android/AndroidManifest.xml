@@ -12,5 +12,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".HomeActivity" android:label="home_activity"/>
+        <activity android:name=".TurismoActivity" android:label="turismo_activity"/>
+        <activity android:name=".NewsActivity" android:label="news_activity"/>
+        <activity android:name=".FacebookActivity" android:label="facebook_activity"/>
+        <activity android:name=".EventiActivity" android:label="eventi_activity"/>
+        <activity android:name=".DettagliActivity" android:label="dettagli_activity"/>
     </application>
 </manifest>
