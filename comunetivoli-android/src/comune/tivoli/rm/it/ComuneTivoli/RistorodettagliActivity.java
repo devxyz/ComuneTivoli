@@ -10,6 +10,8 @@ public class RistorodettagliActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.ristorodettagli_activity);
     }
 }
