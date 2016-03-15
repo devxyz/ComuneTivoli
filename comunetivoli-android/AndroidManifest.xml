@@ -12,5 +12,22 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".HomeActivity" android:label="home_activity"/>
+        <activity android:name=".TurismoActivity" android:label="turismo_activity"/>
+        <activity android:name=".NewsActivity" android:label="news_activity"/>
+        <activity android:name=".FacebookActivity" android:label="facebook_activity"/>
+        <activity android:name=".EventiActivity" android:label="eventi_activity"/>
+        <activity android:name=".DettagliActivity" android:label="dettagli_activity"/>
+        <activity android:name=".FacebookdettagliActivity" android:label="facebookdettagli_activity"/>
+        <activity android:name=".EventidettagliActivity" android:label="eventidettagli_activity"/>
+        <activity android:name=".ContattiActivity" android:label="contatti_activity"/>
+        <activity android:name=".CreditiActivity" android:label="crediti_activity"/>
+        <activity android:name=".MapsActivity" android:label="maps_activity"/>
+        <activity android:name=".StreetviewActivity" android:label="streetview_activity"/>
+        <activity android:name=".YoutubeActivity" android:label="youtube_activity"/>
+        <activity android:name=".MonumentiActivity" android:label="monumenti_activity"/>
+        <activity android:name=".MonumentidettagliActivity" android:label="monumentidettagli_activity"/>
+        <activity android:name=".RistoroActivity" android:label="ristoro_activity"/>
+        <activity android:name=".RistorodettagliActivity" android:label="ristorodettagli_activity"/>
     </application>
 </manifest>
