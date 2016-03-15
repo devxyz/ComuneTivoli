@@ -12,6 +12,7 @@ public class RistorodettagliActivity extends Activity {
         super.onCreate(savedInstanceState);
 
 
+
         setContentView(R.layout.ristorodettagli_activity);
     }
 }
