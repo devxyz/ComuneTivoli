@@ -3,4 +3,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEWS"
+            android:id="@+id/Text_Facebook" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:textSize="30dp"/>
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Lst_News_FB" android:layout_below="@+id/Text_Facebook"
+            android:layout_alignParentStart="true"/>
 </RelativeLayout>
