@@ -3,4 +3,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CREDITS"
+            android:id="@+id/Text_Credits" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:textSize="30dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orlando Alessio Morrone Samuele"
+            android:id="@+id/Text_Nomi" android:layout_below="@+id/Text_Credits" android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" android:textSize="20dp"/>
 </RelativeLayout>
