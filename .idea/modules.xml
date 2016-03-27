@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/comunetivoli-android/comunetivoli-android.iml" filepath="$PROJECT_DIR$/comunetivoli-android/comunetivoli-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comunetivoli-common/comunetivoli-common.iml" filepath="$PROJECT_DIR$/comunetivoli-common/comunetivoli-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comunetivoli-server/comunetivoli-server.iml" filepath="$PROJECT_DIR$/comunetivoli-server/comunetivoli-server.iml" />
     </modules>
   </component>
 </project>
