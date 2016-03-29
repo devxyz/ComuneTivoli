@@ -6,33 +6,68 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button" android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+            android:text="News"
+            android:id="@+id/btn_news"
+            android:width="150dp" android:textStyle="bold" android:textSize="30dp"
+            android:background="#4692ff" android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+            android:layout_below="@+id/textView" android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button2" android:layout_alignBottom="@+id/button" android:layout_alignParentEnd="true"/>
+            android:text="Contatti"
+            android:id="@+id/btn_contatti"
+            android:width="150dp"
+            android:textStyle="bold" android:textSize="30dp"
+            android:background="#4692ff" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:layout_alignTop="@+id/btn_news" android:layout_alignParentEnd="true"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button3" android:layout_below="@+id/button" android:layout_alignParentStart="true"
-            android:layout_marginTop="48dp"/>
+            android:text="Eventi"
+            android:id="@+id/btn_eventi"
+            android:layout_marginTop="30dp" android:textStyle="bold"
+            android:textSize="30dp" android:background="#4692ff"
+            android:layout_below="@+id/btn_news" android:layout_alignStart="@+id/btn_news"
+            android:layout_alignEnd="@+id/btn_news"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button4" android:layout_alignBottom="@+id/button3" android:layout_alignEnd="@+id/button2"/>
+            android:text="Web"
+            android:id="@+id/btn_www"
+            android:textStyle="bold" android:textSize="30dp"
+            android:background="#4692ff"
+            android:layout_alignTop="@+id/btn_eventi" android:layout_alignStart="@+id/btn_contatti"
+            android:layout_alignEnd="@+id/btn_contatti"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button5" android:layout_below="@+id/button3" android:layout_alignParentStart="true"
-            android:layout_marginTop="64dp"/>
+            android:text="Turismo"
+            android:id="@+id/btn_turismo"
+            android:layout_marginTop="30dp" android:textStyle="bold"
+            android:textSize="30dp" android:background="#4692ff"
+            android:layout_below="@+id/btn_eventi"
+            android:layout_alignEnd="@+id/btn_eventi" android:layout_alignStart="@+id/btn_eventi"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button6" android:layout_alignBottom="@+id/button5" android:layout_alignParentEnd="true"/>
+            android:text="Social"
+            android:id="@+id/btn_fb"
+            android:layout_above="@+id/btn_crediti" android:textStyle="bold"
+            android:textSize="30dp" android:background="#4692ff"
+            android:layout_alignStart="@+id/btn_contatti" android:layout_alignEnd="@+id/btn_contatti"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Crediti"
+            android:id="@+id/btn_crediti"
+            android:layout_below="@+id/btn_turismo"
+            android:layout_marginTop="30dp" android:layout_alignEnd="@+id/btn_turismo" android:textStyle="bold"
+            android:textSize="30dp" android:background="#4692ff"
+            android:layout_alignStart="@+id/btn_turismo"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Menu di test dell&apos;applicazione"
+            android:id="@+id/textView" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" android:background="#27008a" android:gravity="center_vertical|center_horizontal"
+            android:padding="10dp"/>
 </RelativeLayout>
