@@ -48,8 +48,14 @@ public class TestParser {
         final ArrayList<String> allIndexLinks = extractIndexPageUrlFromHomepage(baseUrl);
         System.out.println("Found page-index links: " + allIndexLinks.size() + " pages");
         System.out.println("  - " + allIndexLinks);
+        final ArrayList<String> allLinkArticoli = extractNodeUrlsFromIndexPages(baseUrl, nodeLinksInDB, allIndexLinks);
+
+        System.out.println(allLinkArticoli);
+    }
 
 
+
+    private static ArrayList<String> extractNodeUrlsFromIndexPages(String baseUrl, Set<String> nodeLinksInDB, ArrayList<String> allIndexLinks) throws IOException {
         //================================================================
         final ArrayList<String> allLinkArticoli = new ArrayList<>();
         boolean finish = false;
@@ -68,11 +74,8 @@ public class TestParser {
                     allLinkArticoli.add(x);
                 }
             }
-
-
         }
-
-
+        return allLinkArticoli;
     }
 
     private static ArrayList<String> extractNodeLinksFromPages(String baseUrl, String pageLink) throws IOException {

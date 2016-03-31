@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="comunetivoli-server:war exploded">
+    <output-path>$PROJECT_DIR$/output/artifacts/comunetivoli_server_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="comunetivoli-server" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jsoup-1.8.3-javadoc" />
+          <element id="library" level="project" name="gson-2.3.1-javadoc" />
+          <element id="library" level="project" name="objectify-5.1.5-javadoc" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="comunetivoli-server/web/Web" />
+    </root>
+  </artifact>
+</component>
