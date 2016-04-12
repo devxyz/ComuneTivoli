@@ -29,5 +29,6 @@
         <activity android:name=".MonumentidettagliActivity" android:label="monumentidettagli_activity"/>
         <activity android:name=".RistoroActivity" android:label="ristoro_activity"/>
         <activity android:name=".RistorodettagliActivity" android:label="ristorodettagli_activity"/>
+        <activity android:name=".TemplateActivity"/>
     </application>
 </manifest>
