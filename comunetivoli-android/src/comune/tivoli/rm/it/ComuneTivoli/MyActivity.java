@@ -26,6 +26,7 @@ public class MyActivity extends Activity {
                 Intent i=new Intent(MyActivity.this,HomeActivity.class);
                 startActivity(i);
 
+
             }
         });
 
