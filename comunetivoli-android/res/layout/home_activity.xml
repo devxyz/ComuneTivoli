@@ -6,7 +6,7 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="News"
+            android:text="@string/home_btn_new"
             android:id="@+id/btn_news"
             android:width="150dp" android:textStyle="bold" android:textSize="30dp"
             android:background="#4692ff" android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
