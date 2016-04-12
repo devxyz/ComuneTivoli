@@ -9,15 +9,16 @@
             android:layout_width="53dp"
             android:layout_height="30dp"
             android:id="@+id/txt_sfondo" android:background="@color/template_colorblu" android:width="35dp" android:height="@dimen/template_topheight"
-            android:layout_alignParentStart="true" android:layout_alignBottom="@+id/text_cont"/>
+            android:layout_alignParentStart="true" android:layout_alignBottom="@+id/text_cont"
+            android:layout_alignParentTop="true"/>
     <TextView
-            android:layout_width="60dp"
+            android:layout_width="1000dp"
             android:layout_height="wrap_content"
             android:text="Contatti"
             android:id="@+id/text_cont" android:background="#355f99" android:width="35dp" android:height="@dimen/template_topheight"
             android:textIsSelectable="false" android:gravity="center_vertical"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/txt_sfondo"/>
+            android:layout_toEndOf="@+id/txt_sfondo" android:textSize="@dimen/tepmlate_text"/>
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,10 +53,10 @@
             android:text=" "
             android:id="@+id/textView4"
             android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/textView3" android:height="@dimen/template_topheight"
+            android:layout_toStartOf="@+id/textView3" android:height="@dimen/template_rossobasso"
             android:background="@color/template_colorred" android:layout_alignParentRight="true"/>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/textView5"
-              android:height="@dimen/template_redheight"
               android:background="@color/template_colorblu" android:text=" "
-              android:layout_above="@+id/textView4" android:layout_alignParentStart="true"/>
+              android:layout_above="@+id/textView4" android:layout_alignParentStart="true"
+              android:height="@dimen/template_blubasso"/>
 </RelativeLayout>

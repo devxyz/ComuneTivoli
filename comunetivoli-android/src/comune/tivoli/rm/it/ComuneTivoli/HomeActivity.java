@@ -40,7 +40,7 @@ public class HomeActivity extends Activity {
      btn_news.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
-             Intent i= new Intent(HomeActivity.this, NewsActivity.class);
+             Intent i= new Intent(HomeActivity.this, TemplateActivity.class);
              startActivity(i);
 
 

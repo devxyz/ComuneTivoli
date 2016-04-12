@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="template_topheight">30dp</dimen>
-    <dimen name="template_redheight">5dp</dimen>
+    <dimen name="template_topheight">40dp</dimen>
+    <dimen name="template_redheight">10dp</dimen>
+    <dimen name="template_rossobasso">7dp</dimen>
+    <dimen name="template_blubasso">5dp</dimen>
 </resources>
