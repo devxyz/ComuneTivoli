@@ -4,4 +4,9 @@
     <dimen name="template_redheight">10dp</dimen>
     <dimen name="template_rossobasso">7dp</dimen>
     <dimen name="template_blubasso">5dp</dimen>
+    <dimen name="app_dim_titolo">30dp</dimen>
+    <dimen name="app_dim_sottotitolo">20dp</dimen>
+    <dimen name="app_dim_evidenziato">15dp</dimen>
+    <dimen name="app_dim_normale">15dp</dimen>
+
 </resources>
