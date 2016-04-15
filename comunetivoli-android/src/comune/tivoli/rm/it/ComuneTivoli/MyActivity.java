@@ -13,8 +13,6 @@ public class MyActivity extends Activity {
      */
     ImageView myactivity_imageView ;
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,10 +21,8 @@ public class MyActivity extends Activity {
         myactivity_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MyActivity.this,HomeActivity.class);
+               Intent i=new Intent(MyActivity.this,HomeActivity.class);
                 startActivity(i);
-
-
             }
         });
 

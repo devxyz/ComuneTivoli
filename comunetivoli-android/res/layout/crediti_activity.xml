@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent" android:id="@+id/">
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CREDITS"
-            android:id="@+id/Text_Credits" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
-            android:textSize="30dp"/>
+            android:text="New Text"
+            android:id="@+id/credits.alunni" android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+            android:textSize="15dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Orlando Alessio Morrone Samuele"
-            android:id="@+id/Text_Nomi" android:layout_below="@+id/Text_Credits" android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true" android:textSize="20dp"/>
+            android:id="@+id/credits.coordinatore" android:layout_above="@+id/credits.alunni"
+            android:layout_centerHorizontal="true" android:text="New Text" android:textSize="15dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/credits.grafico" android:layout_below="@+id/credits.alunni"
+            android:layout_centerHorizontal="true" android:textSize="15dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/credits.alunnigrafica" android:layout_below="@+id/credits.grafico"
+            android:layout_centerHorizontal="true" android:textSize="15dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:src="@drawable/logoscuola" android:layout_above="@+id/credits.coordinatore"
+            android:layout_alignEnd="@+id/credits.coordinatore"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView4"
+            android:src="@drawable/treteste"
+            android:layout_below="@+id/credits.alunnigrafica" android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"/>
 </RelativeLayout>
