@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ComuneTivoli</string>
     <dimen name="tepmlate_text">20dp</dimen>
 </resources>
