@@ -9,7 +9,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.R;
-import comune.tivoli.rm.it.ComuneTivoli.model.ContattiComune;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 
 import java.util.List;
@@ -65,7 +64,7 @@ public class MonumentiComuneListAdapter extends BaseAdapter {
         monumenti_descrizione.setText(mc.descrizione);
         monumenti_titolo.setText(mc.titolo);
 
-        monumenti_image.setImageResource(mc.id_foto);
+        monumenti_image.setImageDrawable(mc.foto);
 
 
         return listItem;
