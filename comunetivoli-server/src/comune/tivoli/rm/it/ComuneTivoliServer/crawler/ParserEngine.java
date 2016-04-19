@@ -1,4 +1,4 @@
-package comune.tivoli.rm.it.ComuneTivoliServer.test;
+package comune.tivoli.rm.it.ComuneTivoliServer.crawler;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -12,7 +12,9 @@ import java.util.*;
 /**
  * Created by stefano on 27/03/16.
  */
-public class TestParser {
+public class ParserEngine {
+    static final String baseUrl = "http://www.comune.tivoli.rm.it/";
+
     /**
      * estrae il numero di pagina da una url del genere:
      * /node?page=1
@@ -37,22 +39,79 @@ public class TestParser {
         return Integer.parseInt(s1[s1.length - 1]);
     }
 
+    private static String composeUrl(String... ss) {
+        StringBuilder sb = new StringBuilder();
+        if (ss.length == 0) return "";
+
+        sb.append(ss[0]);
+        for (int i = 1; i < ss.length; i++) {
+            String s = ss[i];
+            if (!sb.toString().endsWith("/")) {
+                sb.append("/");
+            }
+            if (s.startsWith("/")) {
+                sb.append(s.substring(1));
+            } else
+                sb.append(s);
+        }
+        return sb.toString();
+    }
+
+    public static NotiziaWWWComuneTivoli extractNewsFromPage(String baseUrl, String relativePathID) throws IOException {
+        //versione stampabile
+        String complete = composeUrl(baseUrl, relativePathID, "/print");
+        System.out.println("Download " + complete + "( id " + relativePathID + ")");
+        final Document parse = Jsoup.parse(new URL(complete), 10000);
+        final Elements title_centro = parse.getElementsByClass("title_centro");
+        final Elements content = parse.getElementsByClass("content");
+
+        final StringBuilder titolo = new StringBuilder();
+        for (Element t : title_centro) {
+            titolo.append(t.html()).append(" ");
+        }
+
+        final StringBuilder contenuto = new StringBuilder();
+        for (Element t : content) {
+            contenuto.append(t.html()).append(" ");
+        }
+
+        return new NotiziaWWWComuneTivoli(titolo.toString(), contenuto.toString(), complete, null, relativePathID);
+
+    }
+
     public static void main(String[] args) throws IOException {
-        final String baseUrl = "http://www.comune.tivoli.rm.it/";
+
 
         //ipotetico elenco di nodi gia' nel db
         final Set<String> nodeLinksInDB = new TreeSet<>();
+        nodeLinksInDB.add("/node/2585");
 
+
+        ArrayList<NotiziaWWWComuneTivoli> pagine = parseFromWeb(nodeLinksInDB);
+
+        //System.out.println(pagine);
+    }
+
+    public static ArrayList<NotiziaWWWComuneTivoli> parseFromWeb(Set<String> nodeLinksInDB) throws IOException {
         System.out.println("Check Homepage (searching page-index links)");
         //dalla homepage individua tutte le pagine dei link esistenti, compresa la home
-        final ArrayList<String> allIndexLinks = extractIndexPageUrlFromHomepage(baseUrl);
+        final ArrayList<String> allIndexLinks = extractIndexPageUrlFromHomepage(baseUrl, -1);
         System.out.println("Found page-index links: " + allIndexLinks.size() + " pages");
         System.out.println("  - " + allIndexLinks);
         final ArrayList<String> allLinkArticoli = extractNodeUrlsFromIndexPages(baseUrl, nodeLinksInDB, allIndexLinks);
 
+        System.out.println("LINKS");
         System.out.println(allLinkArticoli);
-    }
+        ArrayList<NotiziaWWWComuneTivoli> pagine = new ArrayList<>();
 
+        for (String urk : allLinkArticoli) {
+//            System.out.println("=============================================");
+            final NotiziaWWWComuneTivoli n = extractNewsFromPage(baseUrl, urk);
+            pagine.add(n);
+            //          System.out.println(n);
+        }
+        return pagine;
+    }
 
 
     private static ArrayList<String> extractNodeUrlsFromIndexPages(String baseUrl, Set<String> nodeLinksInDB, ArrayList<String> allIndexLinks) throws IOException {
@@ -80,7 +139,7 @@ public class TestParser {
 
     private static ArrayList<String> extractNodeLinksFromPages(String baseUrl, String pageLink) throws IOException {
         final ArrayList<String> ris = new ArrayList<>();
-        final Document node = Jsoup.parse(new URL(baseUrl + pageLink), 10000);
+        final Document node = Jsoup.parse(new URL(composeUrl(baseUrl, pageLink)), 10000);
         final Elements elementsByClass = node.getElementsByClass("title");
         for (Element e : elementsByClass) {
 
@@ -88,6 +147,7 @@ public class TestParser {
             for (Element ee : a) {
                 final String link = ee.attributes().get("href");
                 ris.add(link);
+
 
             }
         }
@@ -101,7 +161,7 @@ public class TestParser {
      * @return
      * @throws IOException
      */
-    private static ArrayList<String> extractIndexPageUrlFromHomepage(String baseUrl) throws IOException {
+    private static ArrayList<String> extractIndexPageUrlFromHomepage(String baseUrl, int limit) throws IOException {
         String mainUrl = baseUrl + "node";
         final Document parse = Jsoup.parse(new URL(mainUrl), 10000);
 
@@ -113,6 +173,7 @@ public class TestParser {
         for (Element tagA : indici) {
             final String href = tagA.attributes().get("href");
             linkPage.add(href);
+
         }
         Collections.sort(linkPage, new SortAscPage());
         int lastPageNumber = linkPage.size() == 0 ? 0 : extractPageNumber(linkPage.get(linkPage.size() - 1));
@@ -121,7 +182,9 @@ public class TestParser {
         final ArrayList<String> allPageLinks = new ArrayList<>();
         allPageLinks.add("/node");//link al primo indice (homepage)
         for (int i = 1; i <= lastPageNumber; i++) {
+            if (limit > 0 && allPageLinks.size() >= limit) break;
             allPageLinks.add("/node?page=" + i);
+
         }
         return allPageLinks;
     }
