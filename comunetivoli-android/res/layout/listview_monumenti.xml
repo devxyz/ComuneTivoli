@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Titolo"
+            android:id="@+id/monumenti_titolo"
+            android:textSize="@dimen/app_dim_titolo"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/monumenti_image"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrizione"
+            android:id="@+id/monumenti_descrizione" android:layout_below="@+id/monumenti_titolo" android:layout_alignParentStart="true"
+            android:textSize="@dimen/app_dim_sottotitolo" android:layout_toStartOf="@+id/monumenti_image"
+            android:layout_alignParentBottom="true"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/monumenti_image"
+            android:src="@drawable/monumenti_mensa_ponderaria"
+            android:layout_alignParentTop="true" android:layout_alignParentEnd="true"/>
+</RelativeLayout>
