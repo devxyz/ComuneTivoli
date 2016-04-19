@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name = "credits_coordinatore">Coordinatore Progetto Prof. Stefano Millozzi</string>
-    <String name ="credits_alunni">4 d</String>
+    <string name ="credits_programmatori">Programmatori: Andrea Durante(4D), Giancarlo Liu(4D), Alessio Orlando(4D), Stefano Pasquali(4D),Marco Spizzuoco(4D), Emanuele Leggeri(4C), Samuele Morrone(5c)</string>
+    <string name = "credits_grafico">Coordinatore Grafica Prof.Rossi </string>
+    <string name = "credits_alunnigrafica">Interfaccia grafica a cura della classe II H</string>
 </resources>
