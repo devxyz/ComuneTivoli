@@ -2,12 +2,18 @@
   <library name="gson-2.3.1-javadoc">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/gson-2.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/jsoup-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/objectify-5.1.5.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/gson-2.3.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/jsoup-1.8.3-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/objectify-5.1.5-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/gson-2.3.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/jsoup-1.8.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/objectify-5.1.5-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

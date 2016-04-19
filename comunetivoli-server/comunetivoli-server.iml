@@ -25,10 +25,8 @@
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="AppEngine Dev 1.9.22" level="application_server_libraries" />
-    <orderEntry type="library" name="jsoup-1.8.3-javadoc" level="project" />
     <orderEntry type="library" name="appengine-remote-api" level="application" />
-    <orderEntry type="library" name="gson-2.3.1-javadoc" level="project" />
-    <orderEntry type="library" name="objectify-5.1.5-javadoc" level="project" />
     <orderEntry type="library" name="com.google.api-client:google-api-client-appengine:1.21.0" level="project" />
+    <orderEntry type="library" name="gson-2.3.1-javadoc" level="project" />
   </component>
 </module>
