@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="villa_d_este">Villa d\'Este</string>
+    <string name="monumenti_villa_d_este_titolo">Villa d'Este</string>
+    <string name="monumenti_villa_d_este_descrizione">Villa d'Este è uno dei tesori di Tivoli, splendido esempio di architettura rinascimentale inserito dall'UNESCO nella lista dei Patrimoni Mondiali dell'Umanità.</string>
+    <string name="monumenti_villa_d_este_url"></string>
+    <drawable name="monumenti_villa_d_este_fotosmall">@drawable/monumenti_villa_deste</drawable>
+    <drawable name="monumenti_villa_d_este_fotobig">@drawable/monumenti_villa_deste</drawable>
+
+
+    <string name="monumenti_acquedotti_titolo">Acquedotto Anio Novus</string>
+    <string name="monumenti_acquedotti_descrizione">L'Acquedotto Anio Novus è un'antica costruzione avviata dall'Imperatore Caligola nel 38 d.C. A Tivoli, partendo dalla Via Empolitana si possono trovare molti reperti archeologici.</string>
+    <string name="monumenti_acquedotti_url"></string>
+    <drawable name="monumenti_acquedotti_fotosmall">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia</drawable>
+    <drawable name="monumenti_acquedotti_fotobig">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia</drawable>
+
+
+    <string name="monumenti_anfiteatro_titolo">Anfiteatro di Bleso</string>
+    <string name="monumenti_anfiteatro_descrizione">L'Anfiteatro di Bleso è un antico anfiteatro romano risalente al II secolo d.C., si trova accanto alla Rocca Pia e non molto lontano da Piazza Garibaldi.</string>
+    <string name="monumenti_anfiteatro_url"></string>
+    <drawable name="monumenti_anfiteatro_fotosmall">@drawable/monumenti_anfiteatro_di_bleso</drawable>
+    <drawable name="monumenti_anfiteatro_fotobig">@drawable/monumenti_anfiteatro_di_bleso</drawable>
+
+
+    <string name="monumenti_arcata_dell_acquedotto_titolo">Acquedotti Anio Vetus e Aqua Marcia</string>
+    <string name="monumenti_arcata_dell_acquedotto_descriozione">L'acquedotto Anio Vetus risale al 272 e il 279 a.C., costruito dai censori Marcio Curio Dentato e Fulvio Flacco. L'acquedotto aveva una portata di 180.000 metri cubi d'acqua al giorno, seguendo un percorso di 64 km.</string>
+    <string name="monumenti_arcata_dell_acquedotto_url"></string>
+    <drawable name="monumenti_arcata_dell_acquedotto_fotosmall">@drawable/monumenti_arcata_dell_acquedotto</drawable>
+    <drawable name="monumenti_arcata_dell_acquedotto_fotobig">@drawable/monumenti_arcata_dell_acquedotto</drawable>
+
+    <string name="monumenti_mensa_ponderaria_titolo">Mensa Ponderaria</string>
+    <string name="monumenti_mensa_ponderaria_descrizione">La Mensa Ponderaria, situata nei pressi del Duomo, è un antico locale di epoca romana risalente al I secolo d.C. adibito ad ufficio pubblico per il controllo dei pesi e delle misure.</string>
+    <string name="monumenti_mensa_ponderaria_url"></string>
+    <drawable name="monumenti_mensa_ponderaria_fotosmall">@drawable/monumenti_mensa_ponderaria</drawable>
+    <drawable name="monumenti_mensa_ponderaria_fotobig">@drawable/monumenti_mensa_ponderaria</drawable>
+
+
+
+
 </resources>
