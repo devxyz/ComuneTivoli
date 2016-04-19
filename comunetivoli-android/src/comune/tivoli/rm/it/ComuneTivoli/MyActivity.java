@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -25,7 +24,7 @@ public class MyActivity extends Activity {
         rr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MyActivity.this,HomeActivity.class);
+                Intent i=new Intent(MyActivity.this,DebugHomeActivity.class);
                 startActivity(i);
             }
         });
@@ -35,7 +34,7 @@ public class MyActivity extends Activity {
         myactivity_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MyActivity.this,HomeActivity.class);
+                Intent i=new Intent(MyActivity.this,DebugHomeActivity.class);
                 startActivity(i);
 
 

@@ -12,7 +12,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:theme="@style/NoActionBar"  android:name=".HomeActivity" android:label="home_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".DebugHomeActivity" android:label="home_activity"/>
         <activity  android:theme="@style/NoActionBar" android:name=".TurismoActivity" android:label="turismo_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".NewsActivity" android:label="news_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".FacebookActivity" android:label="facebook_activity"/>
@@ -30,5 +30,6 @@
         <activity android:theme="@style/NoActionBar"  android:name=".RistoroActivity" android:label="ristoro_activity"/>
         <activity  android:theme="@style/NoActionBar" android:name=".RistorodettagliActivity" android:label="ristorodettagli_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".TemplateActivity"/>
+        <activity android:name=".HomeActivity"/>
     </application>
 </manifest>
