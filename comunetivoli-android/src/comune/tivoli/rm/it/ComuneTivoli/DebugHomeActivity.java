@@ -21,7 +21,7 @@ public class DebugHomeActivity extends Activity {
     Button btn_turismo;
     Button btn_fb_;
     Button btn_crediti;
-
+    Button btn_home;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,15 @@ public class DebugHomeActivity extends Activity {
         btn_turismo = (Button) findViewById(R.id.btn_turismo);
         btn_fb_ = (Button) findViewById(R.id.btn_fb);
         btn_crediti = (Button) findViewById(R.id.btn_crediti);
+        btn_home = (Button) findViewById(R.id.btn_home );
 
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(DebugHomeActivity.this,HomeActivity.class);
+                startActivity(i);
+            }
+        }) ;
      btn_news.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
@@ -45,8 +53,6 @@ public class DebugHomeActivity extends Activity {
 
          }
      });
-
-
         btn_contatti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
