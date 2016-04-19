@@ -25,9 +25,15 @@ public class ContattiActivity extends Activity {
         contattiListView = (ListView) findViewById(R.id.contatti_listView);
 
         contatti = new ArrayList<>();
+        ContattiComune c = new ContattiComune(
+                getResources().getString(R.string.contatti_titolo_comune_tivoli),
+                getResources().getString(R.string.contatti_descrizione_anagrafe_tivoli),
+                "url",
+                "indirizzo",
+                "email"
+        );
 
-        //contatti.add(new ContattiComune(getResources().getString(R.)))
-
+        contatti.add(c);
 
 
         contattiListView.setAdapter(new ContattiComuneListAdapter(this, contatti));
