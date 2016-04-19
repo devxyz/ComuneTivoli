@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="#ffffff">
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_btn_new"
+            android:id="@+id/btn_news"
+            android:width="150dp" android:textStyle="bold" android:textSize="30dp"
+            android:background="#4692ff" android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+            android:layout_below="@+id/textView" android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contatti"
+            android:id="@+id/btn_contatti"
+            android:width="150dp"
+            android:textStyle="bold" android:textSize="30dp"
+            android:background="#4692ff" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:layout_alignTop="@+id/btn_news" android:layout_alignParentEnd="true"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eventi"
+            android:id="@+id/btn_eventi"
+            android:layout_marginTop="30dp" android:textStyle="bold"
+            android:textSize="30dp" android:background="#4692ff"
+            android:layout_below="@+id/btn_news" android:layout_alignStart="@+id/btn_news"
+            android:layout_alignEnd="@+id/btn_news"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Web"
+            android:id="@+id/btn_www"
+            android:textStyle="bold" android:textSize="30dp"
+            android:background="#4692ff"
+            android:layout_alignTop="@+id/btn_eventi" android:layout_alignStart="@+id/btn_contatti"
+            android:layout_alignEnd="@+id/btn_contatti"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turismo"
+            android:id="@+id/btn_turismo"
+            android:layout_marginTop="30dp" android:textStyle="bold"
+            android:textSize="30dp" android:background="#4692ff"
+            android:layout_below="@+id/btn_eventi"
+            android:layout_alignEnd="@+id/btn_eventi" android:layout_alignStart="@+id/btn_eventi"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Social"
+            android:id="@+id/btn_fb"
+            android:layout_above="@+id/btn_crediti" android:textStyle="bold"
+            android:textSize="30dp" android:background="#4692ff"
+            android:layout_alignStart="@+id/btn_contatti" android:layout_alignEnd="@+id/btn_contatti"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Crediti"
+            android:id="@+id/btn_crediti"
+            android:layout_below="@+id/btn_turismo"
+            android:layout_marginTop="30dp" android:layout_alignEnd="@+id/btn_turismo" android:textStyle="bold"
+            android:textSize="30dp" android:background="#4692ff"
+            android:layout_alignStart="@+id/btn_turismo"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Menu di test dell&apos;applicazione"
+            android:id="@+id/textView" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" android:background="#27008a" android:gravity="center_vertical|center_horizontal"
+            android:padding="10dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button" android:layout_alignBottom="@+id/btn_crediti"
+            android:layout_alignStart="@+id/btn_fb"/>
+</RelativeLayout>
