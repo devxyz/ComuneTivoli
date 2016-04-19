@@ -1,6 +1,7 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -85,10 +86,12 @@ public class ContattiActivity extends Activity {
         contattiListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ContattiComune cc = contatti.get(position);
                 //eseguito quando si fa click su una voce
-
-
-            }
+                Intent i = new Intent(ContattiActivity.this,ContattiDettagliActivity.class);
+                i.putExtra("titolo",cc.titolo);
+                i.putExtra("descrizione",cc.descrizione);
+           }
         });
 
     }
