@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="contatti_testo1"> Palazzo San Bernardino \n P.zza del Governo. 1, 00019 Tivoli \n Telefono 0774 4531,
+    <string name="contatti_titolo_comune_tivoli">COMUNE DI TIVOLI</string>
+    <string name="contatti_descrizione_tivoli"> Palazzo San Bernardino \n P.zza del Governo. 1, 00019 Tivoli \n Telefono 0774 4531,
         Fax 0774 330675 \n Email: info@pec.comune.tivoli.rm.it
     </string>
-    <string name="contatti_titolo1">COMUNE DI TIVOLI</string>
-    <string name="contatti_titolo2">Ufficio relazioni con il pubblico</string>
-    <string name="contatti_testo2"> U.R.P. (Piazza del Governo, 2) \n Telefono: 0774 453203 - 0774 453230 \n orari: dal
+
+
+    <string name="contatti_titolo_urp_tivoli">Ufficio relazioni con il pubblico</string>
+    <string name="contatti_descrizione_urp_tivoli"> U.R.P. (Piazza del Governo, 2) \n Telefono: 0774 453203 - 0774 453230 \n orari: dal
         Lunedí al Sabato 9.00-12.00 \n Martedí e Giovedí 15.00-17.00
     </string>
-    <string name="contatti_titolo3">Ufficio Anagrafe</string>
-    <string name="contatti_testo3"> Fax 0774 453325 \n Email: anagrafe@pec.comune.tivoli.rm.it</string>
-    <string name="contatti_titolo4">delegazione Villa Adriana</string>
-    <string name="contatti_testo4">Ufficio relazioni con il pubblico \n Via di Villa Adriana, 178 \n Telefono 0774 453542
+    <string name="contatti_titolo_anagrafe_tivoli">Ufficio Anagrafe</string>
+    <string name="contatti_descrizione_anagrafe_tivoli"> Fax 0774 453325 \n Email: anagrafe@pec.comune.tivoli.rm.it</string>
+
+    <string name="contatti_titolo_villa_adriana">URP delegazione Villa Adriana</string>
+    <string name="contatti_descrizione_villa_adriana">Ufficio relazioni con il pubblico \n Via di Villa Adriana, 178 \n Telefono 0774 453542
         \n orari: Giovedí 9.00-12.00 - 15.00-17.00
     </string>
-    <string name="contatti_titolo5">delegazione Tivoli Terme</string>
+
+    <string name="contatti_titolo_titoli_terme">URP delegazione Tivoli Terme</string>
+    <string name="contatti_descrizione_titoli_terme">Ufficio relazioni con il pubblico\n
+        Via Don Minzoni, 9/a\n
+        Telefono 0774 354151\n
+        orari: Martedí 9.00-12.00 - 15:00-17.00 e Venerdí 9.00-12.00</string>
+
+    <string name="contatti_titolo_uff_elettorale">Ufficio Elettorale</string>
+    <string name="contatti_descrizione_uff_elettorale">Fax 0774 453364\n
+        Email: elettorale@pec.comune.tivoli.rm.it</string>
 </resources>

@@ -5,3 +5,4 @@ package comune.tivoli.rm.it.ComuneTivoliCommon;
  */
 public class CommonUtil {
 }
+
