@@ -3,6 +3,7 @@
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:id="@+id/my_splash"
                 android:weightSum="1" android:background="@drawable/splash">
     <ImageView
             android:layout_width="fill_parent"

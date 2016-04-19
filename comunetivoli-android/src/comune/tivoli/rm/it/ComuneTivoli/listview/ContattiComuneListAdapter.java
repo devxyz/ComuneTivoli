@@ -2,8 +2,6 @@ package comune.tivoli.rm.it.ComuneTivoli.listview;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Point;
-import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.R;
 import comune.tivoli.rm.it.ComuneTivoli.model.ContattiComune;
-import comune.tivoli.rm.it.ComuneTivoli.util.ScreenUtil;
 
 import java.util.List;
 
@@ -30,9 +27,7 @@ public class ContattiComuneListAdapter extends BaseAdapter {
         this.contatti = feed;
         this.activity = activity;
         layoutInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        Point size = ScreenUtil.getSize(activity);
     }
-
 
     @Override
     public int getCount() {
