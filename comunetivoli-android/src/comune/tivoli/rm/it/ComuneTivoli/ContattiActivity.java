@@ -92,6 +92,7 @@ public class ContattiActivity extends Activity {
                 i.putExtra("titolo",cc.titolo);
                 i.putExtra("descrizione",cc.descrizione);
                 i.putExtra("telefono", cc.telefono);
+                startActivity(i);
            }
         });
 
