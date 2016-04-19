@@ -13,6 +13,8 @@ import java.util.*;
  * Created by stefano on 27/03/16.
  */
 public class ParserEngine {
+    static final String baseUrl = "http://www.comune.tivoli.rm.it/";
+
     /**
      * estrae il numero di pagina da una url del genere:
      * /node?page=1
@@ -37,10 +39,28 @@ public class ParserEngine {
         return Integer.parseInt(s1[s1.length - 1]);
     }
 
-    public static NotiziaWWWComuneTivoli extractNewsFromPage(String baseUrl, String path) throws IOException {
+    private static String composeUrl(String... ss) {
+        StringBuilder sb = new StringBuilder();
+        if (ss.length == 0) return "";
+
+        sb.append(ss[0]);
+        for (int i = 1; i < ss.length; i++) {
+            String s = ss[i];
+            if (!sb.toString().endsWith("/")) {
+                sb.append("/");
+            }
+            if (s.startsWith("/")) {
+                sb.append(s.substring(1));
+            } else
+                sb.append(s);
+        }
+        return sb.toString();
+    }
+
+    public static NotiziaWWWComuneTivoli extractNewsFromPage(String baseUrl, String relativePathID) throws IOException {
         //versione stampabile
-        String complete = (baseUrl + "/" + path+"/print");
-        System.out.println("Download " + complete);
+        String complete = composeUrl(baseUrl, relativePathID, "/print");
+        System.out.println("Download " + complete + "( id " + relativePathID + ")");
         final Document parse = Jsoup.parse(new URL(complete), 10000);
         final Elements title_centro = parse.getElementsByClass("title_centro");
         final Elements content = parse.getElementsByClass("content");
@@ -55,31 +75,42 @@ public class ParserEngine {
             contenuto.append(t.html()).append(" ");
         }
 
-        return new NotiziaWWWComuneTivoli(titolo.toString(), contenuto.toString(), null);
+        return new NotiziaWWWComuneTivoli(titolo.toString(), contenuto.toString(), complete, null, relativePathID);
 
     }
 
     public static void main(String[] args) throws IOException {
-        final String baseUrl = "http://www.comune.tivoli.rm.it/";
+
 
         //ipotetico elenco di nodi gia' nel db
         final Set<String> nodeLinksInDB = new TreeSet<>();
+        nodeLinksInDB.add("/node/2585");
 
+
+        ArrayList<NotiziaWWWComuneTivoli> pagine = parseFromWeb(nodeLinksInDB);
+
+        //System.out.println(pagine);
+    }
+
+    public static ArrayList<NotiziaWWWComuneTivoli> parseFromWeb(Set<String> nodeLinksInDB) throws IOException {
         System.out.println("Check Homepage (searching page-index links)");
         //dalla homepage individua tutte le pagine dei link esistenti, compresa la home
-        final ArrayList<String> allIndexLinks = extractIndexPageUrlFromHomepage(baseUrl, 1);
+        final ArrayList<String> allIndexLinks = extractIndexPageUrlFromHomepage(baseUrl, -1);
         System.out.println("Found page-index links: " + allIndexLinks.size() + " pages");
         System.out.println("  - " + allIndexLinks);
         final ArrayList<String> allLinkArticoli = extractNodeUrlsFromIndexPages(baseUrl, nodeLinksInDB, allIndexLinks);
 
         System.out.println("LINKS");
         System.out.println(allLinkArticoli);
+        ArrayList<NotiziaWWWComuneTivoli> pagine = new ArrayList<>();
 
         for (String urk : allLinkArticoli) {
-            System.out.println("=============================================");
+//            System.out.println("=============================================");
             final NotiziaWWWComuneTivoli n = extractNewsFromPage(baseUrl, urk);
-            System.out.println(n);
+            pagine.add(n);
+            //          System.out.println(n);
         }
+        return pagine;
     }
 
 
@@ -108,7 +139,7 @@ public class ParserEngine {
 
     private static ArrayList<String> extractNodeLinksFromPages(String baseUrl, String pageLink) throws IOException {
         final ArrayList<String> ris = new ArrayList<>();
-        final Document node = Jsoup.parse(new URL(baseUrl + pageLink), 10000);
+        final Document node = Jsoup.parse(new URL(composeUrl(baseUrl, pageLink)), 10000);
         final Elements elementsByClass = node.getElementsByClass("title");
         for (Element e : elementsByClass) {
 
