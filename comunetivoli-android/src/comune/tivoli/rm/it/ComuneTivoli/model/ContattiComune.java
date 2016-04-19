@@ -6,11 +6,15 @@ package comune.tivoli.rm.it.ComuneTivoli.model;
 public class ContattiComune {
     public final String titolo;
     public final String descrizione;
-    public final String url;
+    public final String telefono;
+    public final String indirizzo;
+    public final String email;
 
-    public ContattiComune(String titolo, String descrizione, String url) {
+    public ContattiComune(String titolo, String descrizione, String url, String indirizzo, String email) {
         this.titolo = titolo;
         this.descrizione = descrizione;
-        this.url = url;
+        this.telefono = url;
+        this.indirizzo = indirizzo;
+        this.email = email;
     }
 }
