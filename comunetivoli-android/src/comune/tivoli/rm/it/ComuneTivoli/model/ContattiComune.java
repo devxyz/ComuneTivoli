@@ -10,10 +10,10 @@ public class ContattiComune {
     public final String indirizzo;
     public final String email;
 
-    public ContattiComune(String titolo, String descrizione, String url, String indirizzo, String email) {
+    public ContattiComune(String titolo, String descrizione, String telefono, String indirizzo, String email) {
         this.titolo = titolo;
         this.descrizione = descrizione;
-        this.telefono = url;
+        this.telefono = telefono;
         this.indirizzo = indirizzo;
         this.email = email;
     }
