@@ -15,7 +15,7 @@
     <drawable name="monumenti_anfiteatro_fotobig">@drawable/monumenti_anfiteatro_di_bleso_big</drawable>
 
     <string name="monumenti_arcata_dell_acquedotto_titolo">Acquedotti Anio Vetus e Aqua Marcia</string>
-    <string name="monumenti_arcata_dell_acquedotto_descriozione">L'acquedotto Anio Vetus risale al 272 e il 279 a.C., costruito dai censori Marcio Curio Dentato e Fulvio Flacco. L'acquedotto aveva una portata di 180.000 metri cubi d'acqua al giorno, seguendo un percorso di 64 km.</string>
+    <string name="monumenti_arcata_dell_acquedotto_descrizione">L'acquedotto Anio Vetus risale al 272 e il 279 a.C., costruito dai censori Marcio Curio Dentato e Fulvio Flacco. L'acquedotto aveva una portata di 180.000 metri cubi d'acqua al giorno, seguendo un percorso di 64 km.</string>
     <string name="monumenti_arcata_dell_acquedotto_url"></string>
     <drawable name="monumenti_arcata_dell_acquedotto_fotosmall">@drawable/monumenti_arcata_dell_acquedotto</drawable>
     <drawable name="monumenti_arcata_dell_acquedotto_fotobig">@drawable/monumenti_arcata_dell_acquedotto_big</drawable>
