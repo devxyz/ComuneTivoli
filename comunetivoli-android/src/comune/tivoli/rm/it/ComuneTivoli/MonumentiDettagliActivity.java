@@ -27,7 +27,7 @@ public class MonumentiDettagliActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.monumentiDettagli_activity);
+        setContentView(R.layout.monumenti_dettagli_activity);
         title_text= (TextView) findViewById(R.id.title_txt);
         dettagli_text= (TextView) findViewById(R.id.txt_description);
         image_monumento= (ImageView) findViewById(R.id.monumenti_image);
