@@ -12,6 +12,7 @@ public class HomeActivity extends Activity {
     ImageButton btn_eventi;
     ImageButton btn_news;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
