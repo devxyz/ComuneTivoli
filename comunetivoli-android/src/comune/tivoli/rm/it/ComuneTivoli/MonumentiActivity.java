@@ -149,7 +149,7 @@ public class MonumentiActivity extends Activity {
         monumenti.add(villa_gregoriana);
 
         MonumentiComuneListAdapter a=new MonumentiComuneListAdapter(this,monumenti);
-                monumenti_list.setAdapter(a);
+        monumenti_list.setAdapter(a);
 
 
     }
