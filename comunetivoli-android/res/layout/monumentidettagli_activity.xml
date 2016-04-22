@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:id="@+id/">
+                android:layout_height="match_parent" android:id="@+id/xyz">
 
     <EditText
             android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txt_description"
                 android:text="villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este "
-                android:elegantTextHeight="false" android:gravity="center" android:layout_below="@+id/image_villa_deste"
+                android:gravity="center" android:layout_below="@+id/image_villa_deste"
                 android:layout_alignParentStart="true"/>
     </ScrollView>
 </RelativeLayout>
