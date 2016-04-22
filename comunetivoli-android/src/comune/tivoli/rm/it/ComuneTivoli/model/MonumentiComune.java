@@ -12,11 +12,12 @@ public class MonumentiComune {
     public Drawable foto_small;
     public Drawable foto_big;
     public String maps;
+    public String video;
     public String tred;
     public String url;
 
 
-    public MonumentiComune(String titolo, String descrizione, String descrizione_big, Drawable foto_small, Drawable foto_big, String url, String maps, String tred) {
+    public MonumentiComune(String titolo, String descrizione, String descrizione_big, Drawable foto_small, Drawable foto_big, String url, String maps, String tred, String video) {
         this.titolo = titolo;
         this.descrizione = descrizione;
         this.descrizione_big = descrizione_big;
@@ -25,6 +26,7 @@ public class MonumentiComune {
         this.maps = maps;
         this.foto_big = foto_big;
         this.url = url;
+        this.video = video;
 
 
     }
