@@ -32,13 +32,28 @@ public class ContattiDettagliActivity extends Activity {
         btn_chiama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i ;
-                i= new Intent(Intent.ACTION_DIAL);
-                i.setData(Uri.parse("tel:"+getIntent().getExtras().getString("telefono")));
-                startActivity(i);
+                Intent callIntent ;
+                callIntent = new Intent(Intent.ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:"+getIntent().getExtras().getString("telefono")));
+                startActivity(callIntent);
+            }
+        });
+        btn_maps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mapsIntent;
+                mapsIntent = new Intent();
             }
         });
 
+        btn_email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent emailIntent;
+                emailIntent = new Intent(Intent.ACTION_SEND);
+                startActivity(emailIntent);
+            }
+        });
     }
 
 }
