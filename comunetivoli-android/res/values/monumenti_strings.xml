@@ -48,8 +48,8 @@
     <string name="monumenti_mensa_ponderaria_descrizionebig">I resti dell\'antica Mensa Ponderaria, risalenti al I secolo d.C., si trovano nei pressi della Cattedrale di San Lorenzo e vennero scoperti solamente nel 1883 durante dei lavori.\n
         Secondo alcuni studiosi e ricercatori, nei pressi di questa straordinaria testimonianza della magnificenza di Roma, doveva trovarsi anche una schola gladiatorum, ma di questa struttura non sono mai state ritrovate tracce.</string>
     <string name="monumenti_mensa_ponderaria_url">http://www.visittivoli.eu/archeologia/mensa-ponderaria</string>
-    <string name="monumenti_mensa_ponderaria_maps">http://www.visittivoli.eu/virtual-tour/mensa-ponderaria/</string>
-    <string name="monumenti_mensa_ponderaria_tred"></string>
+    <string name="monumenti_mensa_ponderaria_maps"></string>
+    <string name="monumenti_mensa_ponderaria_tred">http://www.visittivoli.eu/virtual-tour/mensa-ponderaria/</string>
     <string name="monumenti_mensa_ponderaria_video"></string>
     <drawable name="monumenti_mensa_ponderaria_fotosmall">@drawable/monumenti_mensa_ponderaria</drawable>
     <drawable name="monumenti_mensa_ponderaria_fotobig">@drawable/monumenti_mensa_ponderaria_big</drawable>
@@ -187,7 +187,7 @@
     - le Grandi e Piccole Terme, ambienti dove si trascorrevano delle intere giornate all\'insegna del benessere;\n
     - il Teatro greco, piccolo teatro di corte utilizzato per pochi intimi;\n
     - la Biblioteca Greca e la Biblioteca Latina, ambienti del sapere.\n
-    Di Grande rilievo il Teatro Marittimo, uno dei monumenti più noti e rappresentati di Villa Adriana e uno dei simboli dell\'unicità e della concezione innovativa dell\'impianto architettonico dell\'intero complesso residenziale. L\'Edificio prende il nome da un raffinato fregio figurato in marmo con soggetto marino, che ne decorava la trabeazione. Costituito da una forma circolare, sorretto da colonne ioniche e coperto da volta a botte, si riflette sull\'acqua di un ampio canale. Il Teatro Marittimo può essere identificato come una vera e propria domus, una sorta di residenza minore allinterno della residenza imperiale.
+    Di Grande rilievo il Teatro Marittimo, uno dei monumenti più noti e rappresentati di Villa Adriana e uno dei simboli dell\'unicità e della concezione innovativa dell\'impianto architettonico dell\'intero complesso residenziale. L\'Edificio prende il nome da un raffinato fregio figurato in marmo con soggetto marino, che ne decorava la trabeazione. Costituito da una forma circolare, sorretto da colonne ioniche e coperto da volta a botte, si riflette sull\'acqua di un ampio canale. Il Teatro Marittimo può essere identificato come una vera e propria domus, una sorta di residenza minore all\'interno della residenza imperiale.
 </string>
     <string name="monumenti_villa_adriana_url">http://www.visittivoli.eu/le-ville/villa-adriana</string>
     <string name="monumenti_villa_adriana_maps"></string>
