@@ -16,9 +16,11 @@ public class MonumentiUtil {
         MonumentiComune acquedotti = new MonumentiComune(
                 a.getResources().getString(R.string.monumenti_acquedotti_titolo),
                 a.getResources().getString(R.string.monumenti_acquedotti_descrizione),
+                a.getResources().getString(R.string.monumenti_acquedotti_descrizionebig),
                 a.getResources().getDrawable(R.drawable.monumenti_acquedotti_fotosmall),
                 a.getResources().getDrawable(R.drawable.monumenti_acquedotti_fotobig),
-                a.getResources().getString(R.string.monumenti_acquedotti_url)
+                a.getResources().getString(R.string.monumenti_acquedotti_url),
+                a.getResources().getString(R.string.monumenti_acquedotti_).
         );
 
         MonumentiComune anfiteatro = new MonumentiComune(

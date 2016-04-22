@@ -31,7 +31,7 @@
         <activity android:theme="@style/NoActionBar"  android:name=".MonumentiActivity" android:label="monumenti_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".MonumentiDettagli2Activity" android:label="monumenti_dettagli_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".RistoroActivity" android:label="ristoro_activity"/>
-        <activity android:theme="@style/NoActionBar" android:name=".RistoroDettagliActivity" android:label="ristorodettagli_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".RistoroDettagli2Activity" android:label="ristorodettagli_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".TemplateActivity"/>
         <activity android:name=".HomeActivity"/>
     </application>

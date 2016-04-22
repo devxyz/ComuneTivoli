@@ -8,18 +8,23 @@ import android.graphics.drawable.Drawable;
 public class MonumentiComune {
     public String titolo;
     public String descrizione;
+    public String descrizione_big;
     public Drawable foto_small;
     public Drawable foto_big;
-
+    public String maps;
+    public String tred;
     public String url;
 
-    public MonumentiComune(String titolo, String descrizione, Drawable foto_small, Drawable foto_big, String url) {
+
+    public MonumentiComune(String titolo, String descrizione, String descrizione_big, Drawable foto_small, Drawable foto_big, String url, String maps, String tred) {
         this.titolo = titolo;
         this.descrizione = descrizione;
+        this.descrizione_big = descrizione_big;
+        this.tred= tred;
         this.foto_small = foto_small;
+        this.maps = maps;
         this.foto_big = foto_big;
         this.url = url;
-
 
 
     }
