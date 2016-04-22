@@ -23,6 +23,7 @@
         <activity android:theme="@style/NoActionBar"  android:name=".FacebookdettagliActivity" android:label="facebookdettagli_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".EventidettagliActivity" android:label="eventidettagli_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".ContattiActivity" android:label="contatti_activity"/>
+        <activity android:theme="@style/NoActionBar"  android:name=".ContattiDettagliActivity" android:label="contatti_dettagli_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".CreditiActivity" android:label="crediti_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".MapsActivity" android:label="maps_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".StreetviewActivity" android:label="streetview_activity"/>
