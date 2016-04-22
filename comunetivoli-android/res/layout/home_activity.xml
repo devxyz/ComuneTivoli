@@ -2,27 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:id="@+id/relative">
+                android:layout_height="match_parent" android:id="@+id/xyz">
 
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            android:src="@drawable/Sibilla_small"
-            android:maxWidth="200dp" android:minWidth="200dp"
-            android:minHeight="100dp"
-            android:layout_below="@+id/imageButton3" android:layout_toEndOf="@+id/imageButton2"
-            android:layout_marginTop="55dp"/>
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
-            android:src="@drawable/Latestnews_small"
-            android:layout_alignParentBottom="true"/>
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton3"
-            android:src="@drawable/eventis"
-            android:layout_below="@+id/imageButton" android:layout_toEndOf="@+id/imageButton2"/>
+
 </RelativeLayout>

@@ -2,20 +2,21 @@
 <resources>
 
 
+
     <string name="monumenti_acquedotti_titolo">Acquedotto Anio Novus</string>
-    <string name="monumenti_acquedotti_descrizione">L'Acquedotto Anio Novus è un'antica costruzione avviata dall'Imperatore Caligola nel 38 d.C. A Tivoli, partendo dalla Via Empolitana si possono trovare molti reperti archeologici.</string>
+    <string name="monumenti_acquedotti_descrizione">L\'Acquedotto Anio Novus è un\'antica costruzione avviata dall\'Imperatore Caligola nel 38 d.C. A Tivoli, partendo dalla Via Empolitana si possono trovare molti reperti archeologici.</string>
     <string name="monumenti_acquedotti_url"></string>
     <drawable name="monumenti_acquedotti_fotosmall">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia</drawable>
     <drawable name="monumenti_acquedotti_fotobig">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia_big</drawable>
 
     <string name="monumenti_anfiteatro_titolo">Anfiteatro di Bleso</string>
-    <string name="monumenti_anfiteatro_descrizione">L'Anfiteatro di Bleso è un antico anfiteatro romano risalente al II secolo d.C., si trova accanto alla Rocca Pia e non molto lontano da Piazza Garibaldi.</string>
+    <string name="monumenti_anfiteatro_descrizione">L\'Anfiteatro di Bleso è un antico anfiteatro romano risalente al II secolo d.C., si trova accanto alla Rocca Pia e non molto lontano da Piazza Garibaldi.</string>
     <string name="monumenti_anfiteatro_url"></string>
     <drawable name="monumenti_anfiteatro_fotosmall">@drawable/monumenti_anfiteatro_di_bleso</drawable>
     <drawable name="monumenti_anfiteatro_fotobig">@drawable/monumenti_anfiteatro_di_bleso_big</drawable>
 
     <string name="monumenti_arcata_dell_acquedotto_titolo">Acquedotti Anio Vetus e Aqua Marcia</string>
-    <string name="monumenti_arcata_dell_acquedotto_descrizione">L'acquedotto Anio Vetus risale al 272 e il 279 a.C., costruito dai censori Marcio Curio Dentato e Fulvio Flacco. L'acquedotto aveva una portata di 180.000 metri cubi d'acqua al giorno, seguendo un percorso di 64 km.</string>
+    <string name="monumenti_arcata_dell_acquedotto_descrizione">L\'acquedotto Anio Vetus risale al 272 e il 279 a.C., costruito dai censori Marcio Curio Dentato e Fulvio Flacco. L\'acquedotto aveva una portata di 180.000 metri cubi d\'acqua al giorno, seguendo un percorso di 64 km.</string>
     <string name="monumenti_arcata_dell_acquedotto_url"></string>
     <drawable name="monumenti_arcata_dell_acquedotto_fotosmall">@drawable/monumenti_arcata_dell_acquedotto</drawable>
     <drawable name="monumenti_arcata_dell_acquedotto_fotobig">@drawable/monumenti_arcata_dell_acquedotto_big</drawable>
@@ -29,14 +30,14 @@
 
 
     <string name="monumenti_piazza_campitelli_titolo">Piazza Campitelli</string>
-    <string name="monumenti_piazza_campitelli_descrizione">Piazza Campitelli è un grazioso spazio pubblico di Tivoli appena restaurato. Da qui si può raggiungere la Casa Gotica e la rinascimentale Villa d'Este.</string>
+    <string name="monumenti_piazza_campitelli_descrizione">Piazza Campitelli è un grazioso spazio pubblico di Tivoli appena restaurato. Da qui si può raggiungere la Casa Gotica e la rinascimentale Villa d\'Este.</string>
     <string name="monumenti_piazza_campitelli_url"></string>
     <drawable name="monumenti_piazza_campitelli_fotosmall">@drawable/monumenti_piazza_campitelli</drawable>
     <drawable name="monumenti_piazza_campitelli_fotobig">@drawable/monumenti_piazza_campitelli_big</drawable>
 
 
     <string name="monumenti_piazza_garibaldi_titolo">Piazza Garibaldi</string>
-    <string name="monumenti_piazza_garibaldi_descrizione">Piazza Garibaldi è un ampio spazio pubblico situato vicino la Rocca Pia e l'anfiteatro romano. È abbellita dai giardini e dall'Arco dei Padri Costituenti, opera di Arnaldo Pomodoro.</string>
+    <string name="monumenti_piazza_garibaldi_descrizione">Piazza Garibaldi è un ampio spazio pubblico situato vicino la Rocca Pia e l\'anfiteatro romano. È abbellita dai giardini e dall\'Arco dei Padri Costituenti, opera di Arnaldo Pomodoro.</string>
     <string name="monumenti_piazza_garibaldi_url"></string>
     <drawable name="monumenti_piazza_garibaldi_fotosmall">@drawable/monumenti_piazza_garibaldi</drawable>
     <drawable name="monumenti_piazza_garibaldi_fotobig">@drawable/monumenti_piazza_garibaldi_big</drawable>
@@ -50,49 +51,49 @@
 
 
     <string name="monumenti_rocca_pia_titolo">Rocca Pia</string>
-    <string name="monumenti_rocca_pia_descrizione">La Rocca Pia, voluta da papa Pio II Piccolomini, domina con le sue quattro torri circolari il centro storico della città e la campagna circostante. Affaccia sull'antico anfiteatro romano.</string>
+    <string name="monumenti_rocca_pia_descrizione">La Rocca Pia, voluta da papa Pio II Piccolomini, domina con le sue quattro torri circolari il centro storico della città e la campagna circostante. Affaccia sull\'antico anfiteatro romano.</string>
     <string name="monumenti_rocca_pia_url"></string>
     <drawable name="monumenti_rocca_pia_fotosmall">@drawable/monumenti_rocca_pia</drawable>
     <drawable name="monumenti_rocca_pia_fotobig">@drawable/monumenti_rocca_pia_big</drawable>
 
 
     <string name="monumenti_santuario_ercole_titolo">Santuario di Ercole Vincitore</string>
-    <string name="monumenti_santuario_ercole_descrizione">Il Santuario di Ercole vincitore, dedicato al dio Ercole, protettore dell'antica Tibur Superbum, è considerato uno dei gioielli archeologici più belli della città.</string>
+    <string name="monumenti_santuario_ercole_descrizione">Il Santuario di Ercole vincitore, dedicato al dio Ercole, protettore dell\'antica Tibur Superbum, è considerato uno dei gioielli archeologici più belli della città.</string>
     <string name="monumenti_santuario_ercole_url"></string>
     <drawable name="monumenti_santuario_ercole_fotosmall">@drawable/monumenti_santuario_ercole</drawable>
     <drawable name="monumenti_santuario_ercole_fotobig">@drawable/monumenti_santuario_ercole_big</drawable>
 
 
     <string name="monumenti_tempio_della_sibilla_titolo">Tempio della Sibilla</string>
-    <string name="monumenti_tempio_della_sibilla_descrizione">Il Tempio della Sibilla si trova sul punto più alto dell'antica acropoli di Tivoli. Eretto intorno al II secolo d.C. è considerato uno dei più importanti resti archeologici della città.</string>
+    <string name="monumenti_tempio_della_sibilla_descrizione">Il Tempio della Sibilla si trova sul punto più alto dell\'antica acropoli di Tivoli. Eretto intorno al II secolo d.C. è considerato uno dei più importanti resti archeologici della città.</string>
     <string name="monumenti_tempio_della_sibilla_url"></string>
     <drawable name="monumenti_tempio_della_sibilla_fotosmall">@drawable/monumenti_tempio_della_sibilla</drawable>
     <drawable name="monumenti_tempio_della_sibills_fotobig">@drawable/monumenti_tempio_della_sibilla_big</drawable>
 
 
     <string name="monumenti_tempio_di_vesta_titolo">Tempio di Vesta</string>
-    <string name="monumenti_tempio_di_vesta_descrizione">Il Tempio di Vesta (I secolo a.C.) è uno dei monumenti archeologici più importanti di Tivoli. Situato sull'Acropoli dell'antica Tibur e dedicato a Vesta, la dea del focolare.</string>
+    <string name="monumenti_tempio_di_vesta_descrizione">Il Tempio di Vesta (I secolo a.C.) è uno dei monumenti archeologici più importanti di Tivoli. Situato sull\'Acropoli dell\'antica Tibur e dedicato a Vesta, la dea del focolare.</string>
     <string name="monumenti_tempio_di_vesta_url"></string>
     <drawable name="monumenti_tempio_di_vesta_fotosmall">@drawable/monumenti_tempio_di_vesta</drawable>
     <drawable name="monumenti_tempio_di_vesta_fotobig">@drawable/monumenti_tempio_di_vesta_big</drawable>
 
 
     <string name="monumenti_tomba_dei_plauzi_titolo">Tomba dei Plauzi</string>
-    <string name="monumenti_tomba_dei_plauzi_descrizione">La Tomba dei Plauzi, insieme al Ponte Lucano, è la porta d'accesso all'antica Tibur. La splendida torre cilindrica, la rende uno dei siti archeologici più importanti della città.</string>
+    <string name="monumenti_tomba_dei_plauzi_descrizione">La Tomba dei Plauzi, insieme al Ponte Lucano, è la porta d\'accesso all\'antica Tibur. La splendida torre cilindrica, la rende uno dei siti archeologici più importanti della città.</string>
     <string name="monumenti_tomba_dei_plauzi_url"></string>
     <drawable name="monumenti_tomba_dei_plauzi_fotosmall">@drawable/monumenti_tomba_dei_plauzi</drawable>
     <drawable name="monumenti_tomba_dei_plauzi_fotobig">@drawable/monumenti_tomba_dei_plauzi_big</drawable>
 
 
     <string name="monumenti_villa_adriana_titolo">Villa Adriana</string>
-    <string name="monumenti_villa_adriana_descrizione">Villa Adriana, Patrimonio Mondiale dell'Umanità UNESCO, è il simbolo archeologico di Tivoli; antica dimora dell'imperatore Adriano, testimonia la magnificenza dell'Impero romano.</string>
+    <string name="monumenti_villa_adriana_descrizione">Villa Adriana, Patrimonio Mondiale dell\'Umanità UNESCO, è il simbolo archeologico di Tivoli; antica dimora dell\'imperatore Adriano, testimonia la magnificenza dell\'Impero romano.</string>
     <string name="monumenti_villa_adriana_url"></string>
     <drawable name="monumenti_villa_adriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
     <drawable name="monumenti_villa_adriana_fotobig">@drawable/monumenti_villa_adriana_big</drawable>
 
 
-    <string name="monumenti_villa_d_este_titolo">Villa d'Este</string>
-    <string name="monumenti_villa_d_este_descrizione">Villa d'Este è uno dei tesori di Tivoli, splendido esempio di architettura rinascimentale inserito dall'UNESCO nella lista dei Patrimoni Mondiali dell'Umanità.</string>
+    <string name="monumenti_villa_d_este_titolo">Villa d\'Este</string>
+    <string name="monumenti_villa_d_este_descrizione">Villa d\'Este è uno dei tesori di Tivoli, splendido esempio di architettura rinascimentale inserito dall\'UNESCO nella lista dei Patrimoni Mondiali dell\'Umanità.</string>
     <string name="monumenti_villa_d_este_url"></string>
     <drawable name="monumenti_villa_d_este_fotosmall">@drawable/monumenti_villa_deste</drawable>
     <drawable name="monumenti_villa_d_este_fotobig">@drawable/monumenti_villa_deste_big</drawable>
