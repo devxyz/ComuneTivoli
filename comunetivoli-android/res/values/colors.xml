@@ -3,4 +3,5 @@
     <color name="template_colorblu">#355F99</color>
     <color name="template_colorred">#9F363B</color>
     <color name="white">#FFFFFF</color>
+    <color name="trasparent">#00FFFFFF</color>
 </resources>
