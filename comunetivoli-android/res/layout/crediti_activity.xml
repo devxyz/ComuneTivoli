@@ -6,73 +6,75 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/credits_programmatori"
-            android:id="@+id/credits.alunni"
-            android:textSize="@dimen/app_dim_titolo3" android:gravity="center_vertical|center_horizontal" android:textStyle="bold"
-            android:layout_centerVertical="true" android:layout_alignStart="@+id/credits.coordinatore"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/credits.coordinatore"
-            android:text="@string/credits_coordinatore" android:textSize="@dimen/app_dim_titolo3"
+            android:text="@string/credits_coordinatore" android:textSize="@dimen/app_dim_titolo2"
             android:textStyle="bold"
-            android:layout_above="@+id/credits.alunni" android:layout_alignParentStart="true"/>
+            android:layout_marginTop="201dp"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/credits_grafico"
             android:id="@+id/credits.grafico"
-            android:textSize="@dimen/app_dim_titolo3" android:textStyle="bold"
+            android:textSize="@dimen/app_dim_titolo2" android:textStyle="bold"
             android:layout_below="@+id/textView6" android:layout_alignParentStart="true"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/credits_alunnigrafica"
             android:id="@+id/credits.alunnigrafica"
-            android:textSize="@dimen/app_dim_titolo3" android:textStyle="bold"
-            android:layout_below="@+id/credits.grafico" android:layout_alignParentStart="true"/>
+            android:textSize="@dimen/app_dim_titolo2" android:textStyle="bold"
+            android:layout_below="@+id/credits.grafica" android:layout_alignParentStart="true"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView3" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:id="@+id/imageView3"
             android:src="@drawable/logoscuola"
-            android:layout_above="@+id/credits.coordinatore"/>
+            android:layout_marginBottom="49dp" android:layout_above="@+id/credits.professore"
+            android:layout_alignParentStart="true" android:layout_alignEnd="@+id/credits.alunnigrafica"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/imageView4"
             android:src="@drawable/treteste"
-            android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
-            android:layout_below="@+id/credits.alunnigrafica"/>
+            android:layout_below="@+id/credits.alunnigrafica" android:layout_centerHorizontal="true"
+            android:layout_marginTop="63dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/credits_coordinatorenomi"
             android:id="@+id/credits.professore"
-            android:textSize="@dimen/app_dim_normale"
-            android:layout_alignBottom="@+id/credits.coordinatore" android:layout_toEndOf="@+id/credits.coordinatore"
-            android:visibility="visible"/>
+            android:textSize="@dimen/app_dim_titolo3"
+            android:visibility="visible"
+            android:layout_below="@+id/credits.coordinatore" android:layout_alignParentStart="true"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/credits_programmatorinomi"
             android:id="@+id/textView6"
-            android:textSize="@dimen/app_dim_normale"
-            android:layout_below="@+id/credits.alunni" android:layout_alignParentEnd="true"
-            android:visibility="visible"/>
+            android:textSize="@dimen/app_dim_titolo3"
+            android:visibility="visible"
+            android:layout_below="@+id/textView7" android:layout_alignParentStart="true"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/credits_graficonomi"
             android:id="@+id/credits.grafica"
-            android:textSize="@dimen/app_dim_normale" android:layout_above="@+id/credits.alunnigrafica"
-            android:layout_toEndOf="@+id/credits.grafico" android:visibility="visible"/>
+            android:textSize="@dimen/app_dim_titolo3"
+            android:visibility="visible"
+            android:layout_below="@+id/credits.grafico" android:layout_alignParentStart="true"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/credits_alunnigraficanomi"
             android:id="@+id/credits.classegrafica"
-            android:textSize="@dimen/app_dim_normale"
-            android:layout_toEndOf="@+id/credits.alunnigrafica" android:layout_below="@+id/credits.grafico"
-            android:visibility="visible"/>
+            android:textSize="@dimen/app_dim_titolo3"
+            android:visibility="visible"
+            android:layout_below="@+id/credits.alunnigrafica" android:layout_alignParentStart="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credits_programmatori"
+            android:id="@+id/textView7" android:layout_below="@+id/credits.professore"
+            android:layout_alignParentStart="true" android:textSize="@dimen/app_dim_titolo2" android:textStyle="bold"/>
 </RelativeLayout>
