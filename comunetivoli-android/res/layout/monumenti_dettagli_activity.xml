@@ -9,7 +9,7 @@
             android:id="@+id/title_txt" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
             android:width="@dimen/template_topheight" android:text="Villa d&apos;Este" android:height="50dp"
             android:layout_alignParentEnd="true" android:gravity="center" android:textStyle="bold"
-            android:textSize="@dimen/app_dim_titolo2"/>
+            android:textSize="@dimen/app_dim_titolo" android:textColor="@color/template_colorblu"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,8 +49,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_description"
                     android:text="villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este "
-                    android:gravity="center" android:layout_below="@+id/image_monumento"
-                    android:layout_alignParentStart="true" android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/image_monumento"
+                    android:layout_alignParentStart="true" android:layout_marginTop="10dp"
+                    android:textSize="@dimen/template_text" android:gravity="left"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
