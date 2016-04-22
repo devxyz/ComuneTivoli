@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "home_turismo">Turismo</string>
+    <string name = "home_notizie">News</string>
+    <string name = "home_eventi">Eventi</string>
+</resources>
