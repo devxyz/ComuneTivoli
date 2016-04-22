@@ -8,6 +8,8 @@
     <string name="monumenti_acquedotti_descrizionebig">L\'Acquedotto Anio Novus risale al 38 a.C., sotto l\'Impero di Caligola. Si possono trovare molti reperti archeologici dell\'Acquedotto lungo la Via Empolitana, che parte da Tivoli fino ad arrivare Ciciliano, passando per Castel Madama.\n
         Il maggior numero di resti sono concentrati a 2 km di distanza dal Centro di Tivoli, precisamente nella zona Ponte degli Arci. L\'arcata dell\'Acquedotto più vicina alla città è la parte più corposa che rimane della costruzione del ponte, che attraversava l\'Acquedotto dell\'Acqua Marcia fino al Fosso degli Arci. Alcune rovine sono facilmente visibili, poiché due delle quali sono archi che attraversano le strade di percorrenza. Una seconda arcata dell\'Acquedotto, più imponente della prima, faceva parte di un altro ponte lungo circa 275 m e alto circa 35 m, che attraversava il fiume Aniene. Altri resti dell\'Acquedotto Anio Novus si possono ammirare a Valle Barberini, un piccolo immissario vicino il Fosso di San Gregorio.</string>
     <string name="monumenti_acquedotti_url"></string>
+    <string name="monumenti_acquedotti_tred"></string>
+    <string name="monumenti_acquedotti_maps"></string>
     <drawable name="monumenti_acquedotti_fotosmall">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia</drawable>
     <drawable name="monumenti_acquedotti_fotobig">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia_big</drawable>
 
@@ -17,6 +19,8 @@
         Secondo alcuni studiosi e ricercatori, nei pressi di questa straordinaria testimonianza della magnificenza di Roma, doveva trovarsi anche una schola gladiatorum, ma di questa struttura non sono mai state ritrovate tracce.\n
         Scoperto nel 1948 durante alcuni lavori per la realizzazione di un\'arteria stradale, dello storico anfiteatro che si trova nei pressi di Piazza Garibaldi, si possono ammirare solamente alcuni resti. Infatti la struttura originale venne distrutta durante i lavori di costruzione della Rocca Pia, voluta da papa Pio II Piccolomini come difesa dagli attacchi nemici. </string>
     <string name="monumenti_anfiteatro_url"></string>
+    <string name="monumenti_anfiteatro_maps"></string>
+    <string name="monumenti_anfiteatro_tred"></string>
     <drawable name="monumenti_anfiteatro_fotosmall">@drawable/monumenti_anfiteatro_di_bleso</drawable>
     <drawable name="monumenti_anfiteatro_fotobig">@drawable/monumenti_anfiteatro_di_bleso_big</drawable>
 
@@ -25,6 +29,8 @@
     <string name="monumenti_arcata_dell_acquedotto_descrizionebig">L\'acquedotto Anio Vetus fu il secondo acquedotto di Roma, costruito dai censori Marcio Curio Dentato e Fulvio Flacco tra il 272 e il 269 a.C. L\'acqua era captata dal fiume Aniene all\'altezza di Vicovaro, tramite un laghetto artificiale che permetteva la decantazione delle acque.\n
         L\'acquedotto aveva una portata di 180.000 metri cubi d\'acqua al giorno, e seguiva, per mantenersi in quota, un percorso tortuoso e lunghissimo (circa 64 km) quasi sempre sotterraneo. Una sezione dell\'acquedotto Vetus è conservato appena sopra l\'Acquedotto di Acqua Marcia: l\'Anio Vetus forma un angolo intorno alla città di Tivoli, parallelamente alla strada principale che porta al paese. Le sezioni rimaste dell\'Acquedotto sono conservate intatte presso il tratto dell\'Acquedotto di Acqua Marcia.</string>
     <string name="monumenti_arcata_dell_acquedotto_url"></string>
+    <string name="monumenti_arcata_dell_acquedotto_maps"></string>
+    <string name="monumenti_arcata_dell_acquedotto_tred"></string>
     <drawable name="monumenti_arcata_dell_acquedotto_fotosmall">@drawable/monumenti_arcata_dell_acquedotto</drawable>
     <drawable name="monumenti_arcata_dell_acquedotto_fotobig">@drawable/monumenti_arcata_dell_acquedotto_big</drawable>
 
@@ -34,6 +40,8 @@
     <string name="monumenti_mensa_ponderaria_descrizionebig">I resti dell\'antica Mensa Ponderaria, risalenti al I secolo d.C., si trovano nei pressi della Cattedrale di San Lorenzo e vennero scoperti solamente nel 1883 durante dei lavori.\n
         Secondo alcuni studiosi e ricercatori, nei pressi di questa straordinaria testimonianza della magnificenza di Roma, doveva trovarsi anche una schola gladiatorum, ma di questa struttura non sono mai state ritrovate tracce.</string>
     <string name="monumenti_mensa_ponderaria_url"></string>
+    <string name="monumenti_mensa_ponderaria_maps"></string>
+    <string name="monumenti_mensa_ponderaria_tred"></string>
     <drawable name="monumenti_mensa_ponderaria_fotosmall">@drawable/monumenti_mensa_ponderaria</drawable>
     <drawable name="monumenti_mensa_ponderaria_fotobig">@drawable/monumenti_mensa_ponderaria_big</drawable>
 
@@ -43,6 +51,8 @@
     <string name="monumenti_piazza_campitelli_descrizionebig">Piazza Campitelli è uno spazio pubblico situato alla fine dell\'omonima via, nei pressi della suggestiva Casa Gotica, delimitata a destra da uno degli accessi a Villa d\'Este ed a sinistra dal Palazzo delle Missioni. Al centro della piazza si trova anche la storica Chiesa di San Pietro alla Carità.\n
         In passato la piazza rappresentava una parte della zona sulla quale si trovava la Villa romana di Publio Cornelio Scipione Nasica. Oggi l\'intera area è stata totalmente ristrutturata e la gradinata che la caratterizza è stata dedicata al grande acquerellista Ettore Franz, cittadino onorario della Città di Tivoli. A Piazza Campitelli si trova anche una bella meridiana, comunemente conosciuta come orologio solare. </string>
     <string name="monumenti_piazza_campitelli_url"></string>
+    <string name="monumenti_piazza_campitelli_maps"></string>
+    <string name="monumenti_piazza_campitelli_tred"></string>
     <drawable name="monumenti_piazza_campitelli_fotosmall">@drawable/monumenti_piazza_campitelli</drawable>
     <drawable name="monumenti_piazza_campitelli_fotobig">@drawable/monumenti_piazza_campitelli_big</drawable>
 
@@ -55,6 +65,8 @@
         Nei pressi della piazza si trova anche il Convitto Nazionale Duca Amedeo di Savoia, luogo dove in passato la borghesia italiana mandava i propri figli per apprendere l\'educazione scolastica, oggi sede della Scuola Elementare e della Scuola Media. Menzione a parte va fatta per l\'Arco dei Padri Costituenti, preziosa scultura di Arnaldo Pomodoro realizzata nel 2009.
     </string>
     <string name="monumenti_piazza_garibaldi_url"></string>
+    <string name="monumenti_piazza_garibaldi_tred"></string>
+    <string name="monumenti_piazza_garibaldi_maps"></string>
     <drawable name="monumenti_piazza_garibaldi_fotosmall">@drawable/monumenti_piazza_garibaldi</drawable>
     <drawable name="monumenti_piazza_garibaldi_fotobig">@drawable/monumenti_piazza_garibaldi_big</drawable>
 
@@ -66,6 +78,8 @@
         Ancora oggi questa affascinante riproposizione religiosa richiama cristiani e turisti che assistono silenziosi alla processione ed al celebre rito della benedizione delle acque del fiume Aniene che avviene proprio sul Ponte Gregoriano.\n
         Dallo stesso ponte è possibile ammirare oltre alle splendide cascate di Villa Gregoriana, anche l\'antica acropoli di Tivoli con il Tempio di Vesta ed il Tempio della Sibilla.</string>
     <string name="monumenti_ponte_gregoriano_url"></string>
+    <string name="monumenti_ponte_gregoriano_maps"></string>
+    <string name="monumenti_ponte_gregoriano_tred"></string>
     <drawable name="monumenti_ponte_gregoriano_fotosmall">@drawable/monumenti_ponte_gregoriano</drawable>
     <drawable name="monumenti_ponte_gregoriano_fotobig">@drawable/monumenti_ponte_gregoriano_big</drawable>
 
@@ -77,6 +91,8 @@
         Accessibile in passato attraverso un ponte levatoio, la Rocca Pia nell\'Ottocento venne utilizzata anche come carcere mandamentale, ed è rimasta tale fino al 1960.\n
         Oggi questa struttura è chiusa al pubblico e resta in attesa di una nuova destinazione. </string>
     <string name="monumenti_rocca_pia_url"></string>
+    <string name="monumenti_rocca_pia_maps"></string>
+    <string name="monumenti_rocca_pia_tred"></string>
     <drawable name="monumenti_rocca_pia_fotosmall">@drawable/monumenti_rocca_pia</drawable>
     <drawable name="monumenti_rocca_pia_fotobig">@drawable/monumenti_rocca_pia_big</drawable>
 
@@ -91,6 +107,8 @@
         Grazie al meticoloso lavoro svolto in collaborazione con la Soprintendenza Archeologia del Lazio e dell\'Etruria Meridionale, il primo maggio del 2015 c\'è stata l\'apertura straordinaria al pubblico del santuario, in concomitanza con l\'inaugurazione di Expo 2015 e del 3230° anniversario della nascita di Tivoli, con lo scopo di rendere questo sito al centro della proposta culturale della città.\n
         Oggi questa struttura è chiusa al pubblico. </string>
     <string name="monumenti_santuario_ercole_url"></string>
+    <string name="monumenti_santuario_ercole_tred"></string>
+    <string name="monumenti_santuario_ercole_maps"></string>
     <drawable name="monumenti_santuario_ercole_fotosmall">@drawable/monumenti_santuario_ercole</drawable>
     <drawable name="monumenti_santuario_ercole_fotobig">@drawable/monumenti_santuario_ercole_big</drawable>
 
@@ -100,6 +118,8 @@
     <string name="monumenti_tempio_della_sibilla_descrizionebig">Situato sul punto più alto dell\'acropoli della Tibur Superbum, l\'attuale Tivoli, il Tempio della Sibilla è un\'antica struttura di epoca romana che si innalza vicino al Tempio di Vesta.\n
         Costruito intorno al II secolo a.C. con una caratteristica forma rettangolare, oggi offre una visuale spettacolare sia se visto dalla Piazza del Tempio di Vesta sia se ammirato dal suggestivo Ponte Gregoriano.</string>
     <string name="monumenti_tempio_della_sibilla_url"></string>
+    <string name="monumenti_tempio_della_sibilla_tred"></string>
+    <string name="monumenti_tempio_della_sibilla_maps"></string>
     <drawable name="monumenti_tempio_della_sibilla_fotosmall">@drawable/monumenti_tempio_della_sibilla</drawable>
     <drawable name="monumenti_tempio_della_sibilla_fotobig">@drawable/monumenti_tempio_della_sibilla_big</drawable>
 
@@ -110,6 +130,8 @@
         Raggiungibile oltrepassando un cancello e visibile anche da Ponte Gregoriano, il tempio, risalente al I secolo a.C. è il monumento più conosciuto dell\'antica città di Tibur. E\' dedicato con molta probabilità a Vesta, la dea del focolare, il cui culto era affidato alle Vestali, o a Tiburno, l\'eroe che avrebbe dato il nome alla città. Oggi si presenta con una pianta rotonda caratterizzata da linee eleganti e dal suggestivo scenario paesaggistico che gli fa da scenografia. Nel corso dei secoli il Tempio di Vesta è diventato il soggetto più ritratto dagli artisti italiani e stranieri e dai ricchi aristocratici che nell\'Ottocento arrivavano a Tivoli per il cosiddetto Grand Tour.\n
     </string>
     <string name="monumenti_tempio_di_vesta_url"></string>
+    <string name="monumenti_tempio_di_vesta_maps"></string>
+    <string name="monumenti_tempio_di_vesta_tred"></string>
     <drawable name="monumenti_tempio_di_vesta_fotosmall">@drawable/monumenti_tempio_di_vesta</drawable>
     <drawable name="monumenti_tempio_di_vesta_fotobig">@drawable/monumenti_tempio_di_vesta_big</drawable>
 
@@ -121,6 +143,8 @@
         Oggi il Mausoleo si presenta pieno di crepe, ricoperto da una fitta vegetazione selvaggia e parzialmente celato da un muro di contenimento costruito per bloccare gli straripamenti del vicino fiume Aniene.</string>
 
     <string name="monumenti_tomba_dei_plauzi_url"></string>
+    <string name="monumenti_tomba_dei_plauzi_tred"></string>
+    <string name="monumenti_tomba_dei_plauzi_maps"></string>
     <drawable name="monumenti_tomba_dei_plauzi_fotosmall">@drawable/monumenti_tomba_dei_plauzi</drawable>
     <drawable name="monumenti_tomba_dei_plauzi_fotobig">@drawable/monumenti_tomba_dei_plauzi_big</drawable>
 
@@ -140,6 +164,8 @@
     Di Grande rilievo il Teatro Marittimo, uno dei monumenti più noti e rappresentati di Villa Adriana e uno dei simboli dell\'unicità e della concezione innovativa dell\'impianto architettonico dell\'intero complesso residenziale. L\'Edificio prende il nome da un raffinato fregio figurato in marmo con soggetto marino, che ne decorava la trabeazione. Costituito da una forma circolare, sorretto da colonne ioniche e coperto da volta a botte, si riflette sull\'acqua di un ampio canale. Il Teatro Marittimo può essere identificato come una vera e propria domus, una sorta di residenza minore allinterno della residenza imperiale.
 </string>
     <string name="monumenti_villa_adriana_url"></string>
+    <string name="monumenti_villa_adriana_maps"></string>
+    <string name="monumenti_villa_adriana_tred"></string>
     <drawable name="monumenti_villa_adriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
     <drawable name="monumenti_villa_adriana_fotobig">@drawable/monumenti_villa_adriana_big</drawable>
 
@@ -154,6 +180,8 @@
     La maggior parte delle fontane esterne possono essere considerate dei teatri d\'acqua, come la Rometta, caratterizzata dalla scultura di Roma in trono, o l\'imponente Fontana dell\'Ovato, più comunemente chiamata Fontana di Tivoli, perla architettonica che conclude l\'altrettanto famoso Viale delle Cento Fontane. Di notevole interesse la Fontana del Bicchierone, opera di Gian Lorenzo Bernini e le cosiddette "fontane musicali", la Fontana degli Uccelli e la Fontana dell\'Organo, dotate di alcuni congegni azionati dall\'acqua che riproducono armonie musicali. Degna di nota invece la Fontana della Proserpina, composta da un ninfeo centrale protetto da due colonne tortili, pensata anticamente come la Fontana degli Imperatori. Più recente, ma altrettanto bella, è la Fontana del Nettuno, uno dei luoghi più fotografati da turisti e cittadini.
     </string>
     <string name="monumenti_villa_d_este_url"></string>
+    <string name="monumenti_villa_d_este_maps"></string>
+    <string name="monumenti_villa_d_este_tred"></string>
     <drawable name="monumenti_villa_d_este_fotosmall">@drawable/monumenti_villa_deste</drawable>
     <drawable name="monumenti_villa_d_este_fotobig">@drawable/monumenti_villa_deste_big</drawable>
 
@@ -165,6 +193,8 @@
         Dal 2005 l\'intero territorio della villa è sotto la tutela e la gestione del FAI (Fondo Ambiente Italiano) ed è considerato un unicum mondiale, luogo dove la natura e la costante opera dell\'uomo si fondono, tra straordinarie bellezze paesaggistiche ed i resti dell\'antica villa archeologica di Publio Manlio Vopisco.\n
         Villa Gregoriana è famosa in tutto il mondo sia per la Grande Cascata, scenografico e fotografato getto d\'acqua creato dal fiume Aniene, sia per le Grotte di Nettuno e Grotte delle Sirene, caverne erose dallo stesso fiume poste sotto la zona del Tempio di Vesta e raggiungibili attraverso una strada alberata ornata da una grande varietà di piante. Alla straordinaria villa si aggiunge la vicinanza del Ponte Gregoriano, affascinante struttura fatta costruire sempre da papa Gregorio XVI e che oggi collega il parco al centro storico di Tivoli. Da qui si può ammirare uno straordinario panorama della Valle dell\'Aniene e dell\'antica acropoli. </string>
     <string name="monumenti_villa_gregoriana_url"></string>
+    <string name="monumenti_villa_gregoriana_tred"></string>
+    <string name="monumenti_villa_gregoriana_maps"></string>
     <drawable name="monumenti_villa_gregoriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
     <drawable name="monumenti_villa_gregoriana_fotobig">@drawable/monumenti_villa_gregoriana_big</drawable>
 
