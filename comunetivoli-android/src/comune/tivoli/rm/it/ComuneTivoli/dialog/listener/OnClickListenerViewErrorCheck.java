@@ -3,8 +3,7 @@ package comune.tivoli.rm.it.ComuneTivoli.dialog.listener;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
-import it.gov.fermitivoli.util.DebugUtil;
-import it.gov.fermitivoli.util.DialogUtil;
+import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
 
 /**
  * Created by stefano on 19/03/15.
@@ -40,8 +39,6 @@ public abstract class OnClickListenerViewErrorCheck implements View.OnClickListe
             @Override
             public void run() {
                 DialogUtil.openErrorDialog(activity, "Errore", "Errore durante l'esecuzione dell'operazione", ex);
-                if (DebugUtil.DEBUG__OnClickListenerViewErrorCheck)
-                    Log.d("CLICK_LISTENER", "Error", ex);
 
             }
         });
