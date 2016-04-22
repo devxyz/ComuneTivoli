@@ -38,12 +38,12 @@ public class MonumentiDettagliActivity extends Activity {
         setContentView(R.layout.monumenti_dettagli_activity);
         title_text = (TextView) findViewById(R.id.title_txt);
         dettagli_text = (TextView) findViewById(R.id.txt_description);
-        image_monumento = (ImageView) findViewById(R.id.monumenti_image);
+        image_monumento = (ImageView) findViewById(R.id.image_monumento);
         web_btn = (ImageButton) findViewById(R.id.web_btn);
         tred_btn = (ImageButton) findViewById(R.id.tred_btn);
         maps_btn = (ImageButton) findViewById(R.id.maps_btn);
 
-        int position = getIntent().getExtras().getInt("position");
+        int position = getIntent().getExtras().getInt("posizione");
         try {
             //DialogUtil.openInfoDialog(this, "debug", "Posizione " + position);
             ArrayList<MonumentiComune> mm = MonumentiUtil.elencoMonumenti(this);
