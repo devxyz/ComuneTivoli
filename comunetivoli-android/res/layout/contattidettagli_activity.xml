@@ -33,13 +33,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_maps_dettagli"
-            android:src="@drawable/web_arrow"
+            android:src="@drawable/icona_maps"
             android:layout_alignTop="@+id/btn_chiama_dettagli" android:layout_centerHorizontal="true"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_email_dettagli"
-            android:src="@drawable/contatti"
-            android:layout_alignTop="@+id/btn_maps_dettagli" android:layout_toEndOf="@+id/btn_maps_dettagli"
-            android:layout_marginStart="83dp"/>
+            android:src="@drawable/icona_contatti"
+            android:layout_alignTop="@+id/btn_maps_dettagli" android:layout_alignParentEnd="true"/>
 </RelativeLayout>
