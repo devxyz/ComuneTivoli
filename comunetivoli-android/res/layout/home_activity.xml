@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/home_btn_turismo" android:layout_below="@+id/home_turismo"
             android:layout_alignParentStart="true"
-            android:src="@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia"/>
+            android:src="@drawable/home_sibilla"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/home_btn_eventi"
                  android:src="@drawable/eventi_small"
                  android:layout_below="@+id/home_eventi" android:layout_alignParentEnd="true"/>
@@ -42,6 +42,6 @@
               android:layout_alignTop="@+id/imageButton" android:layout_toEndOf="@+id/home_btn_news"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/imageButton"
-                 android:src="@drawable/facebook"
+                 android:src="@drawable/home_facebook"
                  android:layout_centerVertical="true" android:layout_alignStart="@+id/home_btn_eventi"/>
 </RelativeLayout>
