@@ -13,7 +13,7 @@ import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
  */
 
 
-public class MonumentiDettagliActivity extends Activity {
+public class MonumentiDettagli2Activity extends Activity {
 
     TextView title_text;
     TextView dettagli_text;

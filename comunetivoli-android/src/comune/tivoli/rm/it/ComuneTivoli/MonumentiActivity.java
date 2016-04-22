@@ -32,7 +32,7 @@ public class MonumentiActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //MonumentiComune mc = monumenti.get(position);
-                Intent i = new Intent(MonumentiActivity.this,MonumentiDettagliActivity.class);
+                Intent i = new Intent(MonumentiActivity.this,MonumentiDettagli2Activity.class);
                 i.putExtra("posizione",position);
                 startActivity(i);
 
