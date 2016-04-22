@@ -34,5 +34,6 @@
         <activity android:theme="@style/NoActionBar" android:name=".RistoroDettagli2Activity" android:label="ristorodettagli_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".TemplateActivity"/>
         <activity android:name=".HomeActivity"/>
+        <activity android:name=".util.ImageScrollActivity"/>
     </application>
 </manifest>

@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import comune.tivoli.rm.it.ComuneTivoli.util.ImageScrollActivity;
 
 /**
  * Created by millozzi.stefano on 15/03/2016.
@@ -23,6 +24,8 @@ public class DebugHomeActivity extends Activity {
     Button btn_crediti;
     Button btn_home;
 
+    Button btnscroll;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +39,15 @@ public class DebugHomeActivity extends Activity {
         btn_fb_ = (Button) findViewById(R.id.btn_fb);
         btn_crediti = (Button) findViewById(R.id.btn_crediti);
         btn_home = (Button) findViewById(R.id.btn_home );
+
+        btnscroll=(Button) findViewById(R.id.btnscroll);
+        btnscroll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(DebugHomeActivity.this, ImageScrollActivity.class);
+                startActivity(i);
+            }
+        }) ;
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
