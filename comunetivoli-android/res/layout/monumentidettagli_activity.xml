@@ -13,7 +13,7 @@
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/image_villa_deste"
+            android:id="@+id/image_monumento"
             android:src="@drawable/monumenti_villa_deste_big"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/title_txt"
@@ -22,18 +22,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/web_btn"
-            android:layout_centerHorizontal="true"/>
+            android:src="@drawable/ic_launcher" android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" android:layout_marginStart="29dp"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/maps_btn"
+            android:src="@drawable/ic_launcher" android:layout_alignTop="@+id/tred_btn"
+            android:layout_alignParentEnd="true" android:layout_marginEnd="31dp"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tred_btn"
+            android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_launcher"/>
     <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/scrollView" android:layout_below="@+id/image_villa_deste"
+            android:id="@+id/scrollView" android:layout_below="@+id/image_monumento"
             android:layout_alignParentStart="true">
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/txt_description"
                 android:text="villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este "
-                android:gravity="center" android:layout_below="@+id/image_villa_deste"
+                android:gravity="center" android:layout_below="@+id/image_monumento"
                 android:layout_alignParentStart="true"/>
     </ScrollView>
 </RelativeLayout>
