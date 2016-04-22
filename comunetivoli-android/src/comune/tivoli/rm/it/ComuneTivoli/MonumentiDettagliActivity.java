@@ -16,6 +16,11 @@ import java.util.ArrayList;
  * Created by millozzi.stefano on 15/03/2016.
  */
 
+/**
+ http://www.visittivoli.eu/virtual-tour/santuario-di-ercole-vincitore/
+ http://www.visittivoli.eu/virtual-tour/villa-d-este/
+ http://www.visittivoli.eu/virtual-tour/villa-adriana/
+ */
 
 public class MonumentiDettagliActivity extends Activity {
 
@@ -25,6 +30,7 @@ public class MonumentiDettagliActivity extends Activity {
     ImageButton web_btn;
     ImageButton tred_btn;
     ImageButton maps_btn;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
