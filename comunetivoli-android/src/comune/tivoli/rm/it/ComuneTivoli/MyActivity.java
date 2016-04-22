@@ -11,30 +11,44 @@ public class MyActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
-    ImageView myactivity_imageView ;
+    ImageView myactivity_imageView;
     RelativeLayout rr;
-
+    private boolean close = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        rr= (RelativeLayout) findViewById(R.id.my_splash);
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                }
+                rr.callOnClick();
+            }
+        });
+        t.start();
+
+        rr = (RelativeLayout) findViewById(R.id.my_splash);
         rr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MyActivity.this,DebugHomeActivity.class);
+                if (close) return;
+                Intent i = new Intent(MyActivity.this, DebugHomeActivity.class);
                 startActivity(i);
+                close = true;
             }
         });
 
-        myactivity_imageView =  (ImageView )findViewById(R.id.myactivity_imageView );
+        myactivity_imageView = (ImageView) findViewById(R.id.myactivity_imageView);
 
         myactivity_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MyActivity.this,DebugHomeActivity.class);
+                Intent i = new Intent(MyActivity.this, DebugHomeActivity.class);
                 startActivity(i);
 
 

@@ -5,8 +5,10 @@
     <dimen name="template_rossobasso">7dp</dimen>
     <dimen name="template_blubasso">5dp</dimen>
     <dimen name="app_dim_titolo">30dp</dimen>
-    <dimen name="app_dim_sottotitolo">20dp</dimen>
-    <dimen name="app_dim_evidenziato">15dp</dimen>
-    <dimen name="app_dim_normale">15dp</dimen>
+    <dimen name="app_dim_titolo2">25dp</dimen>
+    <dimen name="app_dim_titolo3">20dp</dimen>
+    <dimen name="app_dim_sottotitolo">28dp</dimen>
+    <dimen name="app_dim_evidenziato">12dp</dimen>
+    <dimen name="app_dim_normale">12dp</dimen>
 
 </resources>

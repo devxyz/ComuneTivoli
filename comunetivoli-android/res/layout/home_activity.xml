@@ -5,4 +5,43 @@
                 android:layout_height="match_parent" android:id="@+id/xyz">
 
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_turismo"
+            android:id="@+id/home_turismo" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:textSize="@dimen/app_dim_titolo2" android:layout_alignEnd="@+id/home_btn_turismo"
+            android:gravity="center_horizontal"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="@string/home_eventi" android:id="@+id/home_eventi"
+              android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+              android:textSize="@dimen/app_dim_titolo2" android:layout_alignStart="@+id/home_btn_eventi"
+              android:gravity="center_horizontal"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_btn_turismo" android:layout_below="@+id/home_turismo"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/home_btn_eventi"
+                 android:src="@drawable/eventi_small"
+                 android:layout_below="@+id/home_eventi" android:layout_alignParentEnd="true"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="@string/home_notizie" android:id="@+id/textView3"
+              android:textSize="@dimen/app_dim_titolo2"
+              android:layout_below="@+id/home_btn_turismo" android:layout_alignParentStart="true"
+              android:layout_alignEnd="@+id/home_btn_news" android:gravity="center_horizontal"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/home_btn_news"
+                 android:src="@drawable/latestnews_small3"
+                 android:layout_below="@+id/textView3" android:layout_alignParentStart="true"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="FB" android:id="@+id/textView6"
+              android:textSize="@dimen/app_dim_titolo2"
+              android:gravity="center_horizontal"
+              android:layout_alignTop="@+id/imageButton" android:layout_toEndOf="@+id/home_btn_news"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/imageButton"
+                 android:src="@drawable/facebook"
+                 android:layout_centerVertical="true" android:layout_alignStart="@+id/home_btn_eventi"/>
 </RelativeLayout>
