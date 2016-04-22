@@ -35,28 +35,28 @@ public class DebugHomeActivity extends Activity {
         btn_turismo = (Button) findViewById(R.id.btn_turismo);
         btn_fb_ = (Button) findViewById(R.id.btn_fb);
         btn_crediti = (Button) findViewById(R.id.btn_crediti);
-        btn_home = (Button) findViewById(R.id.btn_home );
+        btn_home = (Button) findViewById(R.id.btn_home);
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(DebugHomeActivity.this,HomeActivity.class);
+                Intent i = new Intent(DebugHomeActivity.this, HomeActivity.class);
                 startActivity(i);
             }
-        }) ;
-     btn_news.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-             Intent i= new Intent(DebugHomeActivity.this, TemplateActivity.class);
-             startActivity(i);
+        });
+        btn_news.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DebugHomeActivity.this, TemplateActivity.class);
+                startActivity(i);
 
 
-         }
-     });
+            }
+        });
         btn_contatti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(DebugHomeActivity.this, ContattiActivity.class);
+                Intent i = new Intent(DebugHomeActivity.this, ContattiActivity.class);
                 startActivity(i);
             }
         });
@@ -64,7 +64,7 @@ public class DebugHomeActivity extends Activity {
         btn_eventi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(DebugHomeActivity.this, EventiActivity.class);
+                Intent i = new Intent(DebugHomeActivity.this, EventiActivity.class);
                 startActivity(i);
             }
         });
@@ -72,7 +72,7 @@ public class DebugHomeActivity extends Activity {
         btn_turismo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(DebugHomeActivity.this, MonumentiActivity.class);
+                Intent i = new Intent(DebugHomeActivity.this, MonumentiActivity.class);
                 startActivity(i);
             }
         });
@@ -80,7 +80,7 @@ public class DebugHomeActivity extends Activity {
         btn_fb_.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(DebugHomeActivity.this, FacebookActivity.class);
+                Intent i = new Intent(DebugHomeActivity.this, FacebookActivity.class);
                 startActivity(i);
             }
         });
@@ -88,19 +88,19 @@ public class DebugHomeActivity extends Activity {
         btn_crediti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(DebugHomeActivity.this, CreditiActivity.class);
+                Intent i = new Intent(DebugHomeActivity.this, CreditiActivity.class);
                 startActivity(i);
             }
         });
-    btn_web.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-String url="http://www.comune.tivoli.rm.it/";
-            Uri uriUrl = Uri.parse(url);
-            Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-            startActivity(launchBrowser);
-        }
-    });
+        btn_web.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.comune.tivoli.rm.it/";
+                Uri uriUrl = Uri.parse(url);
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
+            }
+        });
 
     }
 

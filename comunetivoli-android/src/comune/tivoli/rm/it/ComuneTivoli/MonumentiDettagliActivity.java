@@ -1,8 +1,11 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,9 +20,9 @@ import java.util.ArrayList;
  */
 
 /**
- http://www.visittivoli.eu/virtual-tour/santuario-di-ercole-vincitore/
- http://www.visittivoli.eu/virtual-tour/villa-d-este/
- http://www.visittivoli.eu/virtual-tour/villa-adriana/
+ * http://www.visittivoli.eu/virtual-tour/santuario-di-ercole-vincitore/
+ * http://www.visittivoli.eu/virtual-tour/villa-d-este/
+ * http://www.visittivoli.eu/virtual-tour/villa-adriana/
  */
 
 public class MonumentiDettagliActivity extends Activity {
@@ -47,7 +50,7 @@ public class MonumentiDettagliActivity extends Activity {
         try {
             //DialogUtil.openInfoDialog(this, "debug", "Posizione " + position);
             ArrayList<MonumentiComune> mm = MonumentiUtil.elencoMonumenti(this);
-            MonumentiComune monumento = mm.get(position);
+            final MonumentiComune monumento = mm.get(position);
             title_text.setText(monumento.titolo);
             dettagli_text.setText(monumento.descrizione);
             final Drawable foto_big = getResources().getDrawable(monumento.foto_big);
@@ -56,6 +59,21 @@ public class MonumentiDettagliActivity extends Activity {
             else {
                 //image_monumento.setImageDrawable(null);
             }
+
+            if (monumento.url.length() > 0)
+                tred_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String url = monumento.url;
+                        Uri uriUrl = Uri.parse(url);
+                        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                        startActivity(launchBrowser);
+
+                    }
+                });
+            else
+                tred_btn.setVisibility(View.INVISIBLE);
+
 
         } catch (Throwable e) {
             DialogUtil.openErrorDialog(this, "Errore", "Errore inatteso " + position, e);
