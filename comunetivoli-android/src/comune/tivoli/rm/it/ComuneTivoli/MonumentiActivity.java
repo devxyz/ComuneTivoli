@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import comune.tivoli.rm.it.ComuneTivoli.listview.MonumentiComuneListAdapter;
-import comune.tivoli.rm.it.ComuneTivoli.model.ContattiComune;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
 
@@ -32,8 +31,8 @@ public class MonumentiActivity extends Activity {
         monumenti_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                MonumentiComune mc = monumenti.get(position);
-                Intent i = new Intent(MonumentiActivity.this,MonumentidettagliActivity.class);
+                //MonumentiComune mc = monumenti.get(position);
+                Intent i = new Intent(MonumentiActivity.this,MonumentiDettagliActivity.class);
                 i.putExtra("posizione",position);
                 startActivity(i);
 

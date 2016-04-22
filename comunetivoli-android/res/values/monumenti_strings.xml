@@ -68,7 +68,7 @@
     <string name="monumenti_tempio_della_sibilla_descrizione">Il Tempio della Sibilla si trova sul punto più alto dell\'antica acropoli di Tivoli. Eretto intorno al II secolo d.C. è considerato uno dei più importanti resti archeologici della città.</string>
     <string name="monumenti_tempio_della_sibilla_url"></string>
     <drawable name="monumenti_tempio_della_sibilla_fotosmall">@drawable/monumenti_tempio_della_sibilla</drawable>
-    <drawable name="monumenti_tempio_della_sibills_fotobig">@drawable/monumenti_tempio_della_sibilla_big</drawable>
+    <drawable name="monumenti_tempio_della_sibilla_fotobig">@drawable/monumenti_tempio_della_sibilla_big</drawable>
 
 
     <string name="monumenti_tempio_di_vesta_titolo">Tempio di Vesta</string>

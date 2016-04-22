@@ -29,7 +29,7 @@
         <activity android:theme="@style/NoActionBar"  android:name=".StreetviewActivity" android:label="streetview_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".YoutubeActivity" android:label="youtube_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".MonumentiActivity" android:label="monumenti_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".MonumentidettagliActivity" android:label="monumentidettagli_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".MonumentiDettagliActivity" android:label="monumentidettagli_activity"/>
         <activity android:theme="@style/NoActionBar"  android:name=".RistoroActivity" android:label="ristoro_activity"/>
         <activity  android:theme="@style/NoActionBar" android:name=".RistorodettagliActivity" android:label="ristorodettagli_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".TemplateActivity"/>

@@ -17,6 +17,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_acquedotti_titolo),
                 a.getResources().getString(R.string.monumenti_acquedotti_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_acquedotti_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_acquedotti_fotobig),
                 a.getResources().getString(R.string.monumenti_acquedotti_url)
         );
 
@@ -24,6 +25,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_anfiteatro_titolo),
                 a.getResources().getString(R.string.monumenti_anfiteatro_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_anfiteatro_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_anfiteatro_fotobig),
                 a.getResources().getString(R.string.monumenti_anfiteatro_url)
         );
 
@@ -31,6 +33,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_arcata_dell_acquedotto_titolo),
                 a.getResources().getString(R.string.monumenti_arcata_dell_acquedotto_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_arcata_dell_acquedotto_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_arcata_dell_acquedotto_fotobig),
                 a.getResources().getString(R.string.monumenti_arcata_dell_acquedotto_url)
         );
 
@@ -38,6 +41,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_mensa_ponderaria_titolo),
                 a.getResources().getString(R.string.monumenti_mensa_ponderaria_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_mensa_ponderaria_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_mensa_ponderaria_fotobig),
                 a.getResources().getString(R.string.monumenti_mensa_ponderaria_url)
         );
 
@@ -45,6 +49,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_piazza_campitelli_titolo),
                 a.getResources().getString(R.string.monumenti_piazza_campitelli_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_piazza_campitelli_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_piazza_campitelli_fotobig),
                 a.getResources().getString(R.string.monumenti_piazza_campitelli_url)
         );
 
@@ -52,6 +57,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_piazza_garibaldi_titolo),
                 a.getResources().getString(R.string.monumenti_piazza_garibaldi_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_piazza_garibaldi_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_piazza_garibaldi_fotobig),
                 a.getResources().getString(R.string.monumenti_piazza_garibaldi_url)
         );
 
@@ -59,6 +65,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_ponte_gregoriano_titolo),
                 a.getResources().getString(R.string.monumenti_ponte_gregoriano_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_ponte_gregoriano_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_ponte_gregoriano_fotobig),
                 a.getResources().getString(R.string.monumenti_ponte_gregoriano_url)
         );
 
@@ -66,6 +73,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_rocca_pia_titolo),
                 a.getResources().getString(R.string.monumenti_rocca_pia_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_rocca_pia_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_rocca_pia_fotobig),
                 a.getResources().getString(R.string.monumenti_rocca_pia_url)
         );
 
@@ -73,6 +81,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_santuario_ercole_titolo),
                 a.getResources().getString(R.string.monumenti_santuario_ercole_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_santuario_ercole_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_santuario_ercole_fotobig),
                 a.getResources().getString(R.string.monumenti_santuario_ercole_url)
         );
 
@@ -80,6 +89,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_tempio_della_sibilla_titolo),
                 a.getResources().getString(R.string.monumenti_tempio_della_sibilla_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_tempio_della_sibilla_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_tempio_della_sibilla_fotobig),
                 a.getResources().getString(R.string.monumenti_tempio_della_sibilla_url)
         );
 
@@ -87,6 +97,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_tempio_di_vesta_titolo),
                 a.getResources().getString(R.string.monumenti_tempio_di_vesta_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_tempio_di_vesta_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_tempio_di_vesta_fotobig),
                 a.getResources().getString(R.string.monumenti_tempio_di_vesta_url)
         );
 
@@ -94,6 +105,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_tomba_dei_plauzi_titolo),
                 a.getResources().getString(R.string.monumenti_tomba_dei_plauzi_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_tomba_dei_plauzi_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_tomba_dei_plauzi_fotobig),
                 a.getResources().getString(R.string.monumenti_tomba_dei_plauzi_url)
         );
 
@@ -101,6 +113,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_villa_adriana_titolo),
                 a.getResources().getString(R.string.monumenti_villa_adriana_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_villa_adriana_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_villa_adriana_fotobig),
                 a.getResources().getString(R.string.monumenti_villa_adriana_url)
         );
 
@@ -109,6 +122,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_villa_d_este_titolo),
                 a.getResources().getString(R.string.monumenti_villa_d_este_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_villa_d_este_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_villa_d_este_fotobig),
                 a.getResources().getString(R.string.monumenti_villa_d_este_url)
         );
 
@@ -116,6 +130,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_villa_gregoriana_titolo),
                 a.getResources().getString(R.string.monumenti_villa_gregoriana_descrizione),
                 a.getResources().getDrawable(R.drawable.monumenti_villa_gregoriana_fotosmall),
+                a.getResources().getDrawable(R.drawable.monumenti_villa_gregoriana_fotobig),
                 a.getResources().getString(R.string.monumenti_villa_gregoriana_url)
         );
 

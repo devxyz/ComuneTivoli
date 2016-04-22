@@ -64,7 +64,7 @@ public class MonumentiComuneListAdapter extends BaseAdapter {
         monumenti_descrizione.setText(mc.descrizione);
         monumenti_titolo.setText(mc.titolo);
 
-        monumenti_image.setImageDrawable(mc.foto);
+        monumenti_image.setImageDrawable(mc.foto_small);
 
 
         return listItem;
