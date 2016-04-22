@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
 
@@ -44,6 +45,7 @@ public class MonumentiDettagliActivity extends Activity {
             title_text.setText(monumento.titolo);
             dettagli_text.setText(monumento.descrizione);
             image_monumento.setImageDrawable(monumento.foto_big);
+            DialogUtil.openInfoDialog(this,"debug","Posizione "+position);
         }catch  (Throwable e){
 
         }
