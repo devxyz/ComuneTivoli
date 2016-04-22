@@ -46,6 +46,7 @@ public class MonumentiDettagliActivity extends Activity {
         tred_btn = (ImageButton) findViewById(R.id.tred_btn);
         maps_btn = (ImageButton) findViewById(R.id.maps_btn);
 
+        
         int position = getIntent().getExtras().getInt("posizione");
         try {
             //DialogUtil.openInfoDialog(this, "debug", "Posizione " + position);
