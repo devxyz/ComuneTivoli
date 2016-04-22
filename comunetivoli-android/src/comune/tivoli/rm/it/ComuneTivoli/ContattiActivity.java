@@ -31,7 +31,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_descrizione_anagrafe_tivoli),
                 getResources().getString(R.string.contatti_telefono_tivoli),
                 getResources().getString(R.string.contatti_indirizzo_tivoli),
-                getResources().getString(R.string.contatti_email_tivoli)
+                getResources().getString(R.string.contatti_email_tivoli),
+                getResources().getString(R.string.contatti_maps_tivoli)
         );
 
         ContattiComune urp = new ContattiComune(
@@ -39,7 +40,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_descrizione_urp_tivoli),
                 getResources().getString(R.string.contatti_telefono_urp_tivoli),
                 getResources().getString(R.string.contatti_indirizzo_urp_tivoli),
-                getResources().getString(R.string.contatti_email_urp_tivoli)
+                getResources().getString(R.string.contatti_email_urp_tivoli),
+                getResources().getString(R.string.contatti_maps_urp_tivoli)
         );
 
         ContattiComune anagrafe = new ContattiComune(
@@ -47,7 +49,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_descrizione_anagrafe_tivoli),
                 getResources().getString(R.string.contatti_telefono_anagrafe_tivoli),
                 getResources().getString(R.string.contatti_indirizzo_anagrafe_tivoli),
-                getResources().getString(R.string.contatti_email_anagrafe_tivoli)
+                getResources().getString(R.string.contatti_email_anagrafe_tivoli),
+                getResources().getString(R.string.contatti_maps_anagrafe_tivoli)
         );
 
         ContattiComune villa_adriana = new ContattiComune(
@@ -55,7 +58,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_descrizione_villa_adriana),
                 getResources().getString(R.string.contatti_telefono_villa_adriana),
                 getResources().getString(R.string.contatti_indirizzo_villa_adriana),
-                getResources().getString(R.string.contatti_email_villa_adriana)
+                getResources().getString(R.string.contatti_email_villa_adriana),
+                getResources().getString(R.string.contatti_maps_villa_adriana)
         );
 
         ContattiComune tivoli_terme = new ContattiComune(
@@ -63,7 +67,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_descrizione_tivoli_terme),
                 getResources().getString(R.string.contatti_telefono_tivoli_terme),
                 getResources().getString(R.string.contatti_indirizzo_tivoli_terme),
-                getResources().getString(R.string.contatti_email_tivoli_terme)
+                getResources().getString(R.string.contatti_email_tivoli_terme),
+                getResources().getString(R.string.contatti_maps_tivoli_terme)
         );
 
         ContattiComune uff_elettorale = new ContattiComune(
@@ -71,7 +76,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_descrizione_uff_elettorale),
                 getResources().getString(R.string.contatti_telefono_uff_elettorale),
                 getResources().getString(R.string.contatti_indirizzo_uff_elettorale),
-                getResources().getString(R.string.contatti_email_uff_elettorale)
+                getResources().getString(R.string.contatti_email_uff_elettorale),
+                getResources().getString(R.string.contatti_maps_uff_elettorale)
         );
 
         contatti.add(comune);
@@ -94,6 +100,7 @@ public class ContattiActivity extends Activity {
                 i.putExtra("telefono", cc.telefono);
                 i.putExtra("indirizzo",cc.indirizzo);
                 i.putExtra("email",cc.email);
+                i.putExtra("maps", cc.maps);
                 startActivity(i);
            }
         });

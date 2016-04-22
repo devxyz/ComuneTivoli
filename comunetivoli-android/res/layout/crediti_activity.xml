@@ -63,8 +63,9 @@
             android:layout_height="wrap_content"
             android:text="@string/credits_graficonomi"
             android:id="@+id/credits.grafica"
-            android:textSize="@dimen/app_dim_normale" android:layout_above="@+id/credits.alunnigrafica"
-            android:layout_toEndOf="@+id/credits.grafico"/>
+            android:textSize="@dimen/app_dim_normale"
+            android:layout_below="@+id/credits.alunni" android:layout_alignParentStart="true"
+            android:layout_marginStart="34dp" android:layout_marginTop="38dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
