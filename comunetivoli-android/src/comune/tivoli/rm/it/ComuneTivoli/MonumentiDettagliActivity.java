@@ -34,7 +34,7 @@ public class MonumentiDettagliActivity extends Activity {
     ImageButton tred_btn;
     ImageButton maps_btn;
 
-
+//todo il titolo del dettaglio non viene visualizzato correttamente nel caso di piu' righe - vedere layout
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
