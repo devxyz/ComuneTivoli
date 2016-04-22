@@ -15,6 +15,7 @@ public class MonumentiComune {
     public String tred;
     public String link_web;
 
+
     public MonumentiComune(String titolo, String descrizione, String descrizione_big, Drawable foto_small, Drawable foto_big, String link_web, String maps) {
         this.titolo = titolo;
         this.descrizione = descrizione;
