@@ -29,25 +29,26 @@ public class MonumentiDettagliActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.monumenti_dettagli_activity);
-        title_text= (TextView) findViewById(R.id.title_txt);
-        dettagli_text= (TextView) findViewById(R.id.txt_description);
-        image_monumento= (ImageView) findViewById(R.id.monumenti_image);
-        web_btn=(ImageButton) findViewById(R.id.web_btn);
-        tred_btn = (ImageButton) findViewById( R.id.tred_btn);
-        maps_btn=(ImageButton) findViewById(R.id.maps_btn);
+        title_text = (TextView) findViewById(R.id.title_txt);
+        dettagli_text = (TextView) findViewById(R.id.txt_description);
+        image_monumento = (ImageView) findViewById(R.id.monumenti_image);
+        web_btn = (ImageButton) findViewById(R.id.web_btn);
+        tred_btn = (ImageButton) findViewById(R.id.tred_btn);
+        maps_btn = (ImageButton) findViewById(R.id.maps_btn);
 
         try {
 
 
             int position = getIntent().getExtras().getInt("position");
+            DialogUtil.openInfoDialog(this, "debug", "Posizione " + position);
             ArrayList<MonumentiComune> mm = MonumentiUtil.elencoMonumenti(this);
             MonumentiComune monumento = mm.get(position);
             title_text.setText(monumento.titolo);
             dettagli_text.setText(monumento.descrizione);
             image_monumento.setImageDrawable(monumento.foto_big);
-            DialogUtil.openInfoDialog(this,"debug","Posizione "+position);
-        }catch  (Throwable e){
 
+        } catch (Throwable e) {
+            DialogUtil.openErrorDialog(this, "Errore", "Errore inatteso", e);
         }
 
 
