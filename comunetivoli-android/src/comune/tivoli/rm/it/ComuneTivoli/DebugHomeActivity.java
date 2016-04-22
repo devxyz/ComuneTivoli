@@ -72,7 +72,7 @@ public class DebugHomeActivity extends Activity {
         btn_turismo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(DebugHomeActivity.this, TurismoActivity.class);
+                Intent i= new Intent(DebugHomeActivity.this, MonumentiActivity.class);
                 startActivity(i);
             }
         });

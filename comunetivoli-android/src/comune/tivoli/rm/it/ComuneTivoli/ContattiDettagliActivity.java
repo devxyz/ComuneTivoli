@@ -42,7 +42,14 @@ public class ContattiDettagliActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent mapsIntent;
-                mapsIntent = new Intent();
+                String mapsLabel ;
+                String mapsGen;
+                mapsGen = getIntent().getExtras().getString("maps");
+                mapsIntent = new Intent(android.content.Intent.ACTION_VIEW,
+                        Uri.parse(mapsGen));
+                //mapsIntent = new Intent(android.content.Intent.ACTION_VIEW,
+                //      Uri.parse("geo:0,0?q="+lat+","+lng+"&z=16 (" + maplLabel + ")"));
+                startActivity(mapsIntent);
             }
         });
 
@@ -50,7 +57,11 @@ public class ContattiDettagliActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent emailIntent;
-                emailIntent = new Intent(Intent.ACTION_SEND);
+                emailIntent = new Intent(Intent.ACTION_VIEW);
+                Uri data = Uri.parse("mailto:"
+                        + "andrea_durante@outlook.it"
+                        + "?subject=" + "Email from Application" + "&body=" + "");
+                emailIntent.setData(data);
                 startActivity(emailIntent);
             }
         });
