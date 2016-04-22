@@ -59,7 +59,7 @@ public class ContattiDettagliActivity extends Activity {
                 Intent emailIntent;
                 emailIntent = new Intent(Intent.ACTION_VIEW);
                 Uri data = Uri.parse("mailto:"
-                        + "andrea_durante@outlook.it"
+                        + getIntent().getExtras().getString("email")
                         + "?subject=" + "Email from Application" + "&body=" + "");
                 emailIntent.setData(data);
                 startActivity(emailIntent);
