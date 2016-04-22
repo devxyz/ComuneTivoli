@@ -9,15 +9,15 @@ public class MonumentiComune {
     public String titolo;
     public String descrizione;
     public String descrizione_big;
-    public Drawable foto_small;
-    public Drawable foto_big;
+    public int foto_small;
+    public int foto_big;
     public String maps;
     public String video;
     public String tred;
     public String url;
 
 
-    public MonumentiComune(String titolo, String descrizione, String descrizione_big, Drawable foto_small, Drawable foto_big, String url, String maps, String tred, String video) {
+    public MonumentiComune(String titolo, String descrizione, String descrizione_big, int foto_small, int foto_big, String url, String maps, String tred, String video) {
         this.titolo = titolo;
         this.descrizione = descrizione;
         this.descrizione_big = descrizione_big;

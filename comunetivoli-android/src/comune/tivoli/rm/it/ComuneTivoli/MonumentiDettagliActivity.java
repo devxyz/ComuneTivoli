@@ -1,6 +1,7 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -36,19 +37,22 @@ public class MonumentiDettagliActivity extends Activity {
         tred_btn = (ImageButton) findViewById(R.id.tred_btn);
         maps_btn = (ImageButton) findViewById(R.id.maps_btn);
 
+        int position = getIntent().getExtras().getInt("position");
         try {
-
-
-            int position = getIntent().getExtras().getInt("position");
-            DialogUtil.openInfoDialog(this, "debug", "Posizione " + position);
+            //DialogUtil.openInfoDialog(this, "debug", "Posizione " + position);
             ArrayList<MonumentiComune> mm = MonumentiUtil.elencoMonumenti(this);
             MonumentiComune monumento = mm.get(position);
             title_text.setText(monumento.titolo);
             dettagli_text.setText(monumento.descrizione);
-            image_monumento.setImageDrawable(monumento.foto_big);
+            final Drawable foto_big = getResources().getDrawable(monumento.foto_big);
+            if (foto_big != null)
+                image_monumento.setImageDrawable(foto_big);
+            else {
+                //image_monumento.setImageDrawable(null);
+            }
 
         } catch (Throwable e) {
-            DialogUtil.openErrorDialog(this, "Errore", "Errore inatteso", e);
+            DialogUtil.openErrorDialog(this, "Errore", "Errore inatteso " + position, e);
         }
 
 
