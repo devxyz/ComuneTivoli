@@ -75,6 +75,7 @@ public class MonumentiDettagliActivity extends Activity {
                 tred_btn.setVisibility(View.INVISIBLE);
 
 
+
         } catch (Throwable e) {
             DialogUtil.openErrorDialog(this, "Errore", "Errore inatteso " + position, e);
         }
