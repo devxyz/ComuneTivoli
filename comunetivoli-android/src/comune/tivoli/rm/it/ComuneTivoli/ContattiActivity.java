@@ -32,7 +32,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_telefono_tivoli),
                 getResources().getString(R.string.contatti_indirizzo_tivoli),
                 getResources().getString(R.string.contatti_email_tivoli),
-                getResources().getString(R.string.contatti_maps_tivoli)
+                getResources().getString(R.string.contatti_maps_tivoli),
+                R.drawable.contatti_mappe_comune_anagrafe
         );
 
         ContattiComune urp = new ContattiComune(
@@ -41,7 +42,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_telefono_urp_tivoli),
                 getResources().getString(R.string.contatti_indirizzo_urp_tivoli),
                 getResources().getString(R.string.contatti_email_urp_tivoli),
-                getResources().getString(R.string.contatti_maps_urp_tivoli)
+                getResources().getString(R.string.contatti_maps_urp_tivoli),
+                R.drawable.contatti_mappe_uffrelazioni
         );
 
         ContattiComune anagrafe = new ContattiComune(
@@ -50,7 +52,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_telefono_anagrafe_tivoli),
                 getResources().getString(R.string.contatti_indirizzo_anagrafe_tivoli),
                 getResources().getString(R.string.contatti_email_anagrafe_tivoli),
-                getResources().getString(R.string.contatti_maps_anagrafe_tivoli)
+                getResources().getString(R.string.contatti_maps_anagrafe_tivoli),
+                R.drawable.contatti_mappe_comune_anagrafe
         );
 
         ContattiComune villa_adriana = new ContattiComune(
@@ -59,7 +62,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_telefono_villa_adriana),
                 getResources().getString(R.string.contatti_indirizzo_villa_adriana),
                 getResources().getString(R.string.contatti_email_villa_adriana),
-                getResources().getString(R.string.contatti_maps_villa_adriana)
+                getResources().getString(R.string.contatti_maps_villa_adriana),
+                R.drawable.contatti_urpvillaadriana
         );
 
         ContattiComune tivoli_terme = new ContattiComune(
@@ -68,7 +72,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_telefono_tivoli_terme),
                 getResources().getString(R.string.contatti_indirizzo_tivoli_terme),
                 getResources().getString(R.string.contatti_email_tivoli_terme),
-                getResources().getString(R.string.contatti_maps_tivoli_terme)
+                getResources().getString(R.string.contatti_maps_tivoli_terme),
+                R.drawable.contatti_urptivoliterme
         );
 
         ContattiComune uff_elettorale = new ContattiComune(
@@ -77,7 +82,8 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_telefono_uff_elettorale),
                 getResources().getString(R.string.contatti_indirizzo_uff_elettorale),
                 getResources().getString(R.string.contatti_email_uff_elettorale),
-                getResources().getString(R.string.contatti_maps_uff_elettorale)
+                getResources().getString(R.string.contatti_maps_uff_elettorale),
+                R.drawable.contatti_ufficioelettorale
         );
 
         contatti.add(comune);
@@ -101,6 +107,7 @@ public class ContattiActivity extends Activity {
                 i.putExtra("indirizzo",cc.indirizzo);
                 i.putExtra("email",cc.email);
                 i.putExtra("maps", cc.maps);
+                i.putExtra("img",cc.img);
                 startActivity(i);
            }
         });

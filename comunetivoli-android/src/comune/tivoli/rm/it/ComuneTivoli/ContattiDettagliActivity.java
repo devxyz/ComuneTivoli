@@ -2,10 +2,12 @@ package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -17,7 +19,7 @@ public class ContattiDettagliActivity extends Activity {
     ImageButton btn_chiama;
     ImageButton btn_maps;
     ImageButton btn_email;
-
+    ImageView screen;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,8 @@ public class ContattiDettagliActivity extends Activity {
         btn_chiama = (ImageButton) findViewById(R.id.btn_chiama_dettagli);
         btn_maps = (ImageButton) findViewById(R.id.btn_maps_dettagli);
         btn_email = (ImageButton) findViewById(R.id.btn_email_dettagli);
+        screen = (ImageView) findViewById(R.id.screenmaps);
+        screen.setImageDrawable(getResources().getDrawable(getIntent().getExtras().getInt("img")));
         btn_chiama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

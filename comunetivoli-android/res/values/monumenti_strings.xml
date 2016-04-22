@@ -115,7 +115,7 @@
         Grazie al meticoloso lavoro svolto in collaborazione con la Soprintendenza Archeologia del Lazio e dell\'Etruria Meridionale, il primo maggio del 2015 c\'è stata l\'apertura straordinaria al pubblico del santuario, in concomitanza con l\'inaugurazione di Expo 2015 e del 3230° anniversario della nascita di Tivoli, con lo scopo di rendere questo sito al centro della proposta culturale della città.\n
         Oggi questa struttura è chiusa al pubblico. </string>
     <string name="monumenti_santuario_ercole_url"></string>
-    <string name="monumenti_santuario_ercole_tred"></string>
+    <string name="monumenti_santuario_ercole_tred">http://www.visittivoli.eu/virtual-tour/santuario-di-ercole-vincitore/</string>
     <string name="monumenti_santuario_ercole_maps"></string>
     <string name="monumenti_santuario_ercole_video"></string>
     <drawable name="monumenti_santuario_ercole_fotosmall">@drawable/monumenti_santuario_ercole</drawable>
@@ -177,7 +177,7 @@
 </string>
     <string name="monumenti_villa_adriana_url"></string>
     <string name="monumenti_villa_adriana_maps"></string>
-    <string name="monumenti_villa_adriana_tred"></string>
+    <string name="monumenti_villa_adriana_tred">http://www.visittivoli.eu/virtual-tour/villa-adriana/</string>
     <string name="monumenti_villa_adriana_video"></string>
     <drawable name="monumenti_villa_adriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
     <drawable name="monumenti_villa_adriana_fotobig">@drawable/monumenti_villa_adriana_big</drawable>
@@ -194,7 +194,7 @@
     </string>
     <string name="monumenti_villa_d_este_url"></string>
     <string name="monumenti_villa_d_este_maps"></string>
-    <string name="monumenti_villa_d_este_tred"></string>
+    <string name="monumenti_villa_d_este_tred">http://www.visittivoli.eu/virtual-tour/villa-d-este/</string>
     <string name="monumenti_villa_d_este_video"></string>
     <drawable name="monumenti_villa_d_este_fotosmall">@drawable/monumenti_villa_deste</drawable>
     <drawable name="monumenti_villa_d_este_fotobig">@drawable/monumenti_villa_deste_big</drawable>
