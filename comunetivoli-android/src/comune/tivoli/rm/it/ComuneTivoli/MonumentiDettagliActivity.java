@@ -52,7 +52,7 @@ public class MonumentiDettagliActivity extends Activity {
             ArrayList<MonumentiComune> mm = MonumentiUtil.elencoMonumenti(this);
             final MonumentiComune monumento = mm.get(position);
             title_text.setText(monumento.titolo);
-            dettagli_text.setText(monumento.descrizione);
+            dettagli_text.setText(monumento.descrizione_big);
             final Drawable foto_big = getResources().getDrawable(monumento.foto_big);
             if (foto_big != null)
                 image_monumento.setImageDrawable(foto_big);
@@ -60,8 +60,34 @@ public class MonumentiDettagliActivity extends Activity {
                 //image_monumento.setImageDrawable(null);
             }
 
-            if (monumento.url.length() > 0)
+            if (monumento.tred.length() > 0)
                 tred_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String url = monumento.tred;
+                        Uri uriUrl = Uri.parse(url);
+                        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                        startActivity(launchBrowser);
+
+                    }
+                });
+            else
+                tred_btn.setVisibility(View.INVISIBLE);
+            if (monumento.maps.length() > 0)
+                maps_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String url = monumento.maps;
+                        Uri uriUrl = Uri.parse(url);
+                        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                        startActivity(launchBrowser);
+
+                    }
+                });
+            else
+                 maps_btn.setVisibility(View.INVISIBLE);
+            if (monumento.url.length() > 0)
+                web_btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         String url = monumento.url;
@@ -72,9 +98,7 @@ public class MonumentiDettagliActivity extends Activity {
                     }
                 });
             else
-                tred_btn.setVisibility(View.INVISIBLE);
-
-
+                web_btn.setVisibility(View.INVISIBLE);
 
         } catch (Throwable e) {
             DialogUtil.openErrorDialog(this, "Errore", "Errore inatteso " + position, e);

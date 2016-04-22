@@ -15,16 +15,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/image_monumento"
             android:src="@drawable/ic_launcher"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/title_txt"
-            android:layout_alignParentEnd="true"/>
+            android:layout_below="@+id/title_txt" android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/maps_btn"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/web_btn"
             android:src="@drawable/ic_launcher"
-            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
-            android:layout_marginStart="42dp"/>
+            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +34,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tred_btn"
             android:src="@drawable/ic_launcher"
-            android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+            android:layout_alignTop="@+id/web_btn" android:layout_centerHorizontal="true"/>
     <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
