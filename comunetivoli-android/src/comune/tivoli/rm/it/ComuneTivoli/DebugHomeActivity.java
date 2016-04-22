@@ -23,6 +23,7 @@ public class DebugHomeActivity extends Activity {
     Button btn_crediti;
     Button btn_home;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
