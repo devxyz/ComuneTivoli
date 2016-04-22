@@ -13,7 +13,9 @@
 
     <string name="monumenti_anfiteatro_titolo">Anfiteatro di Bleso</string>
     <string name="monumenti_anfiteatro_descrizione">L\'Anfiteatro di Bleso è un antico anfiteatro romano risalente al II secolo d.C., si trova accanto alla Rocca Pia e non molto lontano da Piazza Garibaldi.</string>
-    <string name="monumenti_anfiteatro_descrizionebig"></string>
+    <string name="monumenti_anfiteatro_descrizionebig">L'antico anfiteatro romano di Tivoli, conosciuto anche come Anfiteatro di Bleso, risale al II secolo dell'età imperiale e tra i suoi spalti poteva accogliere fino a 2.000 spettatori.\n
+        Secondo alcuni studiosi e ricercatori, nei pressi di questa straordinaria testimonianza della magnificenza di Roma, doveva trovarsi anche una schola gladiatorum, ma di questa struttura non sono mai state ritrovate tracce.\n
+        Scoperto nel 1948 durante alcuni lavori per la realizzazione di un'arteria stradale, dello storico anfiteatro che si trova nei pressi di Piazza Garibaldi, si possono ammirare solamente alcuni resti. Infatti la struttura originale venne distrutta durante i lavori di costruzione della Rocca Pia, voluta da papa Pio II Piccolomini come difesa dagli attacchi nemici. </string>
     <string name="monumenti_anfiteatro_url"></string>
     <drawable name="monumenti_anfiteatro_fotosmall">@drawable/monumenti_anfiteatro_di_bleso</drawable>
     <drawable name="monumenti_anfiteatro_fotobig">@drawable/monumenti_anfiteatro_di_bleso_big</drawable>
@@ -29,7 +31,8 @@
 
     <string name="monumenti_mensa_ponderaria_titolo">Mensa Ponderaria</string>
     <string name="monumenti_mensa_ponderaria_descrizione">La Mensa Ponderaria, situata nei pressi del Duomo, è un antico locale di epoca romana risalente al I secolo d.C. adibito ad ufficio pubblico per il controllo dei pesi e delle misure.</string>
-    <string name="monumenti_mensa_ponderaria_descrizionebig"></string>
+    <string name="monumenti_mensa_ponderaria_descrizionebig">I resti dell'antica Mensa Ponderaria, risalenti al I secolo d.C., si trovano nei pressi della Cattedrale di San Lorenzo e vennero scoperti solamente nel 1883 durante dei lavori.\n
+        Secondo alcuni studiosi e ricercatori, nei pressi di questa straordinaria testimonianza della magnificenza di Roma, doveva trovarsi anche una schola gladiatorum, ma di questa struttura non sono mai state ritrovate tracce.</string>
     <string name="monumenti_mensa_ponderaria_url"></string>
     <drawable name="monumenti_mensa_ponderaria_fotosmall">@drawable/monumenti_mensa_ponderaria</drawable>
     <drawable name="monumenti_mensa_ponderaria_fotobig">@drawable/monumenti_mensa_ponderaria_big</drawable>
@@ -37,7 +40,8 @@
 
     <string name="monumenti_piazza_campitelli_titolo">Piazza Campitelli</string>
     <string name="monumenti_piazza_campitelli_descrizione">Piazza Campitelli è un grazioso spazio pubblico di Tivoli appena restaurato. Da qui si può raggiungere la Casa Gotica e la rinascimentale Villa d\'Este.</string>
-    <string name="monumenti_piazza_campitelli_descrizionebig"></string>
+    <string name="monumenti_piazza_campitelli_descrizionebig">Piazza Campitelli è uno spazio pubblico situato alla fine dell'omonima via, nei pressi della suggestiva Casa Gotica, delimitata a destra da uno degli accessi a Villa d'Este ed a sinistra dal Palazzo delle Missioni. Al centro della piazza si trova anche la storica Chiesa di San Pietro alla Carità.\n
+        In passato la piazza rappresentava una parte della zona sulla quale si trovava la Villa romana di Publio Cornelio Scipione Nasica. Oggi l'intera area è stata totalmente ristrutturata e la gradinata che la caratterizza è stata dedicata al grande acquerellista Ettore Franz, cittadino onorario della Città di Tivoli. A Piazza Campitelli si trova anche una bella meridiana, comunemente conosciuta come orologio solare. </string>
     <string name="monumenti_piazza_campitelli_url"></string>
     <drawable name="monumenti_piazza_campitelli_fotosmall">@drawable/monumenti_piazza_campitelli</drawable>
     <drawable name="monumenti_piazza_campitelli_fotobig">@drawable/monumenti_piazza_campitelli_big</drawable>
@@ -45,7 +49,11 @@
 
     <string name="monumenti_piazza_garibaldi_titolo">Piazza Garibaldi</string>
     <string name="monumenti_piazza_garibaldi_descrizione">Piazza Garibaldi è un ampio spazio pubblico situato vicino la Rocca Pia e l\'anfiteatro romano. È abbellita dai giardini e dall\'Arco dei Padri Costituenti, opera di Arnaldo Pomodoro.</string>
-    <string name="monumenti_piazza_garibaldi_descrizionebig"></string>
+    <string name="monumenti_piazza_garibaldi_descrizionebig">Piazza Garibaldi è una delle piazze più grandi di Tivoli, un'ampia area pubblica che si trova all'ingresso della città caratterizzata dal verde, dalle aiuole dei giardini e dalle tre fontane centrali con i loro zampilli d'acqua.\n
+        Dedicata al cosiddetto Eroe dei Due Mondi, che qui giunse in fuga dai nemici dopo la caduta della Repubblica Romana, da questa piazza si può ammirare un bellissimo panorama su Roma e sulla campagna che circonda la città di Tivoli.\n
+        A pochi passi da Piazza Garibaldi troviamo alcuni dei simboli storici e religiosi di Tivoli, come la Rocca Pia con il sottostante Anfiteatro di Bleso e la Chiesa di Santa Maria Maggiore.\n
+        Nei pressi della piazza si trova anche il Convitto Nazionale Duca Amedeo di Savoia, luogo dove in passato la borghesia italiana mandava i propri figli per apprendere l'educazione scolastica, oggi sede della Scuola Elementare e della Scuola Media. Menzione a parte va fatta per l'Arco dei Padri Costituenti, preziosa scultura di Arnaldo Pomodoro realizzata nel 2009.
+    </string>
     <string name="monumenti_piazza_garibaldi_url"></string>
     <drawable name="monumenti_piazza_garibaldi_fotosmall">@drawable/monumenti_piazza_garibaldi</drawable>
     <drawable name="monumenti_piazza_garibaldi_fotobig">@drawable/monumenti_piazza_garibaldi_big</drawable>
@@ -53,7 +61,10 @@
 
     <string name="monumenti_ponte_gregoriano_titolo">Ponte Gregoriano</string>
     <string name="monumenti_ponte_gregoriano_descrizione">Ponte Gregoriano collega il centro storico alla meravigliosa Villa Gregoriana. Voluto da papa Gregorio XVI, è anche scenario della processione della Madonna di Quintiliolo.</string>
-    <string name="monumenti_ponte_gregoriano_descrizionebig"></string>
+    <string name="monumenti_ponte_gregoriano_descrizionebig">Lo scenografico Ponte Gregoriano è una splendida passerella architettonica che collega il centro storico della città alla Villa Gregoriana.\n
+        Fatto costruire da papa Gregorio XVI verso il 1834, la struttura, in travertino con un'arcata unica che poggia su due piloni laterali, lega la sua storia a due eventi, il primo negativo risale al 27 maggio 1944, giorno in cui venne fatta saltare in aria dalle truppe tedesche in ritirata, il secondo all'inaugurazione avvenuta la prima domenica di maggio dopo quella drammatica distruzione, con il passaggio trionfale della processione che portava l'immagine della Madonna di Quintiliolo fino alla Cattedrale di San Lorenzo, da cui riparte per tornare indietro l'8 settembre.\n
+        Ancora oggi questa affascinante riproposizione religiosa richiama cristiani e turisti che assistono silenziosi alla processione ed al celebre rito della benedizione delle acque del fiume Aniene che avviene proprio sul Ponte Gregoriano.\n
+        Dallo stesso ponte è possibile ammirare oltre alle splendide cascate di Villa Gregoriana, anche l'antica acropoli di Tivoli con il Tempio di Vesta ed il Tempio della Sibilla.</string>
     <string name="monumenti_ponte_gregoriano_url"></string>
     <drawable name="monumenti_ponte_gregoriano_fotosmall">@drawable/monumenti_ponte_gregoriano</drawable>
     <drawable name="monumenti_ponte_gregoriano_fotobig">@drawable/monumenti_ponte_gregoriano_big</drawable>
@@ -61,7 +72,10 @@
 
     <string name="monumenti_rocca_pia_titolo">Rocca Pia</string>
     <string name="monumenti_rocca_pia_descrizione">La Rocca Pia, voluta da papa Pio II Piccolomini, domina con le sue quattro torri circolari il centro storico della città e la campagna circostante. Affaccia sull\'antico anfiteatro romano.</string>
-    <string name="monumenti_rocca_pia_descrizionebig"></string>
+    <string name="monumenti_rocca_pia_descrizionebig">Rocca Pia è il simbolo storico di Tivoli che troneggia a pochi passi dalla moderna  Piazza Garibaldi e dalla scultura di Arnoldo Pomodoro.\n
+        Fatta costruire da papa Pio II Piccolomini verso il 1461 sulla sommità di una collinetta, sia per controllare la città dall'alto, sia per evitare eventuali insurrezioni popolari. La rocca ha una struttura quadrangolare con quattro torri circolari di altezza differente, dove la più alta raggiunge i 36,50 metri ed è livellata in adiacenza con l'anfiteatro romano risalente al II secolo d.C., conosciuto anche come Anfiteatro di Bleso.\n
+        Accessibile in passato attraverso un ponte levatoio, la Rocca Pia nell'Ottocento venne utilizzata anche come carcere mandamentale, ed è rimasta tale fino al 1960.\n
+        Oggi questa struttura è chiusa al pubblico e resta in attesa di una nuova destinazione. </string>
     <string name="monumenti_rocca_pia_url"></string>
     <drawable name="monumenti_rocca_pia_fotosmall">@drawable/monumenti_rocca_pia</drawable>
     <drawable name="monumenti_rocca_pia_fotobig">@drawable/monumenti_rocca_pia_big</drawable>
@@ -69,7 +83,13 @@
 
     <string name="monumenti_santuario_ercole_titolo">Santuario di Ercole Vincitore</string>
     <string name="monumenti_santuario_ercole_descrizione">Il Santuario di Ercole vincitore, dedicato al dio Ercole, protettore dell\'antica Tibur Superbum, è considerato uno dei gioielli archeologici più belli della città.</string>
-    <string name="monumenti_santuario_ercole_descrizionebig"></string>
+    <string name="monumenti_santuario_ercole_descrizionebig">Il Santuario di Ercole vincitore era dedicato al dio protettore dell'antica Tibur, e ricopriva una superficie molto vasta estesa ai piedi della città.\n
+        La costruzione del complesso, durata all'incirca una decina di anni, diede non pochi problemi agli architetti che la realizzarono, perchè dovettero prima scavare una via coperta sotto il santuario in modo da far passare l'antica Tiburtina Valeria, la cosiddetta Via Tecta, poi furono costretti ad innalzare delle arcate per superare i burroni sul fiume Aniene.\n
+        Originariamente il santuario occupava un'area di 3.000 mq e si articolava in tre ambienti: un tempio, un teatro ed un'enorme piazza che faceva da area sacra. Lo scopo principale del progetto era quello di colpire scenograficamente tutti coloro che giungevano a Tivoli da Roma, tanto era il suo splendore e la sua magnificenza (188 x 141 m), infatti la struttura utilizzata per le fondamenta si innalzava per circa 50 metri a strapiombo sul fiume Aniene.\n
+        In passato all'interno del santuario si trovava la statua di Ercole, dio venerato dai Salii, i quali organizzavano una cerimonia d'onore durante le Idi di agosto, così come ci viene ricordato da Virgilio nell'Eneide.\n
+        L'intera area del santuario, fino ad una cinquantina di anni fa, era occupata dalle Cartiere Tiburtine, stabilimenti industriali che trasformavano paglia e legno in varie qualità di carta grazie alla forza motrice prodotta dalle acque del vicino fiume Aniene.\n
+        Grazie al meticoloso lavoro svolto in collaborazione con la Soprintendenza Archeologia del Lazio e dell'Etruria Meridionale, il primo maggio del 2015 c'è stata l'apertura straordinaria al pubblico del santuario, in concomitanza con l'inaugurazione di Expo 2015 e del 3230° anniversario della nascita di Tivoli, con lo scopo di rendere questo sito al centro della proposta culturale della città.\n
+        Oggi questa struttura è chiusa al pubblico. </string>
     <string name="monumenti_santuario_ercole_url"></string>
     <drawable name="monumenti_santuario_ercole_fotosmall">@drawable/monumenti_santuario_ercole</drawable>
     <drawable name="monumenti_santuario_ercole_fotobig">@drawable/monumenti_santuario_ercole_big</drawable>
@@ -77,7 +97,8 @@
 
     <string name="monumenti_tempio_della_sibilla_titolo">Tempio della Sibilla</string>
     <string name="monumenti_tempio_della_sibilla_descrizione">Il Tempio della Sibilla si trova sul punto più alto dell\'antica acropoli di Tivoli. Eretto intorno al II secolo d.C. è considerato uno dei più importanti resti archeologici della città.</string>
-    <string name="monumenti_tempio_della_sibilla_descrizionebig"></string>
+    <string name="monumenti_tempio_della_sibilla_descrizionebig">Situato sul punto più alto dell'acropoli della Tibur Superbum, l'attuale Tivoli, il Tempio della Sibilla è un'antica struttura di epoca romana che si innalza vicino al Tempio di Vesta.\n
+        Costruito intorno al II secolo a.C. con una caratteristica forma rettangolare, oggi offre una visuale spettacolare sia se visto dalla Piazza del Tempio di Vesta sia se ammirato dal suggestivo Ponte Gregoriano.</string>
     <string name="monumenti_tempio_della_sibilla_url"></string>
     <drawable name="monumenti_tempio_della_sibilla_fotosmall">@drawable/monumenti_tempio_della_sibilla</drawable>
     <drawable name="monumenti_tempio_della_sibilla_fotobig">@drawable/monumenti_tempio_della_sibilla_big</drawable>
@@ -85,7 +106,9 @@
 
     <string name="monumenti_tempio_di_vesta_titolo">Tempio di Vesta</string>
     <string name="monumenti_tempio_di_vesta_descrizione">Il Tempio di Vesta (I secolo a.C.) è uno dei monumenti archeologici più importanti di Tivoli. Situato sull\'Acropoli dell\'antica Tibur e dedicato a Vesta, la dea del focolare.</string>
-    <string name="monumenti_tempio_di_vesta_descrizionebig"></string>
+    <string name="monumenti_tempio_di_vesta_descrizionebig">Il Tempio di Vesta si trova a coronamento dell'antica acropoli di Tivoli, adiacente all'altrettanto importante Tempio della Sibilla.\n
+        Raggiungibile oltrepassando un cancello e visibile anche da Ponte Gregoriano, il tempio, risalente al I secolo a.C. è il monumento più conosciuto dell'antica città di Tibur. E' dedicato con molta probabilità a Vesta, la dea del focolare, il cui culto era affidato alle Vestali, o a Tiburno, l'eroe che avrebbe dato il nome alla città. Oggi si presenta con una pianta rotonda caratterizzata da linee eleganti e dal suggestivo scenario paesaggistico che gli fa da scenografia. Nel corso dei secoli il Tempio di Vesta è diventato il soggetto più ritratto dagli artisti italiani e stranieri e dai ricchi aristocratici che nell'Ottocento arrivavano a Tivoli per il cosiddetto Grand Tour.\n
+    </string>
     <string name="monumenti_tempio_di_vesta_url"></string>
     <drawable name="monumenti_tempio_di_vesta_fotosmall">@drawable/monumenti_tempio_di_vesta</drawable>
     <drawable name="monumenti_tempio_di_vesta_fotobig">@drawable/monumenti_tempio_di_vesta_big</drawable>
@@ -93,7 +116,10 @@
 
     <string name="monumenti_tomba_dei_plauzi_titolo">Tomba dei Plauzi</string>
     <string name="monumenti_tomba_dei_plauzi_descrizione">La Tomba dei Plauzi, insieme al Ponte Lucano, è la porta d\'accesso all\'antica Tibur. La splendida torre cilindrica, la rende uno dei siti archeologici più importanti della città.</string>
-    <string name="monumenti_tomba_dei_plauzi_descrizionebig"></string>
+    <string name="monumenti_tomba_dei_plauzi_descrizionebig">Il Mausoleo dei Plauzi è uno dei siti archeologici più importanti di Tivoli, un'antica torre circolare risalente al I secolo d.C. Situata non molto lontano dalla Villa di Adriano, Patrimonio Mondiale dell'Umanità UNESCO, questo mausoleo, insieme al Ponte Lucano, rappresenta l'accesso all'antica Tibur Superbum.\n
+        Sviluppato su una base quadrangolare interrata sormontata da una torre circolare alta circa 35 metri, l'interno è caratterizzato da un ambiente a forma di croce unito grazie ad un corridoio sferico, opera attribuita a Marco Plautio Silvano.\n
+        Oggi il Mausoleo si presenta pieno di crepe, ricoperto da una fitta vegetazione selvaggia e parzialmente celato da un muro di contenimento costruito per bloccare gli straripamenti del vicino fiume Aniene.</string>
+
     <string name="monumenti_tomba_dei_plauzi_url"></string>
     <drawable name="monumenti_tomba_dei_plauzi_fotosmall">@drawable/monumenti_tomba_dei_plauzi</drawable>
     <drawable name="monumenti_tomba_dei_plauzi_fotobig">@drawable/monumenti_tomba_dei_plauzi_big</drawable>
