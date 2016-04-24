@@ -9,16 +9,16 @@
             android:layout_width="1000dp"
             android:layout_height="wrap_content"
             android:text="Contatti"
-            android:id="@+id/text_cont" android:background="#355f99" android:width="35dp" android:height="@dimen/template_topheight"
+            android:id="@+id/text_cont" android:background="#355f99" android:width="35dp" android:height="@dimen/template_height_barra_blu_top"
             android:textIsSelectable="false" android:gravity="center_vertical"
             android:textSize="@dimen/template_text"
             android:foreground="@color/white"
-            android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/imageView" android:paddingLeft="10dp"/>
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10dp" android:layout_toEndOf="@+id/imageView"/>
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/text" android:height="@dimen/template_topheight"
+            android:id="@+id/text" android:height="@dimen/template_height_barra_blu_top"
             android:background="@color/template_colorblu"
             android:layout_alignParentTop="true" android:layout_toEndOf="@+id/text_cont"/>
     <ImageView
@@ -32,25 +32,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
-            android:height="@dimen/template_redheight"
+            android:height="@dimen/template_height_barra_red_top"
             android:background="@color/template_colorred" android:text=" " android:layout_below="@+id/text_cont"
             android:layout_alignParentStart="true"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView2" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
-            android:src="@drawable/home_icon" android:layout_alignBottom="@+id/text"
-            android:background="@color/template_colorblu" android:paddingRight="50dp"/>
+            android:id="@+id/imageView2"
+            android:src="@drawable/home_icon"
+            android:background="@color/template_colorblu"
+            android:layout_above="@+id/textView2" android:layout_alignEnd="@+id/text"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" "
             android:id="@+id/textView4"
             android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
-            android:height="@dimen/template_rossobasso"
+            android:height="@dimen/template_height_barra_red_bottom"
             android:background="@color/template_colorred" android:layout_alignParentRight="true"/>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/textView5"
               android:background="@color/template_colorblu" android:text=" "
               android:layout_above="@+id/textView4" android:layout_alignParentStart="true"
-              android:height="@dimen/template_blubasso"/>
+              android:height="@dimen/template_height_barra_blu_bottom"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_below="@+id/textView2"
+            android:layout_alignParentStart="true" android:id="@+id/content"
+            android:layout_above="@+id/textView5">
+    </RelativeLayout>
 </RelativeLayout>

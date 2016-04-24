@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-public class MyActivity extends Activity {
+public class LoadingActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
@@ -18,7 +18,7 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.loading);
 
         Thread t = new Thread(new Runnable() {
             @Override
@@ -37,7 +37,7 @@ public class MyActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (close) return;
-                Intent i = new Intent(MyActivity.this, DebugHomeActivity.class);
+                Intent i = new Intent(LoadingActivity.this, DebugHomeActivity.class);
                 startActivity(i);
                 close = true;
             }
@@ -48,7 +48,8 @@ public class MyActivity extends Activity {
         myactivity_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MyActivity.this, DebugHomeActivity.class);
+                Intent i = new Intent(LoadingActivity.this, DebugHomeActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
 
 

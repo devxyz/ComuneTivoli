@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:weightSum="1" android:id="@+id/xyz"
+                android:background="#ffffff">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:id="@+id/textView4"
+            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
+            android:height="@dimen/template_height_barra_red_bottom"
+            android:background="@color/template_colorred" android:layout_alignParentRight="true"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/textView5"
+              android:background="@color/template_colorblu" android:text=" "
+              android:layout_above="@+id/textView4" android:layout_alignParentStart="true"
+              android:height="@dimen/template_height_barra_blu_bottom"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content"
+            android:layout_below="@+id/textView14" android:layout_above="@+id/textView5" android:padding="10dp"
+            android:background="#79bed7ff">
+    
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/turismo_monumenti"
+            android:id="@+id/textView10"
+            android:textSize="@dimen/app_textsize_titolo2"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/turismo_btn_monumenti"
+            android:src="@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia"
+            android:background="@color/trasparent"
+            android:layout_below="@+id/textView10" android:layout_alignParentStart="true"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="@string/turismo_dove_mangiare" android:id="@+id/textView11"
+              android:textSize="@dimen/app_textsize_titolo2"
+              android:layout_alignParentTop="true" android:layout_alignParentEnd="true"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/turismo_btn_cosa_mangiare"
+                 android:src="@drawable/internet_icon"
+                 android:background="@color/trasparent"
+                 android:layout_below="@+id/textView11" android:layout_alignParentEnd="true"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="@string/turismo_mappa" android:id="@+id/textView12"
+              android:textSize="@dimen/app_textsize_titolo2"
+              android:layout_below="@+id/turismo_btn_cosa_mangiare" android:layout_alignParentStart="true"
+              android:layout_marginTop="48dp"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/turismo_btn_mappa" android:src="@drawable/icona_maps"
+                 android:background="@color/trasparent"
+                 android:layout_marginTop="21dp" android:layout_below="@+id/textView12"
+                 android:layout_alignStart="@+id/turismo_btn_monumenti"/>
+</RelativeLayout>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/template_btn_sx" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/template_trelinee" android:background="@color/template_colorblu"
+            android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/template_btn_dx"
+                 android:src="@drawable/template_home" android:layout_alignParentTop="true"
+                 android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
+                 android:background="@color/template_colorblu" android:paddingRight="20dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/template_titolo"
+            android:background="@color/template_colorblu" android:textSize="@dimen/template_text"
+            android:gravity="center_vertical" android:height="@dimen/template_height_barra_blu_top"
+            android:layout_alignParentTop="true" android:layout_toEndOf="@+id/template_btn_sx"
+            android:layout_toLeftOf="@+id/template_btn_dx"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text=" "
+              android:id="@+id/textView14"
+              android:height="@dimen/template_height_barra_red_top" android:background="@color/template_colorred"
+              android:layout_below="@+id/template_btn_sx" android:layout_alignEnd="@+id/template_btn_dx"/>
+</RelativeLayout>
