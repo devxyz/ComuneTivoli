@@ -31,62 +31,62 @@ public class ContattiActivity extends Activity {
 
         contatti = new ArrayList<>();
         ContattiComune comune = new ContattiComune(
-                getResources().getString(R.string.contatti_titolo_comune_tivoli),
-                getResources().getString(R.string.contatti_descrizione_anagrafe_tivoli),
-                getResources().getString(R.string.contatti_telefono_tivoli),
-                getResources().getString(R.string.contatti_indirizzo_tivoli),
-                getResources().getString(R.string.contatti_email_tivoli),
-                getResources().getString(R.string.contatti_maps_tivoli),
+                getResources().getString(R.string.contatti_comune_tivoli_titolo),
+                getResources().getString(R.string.contatti_anagrafe_tivoli_descrizione),
+                getResources().getString(R.string.contatti_comune_tivoli_telefono),
+                getResources().getString(R.string.contatti_comune_tivoli_indirizzo),
+                getResources().getString(R.string.contatti_comune_tivoli_email),
+                getResources().getString(R.string.contatti_comune_tivoli_maps),
                 R.drawable.contatti_mappe_comune_anagrafe
         );
 
         ContattiComune urp = new ContattiComune(
-                getResources().getString(R.string.contatti_titolo_urp_tivoli),
-                getResources().getString(R.string.contatti_descrizione_urp_tivoli),
-                getResources().getString(R.string.contatti_telefono_urp_tivoli),
-                getResources().getString(R.string.contatti_indirizzo_urp_tivoli),
-                getResources().getString(R.string.contatti_email_urp_tivoli),
-                getResources().getString(R.string.contatti_maps_urp_tivoli),
+                getResources().getString(R.string.contatti_urp_tivoli_titolo),
+                getResources().getString(R.string.contatti_urp_tivoli_descrizione),
+                getResources().getString(R.string.contatti_urp_tivoli_telefono),
+                getResources().getString(R.string.contatti_urp_tivoli_indirizzo),
+                getResources().getString(R.string.contatti_urp_tivoli_email),
+                getResources().getString(R.string.contatti_urp_tivoli_maps),
                 R.drawable.contatti_mappe_uffrelazioni
         );
 
         ContattiComune anagrafe = new ContattiComune(
-                getResources().getString(R.string.contatti_titolo_anagrafe_tivoli),
-                getResources().getString(R.string.contatti_descrizione_anagrafe_tivoli),
-                getResources().getString(R.string.contatti_telefono_anagrafe_tivoli),
-                getResources().getString(R.string.contatti_indirizzo_anagrafe_tivoli),
-                getResources().getString(R.string.contatti_email_anagrafe_tivoli),
-                getResources().getString(R.string.contatti_maps_anagrafe_tivoli),
+                getResources().getString(R.string.contatti_anagrafe_tivoli_titolo),
+                getResources().getString(R.string.contatti_anagrafe_tivoli_descrizione),
+                getResources().getString(R.string.contatti_anagrafe_tivoli_telefono),
+                getResources().getString(R.string.contatti_anagrafe_tivoli_indirizzo),
+                getResources().getString(R.string.contatti_anagrafe_tivoli_email),
+                getResources().getString(R.string.contatti_anagrafe_tivoli_maps),
                 R.drawable.contatti_mappe_comune_anagrafe
         );
 
         ContattiComune villa_adriana = new ContattiComune(
-                getResources().getString(R.string.contatti_titolo_villa_adriana),
-                getResources().getString(R.string.contatti_descrizione_villa_adriana),
-                getResources().getString(R.string.contatti_telefono_villa_adriana),
-                getResources().getString(R.string.contatti_indirizzo_villa_adriana),
-                getResources().getString(R.string.contatti_email_villa_adriana),
-                getResources().getString(R.string.contatti_maps_villa_adriana),
+                getResources().getString(R.string.contatti_villa_adriana_titolo),
+                getResources().getString(R.string.contatti_villa_adriana_descrizione),
+                getResources().getString(R.string.contatti_villa_adriana_telefono),
+                getResources().getString(R.string.contatti_villa_adriana_indirizzo),
+                getResources().getString(R.string.contatti_villa_adriana_email),
+                getResources().getString(R.string.contatti_villa_adriana_maps),
                 R.drawable.contatti_urpvillaadriana
         );
 
         ContattiComune tivoli_terme = new ContattiComune(
-                getResources().getString(R.string.contatti_titolo_tivoli_terme),
-                getResources().getString(R.string.contatti_descrizione_tivoli_terme),
-                getResources().getString(R.string.contatti_telefono_tivoli_terme),
-                getResources().getString(R.string.contatti_indirizzo_tivoli_terme),
-                getResources().getString(R.string.contatti_email_tivoli_terme),
-                getResources().getString(R.string.contatti_maps_tivoli_terme),
+                getResources().getString(R.string.contatti_tivoli_terme_titolo),
+                getResources().getString(R.string.contatti_tivoli_terme_descrizione),
+                getResources().getString(R.string.contatti_tivoli_terme_telefono),
+                getResources().getString(R.string.contatti_tivoli_terme_indirizzo),
+                getResources().getString(R.string.contatti_tivoli_terme_email),
+                getResources().getString(R.string.contatti_tivoli_terme_maps),
                 R.drawable.contatti_urptivoliterme
         );
 
         ContattiComune uff_elettorale = new ContattiComune(
-                getResources().getString(R.string.contatti_titolo_uff_elettorale),
-                getResources().getString(R.string.contatti_descrizione_uff_elettorale),
-                getResources().getString(R.string.contatti_telefono_uff_elettorale),
-                getResources().getString(R.string.contatti_indirizzo_uff_elettorale),
-                getResources().getString(R.string.contatti_email_uff_elettorale),
-                getResources().getString(R.string.contatti_maps_uff_elettorale),
+                getResources().getString(R.string.contatti_uff_elettorale_titolo),
+                getResources().getString(R.string.contatti_uff_elettorale_descrizione),
+                getResources().getString(R.string.contatti_uff_elettorale_telefono),
+                getResources().getString(R.string.contatti_uff_elettorale_indirizzo),
+                getResources().getString(R.string.contatti_uff_elettorale_email),
+                getResources().getString(R.string.contatti_uff_elettorale_maps),
                 R.drawable.contatti_ufficioelettorale
         );
 
