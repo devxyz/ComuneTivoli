@@ -45,6 +45,14 @@ public class ContattiDettagliActivity extends Activity {
                 startActivity(callIntent);
             }
         });
+
+        screen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btn_maps.callOnClick();
+            }
+        });
+
         btn_maps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
