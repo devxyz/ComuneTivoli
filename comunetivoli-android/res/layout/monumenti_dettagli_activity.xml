@@ -8,8 +8,8 @@
             android:layout_height="wrap_content"
             android:text="Chissa Se \n FUNZIONA"
             android:id="@+id/title_txt" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true" android:gravity="center" android:textColor="@color/template_colorblu"
-            android:textSize="@dimen/app_textsize_titolo2" android:textStyle="bold"/>
+            android:layout_alignParentEnd="true" android:textColor="@color/template_colorred"
+            android:textSize="@dimen/app_textsize_titolo" android:textStyle="bold" android:gravity="left"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,13 +46,13 @@
                     android:layout_below="@+id/title_txt" android:layout_alignParentStart="true"
                     android:layout_weight="1.13"/>
             <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="395dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_description"
                     android:text="villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este "
                     android:layout_below="@+id/image_monumento"
                     android:layout_alignParentStart="true" android:layout_marginTop="10dp"
-                    android:textSize="@dimen/template_text" android:gravity="left"/>
+                    android:gravity="fill_horizontal"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

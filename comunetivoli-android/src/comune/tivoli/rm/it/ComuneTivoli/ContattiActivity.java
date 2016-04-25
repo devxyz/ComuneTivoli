@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import comune.tivoli.rm.it.ComuneTivoli.listview.ContattiComuneListAdapter;
 import comune.tivoli.rm.it.ComuneTivoli.model.ContattiComune;
+import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 import java.util.ArrayList;
 
@@ -22,7 +23,10 @@ public class ContattiActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.contatti_activity_list);
+
+        setContentView(R.layout.contatti_activity_list_decorated);
+        TemplateUtil.inizializzaComponentiTemplate(this, "Contatti");
+
         contattiListView = (ListView) findViewById(R.id.contatti_listView);
 
         contatti = new ArrayList<>();

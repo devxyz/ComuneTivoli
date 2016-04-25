@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import comune.tivoli.rm.it.ComuneTivoli.DebugHomeActivity;
+import comune.tivoli.rm.it.ComuneTivoli.HomeActivity;
 import comune.tivoli.rm.it.ComuneTivoli.R;
 
 /**
@@ -16,15 +16,20 @@ public class TemplateUtil {
         final ImageButton template_btn_sx = (ImageButton) a.findViewById(R.id.template_btn_sx);
         final ImageButton template_btn_dx = (ImageButton) a.findViewById(R.id.template_btn_dx);
         final TextView testo = (TextView) a.findViewById(R.id.template_titolo);
-        testo.setText(label);
-        template_btn_dx.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(a, DebugHomeActivity.class);
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                a.startActivity(i);
-            }
-        });
+        if (testo != null)
+            testo.setText(label);
+
+        if (template_btn_dx != null)
+            template_btn_dx.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (a.getClass().equals(HomeActivity.class)) return;
+
+                    Intent i = new Intent(a, HomeActivity.class);
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    a.startActivity(i);
+                }
+            });
 
     }
 }

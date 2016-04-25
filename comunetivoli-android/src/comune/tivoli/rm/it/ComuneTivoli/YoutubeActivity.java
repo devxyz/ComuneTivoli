@@ -6,6 +6,7 @@ import android.os.Bundle;
 /**
  * Created by millozzi.stefano on 15/03/2016.
  */
+@Deprecated
 public class YoutubeActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -15,7 +15,7 @@
             android:layout_alignParentStart="true"
             android:textIsSelectable="false" android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/template_colorred" android:textSize="@dimen/app_textsize_titolo2"
+            android:textColor="@color/template_colorred" android:textSize="@dimen/app_textsize_titolo"
             android:layout_toStartOf="@+id/contatti_image"/>
 
     <ImageView
@@ -29,10 +29,10 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Small Text"
+            android:text="Testo"
             android:id="@+id/contatti_descrizione" android:layout_below="@+id/contatti_title"
             android:layout_toLeftOf="@+id/contatti_image" android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" android:layout_marginLeft="10dp" android:gravity="fill_horizontal"
-            android:textColor="@color/template_colorblu"/>
+    />
 
 </RelativeLayout>

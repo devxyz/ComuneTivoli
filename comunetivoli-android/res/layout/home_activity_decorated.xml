@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/content"
             android:layout_below="@+id/textView14" android:layout_above="@+id/textView5" android:padding="10dp"
-            android:background="#79bed7ff">
+            android:background="@color/white">
     
 
 
@@ -31,13 +31,15 @@
             android:layout_height="wrap_content"
             android:text="@string/home_turismo"
             android:id="@+id/home_turismo" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
-            android:textSize="@dimen/app_textsize_titolo2" android:layout_alignEnd="@+id/home_btn_turismo"
-            android:gravity="center_horizontal" android:textColor="#000000"/>
+            android:textSize="@dimen/app_textsize_titolo" android:layout_alignEnd="@+id/home_btn_turismo"
+            android:gravity="center_horizontal" android:textColor="@color/template_colorblu" android:textStyle="bold"
+    />
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:text="@string/home_eventi" android:id="@+id/home_eventi"
-              android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
-              android:textSize="@dimen/app_textsize_titolo2" android:layout_alignStart="@+id/home_btn_eventi"
-              android:gravity="center_horizontal" android:textColor="#000000"/>
+              android:textSize="@dimen/app_textsize_titolo"
+              android:gravity="center_horizontal" android:textColor="@color/template_colorblu" android:textStyle="bold"
+              android:layout_alignParentTop="true" android:layout_alignStart="@+id/home_btn_eventi"
+              android:layout_alignParentEnd="true"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,10 +52,11 @@
                  android:background="@color/trasparent"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:text="@string/home_notizie" android:id="@+id/textView3"
-              android:textSize="@dimen/app_textsize_titolo2"
+              android:textSize="@dimen/app_textsize_titolo"
               android:layout_below="@+id/home_btn_turismo" android:layout_alignParentStart="true"
               android:layout_alignEnd="@+id/home_btn_news" android:gravity="center_horizontal"
-              android:textColor="#000000"/>
+              android:textColor="@color/template_colorblu" android:textStyle="bold"
+              android:layout_marginTop="10dp"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/home_btn_news"
                  android:src="@drawable/latestnews_small3"
@@ -61,36 +64,40 @@
                  android:background="@color/trasparent"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:text="Facebook" android:id="@+id/textView6"
-              android:textSize="@dimen/app_textsize_titolo2"
+              android:textSize="@dimen/app_textsize_titolo"
               android:gravity="center_horizontal"
-              android:layout_alignTop="@+id/home_btn_fb" android:layout_toEndOf="@+id/home_btn_news"
-              android:layout_marginLeft="10dp" android:textColor="#000000"/>
+              android:textColor="@color/template_colorred"
+              android:layout_alignTop="@+id/home_btn_fb" android:layout_alignStart="@+id/textView7"
+              android:textStyle="bold"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/home_btn_fb"
                  android:src="@drawable/home_facebook"
-                 android:layout_centerVertical="true" android:layout_alignParentEnd="true"
-                 android:background="@color/trasparent"/>
+                 android:background="@color/trasparent"
+                 android:layout_below="@+id/home_btn_eventi" android:layout_alignEnd="@+id/home_btn_eventi"
+                 android:layout_marginTop="26dp"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/home_btn_web"
                  android:src="@drawable/home_web_arrow"
                  android:background="@color/trasparent"
                  android:layout_below="@+id/home_btn_fb" android:layout_alignParentEnd="true"
                  android:layout_marginTop="10dp"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Web"
-              android:id="@+id/textView7" android:textSize="@dimen/app_textsize_titolo2" android:gravity="center_horizontal"
+              android:id="@+id/textView7" android:textSize="@dimen/app_textsize_titolo" android:gravity="center_horizontal"
               android:layout_alignTop="@+id/home_btn_web" android:layout_toEndOf="@+id/home_btn_news"
-              android:layout_marginLeft="10dp" android:textColor="#000000"/>
+              android:layout_marginLeft="10dp" android:textColor="@color/template_colorred" android:textStyle="bold"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contatti"
-              android:id="@+id/textView8" android:textSize="@dimen/app_textsize_titolo2" android:gravity="center_horizontal"
+              android:id="@+id/textView8" android:textSize="@dimen/app_textsize_titolo" android:gravity="center_horizontal"
               android:layout_below="@+id/home_btn_web" android:layout_toEndOf="@+id/home_btn_news"
-              android:layout_marginTop="10dp" android:layout_marginLeft="10dp" android:textColor="#000000"/>
+              android:layout_marginTop="10dp" android:layout_marginLeft="10dp" android:textColor="@color/template_colorred"
+              android:textStyle="bold"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/home_btn_contatti"
                  android:src="@drawable/home_contatti" android:background="@color/trasparent"
                  android:layout_below="@+id/home_btn_web" android:layout_alignParentEnd="true"
                  android:layout_marginTop="10dp"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="About Us"
-              android:id="@+id/textView9" android:textSize="@dimen/app_textsize_titolo2" android:gravity="center_horizontal"
+              android:id="@+id/textView9" android:textSize="@dimen/app_textsize_titolo" android:gravity="center_horizontal"
               android:layout_below="@+id/home_btn_contatti" android:layout_toEndOf="@+id/home_btn_news"
-              android:layout_marginTop="10dp" android:layout_marginLeft="10dp" android:textColor="#000000"/>
+              android:layout_marginTop="10dp" android:layout_marginLeft="10dp" android:textColor="@color/template_colorred"
+              android:textStyle="bold"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/home_about_us"
                  android:src="@drawable/home_about_us" android:background="@color/trasparent"
                  android:layout_alignTop="@+id/textView9" android:layout_alignStart="@+id/home_btn_contatti"/>
@@ -104,9 +111,9 @@
             android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/template_btn_dx"
-                 android:src="@drawable/template_home" android:layout_alignParentTop="true"
+                 android:src="@drawable/scritta_comunetivolix50" android:layout_alignParentTop="true"
                  android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
-                 android:background="@color/template_colorblu" android:paddingRight="20dp"/>
+                 android:background="@color/trasparent" android:paddingRight="20dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -115,7 +122,7 @@
             android:background="@color/template_colorblu" android:textSize="@dimen/template_text"
             android:gravity="center_vertical" android:height="@dimen/template_height_barra_blu_top"
             android:layout_alignParentTop="true" android:layout_toEndOf="@+id/template_btn_sx"
-            android:layout_toLeftOf="@+id/template_btn_dx"/>
+            android:layout_toLeftOf="@+id/template_btn_dx" android:textColor="@color/white" android:textStyle="bold"/>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text=" "
               android:id="@+id/textView14"
               android:height="@dimen/template_height_barra_red_top" android:background="@color/template_colorred"

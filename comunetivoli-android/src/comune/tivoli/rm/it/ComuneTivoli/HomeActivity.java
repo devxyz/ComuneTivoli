@@ -24,8 +24,11 @@ public class HomeActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaComponentiTemplate(this, "Home");
+
         setContentView(R.layout.home_activity_decorated);
+        TemplateUtil.inizializzaComponentiTemplate(this, "Home");
+
+
         btn_turismo = (ImageButton) findViewById(R.id.home_btn_turismo);
         btn_eventi = (ImageButton) findViewById(R.id.home_btn_eventi);
         btn_news = (ImageButton) findViewById(R.id.home_btn_news);

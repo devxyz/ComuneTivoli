@@ -8,22 +8,22 @@
             android:layout_height="wrap_content"
             android:text="Titolo"
             android:id="@+id/monumenti_titolo"
-            android:textSize="@dimen/app_textsize_titolo2"
+            android:textSize="@dimen/app_textsize_titolo"
             android:layout_alignParentTop="true" android:layout_alignParentStart="true"
             android:layout_toStartOf="@+id/monumenti_image" android:textStyle="bold"
-            android:gravity="center" android:textColor="@color/template_colorred" android:layout_alignParentEnd="true"/>
+            android:textColor="@color/template_colorred" android:layout_alignParentEnd="true"/>
     <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Descrizione"
             android:id="@+id/monumenti_descrizione"
-            android:textSize="@dimen/template_height_barra_red_top"
-            android:layout_below="@+id/monumenti_image" android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="false" android:layout_marginBottom="2dp"/>
+            android:layout_alignTop="@+id/monumenti_image" android:layout_toEndOf="@+id/monumenti_image"
+            android:padding="10dp" android:gravity="fill_horizontal"/>
     <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/monumenti_image"
             android:src="@drawable/monumenti_mensa_ponderaria"
-            android:layout_below="@+id/monumenti_titolo" android:layout_alignParentStart="true"/>
+            android:layout_below="@+id/monumenti_titolo" android:layout_alignParentStart="true"
+            android:paddingBottom="10dp"/>
 </RelativeLayout>

@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/content"
             android:layout_below="@+id/textView14" android:layout_above="@+id/textView5" android:padding="10dp"
-            android:background="#79bed7ff">
+            android:background="@color/white">
     
 
     <Button
@@ -107,9 +107,9 @@
             android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/template_btn_dx"
-                 android:src="@drawable/template_home" android:layout_alignParentTop="true"
+                 android:src="@drawable/scritta_comunetivolix50" android:layout_alignParentTop="true"
                  android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
-                 android:background="@color/template_colorblu" android:paddingRight="20dp"/>
+                 android:background="@color/trasparent" android:paddingRight="20dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
             android:background="@color/template_colorblu" android:textSize="@dimen/template_text"
             android:gravity="center_vertical" android:height="@dimen/template_height_barra_blu_top"
             android:layout_alignParentTop="true" android:layout_toEndOf="@+id/template_btn_sx"
-            android:layout_toLeftOf="@+id/template_btn_dx"/>
+            android:layout_toLeftOf="@+id/template_btn_dx" android:textColor="@color/white" android:textStyle="bold"/>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text=" "
               android:id="@+id/textView14"
               android:height="@dimen/template_height_barra_red_top" android:background="@color/template_colorred"

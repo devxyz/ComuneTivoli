@@ -9,6 +9,7 @@ import android.widget.ListView;
 import comune.tivoli.rm.it.ComuneTivoli.listview.MonumentiComuneListAdapter;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
+import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 import java.util.ArrayList;
 
@@ -22,7 +23,9 @@ public class MonumentiActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.monumenti_activity);
+        setContentView(R.layout.monumenti_activity_decorated);
+        TemplateUtil.inizializzaComponentiTemplate(this, "Monumenti");
+
         monumenti_list = (ListView) findViewById(R.id.monumenti_listview);
         monumenti= MonumentiUtil.elencoMonumenti(this);
 

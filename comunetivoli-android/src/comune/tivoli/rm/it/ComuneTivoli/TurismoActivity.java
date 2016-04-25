@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 /**
  * Created by millozzi.stefano on 15/03/2016.
@@ -18,7 +19,8 @@ public class TurismoActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.turismo_activity);
+        setContentView(R.layout.turismo_activity_decorated);
+        TemplateUtil.inizializzaComponentiTemplate(this, "Turismo");
         turismo_btn_monumenti = (ImageButton) findViewById(R.id.turismo_btn_monumenti);
         turismo_btn_cosa_mangiare = (ImageButton) findViewById(R.id.turismo_btn_cosa_mangiare);
         turismo_btn_mappa = (ImageButton) findViewById(R.id.turismo_btn_mappa);

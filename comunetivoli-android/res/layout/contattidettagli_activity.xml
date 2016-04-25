@@ -4,24 +4,26 @@
                 android:layout_height="match_parent" android:id="@+id/asdrs">
 
     <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Text"
             android:id="@+id/titolo_dettagli"
-            android:layout_marginTop="32dp" android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"/>
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:textColor="@color/template_colorred" android:textSize="@dimen/app_textsize_titolo"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/screenmaps"
-            android:minHeight="200dp" android:minWidth="300dp" android:layout_below="@+id/titolo_dettagli"
-            android:layout_centerHorizontal="true"/>
+
+            android:src="@drawable/contatti_mappe_comune_anagrafe"
+            android:layout_below="@+id/titolo_dettagli"
+    />
     <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Text"
             android:id="@+id/descrizione_dettagli"
-            android:layout_below="@+id/screenmaps" android:layout_alignParentStart="true"/>
+            android:layout_above="@+id/btn_chiama_dettagli" android:layout_alignParentStart="true"/>
 
     <ImageButton
             android:layout_width="wrap_content"
@@ -34,13 +36,19 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_maps_dettagli"
             android:src="@drawable/icona_maps"
-            android:layout_alignTop="@+id/btn_chiama_dettagli" android:layout_centerHorizontal="true"
-            android:background="@color/trasparent"/>
+            android:background="@color/trasparent"
+            android:layout_alignTop="@+id/btn_email_dettagli" android:layout_alignParentEnd="true"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_email_dettagli"
             android:src="@drawable/icona_contatti"
-            android:layout_alignTop="@+id/btn_maps_dettagli" android:layout_alignParentEnd="true"
-            android:background="@color/trasparent"/>
+            android:background="@color/trasparent"
+            android:layout_alignParentTop="true" android:layout_toEndOf="@+id/imageView5"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:src="@drawable/dialog_alert"
+            android:layout_alignBottom="@+id/btn_maps_dettagli" android:layout_centerHorizontal="true"/>
 </RelativeLayout>
