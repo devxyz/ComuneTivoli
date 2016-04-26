@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:theme="@style/NoActionBar" android:name=".DebugHomeActivity" android:label="home_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".ImageScrollActivity" android:label="image_scroll_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".TurismoActivity" android:label="turismo_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".NewsActivity" android:label="news_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".FacebookActivity"
