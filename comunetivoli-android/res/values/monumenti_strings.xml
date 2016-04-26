@@ -3,7 +3,6 @@
 
 
 
-
     <string name="monumenti_acquedotti_titolo">Acquedotto Anio Novus</string>
     <string name="monumenti_acquedotti_descrizione">L\'Acquedotto Anio Novus è un\'antica costruzione avviata dall\'Imperatore Caligola nel 38 d.C. A Tivoli, partendo dalla Via Empolitana si possono trovare molti reperti archeologici.</string>
     <string name="monumenti_acquedotti_descrizionebig">L\'Acquedotto Anio Novus risale al 38 a.C., sotto l\'Impero di Caligola. Si possono trovare molti reperti archeologici dell\'Acquedotto lungo la Via Empolitana, che parte da Tivoli fino ad arrivare Ciciliano, passando per Castel Madama.\n
@@ -12,9 +11,7 @@
     <string name="monumenti_acquedotti_tred"></string>
     <string name="monumenti_acquedotti_maps"></string>
     <string name="monumenti_acquedotti_gallery"></string>
-
     <string name="monumenti_acquedotti_categoria"></string>
-
     <string name="monumenti_acquedotti_video">https://youtu.be/VKCjvOcru9k</string>
     <drawable name="monumenti_acquedotti_fotosmall">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia</drawable>
     <drawable name="monumenti_acquedotti_fotobig">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia_big</drawable>
