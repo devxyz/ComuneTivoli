@@ -1,9 +1,13 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import comune.tivoli.rm.it.ComuneTivoli.listview.NewsComuneListAdapter;
+import comune.tivoli.rm.it.ComuneTivoli.model.ContattiComune;
 import comune.tivoli.rm.it.ComuneTivoli.model.NewsComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
@@ -34,7 +38,20 @@ public class NewsActivity extends Activity {
         NewsComune news3 = new NewsComune("News 3", "La news 3", new Date(2010, 12, 5), "www.tiscali.it");
         news.add(news3);
         newslist.setAdapter(new NewsComuneListAdapter(this, news));
-    }
 
+        newslist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                NewsComune nc = news.get(position);
+                //eseguito quando si fa click su una voce
+                Intent i = new Intent(NewsActivity.this,NewsDettagliActivity.class);
+                i.putExtra("titolo",nc.titolo);
+                i.putExtra("descrizione",nc.descrizione);
+                i.putExtra("data", nc.data);
+                 startActivity(i);
+            }
+        });
+
+    }
 
 }
