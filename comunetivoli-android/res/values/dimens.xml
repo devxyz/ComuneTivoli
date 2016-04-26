@@ -2,6 +2,7 @@
 <resources>
     <dimen name="template_height_barra_blu_top">40dp</dimen>
     <dimen name="template_height_barra_red_top">10dp</dimen>
+    <dimen name="template_height_barra_red_and_blu_top">50dp</dimen>
     <dimen name="template_height_barra_red_bottom">7dp</dimen>
     <dimen name="template_height_barra_blu_bottom">5dp</dimen>
     <dimen name="app_textsize_titolo_big">24dp</dimen>

@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.HomeActivity;
+import comune.tivoli.rm.it.ComuneTivoli.MenuActivity;
 import comune.tivoli.rm.it.ComuneTivoli.R;
 
 /**
@@ -30,6 +31,22 @@ public class TemplateUtil {
                     a.startActivity(i);
                 }
             });
+
+        final View.OnClickListener l = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(a, MenuActivity.class);
+                a.startActivity(i);
+            }
+        };
+
+        if (template_btn_sx != null) {
+            template_btn_sx.setOnClickListener(l);
+        }
+
+        if (testo != null) {
+            testo.setOnClickListener(l);
+        }
 
     }
 }

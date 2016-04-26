@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="#a0355f99" android:id="@+id/menu_relative">
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/menu_btnclose"
+            android:layout_marginLeft="100dp" android:layout_below="@+id/menu_topimg"
+            android:layout_alignParentEnd="true" android:background="@color/trasparent"/>
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/menu_listview"
+            android:choiceMode="singleChoice"
+            android:background="@color/template_colorred" android:layout_alignParentBottom="false"
+            android:layout_alignParentStart="true" android:layout_toStartOf="@+id/menu_btnclose"
+            android:layout_below="@+id/menu_topimg"/>
+    <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/menu_topimg" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:src="@drawable/scritta_comunetivolix50" android:background="@color/white"
+            android:minHeight="@dimen/template_height_barra_red_and_blu_top"/>
+</RelativeLayout>
