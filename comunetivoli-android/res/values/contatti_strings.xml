@@ -1,62 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="contatti_titolo_comune_tivoli">COMUNE DI TIVOLI</string>
-    <string name="contatti_descrizione_tivoli">Palazzo San Bernardino \n P.zza del Governo. 1, 00019 Tivoli \n Telefono
+    <string name="contatti_comune_tivoli_titolo">Comuni di Tivoli</string>
+    <string name="contatti_comune_tivoli_descrizione">Palazzo San Bernardino \n P.zza del Governo. 1, 00019 Tivoli \n
+        Telefono
         0774 4531,
         Fax 0774 330675 \n Email: info@pec.comune.tivoli.rm.it
     </string>
-    <string name="contatti_telefono_tivoli">0774 4531</string>
-    <string name="contatti_indirizzo_tivoli">Palazzo San Bernardino \n P.zza del Governo. 1, 00019 Tivoli</string>
-    <string name="contatti_email_tivoli">info@pec.comune.tivoli.rm.it</string>
-    <string name ="contatti_maps_tivoli">41.9635587,12.7964803</string>
+    <string name="contatti_comune_tivoli_telefono">07744531</string>
+    <string name="contatti_comune_tivoli_indirizzo">Palazzo San Bernardino \n P.zza del Governo. 1, 00019 Tivoli
+    </string>
+    <string name="contatti_comune_tivoli_email">info@pec.comune.tivoli.rm.it</string>
+    <string name="contatti_comune_tivoli_maps">
+       41.9635587,12.7964803
+    </string>
 
-    <string name="contatti_titolo_urp_tivoli">Ufficio relazioni con il pubblico</string>
-    <string name="contatti_descrizione_urp_tivoli">U.R.P. (Piazza del Governo, 2) \n Telefono: 0774 453203 - 0774 453230
+
+    <string name="contatti_urp_tivoli_titolo">Ufficio relazioni con il pubblico</string>
+    <string name="contatti_urp_tivoli_descrizione">U.R.P. (Piazza del Governo, 2) \n Telefono: 0774 453203 - 0774 453230
         \n orari: dal
         Lunedí al Sabato 9.00-12.00 \n Martedí e Giovedí 15.00-17.00
     </string>
-    <string name="contatti_telefono_urp_tivoli">0774 453203</string>
-    <string name="contatti_indirizzo_urp_tivoli">U.R.P. (Piazza del Governo , 2 )</string>
-    <string name="contatti_email_urp_tivoli"></string>
-    <string name="contatti_maps_urp_tivoli">41.9637744,12.7967359</string>
-
-    <string name="contatti_titolo_anagrafe_tivoli">Ufficio Anagrafe</string>
-    <string name="contatti_descrizione_anagrafe_tivoli">Fax 0774 453325 \n Email: anagrafe@pec.comune.tivoli.rm.it
+    <string name="contatti_urp_tivoli_telefono">0774453203</string>
+    <string name="contatti_urp_tivoli_indirizzo">U.R.P. (Piazza del Governo , 2 )</string>
+    <string name="contatti_urp_tivoli_email"></string>
+    <string name="contatti_urp_tivoli_maps">
+        41.9637744,12.7967359
     </string>
-    <string name="contatti_telefono_anagrafe_tivoli">0774 453325</string>
-    <string name="contatti_indirizzo_anagrafe_tivoli">Palazzo San Bernardino \n P.zza del Governo. 1, 00019 Tivoli</string>
-    <string name="contatti_email_anagrafe_tivoli">anagrafe@pec.comune.tivoli.rm.it</string>
-    <string name="contatti_maps_anagrafe_tivoli">41.9635587,12.7964803</string>
 
 
-    <string name="contatti_titolo_villa_adriana">URP delegazione Villa Adriana</string>
-    <string name="contatti_descrizione_villa_adriana">Ufficio relazioni con il pubblico \n Via di Villa Adriana, 178 \n
+    <string name="contatti_anagrafe_tivoli_titolo">Ufficio Anagrafe</string>
+    <string name="contatti_anagrafe_tivoli_descrizione">Fax 0774 453325 \n Email: anagrafe@pec.comune.tivoli.rm.it
+    </string>
+    <string name="contatti_anagrafe_tivoli_telefono">0774453325</string>
+    <string name="contatti_anagrafe_tivoli_indirizzo">Palazzo San Bernardino \n P.zza del Governo. 1, 00019 Tivoli
+    </string>
+    <string name="contatti_anagrafe_tivoli_email">anagrafe@pec.comune.tivoli.rm.it</string>
+    <string name="contatti_anagrafe_tivoli_maps">
+        41.9635587,12.7964803
+    </string>
+
+
+    <string name="contatti_villa_adriana_titolo">URP delegazione Villa Adriana</string>
+    <string name="contatti_villa_adriana_descrizione">Ufficio relazioni con il pubblico \n Via di Villa Adriana, 178 \n
         Telefono 0774 453542
         \n orari: Giovedí 9.00-12.00 - 15.00-17.00
     </string>
-    <string name="contatti_telefono_villa_adriana">0774 453542</string>
-    <string name="contatti_indirizzo_villa_adriana">Via di Villa Adriana, 178</string>
-    <string name="contatti_email_villa_adriana"></string>
-    <string name="contatti_maps_villa_adriana">41.948848,12.7719295</string>
+    <string name="contatti_villa_adriana_telefono">0774453542</string>
+    <string name="contatti_villa_adriana_indirizzo">Via di Villa Adriana, 178</string>
+    <string name="contatti_villa_adriana_email"></string>
+    <string name="contatti_villa_adriana_maps">
+        41.948848,12.7719295
+    </string>
 
 
-    <string name="contatti_titolo_tivoli_terme">URP delegazione Tivoli Terme</string>
-    <string name="contatti_descrizione_tivoli_terme">Ufficio relazioni con il pubblico\n
+    <string name="contatti_tivoli_terme_titolo">URP delegazione Tivoli Terme</string>
+    <string name="contatti_tivoli_terme_descrizione">Ufficio relazioni con il pubblico\n
         Via Don Giovanni Minzoni, 9/a\n
         Telefono 0774 354151\n
         orari: Martedí 9.00-12.00 - 15:00-17.00 e Venerdí 9.00-12.00
     </string>
-    <string name="contatti_telefono_tivoli_terme">0774 354151</string>
-    <string name="contatti_indirizzo_tivoli_terme">Via Don Giovanni Minzoni , 9</string>
-    <string name="contatti_email_tivoli_terme"></string>
-    <string name="contatti_maps_tivoli_terme">41.953692,12.7241943</string>
+    <string name="contatti_tivoli_terme_telefono">0774354151</string>
+    <string name="contatti_tivoli_terme_indirizzo">Via Don Giovanni Minzoni , 9</string>
+    <string name="contatti_tivoli_terme_email"></string>
+    <string name="contatti_tivoli_terme_maps">
+        41.953692,12.7241943
+    </string>
 
-    <string name="contatti_titolo_uff_elettorale">Ufficio Elettorale</string>
-    <string name="contatti_descrizione_uff_elettorale">Fax 0774 453364\n
+
+    <string name="contatti_uff_elettorale_titolo">Ufficio Elettorale</string>
+    <string name="contatti_uff_elettorale_descrizione">Fax 0774 453364\n
         Email: elettorale@pec.comune.tivoli.rm.it
     </string>
-    <string name="contatti_telefono_uff_elettorale">0774 453364</string>
-    <string name="contatti_indirizzo_uff_elettorale">Palazzo San Bernardino \n P.zza del Governo. 1, 00019 Tivoli</string>
-    <string name="contatti_email_uff_elettorale">elettorale@pec.comune.tivoli.rm.it</string>
-    <string name="contatti_maps_uff_elettorale">41.9635587,12.7964803</string>
+    <string name="contatti_uff_elettorale_telefono">0774453364</string>
+    <string name="contatti_uff_elettorale_indirizzo">Palazzo San Bernardino \n P.zza del Governo. 1, 00019 Tivoli
+    </string>
+    <string name="contatti_uff_elettorale_email">elettorale@pec.comune.tivoli.rm.it</string>
+    <string name="contatti_uff_elettorale_maps">
+        41.9635587,12.7964803
+    </string>
 </resources>
