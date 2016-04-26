@@ -47,5 +47,6 @@
                   android:label="ristorodettagli_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".TemplateActivity"/>
         <activity android:theme="@style/NoActionBar" android:name=".HomeActivity"/>
+        <activity android:name=".NewsDettagliActivity" android:label="newa_dettagli_activity"/>
     </application>
 </manifest>
