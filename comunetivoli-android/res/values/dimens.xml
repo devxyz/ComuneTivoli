@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="template_topheight">40dp</dimen>
-    <dimen name="template_redheight">10dp</dimen>
-    <dimen name="template_rossobasso">7dp</dimen>
-    <dimen name="template_blubasso">5dp</dimen>
-    <dimen name="app_dim_titolo">30dp</dimen>
-    <dimen name="app_dim_titolo2">25dp</dimen>
-    <dimen name="app_dim_titolo3">20dp</dimen>
-    <dimen name="app_dim_sottotitolo">28dp</dimen>
-    <dimen name="app_dim_evidenziato">12dp</dimen>
-    <dimen name="app_dim_normale">12dp</dimen>
+    <dimen name="template_height_barra_blu_top">40dp</dimen>
+    <dimen name="template_height_barra_red_top">10dp</dimen>
+    <dimen name="template_height_barra_red_bottom">7dp</dimen>
+    <dimen name="template_height_barra_blu_bottom">5dp</dimen>
+    <dimen name="app_textsize_titolo_big">24dp</dimen>
+    <dimen name="app_textsize_titolo">20dp</dimen>
+    <dimen name="app_textsize_sottotitolo">16dp</dimen>
+    <dimen name="app_textsize_normale">12dp</dimen>
+
 
 </resources>

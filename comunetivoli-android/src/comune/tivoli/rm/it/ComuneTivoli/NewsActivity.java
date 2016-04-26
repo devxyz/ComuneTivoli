@@ -3,6 +3,7 @@ package comune.tivoli.rm.it.ComuneTivoli;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ListView;
+import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,7 @@ public class NewsActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.news_activity);
+        setContentView(R.layout.news_activity_decorated);
+        TemplateUtil.inizializzaComponentiTemplate(this, "Notizie");
     }
 }

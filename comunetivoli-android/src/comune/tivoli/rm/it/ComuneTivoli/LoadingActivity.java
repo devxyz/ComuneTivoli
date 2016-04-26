@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-public class MyActivity extends Activity {
+public class LoadingActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
@@ -18,7 +18,7 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.loading);
 
         Thread t = new Thread(new Runnable() {
             @Override
@@ -32,28 +32,27 @@ public class MyActivity extends Activity {
         });
         t.start();
 
-        rr = (RelativeLayout) findViewById(R.id.my_splash);
-        rr.setOnClickListener(new View.OnClickListener() {
+        final View.OnClickListener l = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (close) return;
-                Intent i = new Intent(MyActivity.this, DebugHomeActivity.class);
+                Intent i = new Intent(LoadingActivity.this, HomeActivity.class);
                 startActivity(i);
-                close = true;
-            }
-        });
+                finish();
 
+            }
+        };
+
+        rr = (RelativeLayout) findViewById(R.id.my_splash);
         myactivity_imageView = (ImageView) findViewById(R.id.myactivity_imageView);
 
-        myactivity_imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MyActivity.this, DebugHomeActivity.class);
-                startActivity(i);
+        myactivity_imageView.setOnClickListener(l);
+        rr.setOnClickListener(l);
+    }
 
-
-            }
-        });
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        close = true;
     }
 }

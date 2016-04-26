@@ -12,6 +12,7 @@ import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
+import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 import java.util.ArrayList;
 
@@ -34,11 +35,12 @@ public class MonumentiDettagliActivity extends Activity {
     ImageButton tred_btn;
     ImageButton maps_btn;
 
-//todo il titolo del dettaglio non viene visualizzato correttamente nel caso di piu' righe - vedere layout
+    //todo il titolo del dettaglio non viene visualizzato correttamente nel caso di piu' righe - vedere layout
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.monumenti_dettagli_activity);
+        setContentView(R.layout.monumenti_dettagli_activity_decorated);
+        TemplateUtil.inizializzaComponentiTemplate(this, "Monumenti");
         title_text = (TextView) findViewById(R.id.title_txt);
         dettagli_text = (TextView) findViewById(R.id.txt_description);
         image_monumento = (ImageView) findViewById(R.id.image_monumento);
@@ -46,7 +48,7 @@ public class MonumentiDettagliActivity extends Activity {
         tred_btn = (ImageButton) findViewById(R.id.tred_btn);
         maps_btn = (ImageButton) findViewById(R.id.maps_btn);
 
-        
+
         int position = getIntent().getExtras().getInt("posizione");
         try {
             //DialogUtil.openInfoDialog(this, "debug", "Posizione " + position);
@@ -86,7 +88,7 @@ public class MonumentiDettagliActivity extends Activity {
                     }
                 });
             else
-                 maps_btn.setVisibility(View.INVISIBLE);
+                maps_btn.setVisibility(View.INVISIBLE);
             if (monumento.url.length() > 0)
                 web_btn.setOnClickListener(new View.OnClickListener() {
                     @Override

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:weightSum="1" android:id="@+id/xyz"
+                android:background="#ffffff">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:id="@+id/textView4"
+            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
+            android:height="@dimen/template_height_barra_red_bottom"
+            android:background="@color/template_colorred" android:layout_alignParentRight="true"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/textView5"
+              android:background="@color/template_colorblu" android:text=" "
+              android:layout_above="@+id/textView4" android:layout_alignParentStart="true"
+              android:height="@dimen/template_height_barra_blu_bottom"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content"
+            android:layout_below="@+id/textView14" android:layout_above="@+id/textView5" android:padding="10dp"
+            android:background="@color/white">
+    
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/titolo_dettagli"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:textColor="@color/template_colorred" android:textSize="@dimen/app_textsize_titolo"/>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/screenmaps"
+
+            android:src="@drawable/contatti_mappe_comune_anagrafe"
+            android:layout_below="@+id/titolo_dettagli"
+            android:layout_toEndOf="@+id/linearLayout" android:layout_alignBottom="@+id/linearLayout"
+            android:paddingLeft="10dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/descrizione_dettagli"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/screenmaps" android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false" android:layout_below="@+id/titolo_dettagli"
+            android:id="@+id/linearLayout">
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_chiama_dettagli"
+                android:background="@color/trasparent" android:src="@drawable/contatti_icona_chiama50px"
+                android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_maps_dettagli"
+                android:src="@drawable/contatti_icona_maps50px"
+                android:background="@color/trasparent"
+                android:layout_below="@+id/descrizione_dettagli" android:layout_toEndOf="@+id/btn_email_dettagli"
+                android:paddingTop="5dp" android:paddingBottom="5dp"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_email_dettagli"
+                android:src="@drawable/contatti_icona_contatti50px"
+                android:background="@color/trasparent"
+                android:layout_below="@+id/descrizione_dettagli" android:layout_toEndOf="@+id/btn_chiama_dettagli"/>
+    </LinearLayout>
+</RelativeLayout>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/template_btn_sx" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/template_trelinee" android:background="@color/template_colorblu"
+            android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/template_btn_dx"
+                 android:src="@drawable/scritta_comunetivolix50" android:layout_alignParentTop="true"
+                 android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
+                 android:background="@color/trasparent" android:paddingRight="20dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/template_titolo"
+            android:background="@color/template_colorblu" android:textSize="@dimen/template_text"
+            android:gravity="center_vertical" android:height="@dimen/template_height_barra_blu_top"
+            android:layout_alignParentTop="true" android:layout_toEndOf="@+id/template_btn_sx"
+            android:layout_toLeftOf="@+id/template_btn_dx" android:textColor="@color/white" android:textStyle="bold"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text=" "
+              android:id="@+id/textView14"
+              android:height="@dimen/template_height_barra_red_top" android:background="@color/template_colorred"
+              android:layout_below="@+id/template_btn_sx" android:layout_alignEnd="@+id/template_btn_dx"/>
+</RelativeLayout>

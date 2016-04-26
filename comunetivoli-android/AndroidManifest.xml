@@ -7,33 +7,44 @@
 
     <uses-sdk android:minSdkVersion="19"/>
     <application android:label="@string/app_name" android:icon="@drawable/icona_app_tivoli">
-        <activity android:name="MyActivity"
-                  android:label="@string/app_name">
+        <activity android:name=".LoadingActivity"
+                  android:label="@string/app_name"
+                  android:theme="@style/NoActionBar"
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:theme="@style/NoActionBar" android:name=".DebugHomeActivity" android:label="home_activity"/>
-        <activity  android:theme="@style/NoActionBar" android:name=".TurismoActivity" android:label="turismo_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".NewsActivity" android:label="news_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".FacebookActivity" android:label="facebook_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".EventiActivity" android:label="eventi_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".DettagliActivity" android:label="dettagli_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".FacebookdettagliActivity" android:label="facebookdettagli_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".EventidettagliActivity" android:label="eventidettagli_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".ContattiActivity" android:label="contatti_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".ContattiDettagliActivity" android:label="contatti_dettagli_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".CreditiActivity" android:label="crediti_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".MapsActivity" android:label="maps_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".StreetviewActivity" android:label="streetview_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".YoutubeActivity" android:label="youtube_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".MonumentiActivity" android:label="monumenti_activity"/>
-        <activity android:theme="@style/NoActionBar" android:name=".MonumentiDettagliActivity" android:label="monumenti_dettagli_activity"/>
-        <activity android:theme="@style/NoActionBar"  android:name=".RistoroActivity" android:label="ristoro_activity"/>
-        <activity android:theme="@style/NoActionBar" android:name=".RistoroDettagli2Activity" android:label="ristorodettagli_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".TurismoActivity" android:label="turismo_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".NewsActivity" android:label="news_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".FacebookActivity"
+                  android:label="facebook_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".EventiActivity" android:label="eventi_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".DettagliActivity"
+                  android:label="dettagli_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".FacebookdettagliActivity"
+                  android:label="facebookdettagli_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".EventidettagliActivity"
+                  android:label="eventidettagli_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".ContattiActivity"
+                  android:label="contatti_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".ContattiDettagliActivity"
+                  android:label="contatti_dettagli_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".CreditiActivity" android:label="crediti_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".MapsActivity" android:label="maps_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".StreetviewActivity"
+                  android:label="streetview_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".YoutubeActivity" android:label="youtube_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".MonumentiActivity"
+                  android:label="monumenti_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".MonumentiDettagliActivity"
+                  android:label="monumenti_dettagli_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".RistoroActivity" android:label="ristoro_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".RistoroDettagli2Activity"
+                  android:label="ristorodettagli_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".TemplateActivity"/>
-        <activity android:name=".HomeActivity"/>
-        <activity android:name=".util.ImageScrollActivity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".HomeActivity"/>
     </application>
 </manifest>

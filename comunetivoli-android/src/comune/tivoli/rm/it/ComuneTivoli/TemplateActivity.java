@@ -10,6 +10,6 @@ public class TemplateActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.empty_layout);
+        setContentView(R.layout.empty_layout2);
     }
 }

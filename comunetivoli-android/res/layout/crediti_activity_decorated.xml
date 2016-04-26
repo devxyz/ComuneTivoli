@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:weightSum="1" android:id="@+id/xyz"
+                android:background="#ffffff">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:id="@+id/textView4"
+            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
+            android:height="@dimen/template_height_barra_red_bottom"
+            android:background="@color/template_colorred" android:layout_alignParentRight="true"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/textView5"
+              android:background="@color/template_colorblu" android:text=" "
+              android:layout_above="@+id/textView4" android:layout_alignParentStart="true"
+              android:height="@dimen/template_height_barra_blu_bottom"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content"
+            android:layout_below="@+id/textView14" android:layout_above="@+id/textView5" android:padding="10dp"
+            android:background="@color/white">
+    
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/credits.coordinatore"
+            android:text="@string/credits_coordinatore" android:textSize="@dimen/app_textsize_titolo"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credits_grafico"
+            android:id="@+id/credits.grafico"
+            android:textSize="@dimen/app_textsize_titolo" android:textStyle="bold"
+            android:layout_below="@+id/textView6" android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credits_alunnigrafica"
+            android:id="@+id/credits.alunnigrafica"
+            android:textSize="@dimen/app_textsize_titolo" android:textStyle="bold"
+            android:layout_below="@+id/credits.grafica" android:layout_alignParentStart="true"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+            android:src="@drawable/logoscuola"
+            android:layout_alignParentStart="true" android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView4"
+            android:src="@drawable/treteste"
+            android:layout_alignParentBottom="true" android:layout_toEndOf="@+id/credits.grafica"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credits_coordinatorenomi"
+            android:id="@+id/credits.professore"
+            android:textSize="@dimen/app_textsize_sottotitolo"
+            android:visibility="visible"
+            android:layout_below="@+id/credits.coordinatore" android:layout_alignParentStart="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credits_programmatorinomi"
+            android:id="@+id/textView6"
+            android:textSize="@dimen/app_textsize_sottotitolo"
+            android:visibility="visible"
+            android:layout_below="@+id/textView7" android:layout_alignParentStart="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credits_graficonomi"
+            android:id="@+id/credits.grafica"
+            android:textSize="@dimen/app_textsize_sottotitolo"
+            android:visibility="visible"
+            android:layout_below="@+id/credits.grafico" android:layout_alignParentStart="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credits_alunnigraficanomi"
+            android:id="@+id/credits.classegrafica"
+            android:textSize="@dimen/app_textsize_sottotitolo"
+            android:visibility="visible"
+            android:layout_below="@+id/credits.alunnigrafica" android:layout_alignParentStart="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credits_programmatori"
+            android:id="@+id/textView7" android:layout_below="@+id/credits.professore"
+            android:layout_alignParentStart="true" android:textSize="@dimen/app_textsize_sottotitolo" android:textStyle="bold"/>
+</RelativeLayout>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/template_btn_sx" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/template_trelinee" android:background="@color/template_colorblu"
+            android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/template_btn_dx"
+                 android:src="@drawable/scritta_comunetivolix50" android:layout_alignParentTop="true"
+                 android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
+                 android:background="@color/trasparent" android:paddingRight="20dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/template_titolo"
+            android:background="@color/template_colorblu" android:textSize="@dimen/template_text"
+            android:gravity="center_vertical" android:height="@dimen/template_height_barra_blu_top"
+            android:layout_alignParentTop="true" android:layout_toEndOf="@+id/template_btn_sx"
+            android:layout_toLeftOf="@+id/template_btn_dx" android:textColor="@color/white" android:textStyle="bold"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text=" "
+              android:id="@+id/textView14"
+              android:height="@dimen/template_height_barra_red_top" android:background="@color/template_colorred"
+              android:layout_below="@+id/template_btn_sx" android:layout_alignEnd="@+id/template_btn_dx"/>
+</RelativeLayout>
