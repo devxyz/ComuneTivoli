@@ -9,9 +9,9 @@
         Il maggior numero di resti sono concentrati a 2 km di distanza dal Centro di Tivoli, precisamente nella zona Ponte degli Arci. L\'arcata dell\'Acquedotto più vicina alla città è la parte più corposa che rimane della costruzione del ponte, che attraversava l\'Acquedotto dell\'Acqua Marcia fino al Fosso degli Arci. Alcune rovine sono facilmente visibili, poiché due delle quali sono archi che attraversano le strade di percorrenza. Una seconda arcata dell\'Acquedotto, più imponente della prima, faceva parte di un altro ponte lungo circa 275 m e alto circa 35 m, che attraversava il fiume Aniene. Altri resti dell\'Acquedotto Anio Novus si possono ammirare a Valle Barberini, un piccolo immissario vicino il Fosso di San Gregorio.</string>
     <string name="monumenti_acquedotti_url">http://www.visittivoli.eu/archeologia/acquedotto-anio-novus</string>
     <string name="monumenti_acquedotti_tred"></string>
-    <string name="monumenti_acquedotti_maps"></string>
+    <string name="monumenti_acquedotti_maps">41.950792, 12.821954</string>
     <string name="monumenti_acquedotti_gallery"></string>
-    <string name="monumenti_acquedotti_categoria"></string>
+    <string name="monumenti_acquedotti_categoria">Archeologia</string>
     <string name="monumenti_acquedotti_video">https://youtu.be/VKCjvOcru9k</string>
     <drawable name="monumenti_acquedotti_fotosmall">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia</drawable>
     <drawable name="monumenti_acquedotti_fotobig">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia_big</drawable>
@@ -24,7 +24,9 @@
         Secondo alcuni studiosi e ricercatori, nei pressi di questa straordinaria testimonianza della magnificenza di Roma, doveva trovarsi anche una schola gladiatorum, ma di questa struttura non sono mai state ritrovate tracce.\n
         Scoperto nel 1948 durante alcuni lavori per la realizzazione di un\'arteria stradale, dello storico anfiteatro che si trova nei pressi di Piazza Garibaldi, si possono ammirare solamente alcuni resti. Infatti la struttura originale venne distrutta durante i lavori di costruzione della Rocca Pia, voluta da papa Pio II Piccolomini come difesa dagli attacchi nemici. </string>
     <string name="monumenti_anfiteatro_url">http://www.visittivoli.eu/archeologia/anfiteatro-bleso</string>
-    <string name="monumenti_anfiteatro_maps"></string>
+    <string name="monumenti_anfiteatro_maps">41.960560, 12.798114</string>
+    <string name="monumenti_anfiteatro_gallery"></string>
+    <string name="monumenti_anfiteatro_categoria">Archeologia</string>
     <string name="monumenti_anfiteatro_tred"></string>
     <string name="monumenti_anfiteatro_video"></string>
     <drawable name="monumenti_anfiteatro_fotosmall">@drawable/monumenti_anfiteatro_di_bleso</drawable>
@@ -37,7 +39,9 @@
     <string name="monumenti_arcata_dell_acquedotto_descrizionebig">L\'acquedotto Anio Vetus fu il secondo acquedotto di Roma, costruito dai censori Marcio Curio Dentato e Fulvio Flacco tra il 272 e il 269 a.C. L\'acqua era captata dal fiume Aniene all\'altezza di Vicovaro, tramite un laghetto artificiale che permetteva la decantazione delle acque.\n
         L\'acquedotto aveva una portata di 180.000 metri cubi d\'acqua al giorno, e seguiva, per mantenersi in quota, un percorso tortuoso e lunghissimo (circa 64 km) quasi sempre sotterraneo. Una sezione dell\'acquedotto Vetus è conservato appena sopra l\'Acquedotto di Acqua Marcia: l\'Anio Vetus forma un angolo intorno alla città di Tivoli, parallelamente alla strada principale che porta al paese. Le sezioni rimaste dell\'Acquedotto sono conservate intatte presso il tratto dell\'Acquedotto di Acqua Marcia.</string>
     <string name="monumenti_arcata_dell_acquedotto_url">http://www.visittivoli.eu/archeologia/acquedotti-anio-vetus-e-aqua-marcia</string>
-    <string name="monumenti_arcata_dell_acquedotto_maps"></string>
+    <string name="monumenti_arcata_dell_acquedotto_maps">41.950467, 12.821217</string>
+    <string name="monumenti_arcata_dell_acquedotto_gallery"></string>
+    <string name="monumenti_arcata_dell_acquedotto_categoria">Archeologia</string>
     <string name="monumenti_arcata_dell_acquedotto_tred"></string>
     <string name="monumenti_arcata_dell_acquedotto_video"></string>
     <drawable name="monumenti_arcata_dell_acquedotto_fotosmall">@drawable/monumenti_arcata_dell_acquedotto</drawable>
@@ -50,7 +54,9 @@
     <string name="monumenti_mensa_ponderaria_descrizionebig">I resti dell\'antica Mensa Ponderaria, risalenti al I secolo d.C., si trovano nei pressi della Cattedrale di San Lorenzo e vennero scoperti solamente nel 1883 durante dei lavori.\n
         Secondo alcuni studiosi e ricercatori, nei pressi di questa straordinaria testimonianza della magnificenza di Roma, doveva trovarsi anche una schola gladiatorum, ma di questa struttura non sono mai state ritrovate tracce.</string>
     <string name="monumenti_mensa_ponderaria_url">http://www.visittivoli.eu/archeologia/mensa-ponderaria</string>
-    <string name="monumenti_mensa_ponderaria_maps"></string>
+    <string name="monumenti_mensa_ponderaria_maps">41.965536, 12.796817</string>
+    <string name="monumenti_mensa_ponderaria_gallery"></string>
+    <string name="monumenti_mensa_ponderaria_categoria">Archeologia</string>
     <string name="monumenti_mensa_ponderaria_tred">http://www.visittivoli.eu/virtual-tour/mensa-ponderaria/</string>
     <string name="monumenti_mensa_ponderaria_video"></string>
     <drawable name="monumenti_mensa_ponderaria_fotosmall">@drawable/monumenti_mensa_ponderaria</drawable>
@@ -64,6 +70,8 @@
         In passato la piazza rappresentava una parte della zona sulla quale si trovava la Villa romana di Publio Cornelio Scipione Nasica. Oggi l\'intera area è stata totalmente ristrutturata e la gradinata che la caratterizza è stata dedicata al grande acquerellista Ettore Franz, cittadino onorario della Città di Tivoli. A Piazza Campitelli si trova anche una bella meridiana, comunemente conosciuta come orologio solare. </string>
     <string name="monumenti_piazza_campitelli_url">http://www.visittivoli.eu/piazze/piazza-campitelli</string>
     <string name="monumenti_piazza_campitelli_maps"></string>
+    <string name="monumenti_piazza_campitelli_gallery"></string>
+    <string name="monumenti_piazza_campitelli_categoria">Piazza</string>
     <string name="monumenti_piazza_campitelli_tred">http://www.visittivoli.eu/virtual-tour/piazza-campitelli/</string>
     <string name="monumenti_piazza_campitelli_video"></string>
     <drawable name="monumenti_piazza_campitelli_fotosmall">@drawable/monumenti_piazza_campitelli</drawable>
@@ -81,6 +89,8 @@
     <string name="monumenti_piazza_garibaldi_url">http://www.visittivoli.eu/piazze/piazza-garibaldi</string>
     <string name="monumenti_piazza_garibaldi_tred">http://www.visittivoli.eu/virtual-tour/piazza-garibaldi/</string>
     <string name="monumenti_piazza_garibaldi_maps"></string>
+    <string name="monumenti_piazza_garibaldi_gallery"></string>
+    <string name="monumenti_piazza_garibaldi_categoria">Piazza</string>
     <string name="monumenti_piazza_garibaldi_video"></string>
     <drawable name="monumenti_piazza_garibaldi_fotosmall">@drawable/monumenti_piazza_garibaldi</drawable>
     <drawable name="monumenti_piazza_garibaldi_fotobig">@drawable/monumenti_piazza_garibaldi_big</drawable>
@@ -94,7 +104,9 @@
         Ancora oggi questa affascinante riproposizione religiosa richiama cristiani e turisti che assistono silenziosi alla processione ed al celebre rito della benedizione delle acque del fiume Aniene che avviene proprio sul Ponte Gregoriano.\n
         Dallo stesso ponte è possibile ammirare oltre alle splendide cascate di Villa Gregoriana, anche l\'antica acropoli di Tivoli con il Tempio di Vesta ed il Tempio della Sibilla.</string>
     <string name="monumenti_ponte_gregoriano_url">http://www.visittivoli.eu/edifici-storici/ponte-gregoriano</string>
-    <string name="monumenti_ponte_gregoriano_maps"></string>
+    <string name="monumenti_ponte_gregoriano_maps">41.965545, 12.800222</string>
+    <string name="monumenti_ponte_gregoriano_gallery"></string>
+    <string name="monumenti_ponte_gregoriano_categoria">Archeologia</string>
     <string name="monumenti_ponte_gregoriano_tred"></string>
     <string name="monumenti_ponte_gregoriano_video"></string>
     <drawable name="monumenti_ponte_gregoriano_fotosmall">@drawable/monumenti_ponte_gregoriano</drawable>
@@ -109,7 +121,9 @@
         Accessibile in passato attraverso un ponte levatoio, la Rocca Pia nell\'Ottocento venne utilizzata anche come carcere mandamentale, ed è rimasta tale fino al 1960.\n
         Oggi questa struttura è chiusa al pubblico e resta in attesa di una nuova destinazione. </string>
     <string name="monumenti_rocca_pia_url">http://www.visittivoli.eu/edifici-storici/rocca-pia</string>
-    <string name="monumenti_rocca_pia_maps"></string>
+    <string name="monumenti_rocca_pia_maps">41.959910, 12.798124</string>
+    <string name="monumenti_rocca_pia_gallery"></string>
+    <string name="monumenti_rocca_pia_categoria">Archeologia</string>
     <string name="monumenti_rocca_pia_tred">http://www.visittivoli.eu/virtual-tour/rocca-pia/</string>
     <string name="monumenti_rocca_pia_video"></string>
     <drawable name="monumenti_rocca_pia_fotosmall">@drawable/monumenti_rocca_pia</drawable>
@@ -128,7 +142,9 @@
         Oggi questa struttura è chiusa al pubblico. </string>
     <string name="monumenti_santuario_ercole_url">http://www.visittivoli.eu/archeologia/santuario-di-ercole-vincitore</string>
     <string name="monumenti_santuario_ercole_tred">http://www.visittivoli.eu/virtual-tour/santuario-di-ercole-vincitore/</string>
-    <string name="monumenti_santuario_ercole_maps"></string>
+    <string name="monumenti_santuario_ercole_maps">41.964343, 12.793234</string>
+    <string name="monumenti_santuario_ercole_gallery"></string>
+    <string name="monumenti_santuario_ercole_categoria">Archeologia</string>
     <string name="monumenti_santuario_ercole_video"></string>
     <drawable name="monumenti_santuario_ercole_fotosmall">@drawable/monumenti_santuario_ercole</drawable>
     <drawable name="monumenti_santuario_ercole_fotobig">@drawable/monumenti_santuario_ercole_big</drawable>
@@ -141,7 +157,9 @@
         Costruito intorno al II secolo a.C. con una caratteristica forma rettangolare, oggi offre una visuale spettacolare sia se visto dalla Piazza del Tempio di Vesta sia se ammirato dal suggestivo Ponte Gregoriano.</string>
     <string name="monumenti_tempio_della_sibilla_url">http://www.visittivoli.eu/archeologia/tempio-della-sibilla</string>
     <string name="monumenti_tempio_della_sibilla_tred"></string>
-    <string name="monumenti_tempio_della_sibilla_maps"></string>
+    <string name="monumenti_tempio_della_sibilla_gallery"></string>
+    <string name="monumenti_tempio_della_sibilla_categoria">Archeologia</string>
+    <string name="monumenti_tempio_della_sibilla_maps">41.966772, 12.800841</string>
     <string name="monumenti_tempio_della_sibilla_video"></string>
     <drawable name="monumenti_tempio_della_sibilla_fotosmall">@drawable/monumenti_tempio_della_sibilla</drawable>
     <drawable name="monumenti_tempio_della_sibilla_fotobig">@drawable/monumenti_tempio_della_sibilla_big</drawable>
@@ -154,9 +172,11 @@
         Raggiungibile oltrepassando un cancello e visibile anche da Ponte Gregoriano, il tempio, risalente al I secolo a.C. è il monumento più conosciuto dell\'antica città di Tibur. E\' dedicato con molta probabilità a Vesta, la dea del focolare, il cui culto era affidato alle Vestali, o a Tiburno, l\'eroe che avrebbe dato il nome alla città. Oggi si presenta con una pianta rotonda caratterizzata da linee eleganti e dal suggestivo scenario paesaggistico che gli fa da scenografia. Nel corso dei secoli il Tempio di Vesta è diventato il soggetto più ritratto dagli artisti italiani e stranieri e dai ricchi aristocratici che nell\'Ottocento arrivavano a Tivoli per il cosiddetto Grand Tour.\n
     </string>
     <string name="monumenti_tempio_di_vesta_url">http://www.visittivoli.eu/archeologia/tempio-di-vesta</string>
-    <string name="monumenti_tempio_di_vesta_maps"></string>
+    <string name="monumenti_tempio_di_vesta_maps">41.891685, 12.486194</string>
     <string name="monumenti_tempio_di_vesta_tred">http://www.visittivoli.eu/virtual-tour/tempio-di-vesta/</string>
     <string name="monumenti_tempio_di_vesta_video"></string>
+    <string name="monumenti_tempio_di_vesta_gallery"></string>
+    <string name="monumenti_tempio_di_vesta_categoria">Archeologia</string>
     <drawable name="monumenti_tempio_di_vesta_fotosmall">@drawable/monumenti_tempio_di_vesta</drawable>
     <drawable name="monumenti_tempio_di_vesta_fotobig">@drawable/monumenti_tempio_di_vesta_big</drawable>
 
@@ -169,9 +189,11 @@
         Oggi il Mausoleo si presenta pieno di crepe, ricoperto da una fitta vegetazione selvaggia e parzialmente celato da un muro di contenimento costruito per bloccare gli straripamenti del vicino fiume Aniene.</string>
 
     <string name="monumenti_tomba_dei_plauzi_url">http://www.visittivoli.eu/archeologia/tomba-dei-plauzi</string>
-    <string name="monumenti_tomba_dei_plauzi_tred"></string>
+    <string name="monumenti_tomba_dei_plauzi_tred">41.954583, 12.762467</string>
     <string name="monumenti_tomba_dei_plauzi_maps"></string>
     <string name="monumenti_tomba_dei_plauzi_video"></string>
+    <string name="monumenti_tomba_dei_plauzi_gallery"></string>
+    <string name="monumenti_tomba_dei_plauzi_categoria">Archeologia</string>
     <drawable name="monumenti_tomba_dei_plauzi_fotosmall">@drawable/monumenti_tomba_dei_plauzi</drawable>
     <drawable name="monumenti_tomba_dei_plauzi_fotobig">@drawable/monumenti_tomba_dei_plauzi_big</drawable>
 
@@ -192,9 +214,11 @@
     Di Grande rilievo il Teatro Marittimo, uno dei monumenti più noti e rappresentati di Villa Adriana e uno dei simboli dell\'unicità e della concezione innovativa dell\'impianto architettonico dell\'intero complesso residenziale. L\'Edificio prende il nome da un raffinato fregio figurato in marmo con soggetto marino, che ne decorava la trabeazione. Costituito da una forma circolare, sorretto da colonne ioniche e coperto da volta a botte, si riflette sull\'acqua di un ampio canale. Il Teatro Marittimo può essere identificato come una vera e propria domus, una sorta di residenza minore all\'interno della residenza imperiale.
 </string>
     <string name="monumenti_villa_adriana_url">http://www.visittivoli.eu/le-ville/villa-adriana</string>
-    <string name="monumenti_villa_adriana_maps"></string>
+    <string name="monumenti_villa_adriana_maps">41.942681, 12.774496</string>
     <string name="monumenti_villa_adriana_tred">http://www.visittivoli.eu/virtual-tour/villa-adriana</string>
     <string name="monumenti_villa_adriana_video"></string>
+    <string name="monumenti_villa_adriana_gallery"></string>
+    <string name="monumenti_villa_adriana_categoria">Villa</string>
     <drawable name="monumenti_villa_adriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
     <drawable name="monumenti_villa_adriana_fotobig">@drawable/monumenti_villa_adriana_big</drawable>
 
@@ -210,9 +234,11 @@
     La maggior parte delle fontane esterne possono essere considerate dei teatri d\'acqua, come la Rometta, caratterizzata dalla scultura di Roma in trono, o l\'imponente Fontana dell\'Ovato, più comunemente chiamata Fontana di Tivoli, perla architettonica che conclude l\'altrettanto famoso Viale delle Cento Fontane. Di notevole interesse la Fontana del Bicchierone, opera di Gian Lorenzo Bernini e le cosiddette "fontane musicali", la Fontana degli Uccelli e la Fontana dell\'Organo, dotate di alcuni congegni azionati dall\'acqua che riproducono armonie musicali. Degna di nota invece la Fontana della Proserpina, composta da un ninfeo centrale protetto da due colonne tortili, pensata anticamente come la Fontana degli Imperatori. Più recente, ma altrettanto bella, è la Fontana del Nettuno, uno dei luoghi più fotografati da turisti e cittadini.
     </string>
     <string name="monumenti_villa_d_este_url">http://www.visittivoli.eu/le-ville/villa-d-este</string>
-    <string name="monumenti_villa_d_este_maps"></string>
+    <string name="monumenti_villa_d_este_maps">41.963268, 12.795826</string>
     <string name="monumenti_villa_d_este_tred">http://www.visittivoli.eu/virtual-tour/villa-d-este/</string>
     <string name="monumenti_villa_d_este_video"></string>
+    <string name="monumenti_villa_d_este_gallery"></string>
+    <string name="monumenti_villa_d_este_categoria">Villa</string>
     <drawable name="monumenti_villa_d_este_fotosmall">@drawable/monumenti_villa_deste</drawable>
     <drawable name="monumenti_villa_d_este_fotobig">@drawable/monumenti_villa_deste_big</drawable>
 
@@ -226,10 +252,108 @@
         Villa Gregoriana è famosa in tutto il mondo sia per la Grande Cascata, scenografico e fotografato getto d\'acqua creato dal fiume Aniene, sia per le Grotte di Nettuno e Grotte delle Sirene, caverne erose dallo stesso fiume poste sotto la zona del Tempio di Vesta e raggiungibili attraverso una strada alberata ornata da una grande varietà di piante. Alla straordinaria villa si aggiunge la vicinanza del Ponte Gregoriano, affascinante struttura fatta costruire sempre da papa Gregorio XVI e che oggi collega il parco al centro storico di Tivoli. Da qui si può ammirare uno straordinario panorama della Valle dell\'Aniene e dell\'antica acropoli. </string>
     <string name="monumenti_villa_gregoriana_url">http://www.visittivoli.eu/le-ville/villa-gregoriana</string>
     <string name="monumenti_villa_gregoriana_tred"></string>
-    <string name="monumenti_villa_gregoriana_maps"></string>
+    <string name="monumenti_villa_gregoriana_maps">41.965386, 12.801773</string>
     <string name="monumenti_villa_gregoriana_video"></string>
+    <string name="monumenti_villa_gregoriana_gallery"></string>
+    <string name="monumenti_villa_gregoriana_categoria">Villa</string>
     <drawable name="monumenti_villa_gregoriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
     <drawable name="monumenti_villa_gregoriana_fotobig">@drawable/monumenti_villa_gregoriana_big</drawable>
+
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_titolo">Cattedrale di San Lorenzo</string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizione">La Cattedrale di San Lorenzo o Duomo di Tivoli, situato nell'omonima piazza, a due passi dall'antica Mensa Ponderaria, è il luogo di culto più rappresentativo della città.</string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizione_big">La Cattedrale di San Lorenzo o Duomo di Tivoli è la massima espressione religiosa della città.
+        Eretta nel medioevo e situata nel centro storico della città, a due passi dalla Mensa ponderaria. Il Duomo è rinomato per il suo meraviglioso campanile romanico alto 45 metri che domina l'omonima piazza sottostante. Un'antica leggenda associa la costruzione del duomo all'imperatore Costantino, la realizzazione sarebbe avvenuta sopra le rovine dell'antico Foro Tiburtino e l'abside originale è ancora visibile all'esterno dell'edificio religioso.
+        All'interno della struttura ci sono tre capolavori degni di attenzione ammirabili ancora oggi: il "gruppo ligneo della Deposizione", capolavoro d'arte romanica risalente al XIII secolo e conservato nella IV cappella della navata destra, la Custodia d'argento del XV secolo lavorata a sbalzo, ed il "Trittico del Salvatore" raffigurante il Cristo, la Vergine e San Giovanni Evangelista, databile al XII secolo e custodito nella terza cappella della navata sinistra.
+    </string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_url">http://www.visittivoli.eu/luoghi-di-culto/cattedrale-di-san-lorenzo</string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_tred">http://www.visittivoli.eu/virtual-tour/cattedrale-di-san-lorenzo/</string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_maps">41.965527, 12.796840</string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_video"></string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_gallery"></string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_categoria">Luogo di Culto</string>
+    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotosmall"></drawable>
+    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotobig"></drawable>
+
+
+
+
+
+
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_titolo">Chiesa della Maria SS. di Quintiliolo</string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_descrizione">Il Santuario della Madonna di Quintiliolo si trova fuori dal centro storico di Tivoli e custodisce al suo interno l'icona religiosa risalente al XIII secolo che la ritrae.</string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_descrizione_big">Il Santuario della Madonna di Quintiliolo si trova appena fuori il centro storico di Tivoli, su di una collina immersa nel verde degli ulivi.
+        Il nome Quintiliolo deriverebbe dal territorio in possesso della famiglia dei Quintili, qui infatti si trovava la loro villa, al margine della quale venne eretta la chiesa prima ed il convento poi. Questo splendido complesso religioso è dedicato alla sacra immagine della Vergine Maria, ritrovata, secondo una leggenda tiburtina, da un contadino che lavorava la terra con l'aratro.
+        Esternamente la chiesa si presenta con uno stile neoclassico diviso in due ordini e dominato da un alto campanile che svetta sul paesaggio circostante e sulla zona delle ex cartiere tiburtine, nei pressi del Santuario di Ercole vincitore. L'interno è a navata unica con due cappelle laterali, in quella di sinistra è conservato il dipinto della Madonna Regina dei Santi, settecentesca opera di Francesco Serbucci da Tivoli.
+        Ma è sull'altare maggiore che si trova il simbolo del santuario, l'Icona della Madonna di Quintiliolo, immagine sacra risalente al XIII secolo ed ancora oggi venerata dai tiburtini, raffigurante la Vergine in trono che sorregge Gesù bambino con il ginocchio sinistro. Ogni prima domenica di maggio questa splendida figura cristiana viene portata in processione dal santuario fino alla Cattedrale di San Lorenzo, dove resta fino all'8 settembre, giorno in cui fa ritorno al santuario.
+    </string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-della-maria-ss-di-quintiliolo</string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_tred"></string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_maps">41.971038, 12.792553</string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_video"></string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_gallery"></string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_categoria">Luogo di Culto</string>
+    <drawable name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_fotosmall"></drawable>
+    <drawable name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_fotobig"></drawable>
+
+
+
+
+
+    <string name="monumenti_Chiesa_di_San_Biagio_titolo">Chiesa di San Biagio</string>
+    <string name="monumenti_Chiesa_di_San_Biagio_descrizione">La Chiesa di San Biagio, costruita verso la fine del Trecento, conserva l'affresco della Crocifissione risalente al 1200 ed il busto della Madonna con il Bambino.</string>
+    <string name="monumenti_Chiesa_di_San_Biagio_descrizione_big">La Chiesa di San Biagio di Tivoli fu ultimata da papa Bonifacio IX verso la fine del 1300 e si trova nella centrale Piazza del Plebiscito, spazio pubblico che decise l'annessione della Città di Tivoli al regno d'Italia.
+        Esternamente questo luogo di culto si presenta con una facciata suddivisa in due ordini, in quella inferiore troviamo un portale centrale rialzato da tre gradini, mentre quella superiore è abbellita da un rosone centrale situato tra un orologio romano ed una meridiana. L'interno della chiesa si presenta a navata unica caratterizzata da un altare maggiore, dalle cappelle laterali e dalle grandi finestre visibili nel presbiterio. Tra le opere conservate all'interno delle cappelle troviamo la settecentesca tela di "Santa Caterina d'Alessandria", il quadro del "Santissimo Nome di Gesù", ed il Fonte Battesimale. Notevoli anche gli affreschi raffiguranti la "Gloria di San Tommaso d'Aquino" e la "Madonna in Gloria"che sorregge Gesù Bambino situati vicino la sagrestia. Nel timpano si può ammirare il busto marmoreo della "Madonna con il Bambino", nel presbiterio invece il bellissimo affresco della Crocifissione risalente alla seconda metà del 1200.
+        Menzione a parte va fatta per i resti dell'antico chiostro, oggi infatti dell'antica struttura restano visibili soltanto le quattro arcate a tutto sesto poggiate sui pilastri affrescati. </string>
+    <string name="monumenti_Chiesa_di_San_Biagio_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-biagio</string>
+    <string name="monumenti_Chiesa_di_San_Biagio_tred"></string>
+    <string name="monumenti_Chiesa_di_San_Biagio_maps">41.963303, 12.799990</string>
+    <string name="monumenti_Chiesa_di_San_Biagio_video"></string>
+    <string name="monumenti_Chiesa_di_San_Biagio_gallery"></string>
+    <string name="monumenti_Chiesa_di_San_Biagio_categoria">Luogo di Culto</string>
+    <drawable name="monumenti_Chiesa_di_San_Biagio_fotosmall"></drawable>
+    <drawable name="monumenti_Chiesa_di_San_Biagio_fotobig"></drawable>
+
+
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_titolo"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizione"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizione_big"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_url"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_tred"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_maps"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_video"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_gallery"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_categoria"></string>
+    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotosmall"></drawable>
+    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotobig"></drawable>
+
+
+    <string name="monumenti_Chiesa_di_San_Silvestro_titolo"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_descrizione"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_descrizione_big"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_url"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_tred"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_maps"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_video"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_gallery"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_categoria"></string>
+    <drawable name="monumenti_Chiesa_di_San_Silvestro_fotosmall"></drawable>
+    <drawable name="monumenti_Chiesa_di_San_Silvestro_fotobig"></drawable>
+
+
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_titolo"></string>
+    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_descrizione_big"></string>
+    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_url"></string>
+    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_tred"></string>
+    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_maps"></string>
+    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_video"></string>
+    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_gallery"></string>
+    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_categoria"></string>
+    <drawable name="monumenti__Chiesa_di_Santa_Maria_Maggiore_fotosmall"></drawable>
+    <drawable name="monumenti__Chiesa_di_Santa_Maria_Maggiore_fotobig"></drawable>
+
+
+
+
 
 
 
