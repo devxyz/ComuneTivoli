@@ -70,6 +70,7 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_Chiesa_di_San_Pietro_alla_Carità_categoria),
                 a.getResources().getString(R.string.monumenti_Chiesa_di_San_Pietro_alla_Carità_gallery)
         ));
+
 //monumenti_Chiesa_di_San_Silvestro
         monumenti.add(new MonumentiComune(
                 a.getResources().getString(R.string.monumenti_Chiesa_di_San_Silvestro_titolo),
