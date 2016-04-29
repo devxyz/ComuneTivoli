@@ -32,30 +32,12 @@
             android:id="@+id/title_txt" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true" android:textColor="@color/template_colorred"
             android:textSize="@dimen/app_textsize_titolo" android:textStyle="bold" android:gravity="left"/>
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/web_btn"
-            android:src="@drawable/ic_launcher"
-            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/maps_btn"
-            android:src="@drawable/ic_launcher"
-            android:layout_alignTop="@+id/view3d_btn" android:layout_alignParentEnd="true"/>
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view3d_btn"
-            android:src="@drawable/ic_launcher"
-            android:layout_alignTop="@+id/web_btn" android:layout_centerHorizontal="true"/>
     <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/scrollView"
             android:layout_below="@+id/title_txt" android:layout_alignParentStart="true"
-            android:layout_above="@+id/web_btn" android:layout_alignParentEnd="true">
+            android:layout_alignParentEnd="true" android:layout_above="@+id/linearLayout2">
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -77,6 +59,34 @@
                     android:gravity="fill_horizontal"/>
         </LinearLayout>
     </ScrollView>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout2" android:gravity="center_horizontal">
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/web_btn"
+                android:src="@drawable/icona_maps_50x50"
+                android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/view3d_btn"
+                android:src="@drawable/icona_streetview_50x50"
+                android:layout_alignTop="@+id/web_btn" android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/maps_btn"
+                android:src="@drawable/icona_googlemaps_50x50"
+                android:layout_alignTop="@+id/view3d_btn" android:layout_alignParentEnd="true"
+                android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+    </LinearLayout>
 </RelativeLayout>
     <ImageButton
             android:layout_width="wrap_content"
