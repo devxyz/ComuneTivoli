@@ -36,7 +36,7 @@ public class LoadingActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (close) return;
-                Intent i = new Intent(LoadingActivity.this, DebugHomeActivity.class);
+                Intent i = new Intent(LoadingActivity.this, HomeActivity.class);
                 startActivity(i);
                 finish();
 
