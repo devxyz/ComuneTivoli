@@ -246,7 +246,7 @@
 
     <string name="monumenti_villa_gregoriana_titolo">Villa Gregoriana</string>
     <string name="monumenti_villa_gregoriana_descrizione">Villa Gregoriana è la cartolina paesaggistica di Tivoli, un incantevole parco verde gestito dal FAI (Fondo Ambiente Italiano) e caratterizzato da boschi, grotte, sentieri e da una cascata.</string>
-    <string name="monumenti_villa_gregoriana_descrizione_big">Villa Gregoriana a Tivoli è un rosario di boschi, sentieri, cascate, grotte e vegetazione che si estende ai piedi dell\'antica acropoli, un suggestivo parco naturalistico immerso nel verde e situato a pochi passi da Roma.\n
+    <string name="monumenti_villa_gregoriana_descrizionebig">Villa Gregoriana a Tivoli è un rosario di boschi, sentieri, cascate, grotte e vegetazione che si estende ai piedi dell\'antica acropoli, un suggestivo parco naturalistico immerso nel verde e situato a pochi passi da Roma.\n
         Voluta da papa Gregorio XVI intorno al 1834, questo splendido luogo incontaminato fu meta imprescindibile di artisti ed aristocratici che nell\'Ottocento arrivarono nell\'antica "Tibur" per il famoso "Grand Tour".\n
         Dal 2005 l\'intero territorio della villa è sotto la tutela e la gestione del FAI (Fondo Ambiente Italiano) ed è considerato un unicum mondiale, luogo dove la natura e la costante opera dell\'uomo si fondono, tra straordinarie bellezze paesaggistiche ed i resti dell\'antica villa archeologica di Publio Manlio Vopisco.\n
         Villa Gregoriana è famosa in tutto il mondo sia per la Grande Cascata, scenografico e fotografato getto d\'acqua creato dal fiume Aniene, sia per le Grotte di Nettuno e Grotte delle Sirene, caverne erose dallo stesso fiume poste sotto la zona del Tempio di Vesta e raggiungibili attraverso una strada alberata ornata da una grande varietà di piante. Alla straordinaria villa si aggiunge la vicinanza del Ponte Gregoriano, affascinante struttura fatta costruire sempre da papa Gregorio XVI e che oggi collega il parco al centro storico di Tivoli. Da qui si può ammirare uno straordinario panorama della Valle dell\'Aniene e dell\'antica acropoli. </string>
@@ -261,7 +261,7 @@
 
     <string name="monumenti_Cattedrale_di_San_Lorenzo_titolo">Cattedrale di San Lorenzo</string>
     <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizione">La Cattedrale di San Lorenzo o Duomo di Tivoli, situato nell\'omonima piazza, a due passi dall\'antica Mensa Ponderaria, è il luogo di culto più rappresentativo della città.</string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizione_big">La Cattedrale di San Lorenzo o Duomo di Tivoli è la massima espressione religiosa della città.
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizionebig">La Cattedrale di San Lorenzo o Duomo di Tivoli è la massima espressione religiosa della città.
         Eretta nel medioevo e situata nel centro storico della città, a due passi dalla Mensa ponderaria. Il Duomo è rinomato per il suo meraviglioso campanile romanico alto 45 metri che domina l\'omonima piazza sottostante. Un\'antica leggenda associa la costruzione del duomo all\'imperatore Costantino, la realizzazione sarebbe avvenuta sopra le rovine dell\'antico Foro Tiburtino e l\'abside originale è ancora visibile all\'esterno dell\'edificio religioso.
         All\'interno della struttura ci sono tre capolavori degni di attenzione ammirabili ancora oggi: il "gruppo ligneo della Deposizione", capolavoro d\'arte romanica risalente al XIII secolo e conservato nella IV cappella della navata destra, la Custodia d\'argento del XV secolo lavorata a sbalzo, ed il "Trittico del Salvatore" raffigurante il Cristo, la Vergine e San Giovanni Evangelista, databile al XII secolo e custodito nella terza cappella della navata sinistra.
     </string>
@@ -281,7 +281,7 @@
 
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_titolo">Chiesa della Maria SS. di Quintiliolo</string>
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_descrizione">Il Santuario della Madonna di Quintiliolo si trova fuori dal centro storico di Tivoli e custodisce al suo interno l\'icona religiosa risalente al XIII secolo che la ritrae.</string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_descrizione_big">Il Santuario della Madonna di Quintiliolo si trova appena fuori il centro storico di Tivoli, su di una collina immersa nel verde degli ulivi.
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_descrizionebig">Il Santuario della Madonna di Quintiliolo si trova appena fuori il centro storico di Tivoli, su di una collina immersa nel verde degli ulivi.
         Il nome Quintiliolo deriverebbe dal territorio in possesso della famiglia dei Quintili, qui infatti si trovava la loro villa, al margine della quale venne eretta la chiesa prima ed il convento poi. Questo splendido complesso religioso è dedicato alla sacra immagine della Vergine Maria, ritrovata, secondo una leggenda tiburtina, da un contadino che lavorava la terra con l\'aratro.
         Esternamente la chiesa si presenta con uno stile neoclassico diviso in due ordini e dominato da un alto campanile che svetta sul paesaggio circostante e sulla zona delle ex cartiere tiburtine, nei pressi del Santuario di Ercole vincitore. L\'interno è a navata unica con due cappelle laterali, in quella di sinistra è conservato il dipinto della Madonna Regina dei Santi, settecentesca opera di Francesco Serbucci da Tivoli.
         Ma è sull\'altare maggiore che si trova il simbolo del santuario, l\'Icona della Madonna di Quintiliolo, immagine sacra risalente al XIII secolo ed ancora oggi venerata dai tiburtini, raffigurante la Vergine in trono che sorregge Gesù bambino con il ginocchio sinistro. Ogni prima domenica di maggio questa splendida figura cristiana viene portata in processione dal santuario fino alla Cattedrale di San Lorenzo, dove resta fino all\'8 settembre, giorno in cui fa ritorno al santuario.
@@ -301,7 +301,7 @@
 
     <string name="monumenti_Chiesa_di_San_Biagio_titolo">Chiesa di San Biagio</string>
     <string name="monumenti_Chiesa_di_San_Biagio_descrizione">La Chiesa di San Biagio, costruita verso la fine del Trecento, conserva l\'affresco della Crocifissione risalente al 1200 ed il busto della Madonna con il Bambino.</string>
-    <string name="monumenti_Chiesa_di_San_Biagio_descrizione_big">La Chiesa di San Biagio di Tivoli fu ultimata da papa Bonifacio IX verso la fine del 1300 e si trova nella centrale Piazza del Plebiscito, spazio pubblico che decise l\'annessione della Città di Tivoli al regno d\'Italia.
+    <string name="monumenti_Chiesa_di_San_Biagio_descrizionebig">La Chiesa di San Biagio di Tivoli fu ultimata da papa Bonifacio IX verso la fine del 1300 e si trova nella centrale Piazza del Plebiscito, spazio pubblico che decise l\'annessione della Città di Tivoli al regno d\'Italia.
         Esternamente questo luogo di culto si presenta con una facciata suddivisa in due ordini, in quella inferiore troviamo un portale centrale rialzato da tre gradini, mentre quella superiore è abbellita da un rosone centrale situato tra un orologio romano ed una meridiana. L\'interno della chiesa si presenta a navata unica caratterizzata da un altare maggiore, dalle cappelle laterali e dalle grandi finestre visibili nel presbiterio. Tra le opere conservate all\'interno delle cappelle troviamo la settecentesca tela di "Santa Caterina d\'Alessandria", il quadro del "Santissimo Nome di Gesù", ed il Fonte Battesimale. Notevoli anche gli affreschi raffiguranti la "Gloria di San Tommaso d\'Aquino" e la "Madonna in Gloria"che sorregge Gesù Bambino situati vicino la sagrestia. Nel timpano si può ammirare il busto marmoreo della "Madonna con il Bambino", nel presbiterio invece il bellissimo affresco della Crocifissione risalente alla seconda metà del 1200.
         Menzione a parte va fatta per i resti dell\'antico chiostro, oggi infatti dell\'antica struttura restano visibili soltanto le quattro arcate a tutto sesto poggiate sui pilastri affrescati. </string>
     <string name="monumenti_Chiesa_di_San_Biagio_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-biagio</string>
@@ -316,7 +316,7 @@
 
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_titolo"></string>
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizione"></string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizione_big"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizionebig"></string>
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_url"></string>
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_tred"></string>
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_maps"></string>
@@ -329,7 +329,7 @@
 
     <string name="monumenti_Chiesa_di_San_Silvestro_titolo"></string>
     <string name="monumenti_Chiesa_di_San_Silvestro_descrizione"></string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_descrizione_big"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_descrizionebig"></string>
     <string name="monumenti_Chiesa_di_San_Silvestro_url"></string>
     <string name="monumenti_Chiesa_di_San_Silvestro_tred"></string>
     <string name="monumenti_Chiesa_di_San_Silvestro_maps"></string>
@@ -341,15 +341,16 @@
 
 
     <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_titolo"></string>
-    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_descrizione_big"></string>
-    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_url"></string>
-    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_tred"></string>
-    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_maps"></string>
-    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_video"></string>
-    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_gallery"></string>
-    <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_categoria"></string>
-    <drawable name="monumenti__Chiesa_di_Santa_Maria_Maggiore_fotosmall">@drawable/ic_launcher</drawable>
-    <drawable name="monumenti__Chiesa_di_Santa_Maria_Maggiore_fotobig">@drawable/ic_launcher</drawable>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_descrizione"></string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_descrizionebig"></string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_url"></string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_tred"></string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_maps"></string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_video"></string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_gallery"></string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_categoria"></string>
+    <drawable name="monumenti_Chiesa_di_Santa_Maria_Maggiore_fotosmall">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti_Chiesa_di_Santa_Maria_Maggiore_fotobig">@drawable/ic_launcher</drawable>
 
 
 
