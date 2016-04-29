@@ -13,7 +13,7 @@ public class GenerateLayoutFiles {
 
 
         File source = new File("/Users/stefano/DATA/dev/android/ComuneTivoliApp/ComuneTivoli/github/ComuneTivoli/comunetivoli-android/res/layout");
-        final String fileContent = StreamUtil.getFileContent(new FileReader(new File(source, "empty_layout2.xml")));
+        final String fileContent = StreamUtil.getFileContent(new FileReader(new File(source, "empty_layout.xml")));
 
 
         for (File file : source.listFiles()) {
