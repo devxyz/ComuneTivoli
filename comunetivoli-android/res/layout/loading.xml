@@ -4,11 +4,11 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:id="@+id/my_splash"
-                android:weightSum="1" android:background="@drawable/splash">
+                android:weightSum="1" android:background="@drawable/etichetta_splash_iniziale_720x1280">
     <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/myactivity_imageView" android:layout_gravity="center_horizontal" android:src="@drawable/splash"
+            android:id="@+id/myactivity_imageView" android:layout_gravity="center_horizontal" android:src="@drawable/etichetta_splash_iniziale_720x1280"
             android:layout_marginLeft="0dp"
             android:layout_alignParentTop="true" android:layout_above="@+id/loading" android:visibility="gone"/>
     <TextView

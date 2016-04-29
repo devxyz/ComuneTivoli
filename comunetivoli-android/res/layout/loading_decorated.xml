@@ -27,7 +27,7 @@
     <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/myactivity_imageView" android:layout_gravity="center_horizontal" android:src="@drawable/splash"
+            android:id="@+id/myactivity_imageView" android:layout_gravity="center_horizontal" android:src="@drawable/etichetta_splash_iniziale_720x1280"
             android:layout_marginLeft="0dp"
             android:layout_alignParentTop="true" android:layout_above="@+id/loading" android:visibility="gone"/>
     <TextView
@@ -56,7 +56,7 @@
             android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/template_btn_dx"
-                 android:src="@drawable/scritta_comunetivolix50" android:layout_alignParentTop="true"
+                 android:src="@drawable/template_left_arrow" android:layout_alignParentTop="true"
                  android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
                  android:background="@color/trasparent" android:paddingRight="20dp"/>
     <TextView

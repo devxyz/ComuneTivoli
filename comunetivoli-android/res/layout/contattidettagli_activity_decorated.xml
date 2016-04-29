@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/screenmaps"
 
-            android:src="@drawable/contatti_mappe_comune_anagrafe"
+            android:src="@drawable/contatti_maps_comune_anagrafe"
             android:layout_below="@+id/titolo_dettagli"
             android:layout_toEndOf="@+id/linearLayout" android:layout_alignBottom="@+id/linearLayout"
             android:paddingLeft="10dp"/>
@@ -47,7 +47,7 @@
             android:text="New Text"
             android:id="@+id/descrizione_dettagli"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/screenmaps" android:layout_alignParentBottom="true"/>
+            android:layout_below="@+id/screenmaps" android:layout_alignParentBottom="true" android:paddingTop="10dp"/>
 
     <LinearLayout
             android:orientation="vertical"
@@ -59,13 +59,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_chiama_dettagli"
-                android:background="@color/trasparent" android:src="@drawable/contatti_icona_chiama50px"
+                android:background="@color/trasparent" android:src="@drawable/icona_telefono_50x50"
                 android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_maps_dettagli"
-                android:src="@drawable/contatti_icona_maps50px"
+                android:src="@drawable/icona_maps_50x50"
                 android:background="@color/trasparent"
                 android:layout_below="@+id/descrizione_dettagli" android:layout_toEndOf="@+id/btn_email_dettagli"
                 android:paddingTop="5dp" android:paddingBottom="5dp"/>
@@ -73,7 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_email_dettagli"
-                android:src="@drawable/contatti_icona_contatti50px"
+                android:src="@drawable/icona_email_50x50"
                 android:background="@color/trasparent"
                 android:layout_below="@+id/descrizione_dettagli" android:layout_toEndOf="@+id/btn_chiama_dettagli"/>
     </LinearLayout>
@@ -87,7 +87,7 @@
             android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/template_btn_dx"
-                 android:src="@drawable/scritta_comunetivolix50" android:layout_alignParentTop="true"
+                 android:src="@drawable/template_left_arrow" android:layout_alignParentTop="true"
                  android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
                  android:background="@color/trasparent" android:paddingRight="20dp"/>
     <TextView

@@ -37,7 +37,7 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_comune_tivoli_indirizzo),
                 getResources().getString(R.string.contatti_comune_tivoli_email),
                 getResources().getString(R.string.contatti_comune_tivoli_maps),
-                R.drawable.contatti_mappe_comune_anagrafe
+                R.drawable.contatti_maps_comune_anagrafe
         );
 
         ContattiComune urp = new ContattiComune(
@@ -47,7 +47,7 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_urp_tivoli_indirizzo),
                 getResources().getString(R.string.contatti_urp_tivoli_email),
                 getResources().getString(R.string.contatti_urp_tivoli_maps),
-                R.drawable.contatti_mappe_uffrelazioni
+                R.drawable.contatti_maps_uffrelazioni
         );
 
         ContattiComune anagrafe = new ContattiComune(
@@ -57,7 +57,7 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_anagrafe_tivoli_indirizzo),
                 getResources().getString(R.string.contatti_anagrafe_tivoli_email),
                 getResources().getString(R.string.contatti_anagrafe_tivoli_maps),
-                R.drawable.contatti_mappe_comune_anagrafe
+                R.drawable.contatti_maps_comune_anagrafe
         );
 
         ContattiComune villa_adriana = new ContattiComune(
@@ -67,7 +67,7 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_villa_adriana_indirizzo),
                 getResources().getString(R.string.contatti_villa_adriana_email),
                 getResources().getString(R.string.contatti_villa_adriana_maps),
-                R.drawable.contatti_urpvillaadriana
+                R.drawable.contatti_maps_urpvillaadriana
         );
 
         ContattiComune tivoli_terme = new ContattiComune(
@@ -77,7 +77,7 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_tivoli_terme_indirizzo),
                 getResources().getString(R.string.contatti_tivoli_terme_email),
                 getResources().getString(R.string.contatti_tivoli_terme_maps),
-                R.drawable.contatti_urptivoliterme
+                R.drawable.contatti_maps_urptivoliterme
         );
 
         ContattiComune uff_elettorale = new ContattiComune(
@@ -87,7 +87,7 @@ public class ContattiActivity extends Activity {
                 getResources().getString(R.string.contatti_uff_elettorale_indirizzo),
                 getResources().getString(R.string.contatti_uff_elettorale_email),
                 getResources().getString(R.string.contatti_uff_elettorale_maps),
-                R.drawable.contatti_ufficioelettorale
+                R.drawable.contatti_maps_ufficioelettorale
         );
 
         contatti.add(comune);

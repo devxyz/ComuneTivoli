@@ -45,7 +45,7 @@ public class MonumentiDettagliActivity extends Activity {
         dettagli_text = (TextView) findViewById(R.id.txt_description);
         image_monumento = (ImageView) findViewById(R.id.image_monumento);
         web_btn = (ImageButton) findViewById(R.id.web_btn);
-        tred_btn = (ImageButton) findViewById(R.id.tred_btn);
+        tred_btn = (ImageButton) findViewById(R.id.view3d_btn);
         maps_btn = (ImageButton) findViewById(R.id.maps_btn);
 
 

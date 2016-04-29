@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView3"
-            android:background="@drawable/logotivoli"
+            android:background="@drawable/logo_comune_tivoli_80x110"
             android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
     <ListView
             android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
             android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/template_btn_dx"
-                 android:src="@drawable/scritta_comunetivolix50" android:layout_alignParentTop="true"
+                 android:src="@drawable/template_left_arrow" android:layout_alignParentTop="true"
                  android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
                  android:background="@color/trasparent" android:paddingRight="20dp"/>
     <TextView

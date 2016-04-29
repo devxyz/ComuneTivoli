@@ -32,7 +32,7 @@
               android:layout_below="@+id/turismo_btn_cosa_mangiare" android:layout_alignParentStart="true"
               android:layout_marginTop="48dp"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
-                 android:id="@+id/turismo_btn_mappa" android:src="@drawable/icona_maps"
+                 android:id="@+id/turismo_btn_mappa" android:src="@drawable/icona_maps_96x96"
                  android:background="@color/trasparent"
                  android:layout_marginTop="21dp" android:layout_below="@+id/textView12"
                  android:layout_alignStart="@+id/turismo_btn_monumenti"/>

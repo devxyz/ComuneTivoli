@@ -21,6 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/menu_topimg" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
-            android:src="@drawable/scritta_comunetivolix50" android:background="@color/white"
+            android:src="@drawable/etichetta_comunetivoli_100x50" android:background="@color/white"
             android:minHeight="@dimen/template_height_barra_red_and_blu_top"/>
 </RelativeLayout>

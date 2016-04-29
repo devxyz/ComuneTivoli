@@ -37,18 +37,17 @@
             android:layout_height="wrap_content"
             android:id="@+id/web_btn"
             android:src="@drawable/ic_launcher"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"/>
+            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/maps_btn"
             android:src="@drawable/ic_launcher"
-            android:layout_alignTop="@+id/tred_btn" android:layout_alignParentEnd="true"/>
+            android:layout_alignTop="@+id/view3d_btn" android:layout_alignParentEnd="true"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tred_btn"
+            android:id="@+id/view3d_btn"
             android:src="@drawable/ic_launcher"
             android:layout_alignTop="@+id/web_btn" android:layout_centerHorizontal="true"/>
     <ScrollView
@@ -56,7 +55,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/scrollView"
             android:layout_below="@+id/title_txt" android:layout_alignParentStart="true"
-            android:layout_above="@+id/web_btn">
+            android:layout_above="@+id/web_btn" android:layout_alignParentEnd="true">
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -69,7 +68,7 @@
                     android:layout_below="@+id/title_txt" android:layout_alignParentStart="true"
                     android:layout_weight="1.13"/>
             <TextView
-                    android:layout_width="395dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_description"
                     android:text="villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este villa d&apos;este "
@@ -88,7 +87,7 @@
             android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/template_btn_dx"
-                 android:src="@drawable/scritta_comunetivolix50" android:layout_alignParentTop="true"
+                 android:src="@drawable/template_left_arrow" android:layout_alignParentTop="true"
                  android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
                  android:background="@color/trasparent" android:paddingRight="20dp"/>
     <TextView

@@ -24,7 +24,7 @@ public class DialogUtil {
     public static void openInfoDialog(final Activity context, final String title, final Map<String, String> message) {
         AlertDialog.Builder builderSingle = new AlertDialog.Builder(
                 context);
-        builderSingle.setIcon(R.drawable.icon_info);
+        builderSingle.setIcon(R.drawable.icona_info_25x25);
         builderSingle.setTitle(title);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 context,
@@ -76,7 +76,7 @@ public class DialogUtil {
     public static void openInfoDialog(final Activity context, final String title, final ArrayList<String> message) {
         AlertDialog.Builder builderSingle = new AlertDialog.Builder(
                 context);
-        builderSingle.setIcon(R.drawable.icon_info);
+        builderSingle.setIcon(R.drawable.icona_info_25x25);
         builderSingle.setTitle(title);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 context,
@@ -147,7 +147,7 @@ public class DialogUtil {
         builder1.setMessage(message);
         builder1.setTitle(title);
         builder1.setCancelable(true);
-        builder1.setIcon(R.drawable.dialog_info);
+        builder1.setIcon(R.drawable.icona_info_50x50);
         builder1.setPositiveButton("OK",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
@@ -210,7 +210,7 @@ public class DialogUtil {
         builder1.setMessage(message);
         builder1.setTitle(title);
         builder1.setCancelable(true);
-        builder1.setIcon(R.drawable.dialog_alert);
+        builder1.setIcon(R.drawable.icona_alert_50x50);
         builder1.setPositiveButton("OK",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
@@ -237,7 +237,7 @@ public class DialogUtil {
         builder1.setView(msg);
         builder1.setTitle(title);
         builder1.setCancelable(true);
-        builder1.setIcon(R.drawable.dialog_error);
+        builder1.setIcon(R.drawable.icona_error_50x50);
         builder1.setPositiveButton("OK",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {

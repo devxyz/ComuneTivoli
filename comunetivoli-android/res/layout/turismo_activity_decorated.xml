@@ -54,7 +54,7 @@
               android:layout_below="@+id/turismo_btn_cosa_mangiare" android:layout_alignParentStart="true"
               android:layout_marginTop="48dp"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
-                 android:id="@+id/turismo_btn_mappa" android:src="@drawable/icona_maps"
+                 android:id="@+id/turismo_btn_mappa" android:src="@drawable/icona_maps_96x96"
                  android:background="@color/trasparent"
                  android:layout_marginTop="21dp" android:layout_below="@+id/textView12"
                  android:layout_alignStart="@+id/turismo_btn_monumenti"/>
@@ -68,7 +68,7 @@
             android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/template_btn_dx"
-                 android:src="@drawable/scritta_comunetivolix50" android:layout_alignParentTop="true"
+                 android:src="@drawable/template_left_arrow" android:layout_alignParentTop="true"
                  android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
                  android:background="@color/trasparent" android:paddingRight="20dp"/>
     <TextView

@@ -38,7 +38,7 @@ public class ImageScrollActivity extends Activity {
             imageView.setId(i);
             imageView.setPadding(2, 2, 2, 2);
             imageView.setImageBitmap(BitmapFactory.decodeResource(
-                    getResources(), R.drawable.logoscuola));
+                    getResources(), R.drawable.logo_scuola_500x500));
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             layout.addView(imageView);
             imageView.setImageBitmap(BitmapFactory.decodeResource(

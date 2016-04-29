@@ -8,12 +8,15 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 /**
  * Created by stefano on 26/04/16.
  */
 public class MenuActivity extends Activity {
     ListView menuListView;
-    ImageButton menuButton,menu_topimg;
+    ImageButton menuButton, menu_topimg;
     RelativeLayout menuRelative;
 
     @Override
@@ -24,6 +27,9 @@ public class MenuActivity extends Activity {
         menuButton = (ImageButton) findViewById(R.id.menu_btnclose);
         menu_topimg = (ImageButton) findViewById(R.id.menu_topimg);
         menuRelative = (RelativeLayout) findViewById(R.id.menu_relative);
+
+        Map<String, Class> vociMenu = new LinkedHashMap<>();
+        //vociMenu.put("Co",)
 
         ArrayAdapter<String> a = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         a.add("menu 1");
