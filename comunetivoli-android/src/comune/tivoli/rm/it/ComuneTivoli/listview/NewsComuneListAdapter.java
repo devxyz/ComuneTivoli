@@ -12,6 +12,7 @@ import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.R;
 import comune.tivoli.rm.it.ComuneTivoli.model.ContattiComune;
 import comune.tivoli.rm.it.ComuneTivoli.model.NewsComune;
+import comune.tivoli.rm.it.ComuneTivoli.util.DateUtil;
 
 import java.util.List;
 
@@ -66,7 +67,7 @@ public class NewsComuneListAdapter extends BaseAdapter {
         final NewsComune nc = news.get(position);
         news_descrizione.setText(nc.descrizione);
         news_title.setText(nc.titolo);
-        news_data.setText(nc.data+"");
+        news_data.setText(DateUtil.toDDMMYYY(nc.data));
 
         //contatti_image.setImageResource(R.id.cc.descrizione);
 

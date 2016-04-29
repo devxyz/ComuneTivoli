@@ -20,17 +20,26 @@ public class TemplateUtil {
         if (testo != null)
             testo.setText(label);
 
-        if (template_btn_dx != null)
+
+        if (template_btn_dx != null) {
+
+            if (a.getClass().equals(HomeActivity.class)) {
+                template_btn_dx.setImageDrawable(a.getResources().getDrawable(R.drawable.icona_trasparente));
+            }
+
             template_btn_dx.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (a.getClass().equals(HomeActivity.class)) return;
-
+/*
                     Intent i = new Intent(a, HomeActivity.class);
                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     a.startActivity(i);
+                    */
+                    a.finish();
                 }
             });
+        }
 
         final View.OnClickListener l = new View.OnClickListener() {
             @Override

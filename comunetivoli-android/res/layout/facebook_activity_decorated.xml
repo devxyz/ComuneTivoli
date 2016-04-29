@@ -48,7 +48,7 @@
                  android:id="@+id/template_btn_dx"
                  android:src="@drawable/template_left_arrow" android:layout_alignParentTop="true"
                  android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
-                 android:background="@color/trasparent" android:paddingRight="20dp"/>
+                 android:paddingRight="20dp" android:background="@color/template_colorblu"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

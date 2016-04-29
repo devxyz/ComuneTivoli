@@ -29,7 +29,11 @@ public class MenuActivity extends Activity {
         menuRelative = (RelativeLayout) findViewById(R.id.menu_relative);
 
         Map<String, Class> vociMenu = new LinkedHashMap<>();
-        //vociMenu.put("Co",)
+        vociMenu.put("Home", HomeActivity.class);
+        vociMenu.put("Informazioni turistiche", TurismoActivity.class);
+        vociMenu.put("Notizie Istituzionali", NewsActivity.class);
+        vociMenu.put("News dai Social", NewsActivity.class);
+        vociMenu.put("DEBUG", DebugHomeActivity.class);
 
         ArrayAdapter<String> a = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         a.add("menu 1");
