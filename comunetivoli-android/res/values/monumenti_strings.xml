@@ -260,10 +260,10 @@
     <drawable name="monumenti_villa_gregoriana_fotobig">@drawable/monumenti_villa_gregoriana_big</drawable>
 
     <string name="monumenti_Cattedrale_di_San_Lorenzo_titolo">Cattedrale di San Lorenzo</string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizione">La Cattedrale di San Lorenzo o Duomo di Tivoli, situato nell'omonima piazza, a due passi dall'antica Mensa Ponderaria, è il luogo di culto più rappresentativo della città.</string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizione">La Cattedrale di San Lorenzo o Duomo di Tivoli, situato nell\'omonima piazza, a due passi dall\'antica Mensa Ponderaria, è il luogo di culto più rappresentativo della città.</string>
     <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizione_big">La Cattedrale di San Lorenzo o Duomo di Tivoli è la massima espressione religiosa della città.
-        Eretta nel medioevo e situata nel centro storico della città, a due passi dalla Mensa ponderaria. Il Duomo è rinomato per il suo meraviglioso campanile romanico alto 45 metri che domina l'omonima piazza sottostante. Un'antica leggenda associa la costruzione del duomo all'imperatore Costantino, la realizzazione sarebbe avvenuta sopra le rovine dell'antico Foro Tiburtino e l'abside originale è ancora visibile all'esterno dell'edificio religioso.
-        All'interno della struttura ci sono tre capolavori degni di attenzione ammirabili ancora oggi: il "gruppo ligneo della Deposizione", capolavoro d'arte romanica risalente al XIII secolo e conservato nella IV cappella della navata destra, la Custodia d'argento del XV secolo lavorata a sbalzo, ed il "Trittico del Salvatore" raffigurante il Cristo, la Vergine e San Giovanni Evangelista, databile al XII secolo e custodito nella terza cappella della navata sinistra.
+        Eretta nel medioevo e situata nel centro storico della città, a due passi dalla Mensa ponderaria. Il Duomo è rinomato per il suo meraviglioso campanile romanico alto 45 metri che domina l\'omonima piazza sottostante. Un\'antica leggenda associa la costruzione del duomo all\'imperatore Costantino, la realizzazione sarebbe avvenuta sopra le rovine dell\'antico Foro Tiburtino e l\'abside originale è ancora visibile all\'esterno dell\'edificio religioso.
+        All\'interno della struttura ci sono tre capolavori degni di attenzione ammirabili ancora oggi: il "gruppo ligneo della Deposizione", capolavoro d\'arte romanica risalente al XIII secolo e conservato nella IV cappella della navata destra, la Custodia d\'argento del XV secolo lavorata a sbalzo, ed il "Trittico del Salvatore" raffigurante il Cristo, la Vergine e San Giovanni Evangelista, databile al XII secolo e custodito nella terza cappella della navata sinistra.
     </string>
     <string name="monumenti_Cattedrale_di_San_Lorenzo_url">http://www.visittivoli.eu/luoghi-di-culto/cattedrale-di-san-lorenzo</string>
     <string name="monumenti_Cattedrale_di_San_Lorenzo_tred">http://www.visittivoli.eu/virtual-tour/cattedrale-di-san-lorenzo/</string>
@@ -271,8 +271,8 @@
     <string name="monumenti_Cattedrale_di_San_Lorenzo_video"></string>
     <string name="monumenti_Cattedrale_di_San_Lorenzo_gallery"></string>
     <string name="monumenti_Cattedrale_di_San_Lorenzo_categoria">Luogo di Culto</string>
-    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotosmall"></drawable>
-    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotobig"></drawable>
+    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotosmall">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotobig">@drawable/ic_launcher</drawable>
 
 
 
@@ -280,11 +280,11 @@
 
 
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_titolo">Chiesa della Maria SS. di Quintiliolo</string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_descrizione">Il Santuario della Madonna di Quintiliolo si trova fuori dal centro storico di Tivoli e custodisce al suo interno l'icona religiosa risalente al XIII secolo che la ritrae.</string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_descrizione">Il Santuario della Madonna di Quintiliolo si trova fuori dal centro storico di Tivoli e custodisce al suo interno l\'icona religiosa risalente al XIII secolo che la ritrae.</string>
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_descrizione_big">Il Santuario della Madonna di Quintiliolo si trova appena fuori il centro storico di Tivoli, su di una collina immersa nel verde degli ulivi.
-        Il nome Quintiliolo deriverebbe dal territorio in possesso della famiglia dei Quintili, qui infatti si trovava la loro villa, al margine della quale venne eretta la chiesa prima ed il convento poi. Questo splendido complesso religioso è dedicato alla sacra immagine della Vergine Maria, ritrovata, secondo una leggenda tiburtina, da un contadino che lavorava la terra con l'aratro.
-        Esternamente la chiesa si presenta con uno stile neoclassico diviso in due ordini e dominato da un alto campanile che svetta sul paesaggio circostante e sulla zona delle ex cartiere tiburtine, nei pressi del Santuario di Ercole vincitore. L'interno è a navata unica con due cappelle laterali, in quella di sinistra è conservato il dipinto della Madonna Regina dei Santi, settecentesca opera di Francesco Serbucci da Tivoli.
-        Ma è sull'altare maggiore che si trova il simbolo del santuario, l'Icona della Madonna di Quintiliolo, immagine sacra risalente al XIII secolo ed ancora oggi venerata dai tiburtini, raffigurante la Vergine in trono che sorregge Gesù bambino con il ginocchio sinistro. Ogni prima domenica di maggio questa splendida figura cristiana viene portata in processione dal santuario fino alla Cattedrale di San Lorenzo, dove resta fino all'8 settembre, giorno in cui fa ritorno al santuario.
+        Il nome Quintiliolo deriverebbe dal territorio in possesso della famiglia dei Quintili, qui infatti si trovava la loro villa, al margine della quale venne eretta la chiesa prima ed il convento poi. Questo splendido complesso religioso è dedicato alla sacra immagine della Vergine Maria, ritrovata, secondo una leggenda tiburtina, da un contadino che lavorava la terra con l\'aratro.
+        Esternamente la chiesa si presenta con uno stile neoclassico diviso in due ordini e dominato da un alto campanile che svetta sul paesaggio circostante e sulla zona delle ex cartiere tiburtine, nei pressi del Santuario di Ercole vincitore. L\'interno è a navata unica con due cappelle laterali, in quella di sinistra è conservato il dipinto della Madonna Regina dei Santi, settecentesca opera di Francesco Serbucci da Tivoli.
+        Ma è sull\'altare maggiore che si trova il simbolo del santuario, l\'Icona della Madonna di Quintiliolo, immagine sacra risalente al XIII secolo ed ancora oggi venerata dai tiburtini, raffigurante la Vergine in trono che sorregge Gesù bambino con il ginocchio sinistro. Ogni prima domenica di maggio questa splendida figura cristiana viene portata in processione dal santuario fino alla Cattedrale di San Lorenzo, dove resta fino all\'8 settembre, giorno in cui fa ritorno al santuario.
     </string>
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-della-maria-ss-di-quintiliolo</string>
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_tred"></string>
@@ -292,26 +292,26 @@
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_video"></string>
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_gallery"></string>
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_categoria">Luogo di Culto</string>
-    <drawable name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_fotosmall"></drawable>
-    <drawable name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_fotobig"></drawable>
+    <drawable name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_fotosmall">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_fotobig">@drawable/ic_launcher</drawable>
 
 
 
 
 
     <string name="monumenti_Chiesa_di_San_Biagio_titolo">Chiesa di San Biagio</string>
-    <string name="monumenti_Chiesa_di_San_Biagio_descrizione">La Chiesa di San Biagio, costruita verso la fine del Trecento, conserva l'affresco della Crocifissione risalente al 1200 ed il busto della Madonna con il Bambino.</string>
-    <string name="monumenti_Chiesa_di_San_Biagio_descrizione_big">La Chiesa di San Biagio di Tivoli fu ultimata da papa Bonifacio IX verso la fine del 1300 e si trova nella centrale Piazza del Plebiscito, spazio pubblico che decise l'annessione della Città di Tivoli al regno d'Italia.
-        Esternamente questo luogo di culto si presenta con una facciata suddivisa in due ordini, in quella inferiore troviamo un portale centrale rialzato da tre gradini, mentre quella superiore è abbellita da un rosone centrale situato tra un orologio romano ed una meridiana. L'interno della chiesa si presenta a navata unica caratterizzata da un altare maggiore, dalle cappelle laterali e dalle grandi finestre visibili nel presbiterio. Tra le opere conservate all'interno delle cappelle troviamo la settecentesca tela di "Santa Caterina d'Alessandria", il quadro del "Santissimo Nome di Gesù", ed il Fonte Battesimale. Notevoli anche gli affreschi raffiguranti la "Gloria di San Tommaso d'Aquino" e la "Madonna in Gloria"che sorregge Gesù Bambino situati vicino la sagrestia. Nel timpano si può ammirare il busto marmoreo della "Madonna con il Bambino", nel presbiterio invece il bellissimo affresco della Crocifissione risalente alla seconda metà del 1200.
-        Menzione a parte va fatta per i resti dell'antico chiostro, oggi infatti dell'antica struttura restano visibili soltanto le quattro arcate a tutto sesto poggiate sui pilastri affrescati. </string>
+    <string name="monumenti_Chiesa_di_San_Biagio_descrizione">La Chiesa di San Biagio, costruita verso la fine del Trecento, conserva l\'affresco della Crocifissione risalente al 1200 ed il busto della Madonna con il Bambino.</string>
+    <string name="monumenti_Chiesa_di_San_Biagio_descrizione_big">La Chiesa di San Biagio di Tivoli fu ultimata da papa Bonifacio IX verso la fine del 1300 e si trova nella centrale Piazza del Plebiscito, spazio pubblico che decise l\'annessione della Città di Tivoli al regno d\'Italia.
+        Esternamente questo luogo di culto si presenta con una facciata suddivisa in due ordini, in quella inferiore troviamo un portale centrale rialzato da tre gradini, mentre quella superiore è abbellita da un rosone centrale situato tra un orologio romano ed una meridiana. L\'interno della chiesa si presenta a navata unica caratterizzata da un altare maggiore, dalle cappelle laterali e dalle grandi finestre visibili nel presbiterio. Tra le opere conservate all\'interno delle cappelle troviamo la settecentesca tela di "Santa Caterina d\'Alessandria", il quadro del "Santissimo Nome di Gesù", ed il Fonte Battesimale. Notevoli anche gli affreschi raffiguranti la "Gloria di San Tommaso d\'Aquino" e la "Madonna in Gloria"che sorregge Gesù Bambino situati vicino la sagrestia. Nel timpano si può ammirare il busto marmoreo della "Madonna con il Bambino", nel presbiterio invece il bellissimo affresco della Crocifissione risalente alla seconda metà del 1200.
+        Menzione a parte va fatta per i resti dell\'antico chiostro, oggi infatti dell\'antica struttura restano visibili soltanto le quattro arcate a tutto sesto poggiate sui pilastri affrescati. </string>
     <string name="monumenti_Chiesa_di_San_Biagio_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-biagio</string>
     <string name="monumenti_Chiesa_di_San_Biagio_tred"></string>
     <string name="monumenti_Chiesa_di_San_Biagio_maps">41.963303, 12.799990</string>
     <string name="monumenti_Chiesa_di_San_Biagio_video"></string>
     <string name="monumenti_Chiesa_di_San_Biagio_gallery"></string>
     <string name="monumenti_Chiesa_di_San_Biagio_categoria">Luogo di Culto</string>
-    <drawable name="monumenti_Chiesa_di_San_Biagio_fotosmall"></drawable>
-    <drawable name="monumenti_Chiesa_di_San_Biagio_fotobig"></drawable>
+    <drawable name="monumenti_Chiesa_di_San_Biagio_fotosmall">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti_Chiesa_di_San_Biagio_fotobig">@drawable/ic_launcher</drawable>
 
 
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_titolo"></string>
@@ -323,8 +323,8 @@
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_video"></string>
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_gallery"></string>
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_categoria"></string>
-    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotosmall"></drawable>
-    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotobig"></drawable>
+    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotosmall">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotobig">@drawable/ic_launcher</drawable>
 
 
     <string name="monumenti_Chiesa_di_San_Silvestro_titolo"></string>
@@ -336,8 +336,8 @@
     <string name="monumenti_Chiesa_di_San_Silvestro_video"></string>
     <string name="monumenti_Chiesa_di_San_Silvestro_gallery"></string>
     <string name="monumenti_Chiesa_di_San_Silvestro_categoria"></string>
-    <drawable name="monumenti_Chiesa_di_San_Silvestro_fotosmall"></drawable>
-    <drawable name="monumenti_Chiesa_di_San_Silvestro_fotobig"></drawable>
+    <drawable name="monumenti_Chiesa_di_San_Silvestro_fotosmall">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti_Chiesa_di_San_Silvestro_fotobig">@drawable/ic_launcher</drawable>
 
 
     <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_titolo"></string>
@@ -348,8 +348,8 @@
     <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_video"></string>
     <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_gallery"></string>
     <string name="monumenti__Chiesa_di_Santa_Maria_Maggiore_categoria"></string>
-    <drawable name="monumenti__Chiesa_di_Santa_Maria_Maggiore_fotosmall"></drawable>
-    <drawable name="monumenti__Chiesa_di_Santa_Maria_Maggiore_fotobig"></drawable>
+    <drawable name="monumenti__Chiesa_di_Santa_Maria_Maggiore_fotosmall">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti__Chiesa_di_Santa_Maria_Maggiore_fotobig">@drawable/ic_launcher</drawable>
 
 
 
