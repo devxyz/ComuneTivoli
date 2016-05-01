@@ -2,7 +2,6 @@ package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -126,10 +125,8 @@ public class HomeActivity extends Activity {
         home_btn_web.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent web;
-                web = new Intent(Intent.ACTION_VIEW);
-                web.setData(Uri.parse("http://www.comune.tivoli.rm.it/node"));
-                startActivity(web);
+                final Intent prepare = WebActivity.prepare(HomeActivity.this, "http://www.comune.tivoli.rm.it/node", "Comune di Tivoli", "Sito Web");
+                startActivity(prepare);
             }
         });
         home_web.setOnClickListener(new View.OnClickListener() {

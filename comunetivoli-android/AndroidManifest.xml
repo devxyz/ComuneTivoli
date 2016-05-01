@@ -78,6 +78,7 @@
                   android:label="newa_dettagli_activity"/>
         <activity android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"
                   android:name=".MenuActivity" android:label="menu_activity"/>
-        <activity android:name=".WebActivity" android:label="web_activity"/>
+        <activity android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"
+                  android:name=".WebActivity" android:label="web_activity"/>
     </application>
 </manifest>

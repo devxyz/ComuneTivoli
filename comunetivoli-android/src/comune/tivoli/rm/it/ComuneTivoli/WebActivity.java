@@ -45,6 +45,7 @@ public class WebActivity extends Activity {
         label_titolo.setText(titolo);
 
         //www.getSettings().setDisplayZoomControls(true);
+        www.getSettings().setBuiltInZoomControls(true);
         www.getSettings().setSupportZoom(true);
         www.getSettings().setJavaScriptEnabled(true);
         www.getSettings().setLoadWithOverviewMode(true);
