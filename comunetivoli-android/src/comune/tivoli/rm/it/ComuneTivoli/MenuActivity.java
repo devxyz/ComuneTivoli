@@ -32,6 +32,7 @@ public class MenuActivity extends Activity {
         vociMenu.add(new MenuApplicazione("Notizie Istituzionali", NewsActivity.class));
         vociMenu.add(new MenuApplicazione("News dai Social", NewsActivity.class));
         vociMenu.add(new MenuApplicazione("Credits", CreditiActivity.class));
+        vociMenu.add(new MenuApplicazione("Mappa", MapsActivity.class));
         vociMenu.add(new MenuApplicazione("DEBUG", DebugHomeActivity.class));
 
         final ArrayAdapter<String> a = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
