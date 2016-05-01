@@ -7,6 +7,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import com.squareup.picasso.Picasso;
+import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 import java.util.ArrayList;
 
@@ -19,7 +20,8 @@ public class ImageScrollActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.imagescroll);
+        TemplateUtil.inizializzaActivity(this, "Home", R.layout.imagescroll, R.layout.imagescroll_decorated);
+
         imgurl = new ArrayList<>();
         imgurl = new ArrayList<>();
         imgurl.add("http://www.visittivoli.eu/images/piazze/piazza-campitelli.jpg");

@@ -21,8 +21,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/content"
-            android:layout_below="@+id/textView14" android:layout_above="@+id/textView5" android:padding="10dp"
-            android:background="@color/white">
+            android:layout_below="@+id/textView14" android:layout_above="@+id/textView5"
+            android:background="@color/white" android:paddingLeft="10dp"
+            android:paddingRight="10dp" android:paddingTop="10dp">
     
 
     <Button
@@ -30,80 +31,96 @@
             android:layout_height="wrap_content"
             android:text="@string/home_btn_new"
             android:id="@+id/btn_news"
-            android:width="150dp" android:textStyle="bold" android:textSize="30dp"
-            android:background="#4692ff" android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+            android:width="120dp" android:textStyle="bold" android:textSize="20dp"
+            android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
             android:layout_below="@+id/textView" android:layout_alignParentStart="true"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="10dp"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Contatti"
             android:id="@+id/btn_contatti"
-            android:width="150dp"
-            android:textStyle="bold" android:textSize="30dp"
-            android:background="#4692ff" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
-            android:layout_alignTop="@+id/btn_news" android:layout_alignParentEnd="true"/>
+            android:width="120dp"
+            android:textStyle="bold" android:textSize="20dp"
+            android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:layout_alignTop="@+id/btn_news" android:layout_centerHorizontal="true"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Eventi"
             android:id="@+id/btn_eventi"
-            android:layout_marginTop="30dp" android:textStyle="bold"
-            android:textSize="30dp" android:background="#4692ff"
+            android:textStyle="bold"
+            android:textSize="20dp"
             android:layout_below="@+id/btn_news" android:layout_alignStart="@+id/btn_news"
-            android:layout_alignEnd="@+id/btn_news"/>
+            android:layout_alignEnd="@+id/btn_news" android:layout_marginTop="10dp"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Web"
             android:id="@+id/btn_www"
-            android:textStyle="bold" android:textSize="30dp"
-            android:background="#4692ff"
-            android:layout_alignTop="@+id/btn_eventi" android:layout_alignStart="@+id/btn_contatti"
+            android:textStyle="bold" android:textSize="20dp"
+            android:layout_above="@+id/btn_fb" android:layout_alignStart="@+id/btn_contatti"
             android:layout_alignEnd="@+id/btn_contatti"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Turismo"
             android:id="@+id/btn_turismo"
-            android:layout_marginTop="30dp" android:textStyle="bold"
-            android:textSize="30dp" android:background="#4692ff"
-            android:layout_below="@+id/btn_eventi"
-            android:layout_alignEnd="@+id/btn_eventi" android:layout_alignStart="@+id/btn_eventi"/>
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@+id/btn_eventi" android:layout_alignStart="@+id/btn_eventi"
+            android:layout_alignEnd="@+id/btn_eventi" android:layout_marginTop="10dp"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Social"
             android:id="@+id/btn_fb"
             android:layout_above="@+id/btn_crediti" android:textStyle="bold"
-            android:textSize="30dp" android:background="#4692ff"
-            android:layout_alignStart="@+id/btn_contatti" android:layout_alignEnd="@+id/btn_contatti"/>
+            android:textSize="20dp"
+            android:layout_alignStart="@+id/btn_contatti" android:layout_alignEnd="@+id/btn_contatti"
+            android:layout_marginTop="10dp"/>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Crediti"
             android:id="@+id/btn_crediti"
-            android:layout_below="@+id/btn_turismo"
-            android:layout_marginTop="30dp" android:layout_alignEnd="@+id/btn_turismo" android:textStyle="bold"
-            android:textSize="30dp" android:background="#4692ff"
-            android:layout_alignStart="@+id/btn_turismo"/>
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@+id/btn_turismo" android:layout_alignStart="@+id/btn_turismo"
+            android:layout_alignEnd="@+id/btn_turismo" android:layout_marginTop="10dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Menu di test dell&apos;applicazione"
+            android:text="DEBUG"
             android:id="@+id/textView" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true" android:background="#27008a" android:gravity="center_vertical|center_horizontal"
-            android:padding="10dp"/>
+            android:layout_alignParentEnd="true" android:background="#ffb700" android:gravity="center_vertical|center_horizontal"
+            android:padding="10dp" android:textColor="#000000" android:textStyle="bold"/>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home"
             android:id="@+id/btn_home"
-            android:textStyle="bold" android:textSize="30dp"
-            android:background="#4692ff" android:layout_alignBottom="@+id/btn_crediti"
-            android:layout_alignStart="@+id/btn_fb" android:layout_alignEnd="@+id/btn_fb"/>
+            android:textStyle="bold" android:textSize="20dp"
+            android:layout_alignBottom="@+id/btn_crediti"
+            android:layout_alignStart="@+id/btn_fb" android:layout_alignEnd="@+id/btn_fb"
+            android:layout_marginTop="10dp"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="image scroll"
             android:id="@+id/btnscroll"
-            android:layout_marginTop="38dp" android:layout_below="@+id/btn_crediti"
-            android:layout_alignEnd="@+id/btn_crediti"/>
+            android:layout_below="@+id/btn_crediti" android:layout_alignStart="@+id/btn_crediti"
+            android:layout_alignEnd="@+id/btn_crediti" android:layout_marginTop="10dp" android:textSize="20dp"
+            android:textStyle="bold"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CHIUDI"
+            android:id="@+id/btn_chiudi"
+            android:textSize="20dp" android:textStyle="bold"
+            android:layout_alignTop="@+id/btn_contatti" android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/btn_contatti" android:background="#ff0013"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Abilita DECOR"
+            android:id="@+id/btn_abilita_dec" android:textSize="20dp" android:textStyle="bold"
+            android:layout_below="@+id/btnscroll" android:layout_alignStart="@+id/btnscroll"
+            android:layout_toStartOf="@+id/btn_chiudi" android:layout_marginTop="10dp"
+            android:layout_alignEnd="@+id/btn_chiudi"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Disabilita DECOR"
+            android:id="@+id/btn_disabilit_decor" android:textSize="20dp" android:textStyle="bold"
+            android:layout_below="@+id/btn_abilita_dec" android:layout_alignStart="@+id/btn_abilita_dec"
+            android:layout_toStartOf="@+id/btn_contatti" android:layout_alignEnd="@+id/btn_abilita_dec"/>
 </RelativeLayout>
     <ImageButton
             android:layout_width="wrap_content"

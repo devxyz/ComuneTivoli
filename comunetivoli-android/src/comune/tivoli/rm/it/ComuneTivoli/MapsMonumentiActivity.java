@@ -20,8 +20,7 @@ public class MapsMonumentiActivity extends Activity implements OnMapReadyCallbac
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.maps_activity_decorated);
-        TemplateUtil.inizializzaComponentiTemplate(this,"Luoghi");
+        TemplateUtil.inizializzaActivity(this, "Luoghi", R.layout.maps_monumenti_activity, R.layout.maps_activity_decorated);
         MapFragment mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);

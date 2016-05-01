@@ -23,11 +23,10 @@ public class MonumentiActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.monumenti_activity_decorated);
-        TemplateUtil.inizializzaComponentiTemplate(this, "Monumenti");
+        TemplateUtil.inizializzaActivity(this, "Monumenti", R.layout.monumenti_activity, R.layout.monumenti_activity_decorated);
 
         monumenti_list = (ListView) findViewById(R.id.monumenti_listview);
-        monumenti= MonumentiUtil.elencoMonumenti(this);
+        monumenti = MonumentiUtil.elencoMonumenti(this);
 
         MonumentiComuneListAdapter a = new MonumentiComuneListAdapter(this, monumenti);
         monumenti_list.setAdapter(a);
@@ -35,8 +34,8 @@ public class MonumentiActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //MonumentiComune mc = monumenti.get(position);
-                Intent i = new Intent(MonumentiActivity.this,MonumentiDettagliActivity.class);
-                i.putExtra("posizione",position);
+                Intent i = new Intent(MonumentiActivity.this, MonumentiDettagliActivity.class);
+                i.putExtra("posizione", position);
                 startActivity(i);
 
             }

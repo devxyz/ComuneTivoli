@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import comune.tivoli.rm.it.ComuneTivoli.listview.NewsComuneListAdapter;
-import comune.tivoli.rm.it.ComuneTivoli.model.ContattiComune;
 import comune.tivoli.rm.it.ComuneTivoli.model.NewsComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
@@ -25,8 +24,7 @@ public class NewsActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.news_activity_decorated);
-        TemplateUtil.inizializzaComponentiTemplate(this, "Notizie");
+        TemplateUtil.inizializzaActivity(this, "Notizie",R.layout.news_activity,R.layout.news_activity_decorated);
         newslist = (ListView) findViewById(R.id.news_listview);
         news = new ArrayList<>();
         NewsComune news1 = new NewsComune("News 1", "La news 1", new Date(2016, 4, 5), "www.google.com");

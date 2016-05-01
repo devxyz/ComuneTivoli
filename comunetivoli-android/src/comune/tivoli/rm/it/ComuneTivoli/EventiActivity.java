@@ -11,7 +11,6 @@ public class EventiActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.eventi_activity_decorated);
-        TemplateUtil.inizializzaComponentiTemplate(this, "Eventi");
+        TemplateUtil.inizializzaActivity(this, "Eventi",R.layout.eventi_activity,R.layout.eventi_activity_decorated);
     }
 }

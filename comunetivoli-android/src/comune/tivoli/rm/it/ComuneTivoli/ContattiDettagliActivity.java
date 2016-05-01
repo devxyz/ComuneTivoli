@@ -24,8 +24,9 @@ public class ContattiDettagliActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.contattidettagli_activity_decorated);
-        TemplateUtil.inizializzaComponentiTemplate(this, "Contatto");
+
+        //inizializza l'activiti ed eventualmente il menu
+        TemplateUtil.inizializzaActivity(this, "Contatto", R.layout.contattidettagli_activity, R.layout.contattidettagli_activity_decorated);
 
         dettagli_titolo = (TextView) findViewById(R.id.titolo_dettagli);
         dettagli_descrizione = (TextView) findViewById(R.id.descrizione_dettagli);

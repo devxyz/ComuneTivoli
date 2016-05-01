@@ -11,7 +11,6 @@ public class CreditiActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.crediti_activity_decorated);
-        TemplateUtil.inizializzaComponentiTemplate(this, "Crediti");
+        TemplateUtil.inizializzaActivity(this, "Crediti",R.layout.crediti_activity,R.layout.crediti_activity_decorated);
     }
 }

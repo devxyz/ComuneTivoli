@@ -13,7 +13,16 @@ import comune.tivoli.rm.it.ComuneTivoli.R;
  * Created by stefano on 24/04/16.
  */
 public class TemplateUtil {
-    public static void inizializzaComponentiTemplate(final Activity a, String label) {
+    public static boolean ENABLE_LAYOUT_DECORATED = true;
+
+    public static void inizializzaActivity(final Activity a, String label, int id_layout, int id_layout_decorated) {
+
+        if (ENABLE_LAYOUT_DECORATED) {
+            a.setContentView(id_layout_decorated);
+        } else {
+            a.setContentView(id_layout);
+        }
+
         final ImageButton template_btn_sx = (ImageButton) a.findViewById(R.id.template_btn_sx);
         final ImageButton template_btn_dx = (ImageButton) a.findViewById(R.id.template_btn_dx);
         final TextView testo = (TextView) a.findViewById(R.id.template_titolo);

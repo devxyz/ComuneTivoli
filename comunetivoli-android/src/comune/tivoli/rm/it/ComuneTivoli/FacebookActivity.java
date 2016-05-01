@@ -18,8 +18,7 @@ public class FacebookActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.facebook_activity_decorated);
-        TemplateUtil.inizializzaComponentiTemplate(this, "Facebook");
+        TemplateUtil.inizializzaActivity(this, "Facebook",R.layout.facebook_activity,R.layout.facebook_activity_decorated);
         lst_news_fb = (ListView) findViewById(R.id.Lst_News_FB);
 
         lst_news_fb.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {

@@ -34,8 +34,7 @@ public class HomeActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.home_activity_decorated);
-        TemplateUtil.inizializzaComponentiTemplate(this, "Home");
+        TemplateUtil.inizializzaActivity(this, "Home", R.layout.home_activity_decorated, R.layout.home_activity_decorated);
 
 
         Activity view = this;
