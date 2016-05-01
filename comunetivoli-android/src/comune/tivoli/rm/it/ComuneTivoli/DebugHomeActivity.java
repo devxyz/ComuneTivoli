@@ -138,10 +138,12 @@ public class DebugHomeActivity extends Activity {
         btn_web.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://www.comune.tivoli.rm.it/";
-                Uri uriUrl = Uri.parse(url);
+                String url = "http://www.comune.tivoli.rm.it/node";
+                /*Uri uriUrl = Uri.parse(url);
                 Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-                startActivity(launchBrowser);
+                startActivity(launchBrowser);*/
+                final Intent i = WebActivity.prepare(DebugHomeActivity.this, url, "Comune di tivoli", "WEB");
+                startActivity(i);
             }
         });
 

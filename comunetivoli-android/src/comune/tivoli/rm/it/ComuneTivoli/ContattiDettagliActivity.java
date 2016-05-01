@@ -21,6 +21,18 @@ public class ContattiDettagliActivity extends Activity {
     ImageButton btn_email;
     ImageView screen;
 
+    public static Intent preparaIntent(Activity caller, String titolo, String descrizione, String telefono, String indirizzo, String email, String maps, int img) {
+        Intent i = new Intent(caller, ContattiDettagliActivity.class);
+        i.putExtra("titolo", titolo);
+        i.putExtra("descrizione", descrizione);
+        i.putExtra("telefono", telefono);
+        i.putExtra("indirizzo", indirizzo);
+        i.putExtra("email", email);
+        i.putExtra("maps", maps);
+        i.putExtra("img", img);
+        return i;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

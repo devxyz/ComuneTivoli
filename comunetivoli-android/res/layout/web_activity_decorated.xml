@@ -35,7 +35,12 @@
     <WebView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/webView" android:layout_below="@+id/web_titolo" android:layout_alignParentStart="true"/>
+            android:id="@+id/web_www" android:layout_below="@+id/web_titolo" android:layout_alignParentStart="true"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/web_btn_external_open" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+            android:src="@drawable/icona_maps_50x50"/>
 </RelativeLayout>
     <ImageButton
             android:layout_width="wrap_content"
