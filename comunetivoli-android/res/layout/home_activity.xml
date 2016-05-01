@@ -30,7 +30,7 @@
                  android:layout_below="@+id/home_eventi" android:layout_alignParentEnd="true"
                  android:background="@color/trasparent"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:text="@string/home_notizie" android:id="@+id/textView3"
+              android:text="@string/home_notizie" android:id="@+id/home_news"
               android:textSize="@dimen/app_textsize_titolo"
               android:layout_below="@+id/home_btn_turismo" android:layout_alignParentStart="true"
               android:layout_alignEnd="@+id/home_btn_news" android:gravity="center_horizontal"
@@ -39,14 +39,14 @@
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/home_btn_news"
                  android:src="@drawable/home_latestnews_165x315"
-                 android:layout_below="@+id/textView3" android:layout_alignParentStart="true"
+                 android:layout_below="@+id/home_news" android:layout_alignParentStart="true"
                  android:background="@color/trasparent"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:text="Facebook" android:id="@+id/textView6"
+              android:text="Facebook" android:id="@+id/home_facebook"
               android:textSize="@dimen/app_textsize_titolo"
               android:gravity="center_horizontal"
               android:textColor="@color/template_colorred"
-              android:layout_alignTop="@+id/home_btn_fb" android:layout_alignStart="@+id/textView7"
+              android:layout_alignTop="@+id/home_btn_fb" android:layout_alignStart="@+id/home_web"
               android:textStyle="bold"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/home_btn_fb"
@@ -60,11 +60,11 @@
                  android:layout_below="@+id/home_btn_fb" android:layout_alignParentEnd="true"
                  android:layout_marginTop="10dp"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Web"
-              android:id="@+id/textView7" android:textSize="@dimen/app_textsize_titolo" android:gravity="center_horizontal"
+              android:id="@+id/home_web" android:textSize="@dimen/app_textsize_titolo" android:gravity="center_horizontal"
               android:layout_alignTop="@+id/home_btn_web" android:layout_toEndOf="@+id/home_btn_news"
               android:layout_marginLeft="10dp" android:textColor="@color/template_colorred" android:textStyle="bold"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contatti"
-              android:id="@+id/textView8" android:textSize="@dimen/app_textsize_titolo" android:gravity="center_horizontal"
+              android:id="@+id/home_contatti" android:textSize="@dimen/app_textsize_titolo" android:gravity="center_horizontal"
               android:layout_below="@+id/home_btn_web" android:layout_toEndOf="@+id/home_btn_news"
               android:layout_marginTop="10dp" android:layout_marginLeft="10dp" android:textColor="@color/template_colorred"
               android:textStyle="bold"/>
@@ -73,11 +73,11 @@
                  android:layout_below="@+id/home_btn_web" android:layout_alignParentEnd="true"
                  android:layout_marginTop="10dp"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="About Us"
-              android:id="@+id/textView9" android:textSize="@dimen/app_textsize_titolo" android:gravity="center_horizontal"
+              android:id="@+id/home_aboutus" android:textSize="@dimen/app_textsize_titolo" android:gravity="center_horizontal"
               android:layout_below="@+id/home_btn_contatti" android:layout_toEndOf="@+id/home_btn_news"
               android:layout_marginTop="10dp" android:layout_marginLeft="10dp" android:textColor="@color/template_colorred"
               android:textStyle="bold"/>
-    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/home_about_us"
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/home_btn_aboutus"
                  android:src="@drawable/icona_about_50x50" android:background="@color/trasparent"
-                 android:layout_alignTop="@+id/textView9" android:layout_alignStart="@+id/home_btn_contatti"/>
+                 android:layout_alignTop="@+id/home_aboutus" android:layout_alignStart="@+id/home_btn_contatti"/>
 </RelativeLayout>

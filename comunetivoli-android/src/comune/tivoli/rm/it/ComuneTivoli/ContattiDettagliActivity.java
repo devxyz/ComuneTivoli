@@ -54,7 +54,7 @@ public class ContattiDettagliActivity extends Activity {
                 String[] coordinate = mapsGen.split(",");
 
                 mapsIntent = new Intent(android.content.Intent.ACTION_VIEW,
-                        Uri.parse("geo:0,0?q=" + coordinate[0] + "," + coordinate[1] + "&z=16 (" + mapsLabel + ")"));
+                        Uri.parse("geo:0,0?q=" + coordinate[0] + "," + coordinate[1] + "(" + Uri.encode(mapsLabel) + ")" + "&z=16&"));
                 startActivity(mapsIntent);
             }
         });
@@ -66,9 +66,15 @@ public class ContattiDettagliActivity extends Activity {
                 emailIntent = new Intent(Intent.ACTION_VIEW);
                 Uri data = Uri.parse("mailto:"
                         + getIntent().getExtras().getString("email")
-                        + "?subject=" + "Email from Application" + "&body=" + "");
+                        + "?subject=" + "Richiesta informazioni" + "&body=" + "");
                 emailIntent.setData(data);
                 startActivity(emailIntent);
+            }
+        });
+        screen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btn_maps.callOnClick();
             }
         });
     }

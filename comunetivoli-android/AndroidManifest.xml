@@ -45,6 +45,7 @@
                   android:label="contatti_dettagli_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".CreditiActivity" android:label="crediti_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".MapsActivity" android:label="maps_activity"/>
+        <activity android:theme="@style/NoActionBar" android:name=".MapsMonumentiActivity" android:label="maps_monumenti_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".StreetviewActivity"
                   android:label="streetview_activity"/>
         <activity android:theme="@style/NoActionBar" android:name=".YoutubeActivity" android:label="youtube_activity"/>

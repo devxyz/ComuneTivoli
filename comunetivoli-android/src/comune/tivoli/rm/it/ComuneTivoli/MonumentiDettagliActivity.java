@@ -76,11 +76,11 @@ public class MonumentiDettagliActivity extends Activity {
                 });
             else
                 tred_btn.setVisibility(View.INVISIBLE);
-            if (monumento.maps.length() > 0)
+            if (monumento.latitudineLongitudineMaps.length() > 0)
                 maps_btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String url = monumento.maps;
+                        String url = monumento.latitudineLongitudineMaps;
                         Uri uriUrl = Uri.parse(url);
                         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                         startActivity(launchBrowser);

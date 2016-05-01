@@ -5,12 +5,22 @@ import comune.tivoli.rm.it.ComuneTivoli.R;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeSet;
 
 /**
  * Created by millozzi.stefano on 22/04/2016.
  */
 public class MonumentiUtil {
-    public static ArrayList<MonumentiComune> elencoMonumenti(Activity a){
+    public static List<String> estraiCategorie(ArrayList<MonumentiComune> a) {
+        TreeSet<String> r = new TreeSet<>();
+        for (MonumentiComune monumentiComune : a) {
+            r.add(monumentiComune.categoria);
+        }
+        return new ArrayList<>(r);
+    }
+
+    public static ArrayList<MonumentiComune> elencoMonumenti(Activity a) {
         ArrayList<MonumentiComune> monumenti = new ArrayList<>();
 
 

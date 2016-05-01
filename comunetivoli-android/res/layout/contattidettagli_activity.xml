@@ -17,36 +17,31 @@
 
             android:src="@drawable/contatti_maps_comune_anagrafe"
             android:layout_below="@+id/titolo_dettagli"
-            android:layout_toEndOf="@+id/linearLayout" android:layout_alignBottom="@+id/linearLayout"
-            android:paddingLeft="10dp"/>
+            android:layout_toEndOf="@+id/linearLayout"
+            android:paddingLeft="10dp" android:layout_alignParentStart="true"
+            android:layout_above="@+id/descrizione_dettagli"/>
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:text="descrizione .......... . . .. . .  .. ."
             android:id="@+id/descrizione_dettagli"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/screenmaps" android:layout_alignParentBottom="true" android:paddingTop="10dp"/>
+            android:paddingTop="10dp"
+            android:layout_centerVertical="true" android:layout_toEndOf="@+id/linearLayout"
+            android:paddingBottom="10dp"/>
 
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="false" android:layout_below="@+id/titolo_dettagli"
+            android:layout_alignParentStart="false"
             android:id="@+id/linearLayout">
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_chiama_dettagli"
-                android:background="@color/trasparent" android:src="@drawable/icona_telefono_50x50"
-                android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_maps_dettagli"
-                android:src="@drawable/icona_maps_50x50"
-                android:background="@color/trasparent"
-                android:layout_below="@+id/descrizione_dettagli" android:layout_toEndOf="@+id/btn_email_dettagli"
-                android:paddingTop="5dp" android:paddingBottom="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descrizione_dettagli" android:layout_alignParentStart="true"
+            android:gravity="center_horizontal">
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,5 +49,19 @@
                 android:src="@drawable/icona_email_50x50"
                 android:background="@color/trasparent"
                 android:layout_below="@+id/descrizione_dettagli" android:layout_toEndOf="@+id/btn_chiama_dettagli"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_maps_dettagli"
+                android:src="@drawable/icona_googlemaps_50x50"
+                android:background="@color/trasparent"
+                android:layout_below="@+id/descrizione_dettagli" android:layout_toEndOf="@+id/btn_email_dettagli"
+                android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_chiama_dettagli"
+                android:background="@color/trasparent" android:src="@drawable/icona_telefono_50x50"
+                android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
     </LinearLayout>
 </RelativeLayout>

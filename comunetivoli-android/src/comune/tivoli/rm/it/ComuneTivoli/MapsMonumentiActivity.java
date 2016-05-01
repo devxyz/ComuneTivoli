@@ -14,7 +14,7 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
  * Created by millozzi.stefano on 15/03/2016.
  */
 
-public class MapsActivity extends Activity implements OnMapReadyCallback {
+public class MapsMonumentiActivity extends Activity implements OnMapReadyCallback {
     private MapFragment map;
 
     @Override
