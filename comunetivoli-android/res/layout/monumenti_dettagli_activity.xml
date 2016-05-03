@@ -54,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/view3d_btn"
-                android:src="@drawable/icona_streetview_50x50"
+                android:src="@drawable/streetview"
                 android:layout_alignTop="@+id/web_btn" android:layout_centerHorizontal="true"
                 android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
         <ImageButton
