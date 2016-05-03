@@ -138,7 +138,7 @@ public class DebugHomeActivity extends Activity {
         btn_web.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://www.comune.tivoli.rm.it/node";
+                String url = "http://www.visittivoli.eu/virtual-tour/villa-d-este/";
                 /*Uri uriUrl = Uri.parse(url);
                 Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                 startActivity(launchBrowser);*/

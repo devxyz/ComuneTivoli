@@ -12,7 +12,7 @@ import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 /**
- * Created by stefano on 01/05/16.
+ * todo: rimuovere pulsante per link esterno, sostituirlo con pressione sul titolo
  */
 public class WebActivity extends Activity {
     TextView label_titolo;

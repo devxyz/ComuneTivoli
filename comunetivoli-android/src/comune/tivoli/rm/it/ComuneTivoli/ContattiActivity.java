@@ -14,7 +14,8 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 import java.util.ArrayList;
 
 /**
- * Created by millozzi.stefano on 15/03/2016.
+ * todo: correggere coordinate contatti in quanto imprecisi: usare il sito http://www.coordinate-gps.it/
+ * todo: aggiungere 3D incorporato
  */
 public class ContattiActivity extends Activity {
 

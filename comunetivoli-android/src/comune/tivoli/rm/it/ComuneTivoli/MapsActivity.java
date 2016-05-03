@@ -11,7 +11,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 /**
- * Created by millozzi.stefano on 15/03/2016.
+ * todo: implementare mappa su singolo punto, con possibilità di avviare maps esterno e navigatore
  */
 
 public class MapsActivity extends Activity implements OnMapReadyCallback {
