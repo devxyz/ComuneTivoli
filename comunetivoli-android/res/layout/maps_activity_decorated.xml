@@ -30,23 +30,27 @@
               android:name="com.google.android.gms.maps.MapFragment"
               android:id="@+id/map"
               android:layout_width="match_parent"
-              android:layout_height="match_parent" android:layout_above="@+id/linearLayout3"/>
-    <LinearLayout
-            android:orientation="horizontal"
+              android:layout_height="fill_parent"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentBottom="true" android:layout_alignParentRight="true"
+              android:layout_alignParentEnd="false" android:layout_alignParentStart="false"
+              android:layout_below="@+id/maps_text_titolo"/>
+    <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true" android:id="@+id/linearLayout3">
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Livelli"
-                android:id="@+id/maps_layers"/>
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Elenco"
-                android:id="@+id/maps_btn_elenco"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/maps_text_titolo" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:textColor="@color/template_colorred" android:textSize="@dimen/app_textsize_titolo"
+            android:padding="5dp" android:textStyle="bold" android:layout_toStartOf="@+id/maps_btn_open"
+            android:layout_alignParentLeft="true"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Livelli"
+            android:id="@+id/maps_btn_open" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+            android:src="@drawable/icona_down_arrow_red_50x25"
+            android:background="@color/trasparent" android:layout_alignBottom="@+id/maps_text_titolo"
+            android:padding="5dp"/>
 </RelativeLayout>
     <ImageButton
             android:layout_width="wrap_content"

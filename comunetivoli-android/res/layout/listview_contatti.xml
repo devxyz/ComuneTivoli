@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:src="@drawable/icona_maps_50x50"
+            android:src="@drawable/icona_blue_link_30x30"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"/>
     <TextView

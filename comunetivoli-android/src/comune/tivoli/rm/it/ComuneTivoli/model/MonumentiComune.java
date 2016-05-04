@@ -54,7 +54,7 @@ public class MonumentiComune {
         if (latitudineLongitudineMaps.length() == 0) return -1;
         final String[] split = latitudineLongitudineMaps.split(",");
         try {
-            return Integer.parseInt(split[v]);
+            return Double.parseDouble(split[v]);
         } catch (Throwable e) {
             return -1;
         }

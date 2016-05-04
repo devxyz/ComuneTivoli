@@ -56,9 +56,9 @@ public class ContattiComuneListAdapter extends BaseAdapter {
             listItem = layoutInflater.inflate(R.layout.listview_contatti, null);
         }
 
-        TextView contatti_title= (TextView) listItem.findViewById(R.id.contatti_title);
-        TextView contatti_descrizione= (TextView) listItem.findViewById(R.id.contatti_descrizione);
-        ImageView contatti_image= (ImageView) listItem.findViewById(R.id.contatti_image);
+        TextView contatti_title = (TextView) listItem.findViewById(R.id.contatti_title);
+        TextView contatti_descrizione = (TextView) listItem.findViewById(R.id.contatti_descrizione);
+        ImageView contatti_image = (ImageView) listItem.findViewById(R.id.contatti_image);
 
         final ContattiComune cc = contatti.get(position);
         contatti_descrizione.setText(cc.descrizione);

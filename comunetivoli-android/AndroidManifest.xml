@@ -15,7 +15,7 @@
                    android:value="AIzaSyD6Tn4pub1WzhrjcbrQNgknZBUH4JMovuo"/>
 
         <meta-data android:name="com.google.android.gms.version"
-                   android:value="19"/>
+                   android:value="@integer/google_play_services_version"/>
 
         <activity android:screenOrientation="portrait" android:name=".LoadingActivity"
 
@@ -55,7 +55,7 @@
                   android:label="contatti_dettagli_activity"/>
         <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar"
                   android:name=".CreditiActivity" android:label="crediti_activity"/>
-        <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar" android:name=".MapsActivity"
+        <activity android:theme="@style/NoActionBar" android:name=".MapsActivity"
                   android:label="maps_activity"/>
         <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar"
                   android:name=".MapsMonumentiActivity" android:label="maps_monumenti_activity"/>
@@ -78,7 +78,7 @@
                   android:label="newa_dettagli_activity"/>
         <activity android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"
                   android:name=".MenuActivity" android:label="menu_activity"/>
-        <activity android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"
+        <activity  android:theme="@style/Theme.Transparent"
                   android:name=".WebActivity" android:label="web_activity"/>
     </application>
 </manifest>
