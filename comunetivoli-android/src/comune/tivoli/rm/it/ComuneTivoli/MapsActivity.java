@@ -30,8 +30,11 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
     private MapOperation operation = null;
     private boolean init = false;
 
-    public static Intent createIntent(Activity a, String titolo, double longitudine, double latitudine, String descrizione, int zoom, String indirizzo) {
-        MapsActivityDati dati = new MapsActivityDati(longitudine, latitudine, zoom, titolo, descrizione, indirizzo);
+    /**
+     * GoogleMap.MAP_TYPE_SATELLITE o MAP_TYPE_TERRAIN
+     */
+    public static Intent createIntent(Activity a, String titolo, double longitudine, double latitudine, String descrizione, int zoom, String indirizzo, int mapType) {
+        MapsActivityDati dati = new MapsActivityDati(longitudine, latitudine, zoom, titolo, descrizione, indirizzo, mapType);
         return dati.toIntent(a);
     }
 
@@ -123,7 +126,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap map) {
         if (!init) {
             LatLng pos = new LatLng(dati.latitudine, dati.longitudine);
-
+            map.setMapType(dati.mapType);
             map.setMyLocationEnabled(true);
             map.moveCamera(CameraUpdateFactory.newLatLngZoom(pos, dati.zoom));
 
@@ -152,6 +155,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
         public static final String LABEL_ZOOM = "zoom";
         public static final String LABEL_LONGITUDINE = "longitudine";
         public static final String LABEL_LATITUDINE = "latitudine";
+        public static final String LABEL_MAPTYPE = "map-type";
 
         final double longitudine;
         final double latitudine;
@@ -159,23 +163,29 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
         final String titolo;
         final String descrizione;
         final String indirizzo;
+        /**
+         * GoogleMap.MAP_TYPE_SATELLITE o MAP_TYPE_TERRAIN
+         */
+        final int mapType;
 
         public MapsActivityDati(Bundle savedInstanceState, Intent i) {
             longitudine = IntentUtil.getExtraDouble(i, savedInstanceState, LABEL_LONGITUDINE, 0);
             zoom = IntentUtil.getExtraInt(i, savedInstanceState, LABEL_ZOOM, 0);
+            mapType = IntentUtil.getExtraInt(i, savedInstanceState, LABEL_MAPTYPE, GoogleMap.MAP_TYPE_TERRAIN);
             latitudine = IntentUtil.getExtraDouble(i, savedInstanceState, LABEL_LATITUDINE, 0);
             titolo = IntentUtil.getExtraString(i, savedInstanceState, LABEL_TITOLO, null);
             descrizione = IntentUtil.getExtraString(i, savedInstanceState, LABEL_DESCRIZIONE, null);
             indirizzo = IntentUtil.getExtraString(i, savedInstanceState, LABEL_INDIRIZZO, null);
         }
 
-        public MapsActivityDati(double longitudine, double latitudine, int zoom, String titolo, String descrizione, String indirizzo) {
+        public MapsActivityDati(double longitudine, double latitudine, int zoom, String titolo, String descrizione, String indirizzo, int mapType) {
             this.longitudine = longitudine;
             this.latitudine = latitudine;
             this.zoom = zoom;
             this.titolo = titolo;
             this.descrizione = descrizione;
             this.indirizzo = indirizzo;
+            this.mapType = mapType;
         }
 
         public void saveTo(Bundle a) {
@@ -184,6 +194,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
             a.putDouble(LABEL_LATITUDINE, latitudine);
             a.putString(LABEL_DESCRIZIONE, descrizione);
             a.putString(LABEL_INDIRIZZO, indirizzo);
+            a.putInt(LABEL_MAPTYPE, mapType);
             a.putInt(LABEL_ZOOM, zoom);
         }
 

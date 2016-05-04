@@ -5,11 +5,12 @@ import comune.tivoli.rm.it.ComuneTivoli.R;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.TreeSet;
 
 /**
- * Created by millozzi.stefano on 22/04/2016.
+ * todo: aumentare la dimensione delle immagini "big", portandola ad almeno 400 pixel di larghezza
  */
 public class MonumentiUtil {
     public static List<String> estraiCategorie(ArrayList<MonumentiComune> a) {
@@ -19,9 +20,14 @@ public class MonumentiUtil {
         }
         return new ArrayList<>(r);
     }
+    private static ArrayList<MonumentiComune> monumenti;
 
-    public static ArrayList<MonumentiComune> elencoMonumenti(Activity a) {
-        ArrayList<MonumentiComune> monumenti = new ArrayList<>();
+    public static List<MonumentiComune> elencoMonumenti(Activity a) {
+        if (monumenti!=null){
+            return Collections.unmodifiableList(monumenti);
+        }
+
+        monumenti = new ArrayList<>();
 //monumenti_Casa_Gotica
         monumenti.add(new MonumentiComune(
                 a.getResources().getString(R.string.monumenti_Casa_Gotica_titolo),

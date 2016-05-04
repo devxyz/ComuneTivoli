@@ -47,7 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/image_monumento"
-                    android:src="@drawable/ic_launcher"
+                    android:src="@drawable/icona_trasparente"
                     android:layout_below="@+id/title_txt" android:layout_alignParentStart="true"
                     android:layout_weight="1.13"/>
             <TextView
@@ -65,28 +65,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
-            android:id="@+id/linearLayout2" android:gravity="center_horizontal">
+            android:id="@+id/linearLayout2" android:gravity="center_horizontal" android:paddingTop="10dp"
+            android:paddingBottom="10dp">
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/web_btn"
+                android:id="@+id/monumenti_web_btn"
                 android:src="@drawable/icona_maps_50x50"
                 android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
-                android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+                android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                android:background="@color/trasparent"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/view3d_btn"
-                android:src="@drawable/streetview"
-                android:layout_alignTop="@+id/web_btn" android:layout_centerHorizontal="true"
-                android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+                android:id="@+id/monumenti_view3d_btn"
+                android:src="@drawable/icona_streetview_blue_50x50"
+                android:layout_alignTop="@+id/monumenti_web_btn" android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                android:background="@color/trasparent"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/maps_btn"
-                android:src="@drawable/icona_googlemaps_50x50"
-                android:layout_alignTop="@+id/view3d_btn" android:layout_alignParentEnd="true"
-                android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+                android:id="@+id/monumenti_maps_btn"
+                android:src="@drawable/icona_mappa1_50x50"
+                android:layout_alignTop="@+id/monumenti_view3d_btn" android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                android:background="@color/trasparent"/>
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/monumenti_btn_gallery"
+                     android:src="@drawable/icona_photo_gallery_50x50" android:layout_alignTop="@+id/monumenti_view3d_btn"
+                     android:layout_alignParentEnd="true" android:layout_marginLeft="10dp"
+                     android:layout_marginRight="10dp" android:background="@color/trasparent"/>
     </LinearLayout>
 </RelativeLayout>
     <ImageButton

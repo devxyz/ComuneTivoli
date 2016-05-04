@@ -19,5 +19,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/web_btn_external_open" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
-            android:src="@drawable/icona_blue_link_30x30" android:background="@color/trasparent"/>
+            android:src="@drawable/icona_down_arrow_red_50x25" android:background="@color/trasparent"
+            android:padding="5dp"/>
 </RelativeLayout>

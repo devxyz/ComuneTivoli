@@ -9,7 +9,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-sdk android:minSdkVersion="19"/>
-    <application android:label="@string/app_name" android:icon="@drawable/app_icona_di_sistema">
+    <application android:label="@string/app_name" android:icon="@drawable/app_icona_di_sistema"
+                 android:name=".application.GlobalApplication">
 
         <meta-data android:name="com.google.android.geo.API_KEY"
                    android:value="AIzaSyD6Tn4pub1WzhrjcbrQNgknZBUH4JMovuo"/>
@@ -29,7 +30,7 @@
         </activity>
         <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar"
                   android:name=".DebugHomeActivity" android:label="home_activity"/>
-        <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar"
+        <activity android:theme="@style/NoActionBar"
                   android:name=".ImageScrollActivity"
                   android:label="image_scroll_activity"/>
         <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar"
@@ -78,7 +79,7 @@
                   android:label="newa_dettagli_activity"/>
         <activity android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"
                   android:name=".MenuActivity" android:label="menu_activity"/>
-        <activity  android:theme="@style/Theme.Transparent"
-                  android:name=".WebActivity" android:label="web_activity"/>
+        <activity android:theme="@style/NoActionBar"
+                  android:name=".WebActivity" android:label="web_activity" />
     </application>
 </manifest>

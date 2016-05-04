@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.google.android.gms.maps.GoogleMap;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
@@ -88,7 +89,7 @@ public class ContattiDettagliActivity extends Activity {
         screen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Intent i = MapsActivity.createIntent(ContattiDettagliActivity.this, dati.titolo, dati.longitudine, dati.latitudine, dati.descrizione, 16, dati.indirizzo);
+                final Intent i = MapsActivity.createIntent(ContattiDettagliActivity.this, dati.titolo, dati.longitudine, dati.latitudine, dati.descrizione, 16, dati.indirizzo, GoogleMap.MAP_TYPE_TERRAIN);
                 startActivity(i);
             }
         });

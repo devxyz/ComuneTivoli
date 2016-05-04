@@ -1,6 +1,7 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
@@ -65,12 +67,32 @@ public class WebActivity extends Activity {
         web_btn_external_open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent web;
-                web = new Intent(Intent.ACTION_VIEW);
-                web.setData(Uri.parse("http://www.comune.tivoli.rm.it/node"));
-                startActivity(web);
+                DialogUtil.openChooseDialog(WebActivity.this, "Scegli l'opzione",
+                        new CharSequence[]{"Apri sul browser esterno", "Informazioni", "Annulla"},
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                switch (which) {
+                                    case 0:
+                                        Intent web;
+                                        web = new Intent(Intent.ACTION_VIEW);
+                                        web.setData(Uri.parse(dati.url));
+                                        startActivity(web);
+                                        break;
+                                    case 1:
+                                        DialogUtil.openInfoDialog(WebActivity.this,
+                                                "Informazioni",
+                                                dati.titolo + "\n" + "URK:" + dati.url);
+                                        break;
+                                    default:
+                                        dialog.dismiss();
+                                        break;
+                                }
+                            }
+                        }, null);
             }
         });
+
     }
 
     private static class WebActivityData {

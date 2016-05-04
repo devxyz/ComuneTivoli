@@ -12,13 +12,14 @@ import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by millozzi.stefano on 15/03/2016.
  */
 public class MonumentiActivity extends Activity {
     ListView monumenti_list;
-    private ArrayList<MonumentiComune> monumenti;
+    private List<MonumentiComune> monumenti;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
