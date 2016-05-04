@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  * todo: correggere coordinate contatti in quanto imprecisi: usare il sito http://www.coordinate-gps.it/
- * todo: aggiungere 3D incorporato
+ *
  */
 public class ContattiActivity extends Activity {
 

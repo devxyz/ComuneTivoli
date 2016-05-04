@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+/**
+ * todo: nei telefonini con android 4.3 non si vede lo sfondo...
+ */
 public class LoadingActivity extends Activity {
     /**
      * Called when the activity is first created.
