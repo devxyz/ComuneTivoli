@@ -11,16 +11,19 @@ public class CommonNotiziaSito implements Serializable {
     private long token;
     private String titolo;
     private String testo;
+    private String html;
     private Date data;
 
     private String key;
     private String url;
     private boolean flagDelete;
 
-    public CommonNotiziaSito(long token, String titolo, String testo, Date data, String key, String url, boolean flagDelete) {
+    public CommonNotiziaSito(long token, String titolo, String testo, String html, Date data, String key, String url, boolean flagDelete) {
         this.token = token;
         this.titolo = titolo;
         this.testo = testo;
+        this.html = html;
+
         this.data = data;
         this.key = key;
         this.url = url;
@@ -31,6 +34,13 @@ public class CommonNotiziaSito implements Serializable {
         flagDelete = false;
     }
 
+    public String getHtml() {
+        return html;
+    }
+
+    public void setHtml(String html) {
+        this.html = html;
+    }
 
     public boolean isFlagDelete() {
         return flagDelete;
@@ -40,7 +50,6 @@ public class CommonNotiziaSito implements Serializable {
         this.flagDelete = flagDelete;
     }
 
-
     public long getToken() {
         return token;
     }
@@ -48,7 +57,6 @@ public class CommonNotiziaSito implements Serializable {
     public void setToken(long token) {
         this.token = token;
     }
-
 
     public String getTitolo() {
         return titolo;

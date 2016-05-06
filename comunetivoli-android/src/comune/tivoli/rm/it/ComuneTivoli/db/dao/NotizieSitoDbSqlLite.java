@@ -15,6 +15,8 @@ public class NotizieSitoDbSqlLite {
     private String titolo;
     /** Not-null value. */
     private String testo;
+    /** Not-null value. */
+    private String html;
     private long token;
     /** Not-null value. */
     private String url;
@@ -29,12 +31,13 @@ public class NotizieSitoDbSqlLite {
         this.id = id;
     }
 
-    public NotizieSitoDbSqlLite(Long id, java.util.Date dataInserimento, java.util.Date data, String titolo, String testo, long token, String url, boolean flagContenutoLetto, String key) {
+    public NotizieSitoDbSqlLite(Long id, java.util.Date dataInserimento, java.util.Date data, String titolo, String testo, String html, long token, String url, boolean flagContenutoLetto, String key) {
         this.id = id;
         this.dataInserimento = dataInserimento;
         this.data = data;
         this.titolo = titolo;
         this.testo = testo;
+        this.html = html;
         this.token = token;
         this.url = url;
         this.flagContenutoLetto = flagContenutoLetto;
@@ -87,6 +90,16 @@ public class NotizieSitoDbSqlLite {
     /** Not-null value; ensure this value is available before it is saved to the database. */
     public void setTesto(String testo) {
         this.testo = testo;
+    }
+
+    /** Not-null value. */
+    public String getHtml() {
+        return html;
+    }
+
+    /** Not-null value; ensure this value is available before it is saved to the database. */
+    public void setHtml(String html) {
+        this.html = html;
     }
 
     public long getToken() {

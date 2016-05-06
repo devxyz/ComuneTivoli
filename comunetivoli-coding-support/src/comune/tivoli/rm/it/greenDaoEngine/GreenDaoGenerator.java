@@ -29,6 +29,7 @@ public class GreenDaoGenerator {
             final Property data = circolare.addDateProperty("data").notNull().getProperty();
             circolare.addStringProperty("titolo").notNull();
             circolare.addStringProperty("testo").notNull();
+            circolare.addStringProperty("html").notNull();
             circolare.addLongProperty("token").notNull();
             circolare.addStringProperty("url").notNull().unique();
             circolare.addBooleanProperty("flagContenutoLetto").notNull();

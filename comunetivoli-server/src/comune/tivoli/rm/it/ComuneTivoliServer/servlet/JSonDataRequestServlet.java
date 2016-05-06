@@ -36,7 +36,7 @@ public class JSonDataRequestServlet extends HttpServlet {
 
             for (GAE_NotiziaSitoDB_V1 x : elencoNotizie) {
                 if (x.token > req.maxClientToken) {
-                    CommonNotiziaSito n = new CommonNotiziaSito(x.token, x.titolo, x.testo, x.data, x.key, x.url, x.flagDelete);
+                    CommonNotiziaSito n = new CommonNotiziaSito(x.token, x.titolo, x.testo, x.html, x.data, x.key, x.url, x.flagDelete);
                     notizie.add(n);
                 }
             }

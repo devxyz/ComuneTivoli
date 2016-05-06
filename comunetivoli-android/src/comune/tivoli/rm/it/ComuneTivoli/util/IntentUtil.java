@@ -29,6 +29,20 @@ public class IntentUtil {
      * @param label
      * @return
      */
+    public static long getExtraLong(Intent i, Bundle s, String label, int defaultValue) {
+        if (!_isEmpty(i, label)) return _getLong(i.getExtras(), label);
+        if (!_isEmpty(s, label)) return _getLong(s, label);
+        return defaultValue;
+    }
+
+    /**
+     * ritorna il valore dell'intent, e in mancanza di esso quello del boundle
+     *
+     * @param i
+     * @param s
+     * @param label
+     * @return
+     */
     public static double getExtraDouble(Intent i, Bundle s, String label, double defaultValue) {
         if (!_isEmpty(i, label)) return _getDouble(i.getExtras(), label);
         if (!_isEmpty(s, label)) return _getDouble(s, label);
@@ -53,6 +67,11 @@ public class IntentUtil {
     private static int _getInt(Bundle i, String label) {
         if (_isEmpty(i, label)) return 0;
         return i.getInt(label);
+    }
+
+    private static long _getLong(Bundle i, String label) {
+        if (_isEmpty(i, label)) return 0;
+        return i.getLong(label);
     }
 
     private static String _getString(Bundle i, String label) {

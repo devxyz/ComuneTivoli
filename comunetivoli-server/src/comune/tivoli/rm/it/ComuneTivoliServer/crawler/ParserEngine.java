@@ -77,11 +77,13 @@ public class ParserEngine {
         }
 
         final String titolo1 = titolo.toString().trim();
-        final String html = String.format("<html><head>\n<base href=\"http://www.comune.tivoli.rm.it/\">\n</head><body>%s</body></html>", contenuto.toString());
-        String html2 = CommonTextUtil.normalizeTextFromHtml(html);
+        final String html2 = CommonTextUtil.normalizeTextFromHtml(String.format("<html><head>\n<base href=\"http://www.comune.tivoli.rm.it/\">\n</head><body>%s</body></html>", contenuto.toString()));
+        final Document doc = Jsoup.parse(html2);
+        final String text = doc.body().text();
+
 
         return new NotiziaWWWComuneTivoli(
-                titolo1, html2, complete, null, relativePathID);
+                titolo1, html2, text, complete, null, relativePathID);
 
     }
 

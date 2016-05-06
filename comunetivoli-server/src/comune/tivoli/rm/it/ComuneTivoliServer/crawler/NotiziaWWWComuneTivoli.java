@@ -8,6 +8,7 @@ import java.util.Date;
 public class NotiziaWWWComuneTivoli {
     public final String titolo;
     public final String html;
+    public final String testo;
     public final Date data;
 
     /**
@@ -20,9 +21,10 @@ public class NotiziaWWWComuneTivoli {
      */
     public final String keyPath;
 
-    public NotiziaWWWComuneTivoli(String titolo, String html, String link, Date data, String keyPath) {
+    public NotiziaWWWComuneTivoli(String titolo, String html, String testo, String link, Date data, String keyPath) {
         this.titolo = titolo;
         this.html = html;
+        this.testo = testo;
         this.link = link;
         this.data = data;
         this.keyPath = keyPath;
@@ -33,6 +35,7 @@ public class NotiziaWWWComuneTivoli {
         return "NotiziaWWWComuneTivoli{" +
                 "titolo='" + titolo + '\'' +
                 "\n, html='" + html + '\'' +
+                "\n, testo='" + testo + '\'' +
                 "\n, data=" + data +
                 '}';
     }

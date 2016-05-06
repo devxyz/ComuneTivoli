@@ -15,6 +15,7 @@ public class GAE_NotiziaSitoDB_V1 implements Serializable, CacheItem<String> {
     public long token;
     public String titolo;
     public String testo;
+    public String html;
     public Date data;
 
     @Id
@@ -44,6 +45,7 @@ public class GAE_NotiziaSitoDB_V1 implements Serializable, CacheItem<String> {
                 "token=" + token +
                 ", titolo='" + titolo + '\'' +
                 ", testo='" + "...(NON INSERITO NELLA STAMPA)..." + '\'' +
+                ", html=" + html +
                 ", data=" + data +
                 ", key='" + key + '\'' +
                 ", url='" + url + '\'' +
@@ -83,6 +85,14 @@ public class GAE_NotiziaSitoDB_V1 implements Serializable, CacheItem<String> {
 
     public void setTesto(String testo) {
         this.testo = testo;
+    }
+
+    public String getHtml() {
+        return html;
+    }
+
+    public void setHtml(String html) {
+        this.html = html;
     }
 
     public Date getData() {

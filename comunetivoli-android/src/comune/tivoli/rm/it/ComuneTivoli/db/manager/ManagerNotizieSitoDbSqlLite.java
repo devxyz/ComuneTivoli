@@ -8,6 +8,7 @@ import de.greenrobot.dao.query.Query;
 import de.greenrobot.dao.query.QueryBuilder;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -15,6 +16,21 @@ import java.util.List;
  * Created by stefano on 06/05/16.
  */
 public class ManagerNotizieSitoDbSqlLite {
+    private static List<NotizieSitoDbSqlLite> cache;
+
+
+    public List<NotizieSitoDbSqlLite> list(DaoSession session) {
+        if (cache == null) {
+
+            final QueryBuilder<NotizieSitoDbSqlLite> q = session.queryBuilder(NotizieSitoDbSqlLite.class);
+            q.orderDesc(NotizieSitoDbSqlLiteDao.Properties.Id);
+            final Query<NotizieSitoDbSqlLite> build = q.build();
+            final List<NotizieSitoDbSqlLite> list = build.list();
+            cache = new ArrayList<>(list);
+        }
+        return Collections.unmodifiableList(cache);
+    }
+
     public long maxToken(DaoSession session) {
         final QueryBuilder<NotizieSitoDbSqlLite> q = session.queryBuilder(NotizieSitoDbSqlLite.class);
         q.orderDesc(NotizieSitoDbSqlLiteDao.Properties.Token);
@@ -33,6 +49,7 @@ public class ManagerNotizieSitoDbSqlLite {
         }
         final NotizieSitoDbSqlLiteDao n = session.getNotizieSitoDbSqlLiteDao();
         n.insertInTx(x);
+        cache = null;
     }
 
     public void update(DaoSession session, NotizieSitoDbSqlLite l) {
@@ -41,7 +58,7 @@ public class ManagerNotizieSitoDbSqlLite {
     }
 
     public NotizieSitoDbSqlLite convert(CommonNotiziaSito s) {
-        NotizieSitoDbSqlLite x = new NotizieSitoDbSqlLite(null, new Date(), s.getData(), s.getTitolo(), s.getTesto(), s.getToken(), s.getUrl(), false, s.getKey());
+        NotizieSitoDbSqlLite x = new NotizieSitoDbSqlLite(null, new Date(), s.getData(), s.getTitolo(), s.getTesto(), s.getHtml(),s.getToken(), s.getUrl(), false, s.getKey());
         return x;
     }
 }

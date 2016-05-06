@@ -41,7 +41,8 @@ public class LoadExternalDataServlet extends HttpServlet {
             nv.setFlagDelete(false);
             t.token++;
             nv.setTitolo(p.titolo);
-            nv.setTesto(p.html);
+            nv.setHtml(p.html);
+            nv.setTesto(p.testo);
             nv.setToken(t.token);
             nv.setUrl(p.link);
             nv.setKey(p.keyPath);
