@@ -29,12 +29,15 @@ public class PrintNotizieServlet extends HttpServlet {
 
             out.println("<tr><td rowspan=6>" + i + "</td><td><b>URL</b></td>  <td><a href='" + c.getUrl() + "'>" + c.getUrl() + "</a></td></tr>");
             out.println("<tr><td><b>Data</b></td>  <td>" + c.getData() + "</td></tr>");
-            out.println("<tr><td><b>Titolo</b></td>  <td>" + c.getTitolo() + " - " + c.getTitolo() + "</td></tr>");
+            out.println("<tr><td><b>Titolo</b></td>  <td>" + c.getTitolo() + "</td></tr>");
             out.println("<tr><td><b>Token</b></td>  <td>" + c.getToken() + "</td></tr>");
-            if (c.getTesto() != null)
-                out.println("<tr><td><b>Testo</b></td>  <td>" + c.getTesto().replaceAll("[\n]+", "<br>") + "</td></tr>");
-            else
+            if (c.getTesto() != null) {
+                out.println("<tr><td><b>Testo</b></td>  <td>" + c.getTesto() + "</td></tr>");
+                out.println("<tr><td><b>Html</b></td>  <td>" + c.getHtml() + "</td></tr>");
+            } else {
                 out.println("<tr><td><b>Testo</b></td>  <td> NULL </td></tr>");
+                out.println("<tr><td><b>Html</b></td>  <td> NULL </td></tr>");
+            }
             out.println("<tr><td> ------- </td>  <td> ----------------------------- </td></tr>");
             i++;
         }
