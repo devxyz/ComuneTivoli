@@ -1,10 +1,10 @@
-package comune.tivoli.rm.it.ComuneTivoli.util;
+package comune.tivoli.rm.it.ComuneTivoliCommon.util;
 
 
 /**
  * Created by stefano on 11/03/15.
  */
-public class TextUtil {
+public class CommonTextUtil {
 
 
     public static String normalizeTextFromHtml(String testo) {

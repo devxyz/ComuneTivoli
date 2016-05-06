@@ -1,5 +1,6 @@
 package comune.tivoli.rm.it.ComuneTivoliServer.crawler;
 
+import comune.tivoli.rm.it.ComuneTivoliCommon.util.CommonTextUtil;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -62,7 +63,7 @@ public class ParserEngine {
         String complete = composeUrl(baseUrl, relativePathID, "/print");
         System.out.println("Download " + complete + "( id " + relativePathID + ")");
         final Document parse = Jsoup.parse(new URL(complete), 10000);
-        final Elements title_centro = parse.getElementsByClass("title_centro");
+        final Elements title_centro = parse.getElementsByClass("title");
         final Elements content = parse.getElementsByClass("content");
 
         final StringBuilder titolo = new StringBuilder();
@@ -75,7 +76,12 @@ public class ParserEngine {
             contenuto.append(t.html()).append(" ");
         }
 
-        return new NotiziaWWWComuneTivoli(titolo.toString(), contenuto.toString(), complete, null, relativePathID);
+        final String titolo1 = titolo.toString().trim();
+        final String html = String.format("<html><head>\n<base href=\"http://www.comune.tivoli.rm.it/\">\n</head><body>%s</body></html>", contenuto.toString());
+        String html2 = CommonTextUtil.normalizeTextFromHtml(html);
+
+        return new NotiziaWWWComuneTivoli(
+                titolo1, html2, complete, null, relativePathID);
 
     }
 
@@ -88,7 +94,9 @@ public class ParserEngine {
 
 
         ArrayList<NotiziaWWWComuneTivoli> pagine = parseFromWeb(nodeLinksInDB);
-
+        for (NotiziaWWWComuneTivoli x : pagine) {
+            System.out.println(x);
+        }
         //System.out.println(pagine);
     }
 

@@ -21,10 +21,37 @@
         <servlet-name>LoadExternalDataServlet</servlet-name>
         <servlet-class>comune.tivoli.rm.it.ComuneTivoliServer.servlet.LoadExternalDataServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PrintNotizieServlet</servlet-name>
+        <servlet-class>comune.tivoli.rm.it.ComuneTivoliServer.servlet.PrintNotizieServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>JSonDataRequestServlet</servlet-name>
+        <servlet-class>comune.tivoli.rm.it.ComuneTivoliServer.servlet.JSonDataRequestServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ResetDataServlet</servlet-name>
+        <servlet-class>comune.tivoli.rm.it.ComuneTivoliServer.servlet.ResetDataServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>LoadExternalDataServlet</servlet-name>
         <url-pattern>/LoadExternalDataServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PrintNotizieServlet</servlet-name>
+        <url-pattern>/PrintNotizieServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>JSonDataRequestServlet</servlet-name>
+        <url-pattern>/JSonDataRequestServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ResetDataServlet</servlet-name>
+        <url-pattern>/ResetDataServlet</url-pattern>
     </servlet-mapping>
 
 

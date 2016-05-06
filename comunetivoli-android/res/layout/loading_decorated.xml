@@ -30,11 +30,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/myactivity_imageView" android:layout_gravity="center_horizontal" android:src="@drawable/etichetta_splash_iniziale_720x1280"
             android:layout_marginLeft="0dp"
-            android:layout_alignParentTop="true" android:layout_above="@+id/loading" android:visibility="gone"/>
+            android:layout_alignParentTop="true" android:layout_above="@+id/loading_txt" android:visibility="gone"/>
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/loading"
+            android:id="@+id/loading_txt"
             android:text="Loading..." android:gravity="center_vertical|center_horizontal"
             android:textSize="30dp"
             android:layout_above="@+id/progressBar" android:layout_alignParentStart="true"
