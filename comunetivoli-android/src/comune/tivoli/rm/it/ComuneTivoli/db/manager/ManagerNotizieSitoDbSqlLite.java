@@ -4,6 +4,7 @@ import comune.tivoli.rm.it.ComuneTivoli.db.dao.DaoSession;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.NotizieSitoDbSqlLite;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.NotizieSitoDbSqlLiteDao;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonNotiziaSito;
+import de.greenrobot.dao.query.DeleteQuery;
 import de.greenrobot.dao.query.Query;
 import de.greenrobot.dao.query.QueryBuilder;
 
@@ -18,6 +19,10 @@ import java.util.List;
 public class ManagerNotizieSitoDbSqlLite {
     private static List<NotizieSitoDbSqlLite> cache;
 
+    public void deleteDifferentVersion(DaoSession session, int version) {
+        final DeleteQuery<NotizieSitoDbSqlLite> q = session.queryBuilder(NotizieSitoDbSqlLite.class).where(NotizieSitoDbSqlLiteDao.Properties.Version.notEq(version)).buildDelete();
+        q.executeDeleteWithoutDetachingEntities();
+    }
 
     public List<NotizieSitoDbSqlLite> list(DaoSession session) {
         if (cache == null) {
@@ -42,6 +47,17 @@ public class ManagerNotizieSitoDbSqlLite {
         return list.get(0).getToken();
     }
 
+    public int maxVersion(DaoSession session) {
+        final QueryBuilder<NotizieSitoDbSqlLite> q = session.queryBuilder(NotizieSitoDbSqlLite.class);
+        q.orderDesc(NotizieSitoDbSqlLiteDao.Properties.Version);
+        q.limit(1);
+        final Query<NotizieSitoDbSqlLite> build = q.build();
+        final List<NotizieSitoDbSqlLite> list = build.list();
+        long i = list.size();
+        if (i == 0) return -1;//no data
+        return list.get(0).getVersion();
+    }
+
     public void insertFromServer(DaoSession session, List<CommonNotiziaSito> l) {
         List<NotizieSitoDbSqlLite> x = new ArrayList<>();
         for (CommonNotiziaSito commonNotiziaSito : l) {
@@ -58,7 +74,7 @@ public class ManagerNotizieSitoDbSqlLite {
     }
 
     public NotizieSitoDbSqlLite convert(CommonNotiziaSito s) {
-        NotizieSitoDbSqlLite x = new NotizieSitoDbSqlLite(null, new Date(), s.getData(), s.getTitolo(), s.getTesto(), s.getHtml(),s.getToken(), s.getUrl(), false, s.getKey());
+        NotizieSitoDbSqlLite x = new NotizieSitoDbSqlLite(null, new Date(), s.getData(), s.getTitolo(), s.getTesto(), s.getHtml(), s.getToken(),s.getVersion(), s.getUrl(), false, s.getKey());
         return x;
     }
 }

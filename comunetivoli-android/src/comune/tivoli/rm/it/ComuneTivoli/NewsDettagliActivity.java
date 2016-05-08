@@ -17,6 +17,7 @@ public class NewsDettagliActivity extends Activity {
     TextView news_data;
     TextView news_descrizione;
     NewsDettagliActivityData dati;
+    //todo: gestire pagina html con webview - fixare colori - aggiugnere pulsante apri sul sito
 
     public static Intent prepareIntent(Activity a, String titolo, Date data, String descrizione) {
         NewsDettagliActivityData n = new NewsDettagliActivityData(titolo, descrizione, data);

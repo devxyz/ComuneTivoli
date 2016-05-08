@@ -9,6 +9,7 @@ import java.util.Date;
 
 public class CommonNotiziaSito implements Serializable {
     private long token;
+    private int version;
     private String titolo;
     private String testo;
     private String html;
@@ -18,7 +19,7 @@ public class CommonNotiziaSito implements Serializable {
     private String url;
     private boolean flagDelete;
 
-    public CommonNotiziaSito(long token, String titolo, String testo, String html, Date data, String key, String url, boolean flagDelete) {
+    public CommonNotiziaSito(long token, String titolo, String testo, String html, Date data, String key, String url, boolean flagDelete, int version) {
         this.token = token;
         this.titolo = titolo;
         this.testo = testo;
@@ -28,10 +29,22 @@ public class CommonNotiziaSito implements Serializable {
         this.key = key;
         this.url = url;
         this.flagDelete = flagDelete;
+
+
+        this.version = version;
+
     }
 
     public CommonNotiziaSito() {
         flagDelete = false;
+    }
+
+    public int getVersion() {
+        return version;
+    }
+
+    public void setVersion(int version) {
+        this.version = version;
     }
 
     public String getHtml() {

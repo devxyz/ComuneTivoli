@@ -8,8 +8,8 @@
             android:layout_height="wrap_content"
             android:text="Titolo"
             android:id="@+id/txt_titolo" android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/txt_data" android:textSize="@dimen/app_textsize_titolo"
-            android:textColor="@color/template_colorred" android:textStyle="bold" android:padding="5dp"/>
+            android:layout_toStartOf="@+id/txt_data" android:textSize="@dimen/app_textsize_sottotitolo"
+            android:textColor="@color/template_colorblu" android:textStyle="bold" android:padding="5dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

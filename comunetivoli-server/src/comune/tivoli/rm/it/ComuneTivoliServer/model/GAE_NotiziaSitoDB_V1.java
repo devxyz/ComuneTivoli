@@ -2,6 +2,7 @@ package comune.tivoli.rm.it.ComuneTivoliServer.model;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import comune.tivoli.rm.it.ComuneTivoliServer.ServerConfiguration;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.CacheItem;
 
 import java.io.Serializable;
@@ -17,14 +18,31 @@ public class GAE_NotiziaSitoDB_V1 implements Serializable, CacheItem<String> {
     public String testo;
     public String html;
     public Date data;
+    public int version = ServerConfiguration.PERISTENCE_VERSION_NUMBER;
 
     @Id
     public String key;
-    public String url;
+    /**
+     * url pagina print
+     */
+    public String urlPrint;
+
+    /**
+     * url pagina originale
+     */
+    public String urlOriginal;
     public boolean flagDelete;
 
     public GAE_NotiziaSitoDB_V1() {
         flagDelete = false;
+    }
+
+    public String getUrlOriginal() {
+        return urlOriginal;
+    }
+
+    public void setUrlOriginal(String urlOriginal) {
+        this.urlOriginal = urlOriginal;
     }
 
     private void _assert(boolean cond) {
@@ -48,7 +66,7 @@ public class GAE_NotiziaSitoDB_V1 implements Serializable, CacheItem<String> {
                 ", html=" + html +
                 ", data=" + data +
                 ", key='" + key + '\'' +
-                ", url='" + url + '\'' +
+                ", url='" + urlPrint + '\'' +
                 ", flagDelete=" + flagDelete +
                 '}';
     }
@@ -103,12 +121,12 @@ public class GAE_NotiziaSitoDB_V1 implements Serializable, CacheItem<String> {
         this.data = data;
     }
 
-    public String getUrl() {
-        return url;
+    public String getUrlPrint() {
+        return urlPrint;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setUrlPrint(String urlPrint) {
+        this.urlPrint = urlPrint;
     }
 
 
@@ -126,7 +144,7 @@ public class GAE_NotiziaSitoDB_V1 implements Serializable, CacheItem<String> {
         c.testo = testo;
         c.data = data;
         c.key = key;
-        c.url = url;
+        c.urlPrint = urlPrint;
         c.token = token;
         return c;
     }

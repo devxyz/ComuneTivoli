@@ -9,7 +9,7 @@ import java.util.Date;
  */
 public class GreenDaoGenerator {
     public static void main(String[] args) throws Exception {
-        Schema schema = new Schema(1, "comune.tivoli.rm.it.ComuneTivoli.db.dao");
+        Schema schema = new Schema(3, "comune.tivoli.rm.it.ComuneTivoli.db.dao");
 
         //circolare
         final Entity circolare = schema.addEntity("NotizieSitoDbSqlLite");
@@ -26,14 +26,14 @@ public class GreenDaoGenerator {
             private String url;
 */
 
-            final Property data = circolare.addDateProperty("data").notNull().getProperty();
+            circolare.addDateProperty("data").getProperty();
             circolare.addStringProperty("titolo").notNull();
             circolare.addStringProperty("testo").notNull();
             circolare.addStringProperty("html").notNull();
             circolare.addLongProperty("token").notNull();
+            circolare.addIntProperty("version").notNull();
             circolare.addStringProperty("url").notNull().unique();
             circolare.addBooleanProperty("flagContenutoLetto").notNull();
-
             circolare.addStringProperty("key").notNull().unique();
 
             //index

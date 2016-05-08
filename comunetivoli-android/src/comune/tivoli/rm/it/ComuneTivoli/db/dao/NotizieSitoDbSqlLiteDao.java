@@ -30,9 +30,10 @@ public class NotizieSitoDbSqlLiteDao extends AbstractDao<NotizieSitoDbSqlLite, L
         public final static Property Testo = new Property(4, String.class, "testo", false, "TESTO");
         public final static Property Html = new Property(5, String.class, "html", false, "HTML");
         public final static Property Token = new Property(6, long.class, "token", false, "TOKEN");
-        public final static Property Url = new Property(7, String.class, "url", false, "URL");
-        public final static Property FlagContenutoLetto = new Property(8, boolean.class, "flagContenutoLetto", false, "FLAG_CONTENUTO_LETTO");
-        public final static Property Key = new Property(9, String.class, "key", false, "KEY");
+        public final static Property Version = new Property(7, int.class, "version", false, "VERSION");
+        public final static Property Url = new Property(8, String.class, "url", false, "URL");
+        public final static Property FlagContenutoLetto = new Property(9, boolean.class, "flagContenutoLetto", false, "FLAG_CONTENUTO_LETTO");
+        public final static Property Key = new Property(10, String.class, "key", false, "KEY");
     };
 
 
@@ -50,14 +51,15 @@ public class NotizieSitoDbSqlLiteDao extends AbstractDao<NotizieSitoDbSqlLite, L
         db.execSQL("CREATE TABLE " + constraint + "'NOTIZIE_SITO_DB_SQL_LITE' (" + //
                 "'_id' INTEGER PRIMARY KEY AUTOINCREMENT ," + // 0: id
                 "'DATA_INSERIMENTO' INTEGER NOT NULL ," + // 1: dataInserimento
-                "'DATA' INTEGER NOT NULL ," + // 2: data
+                "'DATA' INTEGER," + // 2: data
                 "'TITOLO' TEXT NOT NULL ," + // 3: titolo
                 "'TESTO' TEXT NOT NULL ," + // 4: testo
                 "'HTML' TEXT NOT NULL ," + // 5: html
                 "'TOKEN' INTEGER NOT NULL ," + // 6: token
-                "'URL' TEXT NOT NULL UNIQUE ," + // 7: url
-                "'FLAG_CONTENUTO_LETTO' INTEGER NOT NULL ," + // 8: flagContenutoLetto
-                "'KEY' TEXT NOT NULL UNIQUE );"); // 9: key
+                "'VERSION' INTEGER NOT NULL ," + // 7: version
+                "'URL' TEXT NOT NULL UNIQUE ," + // 8: url
+                "'FLAG_CONTENUTO_LETTO' INTEGER NOT NULL ," + // 9: flagContenutoLetto
+                "'KEY' TEXT NOT NULL UNIQUE );"); // 10: key
     }
 
     /** Drops the underlying database table. */
@@ -76,14 +78,19 @@ public class NotizieSitoDbSqlLiteDao extends AbstractDao<NotizieSitoDbSqlLite, L
             stmt.bindLong(1, id);
         }
         stmt.bindLong(2, entity.getDataInserimento().getTime());
-        stmt.bindLong(3, entity.getData().getTime());
+ 
+        java.util.Date data = entity.getData();
+        if (data != null) {
+            stmt.bindLong(3, data.getTime());
+        }
         stmt.bindString(4, entity.getTitolo());
         stmt.bindString(5, entity.getTesto());
         stmt.bindString(6, entity.getHtml());
         stmt.bindLong(7, entity.getToken());
-        stmt.bindString(8, entity.getUrl());
-        stmt.bindLong(9, entity.getFlagContenutoLetto() ? 1l: 0l);
-        stmt.bindString(10, entity.getKey());
+        stmt.bindLong(8, entity.getVersion());
+        stmt.bindString(9, entity.getUrl());
+        stmt.bindLong(10, entity.getFlagContenutoLetto() ? 1l: 0l);
+        stmt.bindString(11, entity.getKey());
     }
 
     /** @inheritdoc */
@@ -98,14 +105,15 @@ public class NotizieSitoDbSqlLiteDao extends AbstractDao<NotizieSitoDbSqlLite, L
         NotizieSitoDbSqlLite entity = new NotizieSitoDbSqlLite( //
             cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
             new java.util.Date(cursor.getLong(offset + 1)), // dataInserimento
-            new java.util.Date(cursor.getLong(offset + 2)), // data
+            cursor.isNull(offset + 2) ? null : new java.util.Date(cursor.getLong(offset + 2)), // data
             cursor.getString(offset + 3), // titolo
             cursor.getString(offset + 4), // testo
             cursor.getString(offset + 5), // html
             cursor.getLong(offset + 6), // token
-            cursor.getString(offset + 7), // url
-            cursor.getShort(offset + 8) != 0, // flagContenutoLetto
-            cursor.getString(offset + 9) // key
+            cursor.getInt(offset + 7), // version
+            cursor.getString(offset + 8), // url
+            cursor.getShort(offset + 9) != 0, // flagContenutoLetto
+            cursor.getString(offset + 10) // key
         );
         return entity;
     }
@@ -115,14 +123,15 @@ public class NotizieSitoDbSqlLiteDao extends AbstractDao<NotizieSitoDbSqlLite, L
     public void readEntity(Cursor cursor, NotizieSitoDbSqlLite entity, int offset) {
         entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
         entity.setDataInserimento(new java.util.Date(cursor.getLong(offset + 1)));
-        entity.setData(new java.util.Date(cursor.getLong(offset + 2)));
+        entity.setData(cursor.isNull(offset + 2) ? null : new java.util.Date(cursor.getLong(offset + 2)));
         entity.setTitolo(cursor.getString(offset + 3));
         entity.setTesto(cursor.getString(offset + 4));
         entity.setHtml(cursor.getString(offset + 5));
         entity.setToken(cursor.getLong(offset + 6));
-        entity.setUrl(cursor.getString(offset + 7));
-        entity.setFlagContenutoLetto(cursor.getShort(offset + 8) != 0);
-        entity.setKey(cursor.getString(offset + 9));
+        entity.setVersion(cursor.getInt(offset + 7));
+        entity.setUrl(cursor.getString(offset + 8));
+        entity.setFlagContenutoLetto(cursor.getShort(offset + 9) != 0);
+        entity.setKey(cursor.getString(offset + 10));
      }
     
     /** @inheritdoc */

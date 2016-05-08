@@ -14,6 +14,7 @@
   <a href="/LoadExternalDataServlet" target="_blank">LoadExternalDataServlet</a><br>
   <a href="/ResetDataServlet" target="_blank">ResetDataServlet</a><br>
   <a href="/PrintNotizieServlet" target="_blank">PrintNotizieServlet</a><br>
+  <a href="/JSonDataRequestServlet?param" target="_blank">JSonDataRequestServlet</a><br>
 
   </body>
 </html>

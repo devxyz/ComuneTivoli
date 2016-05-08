@@ -11,18 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by stefano on 31/03/16.
  */
 public class LoadExternalDataServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final InMemoryCacheLayerNotiziaSitoDB ee = DataLayerBuilder.getLoaderNewsSito();
         final List<GAE_NotiziaSitoDB_V1> elencoNotizie = ee.allEntities();
         Set<String> nodeLinksInDB = new TreeSet<>();
         for (GAE_NotiziaSitoDB_V1 x : elencoNotizie) {
-            nodeLinksInDB.add(x.getUrl());
+            nodeLinksInDB.add(x.getUrlPrint());
         }
 
         MyToken t = new MyToken();
@@ -37,14 +41,15 @@ public class LoadExternalDataServlet extends HttpServlet {
 
         for (NotiziaWWWComuneTivoli p : pagine) {
             final GAE_NotiziaSitoDB_V1 nv = new GAE_NotiziaSitoDB_V1();
-            nv.setData(new Date());
+            nv.setData(p.data);
             nv.setFlagDelete(false);
             t.token++;
             nv.setTitolo(p.titolo);
             nv.setHtml(p.html);
             nv.setTesto(p.testo);
             nv.setToken(t.token);
-            nv.setUrl(p.link);
+            nv.setUrlPrint(p.urlPrint);
+            nv.setUrlOriginal(p.urlOriginale);
             nv.setKey(p.keyPath);
             ee.insert(nv);
         }

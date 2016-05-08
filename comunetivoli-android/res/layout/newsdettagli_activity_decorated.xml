@@ -37,15 +37,15 @@
             android:layout_height="wrap_content"
             android:text="data"
             android:id="@+id/news_data" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
-            android:textSize="@dimen/app_textsize_titolo"/>
+            android:textSize="@dimen/app_textsize_titolo" android:layout_above="@+id/scrollView2"/>
     <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/scrollView2"
-            android:layout_below="@+id/news_titolo" android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" android:layout_below="@+id/news_titolo">
         <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="descrizione"
                 android:id="@+id/news_descrizione" android:layout_alignTop="@+id/scrollView2"

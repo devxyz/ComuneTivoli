@@ -10,5 +10,6 @@ public class CommonDataServerResponse {
         this.notizie = notizie;
     }
 
+    public long version;
     public ArrayList<CommonNotiziaSito> notizie;
 }

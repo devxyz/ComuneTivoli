@@ -9,7 +9,6 @@ public class NotizieSitoDbSqlLite {
     private Long id;
     /** Not-null value. */
     private java.util.Date dataInserimento;
-    /** Not-null value. */
     private java.util.Date data;
     /** Not-null value. */
     private String titolo;
@@ -18,6 +17,7 @@ public class NotizieSitoDbSqlLite {
     /** Not-null value. */
     private String html;
     private long token;
+    private int version;
     /** Not-null value. */
     private String url;
     private boolean flagContenutoLetto;
@@ -31,7 +31,7 @@ public class NotizieSitoDbSqlLite {
         this.id = id;
     }
 
-    public NotizieSitoDbSqlLite(Long id, java.util.Date dataInserimento, java.util.Date data, String titolo, String testo, String html, long token, String url, boolean flagContenutoLetto, String key) {
+    public NotizieSitoDbSqlLite(Long id, java.util.Date dataInserimento, java.util.Date data, String titolo, String testo, String html, long token, int version, String url, boolean flagContenutoLetto, String key) {
         this.id = id;
         this.dataInserimento = dataInserimento;
         this.data = data;
@@ -39,6 +39,7 @@ public class NotizieSitoDbSqlLite {
         this.testo = testo;
         this.html = html;
         this.token = token;
+        this.version = version;
         this.url = url;
         this.flagContenutoLetto = flagContenutoLetto;
         this.key = key;
@@ -62,12 +63,10 @@ public class NotizieSitoDbSqlLite {
         this.dataInserimento = dataInserimento;
     }
 
-    /** Not-null value. */
     public java.util.Date getData() {
         return data;
     }
 
-    /** Not-null value; ensure this value is available before it is saved to the database. */
     public void setData(java.util.Date data) {
         this.data = data;
     }
@@ -108,6 +107,14 @@ public class NotizieSitoDbSqlLite {
 
     public void setToken(long token) {
         this.token = token;
+    }
+
+    public int getVersion() {
+        return version;
+    }
+
+    public void setVersion(int version) {
+        this.version = version;
     }
 
     /** Not-null value. */

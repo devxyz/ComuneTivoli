@@ -18,8 +18,8 @@ import java.util.List;
  */
 public class NewsComuneListAdapter extends BaseAdapter {
 
+    private static final int MAX_DESC_SIZE = 300;
     private List<NotizieSitoDbSqlLite> news;
-
     private LayoutInflater layoutInflater;
 
     public NewsComuneListAdapter(Activity activity, List<NotizieSitoDbSqlLite> feed) {
@@ -44,6 +44,10 @@ public class NewsComuneListAdapter extends BaseAdapter {
         return position;
     }
 
+    private boolean isPunctuation(char c) {
+        return ".,:;".contains("" + c);
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -59,9 +63,23 @@ public class NewsComuneListAdapter extends BaseAdapter {
         TextView news_data = (TextView) listItem.findViewById(R.id.txt_data);
 
 
-
         final NotizieSitoDbSqlLite nc = news.get(position);
-        news_descrizione.setText(nc.getTesto());
+        final String testo = nc.getTesto();
+
+        if (testo.length() < MAX_DESC_SIZE)
+            news_descrizione.setText(testo);
+        else {
+            StringBuilder sb = new StringBuilder(testo.length());
+            for (int i = 0; i < testo.length(); i++) {
+                char c = testo.charAt(i);
+                if (i > MAX_DESC_SIZE && (Character.isSpaceChar(c) || Character.isWhitespace(c) || isPunctuation(c))) {
+                    sb.append("[...]");
+                    break;
+                }
+                sb.append(c);
+            }
+            news_descrizione.setText(sb.toString());
+        }
         news_title.setText(nc.getTitolo());
         news_data.setText(DateUtil.toDDMMYYY(nc.getData()));
         return listItem;

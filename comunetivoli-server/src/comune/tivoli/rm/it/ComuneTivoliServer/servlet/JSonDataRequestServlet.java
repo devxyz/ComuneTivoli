@@ -4,6 +4,7 @@ import com.google.appengine.repackaged.com.google.gson.Gson;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerRequest;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerResponse;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonNotiziaSito;
+import comune.tivoli.rm.it.ComuneTivoliServer.ServerConfiguration;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.DataLayerBuilder;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.InMemoryCacheLayerNotiziaSitoDB;
 import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V1;
@@ -35,8 +36,9 @@ public class JSonDataRequestServlet extends HttpServlet {
             ArrayList<CommonNotiziaSito> notizie = new ArrayList<>();
 
             for (GAE_NotiziaSitoDB_V1 x : elencoNotizie) {
-                if (x.token > req.maxClientToken) {
-                    CommonNotiziaSito n = new CommonNotiziaSito(x.token, x.titolo, x.testo, x.html, x.data, x.key, x.url, x.flagDelete);
+                if (x.token > req.maxClientToken || req.version != ServerConfiguration.PERISTENCE_VERSION_NUMBER) {
+                    //invia l'url originale
+                    CommonNotiziaSito n = new CommonNotiziaSito(x.token, x.titolo, x.testo, x.html, x.data, x.key, x.urlOriginal, x.flagDelete, x.version);
                     notizie.add(n);
                 }
             }

@@ -12,6 +12,7 @@ import comune.tivoli.rm.it.ComuneTivoli.db.manager.ManagerNotizieSitoDbSqlLite;
 import comune.tivoli.rm.it.ComuneTivoli.util.StreamAndroidUtil;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerRequest;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerResponse;
+import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonNotiziaSito;
 
 import java.io.BufferedInputStream;
 import java.io.DataOutputStream;
@@ -22,7 +23,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 /**
- * Created by stefano on 06/05/16.
+ * todo: controllare errore inserimento...
  */
 public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
     private final LoadingActivity activity;
@@ -44,6 +45,7 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
         //prepara request
         //-------------------------------------------
         publishProgress("Accesso al database dei dati");
+        if (isCancelled()) return null;
         final CommonDataServerRequest req1 = new CommonDataServerRequest();
         {
             final DbHelper db = new DbHelper(activity);
@@ -84,6 +86,9 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
 
             String urlParameters = "param=" + URLEncoder.encode(json, "UTF-8");
             publishProgress("Invio richiesta");
+            if (DEBUG) {
+                System.out.println("REQUEST: " + url + "?" + urlParameters);
+            }
 
             // Send post request
             con.setDoOutput(true);
@@ -97,6 +102,7 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
             int responseCode = con.getResponseCode();
             if (DEBUG) {
                 System.out.println("\nSending 'POST' request to URL : " + url);
+                System.out.println("Request : " + req1);
                 System.out.println("Post parameters : " + urlParameters);
                 System.out.println("Response Code : " + responseCode);
             }
@@ -113,6 +119,40 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
             if (isCancelled()) return null;
             final CommonDataServerResponse resp = g.fromJson(content, CommonDataServerResponse.class);
             publishProgress(resp.notizie.size() + " nuove notizie");
+
+            //prepara request
+            //-------------------------------------------
+            publishProgress("Cancellazione dati non validi");
+            if (isCancelled()) return null;
+
+            {
+                final DbHelper db = new DbHelper(activity);
+                try {
+                    db.runInTransaction(new DBHelperRunnable() {
+                        @Override
+                        public void run(DaoSession session, Context ctx) throws Throwable {
+                            ManagerNotizieSitoDbSqlLite m = new ManagerNotizieSitoDbSqlLite();
+                            req1.responseInZipFormat = true;
+                            req1.maxClientToken = m.maxToken(session);
+                            req1.version = m.maxVersion(session);
+                        }
+                    });
+
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                } finally {
+                    db.close();
+                }
+            }
+            if (isCancelled()) return null;
+
+            if (DEBUG) {
+                StringBuilder sb = new StringBuilder();
+                for (CommonNotiziaSito n : resp.notizie) {
+                    sb.append(n.getKey()).append("\n");
+                }
+                System.out.println("KEYS: " + sb);
+            }
             publishProgress("Salvataggio dati");
             {
                 if (isCancelled()) return null;
