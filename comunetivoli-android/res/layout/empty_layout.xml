@@ -3,7 +3,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" android:weightSum="1" android:id="@+id/xyz"
-                android:background="#ffffff">
+                android:background="@color/template_colorblu">
 
     <TextView
             android:layout_width="wrap_content"
@@ -30,24 +30,31 @@
             android:layout_height="wrap_content"
             android:id="@+id/template_btn_sx" android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:src="@drawable/template_trelinee" android:background="@color/template_colorblu"
-            android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"/>
+            android:src="@drawable/template_trelinee"
+            android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"
+            android:background="@color/trasparent"/>
     <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                  android:id="@+id/template_btn_dx"
-                 android:src="@drawable/template_left_arrow" android:layout_alignParentTop="true"
-                 android:layout_alignParentEnd="true" android:layout_alignBottom="@+id/template_titolo"
-                 android:paddingRight="20dp" android:background="@color/template_colorblu"/>
+                 android:src="@drawable/template_left_arrow"
+                 android:paddingRight="5dp"
+                 android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+                 android:background="@color/trasparent" android:layout_above="@+id/textView14"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
             android:id="@+id/template_titolo"
-            android:background="@color/template_colorblu" android:textSize="@dimen/template_text"
+            android:textSize="@dimen/template_text"
             android:gravity="center_vertical" android:height="@dimen/template_height_barra_blu_top"
-            android:layout_alignParentTop="true" android:layout_toEndOf="@+id/template_btn_sx"
-            android:layout_toLeftOf="@+id/template_btn_dx" android:textColor="@color/white" android:textStyle="bold"/>
+            android:layout_alignParentTop="true"
+            android:textColor="@color/white" android:textStyle="bold" android:layout_toEndOf="@+id/template_btn_sx"
+            android:layout_toLeftOf="@+id/template_rotate"/>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text=" "
               android:id="@+id/textView14"
               android:height="@dimen/template_height_barra_red_top" android:background="@color/template_colorred"
               android:layout_below="@+id/template_btn_sx" android:layout_alignEnd="@+id/template_btn_dx"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/template_rotate" android:src="@drawable/icona_rotazione_50x50"
+                 android:layout_alignParentTop="true" android:layout_toStartOf="@+id/template_btn_dx"
+                 android:background="@color/trasparent" android:paddingRight="10dp"/>
 </RelativeLayout>

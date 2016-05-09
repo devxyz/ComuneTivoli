@@ -14,11 +14,16 @@
     <WebView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/web_www" android:layout_below="@+id/web_titolo" android:layout_alignParentStart="true"/>
+            android:id="@+id/web_www" android:layout_alignParentStart="true"
+            android:layout_below="@+id/web_btn_external_open"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/web_btn_external_open" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
             android:src="@drawable/icona_down_arrow_red_50x25" android:background="@color/trasparent"
             android:padding="5dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView" android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
 </RelativeLayout>

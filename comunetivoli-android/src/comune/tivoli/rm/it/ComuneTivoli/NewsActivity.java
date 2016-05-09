@@ -57,7 +57,7 @@ public class NewsActivity extends Activity {
                 NotizieSitoDbSqlLite nc = news.get(position);
 
                 //eseguito quando si fa click su una voce
-                final Intent intent = NewsDettagliActivity.prepareIntent(NewsActivity.this, nc.getTitolo(), nc.getData(), nc.getTesto());
+                final Intent intent = NewsDettagliActivity.prepareIntent(NewsActivity.this, nc.getTitolo(), nc.getData(), nc.getTesto(), nc.getHtml());
                 startActivity(intent);
             }
         });

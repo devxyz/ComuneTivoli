@@ -56,6 +56,7 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
                         ManagerNotizieSitoDbSqlLite m = new ManagerNotizieSitoDbSqlLite();
                         req1.responseInZipFormat = true;
                         req1.maxClientToken = m.maxToken(session);
+                        req1.version = m.maxVersion(session);
                     }
                 });
 
@@ -132,9 +133,8 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
                         @Override
                         public void run(DaoSession session, Context ctx) throws Throwable {
                             ManagerNotizieSitoDbSqlLite m = new ManagerNotizieSitoDbSqlLite();
-                            req1.responseInZipFormat = true;
-                            req1.maxClientToken = m.maxToken(session);
-                            req1.version = m.maxVersion(session);
+                            m.deleteDifferentVersion(session, resp.version);
+
                         }
                     });
 
@@ -158,7 +158,7 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
                 if (isCancelled()) return null;
                 final DbHelper db = new DbHelper(activity);
                 try {
-                    db.runInTransaction(new DBHelperRunnable() {
+                   db.runInTransaction(new DBHelperRunnable() {
                         @Override
                         public void run(DaoSession session, Context ctx) throws Throwable {
                             ManagerNotizieSitoDbSqlLite m = new ManagerNotizieSitoDbSqlLite();

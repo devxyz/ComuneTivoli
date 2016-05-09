@@ -74,12 +74,12 @@
         <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar"
                   android:name=".TemplateActivity"/>
         <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar" android:name=".HomeActivity"/>
-        <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar"
+        <activity android:theme="@style/NoActionBar"
                   android:name=".NewsDettagliActivity"
                   android:label="newa_dettagli_activity"/>
         <activity android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"
                   android:name=".MenuActivity" android:label="menu_activity"/>
         <activity android:theme="@style/NoActionBar"
-                  android:name=".WebActivity" android:label="web_activity" />
+                  android:name=".WebActivity" android:label="web_activity"/>
     </application>
 </manifest>

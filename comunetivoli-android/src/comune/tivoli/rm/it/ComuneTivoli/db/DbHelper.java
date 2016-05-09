@@ -20,6 +20,7 @@ public class DbHelper {
         helper = new DaoMaster.DevOpenHelper(ctx, "fermi_tivoli_db", null);
 
 
+
         SQLiteDatabase db = helper.getWritableDatabase();
         daoMaster = new DaoMaster(db);
         session = daoMaster.newSession();

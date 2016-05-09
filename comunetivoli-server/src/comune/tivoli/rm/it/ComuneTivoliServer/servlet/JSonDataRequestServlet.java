@@ -43,7 +43,7 @@ public class JSonDataRequestServlet extends HttpServlet {
                 }
             }
 
-            final CommonDataServerResponse resp = new CommonDataServerResponse(notizie);
+            final CommonDataServerResponse resp = new CommonDataServerResponse(ServerConfiguration.PERISTENCE_VERSION_NUMBER, notizie);
 
             //invio
             final String s = g.toJson(resp);

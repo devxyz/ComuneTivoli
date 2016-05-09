@@ -47,7 +47,7 @@ public class MonumentiDettagliActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this, "Dettagli Luoghi", R.layout.monumenti_dettagli_activity, R.layout.monumenti_dettagli_activity_decorated);
+        TemplateUtil.inizializzaActivity(this, "Dettagli", R.layout.monumenti_dettagli_activity, R.layout.monumenti_dettagli_activity_decorated);
         dati = new MonumentiDettagliActivityData(savedInstanceState, getIntent());
 
 

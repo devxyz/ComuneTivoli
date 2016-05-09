@@ -13,6 +13,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
@@ -132,10 +133,11 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
             map.moveCamera(CameraUpdateFactory.newLatLngZoom(pos, dati.zoom));
 
 
-            map.addMarker(new MarkerOptions()
+            final Marker marker = map.addMarker(new MarkerOptions()
                     .title(dati.titolo)
                     .snippet(dati.descrizione)
                     .position(pos));
+            marker.showInfoWindow();
         }
         init = true;
         if (operation != null) {

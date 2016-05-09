@@ -5,7 +5,7 @@ package comune.tivoli.rm.it.ComuneTivoliCommon.data;
  */
 public class CommonDataServerRequest {
     public long maxClientToken;
-    public long version;
+    public int version;
     public boolean responseInZipFormat;
 
     @Override

@@ -45,9 +45,7 @@ public class GreenDaoGenerator {
         }
 
 
-
-
-
-        new DaoGenerator().generateAll(schema, "/Users/stefano/DATA/dev/android/ComuneTivoliApp/ComuneTivoli/github/ComuneTivoli/comunetivoli-android/src");
+        final DaoGenerator g = new DaoGenerator();
+        g.generateAll(schema, "/Users/stefano/DATA/dev/android/ComuneTivoliApp/ComuneTivoli/github/ComuneTivoli/comunetivoli-android/src");
     }
 }

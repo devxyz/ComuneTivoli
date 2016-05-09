@@ -1,11 +1,16 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
@@ -23,6 +28,7 @@ public class WebActivity extends Activity {
     ImageButton web_btn_external_open;
     WebView www;
     WebActivityData dati;
+    ProgressDialog prDialog;
 
     public static Intent prepare(Activity call, String url, String titolo, String titoloMenu) {
         WebActivityData dati = new WebActivityData(url, titolo, titoloMenu);
@@ -33,6 +39,13 @@ public class WebActivity extends Activity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         dati.saveTo(outState);
+    }
+
+    @Override
+    public void finish() {
+        ViewGroup view = (ViewGroup) getWindow().getDecorView();
+        view.removeAllViews();
+        super.finish();
     }
 
     @Override
@@ -51,14 +64,52 @@ public class WebActivity extends Activity {
         www.getSettings().setBuiltInZoomControls(true);
         www.getSettings().setSupportZoom(true);
         www.getSettings().setJavaScriptEnabled(true);
+        www.getSettings().setSupportZoom(true);
+        www.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         www.getSettings().setLoadWithOverviewMode(true);
         www.getSettings().setUseWideViewPort(true);
+        www.setWebChromeClient(
+                new WebChromeClient() {
+                    public void onProgressChanged(WebView view, int progress) {
+                        if (prDialog == null) {
+                            prDialog = new ProgressDialog(WebActivity.this);
+                            prDialog.setMessage("Caricamento in corso ...");
+                            prDialog.setIndeterminate(false);
+                            prDialog.show();
+                        }
+
+                        prDialog.setProgress(progress);
+                    }
+                }
+        );
+
         www.setWebViewClient(new WebViewClient() {
 
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
                 return true;
+            }
+
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                super.onPageStarted(view, url, favicon);
+                if (prDialog == null) {
+                    prDialog = new ProgressDialog(WebActivity.this);
+                    prDialog.setMessage("Caricamento in corso ...");
+                    prDialog.setIndeterminate(true);
+                    prDialog.show();
+                }
+            }
+
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                if (prDialog != null) {
+                    prDialog.dismiss();
+                    prDialog = null;
+                }
             }
         });
 
