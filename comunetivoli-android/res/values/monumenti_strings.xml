@@ -472,8 +472,8 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-veduta-laterale-della-cattedrale-di-san-lorenzo-martire.jpg
     </string>
     <string name="monumenti_Cattedrale_di_San_Lorenzo_categoria">Luoghi di Culto</string>
-    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotosmall">@drawable/ic_launcher</drawable>
-    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotobig">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotosmall">@drawable/monumenti_cattedrale_san_lorenzo</drawable>
+    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotobig">@drawable/monumenti_cattedrale_san_lorenzo_big</drawable>
 
 
 

@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import comune.tivoli.rm.it.ComuneTivoli.db.DBHelperRunnable;
 import comune.tivoli.rm.it.ComuneTivoli.db.DbHelper;
@@ -19,11 +21,15 @@ import java.util.ArrayList;
 
 /**
  * Created by millozzi.stefano on 15/03/2016.
+ * todo:sistemare icona search.
  */
+
 public class NewsActivity extends Activity {
     ListView newslist;
     boolean Letto = false;
     private ArrayList<NotizieSitoDbSqlLite> news;
+    ImageButton search_btn;
+    EditText edit_serch_news;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,9 @@ public class NewsActivity extends Activity {
         TemplateUtil.inizializzaActivity(this, "Notizie", R.layout.news_activity, R.layout.news_activity_decorated);
         newslist = (ListView) findViewById(R.id.news_listview);
         news = new ArrayList<>();
+        search_btn = (ImageButton) findViewById(R.id.search_btn);
+        edit_serch_news=(EditText) findViewById(R.id.edit_serch_news);
+
 
         ManagerNotizieSitoDbSqlLite m = new ManagerNotizieSitoDbSqlLite();
 
@@ -50,7 +59,23 @@ public class NewsActivity extends Activity {
         }
 
         newslist.setAdapter(new NewsComuneListAdapter(this, news));
+        search_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String ricerca;
+                ricerca = edit_serch_news.getText().toString().toLowerCase();
 
+                ArrayList<NotizieSitoDbSqlLite> nuoveNews=new ArrayList<NotizieSitoDbSqlLite>();
+
+                for(int i=0; i <= news.size(); i++ ) {
+                    NotizieSitoDbSqlLite notizia = news.get(i);
+                    if (notizia.getTitolo().toLowerCase().contains(ricerca) || notizia.getTesto().toLowerCase().contains(ricerca)){
+                        nuoveNews.add(notizia);
+                    }
+                }
+                newslist.setAdapter(new NewsComuneListAdapter(NewsActivity.this, nuoveNews));
+            }
+        });
         newslist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -58,7 +83,7 @@ public class NewsActivity extends Activity {
 
                 //eseguito quando si fa click su una voce
                 final Intent intent = NewsDettagliActivity.prepareIntent(
-                        NewsActivity.this, nc.getTitolo(), nc.getData(), nc.getTesto(), nc.getHtml(),nc.getKey());
+                        NewsActivity.this, nc.getTitolo(), nc.getData(), nc.getTesto(), nc.getHtml(), nc.getKey());
                 startActivity(intent);
             }
         });

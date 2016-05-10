@@ -10,7 +10,7 @@
             android:id="@+id/news_titolo" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
             android:textSize="@dimen/app_textsize_titolo_big"
             android:padding="5dp" android:textStyle="bold" android:textColor="@color/template_colorred"
-            android:layout_toStartOf="@+id/imageButton"/>
+            android:layout_toStartOf="@+id/search_btn"/>
     <WebView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,11 +21,11 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Small Text"
             android:id="@+id/news_data" android:layout_below="@+id/news_titolo" android:layout_alignParentStart="true"
-            android:gravity="right" android:layout_toStartOf="@+id/imageButton"/>
+            android:gravity="right" android:layout_toStartOf="@+id/search_btn"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+            android:id="@+id/search_btn" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
             android:src="@drawable/icona_down_arrow_red_50x25"
             android:background="@color/trasparent" android:layout_alignBottom="@+id/news_data"/>
 </RelativeLayout>
