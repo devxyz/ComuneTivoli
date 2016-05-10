@@ -1,16 +1,12 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
@@ -24,15 +20,14 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
  * done: aggiungere progress bar di caricamento
  * todo: gestire progress caricamento (si blocca con visite 3d)
  */
-public class WebActivity extends Activity {
+public class Web3DActivity extends Activity {
     TextView label_titolo;
     ImageButton web_btn_external_open;
     WebView www;
-    WebActivityData dati;
-    ProgressDialog prDialog;
+    Web3dActivityData dati;
 
     public static Intent prepare(Activity call, String url, String titolo, String titoloMenu) {
-        WebActivityData dati = new WebActivityData(url, titolo, titoloMenu);
+        Web3dActivityData dati = new Web3dActivityData(url, titolo, titoloMenu);
         return dati.toIntent(call);
     }
 
@@ -53,8 +48,8 @@ public class WebActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        dati = new WebActivityData(savedInstanceState, getIntent());
-        TemplateUtil.inizializzaActivity(this, dati.menu, R.layout.web_activity, R.layout.web_activity_decorated);
+        dati = new Web3dActivityData(savedInstanceState, getIntent());
+        TemplateUtil.inizializzaActivity(this, dati.menu, R.layout.web3d_activity, R.layout.web3d_activity_decorated);
 
         label_titolo = (TextView) findViewById(R.id.web_titolo);
         www = (WebView) findViewById(R.id.web_www);
@@ -62,28 +57,13 @@ public class WebActivity extends Activity {
         label_titolo.setText(dati.titolo);
 
         //www.getSettings().setDisplayZoomControls(true);
-        www.getSettings().setBuiltInZoomControls(true);
+/*        www.getSettings().setBuiltInZoomControls(true);
         www.getSettings().setSupportZoom(true);
         www.getSettings().setJavaScriptEnabled(true);
         www.getSettings().setSupportZoom(true);
         www.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         www.getSettings().setLoadWithOverviewMode(true);
-        www.getSettings().setUseWideViewPort(true);
-        www.setWebChromeClient(
-                new WebChromeClient() {
-                    public void onProgressChanged(WebView view, int progress) {
-                        if (prDialog == null) {
-                            prDialog = new ProgressDialog(WebActivity.this);
-                            prDialog.setMessage("Caricamento in corso ...");
-                            prDialog.setIndeterminate(false);
-                            prDialog.show();
-                        }
-
-
-                        prDialog.setProgress(progress);
-                    }
-                }
-        );
+        www.getSettings().setUseWideViewPort(true);*/
 
         www.setWebViewClient(new WebViewClient() {
 
@@ -93,26 +73,6 @@ public class WebActivity extends Activity {
                 return true;
             }
 
-            @Override
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                super.onPageStarted(view, url, favicon);
-                if (prDialog == null) {
-                    prDialog = new ProgressDialog(WebActivity.this);
-                    prDialog.setMessage("Caricamento in corso ...");
-                    prDialog.setIndeterminate(true);
-                    prDialog.show();
-                }
-            }
-
-
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-                if (prDialog != null) {
-                    prDialog.dismiss();
-                    prDialog = null;
-                }
-            }
         });
 
 
@@ -121,7 +81,7 @@ public class WebActivity extends Activity {
         web_btn_external_open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogUtil.openChooseDialog(WebActivity.this, "Scegli l'opzione",
+                DialogUtil.openChooseDialog(Web3DActivity.this, "Scegli l'opzione",
                         new CharSequence[]{"Apri sul browser esterno", "Informazioni", "Annulla"},
                         new DialogInterface.OnClickListener() {
                             @Override
@@ -134,7 +94,7 @@ public class WebActivity extends Activity {
                                         startActivity(web);
                                         break;
                                     case 1:
-                                        DialogUtil.openInfoDialog(WebActivity.this,
+                                        DialogUtil.openInfoDialog(Web3DActivity.this,
                                                 "Informazioni",
                                                 dati.titolo + "\n" + "URK:" + dati.url);
                                         break;
@@ -149,7 +109,7 @@ public class WebActivity extends Activity {
 
     }
 
-    private static class WebActivityData {
+    private static class Web3dActivityData {
         public static final String LABEL_URL = "url";
         public static final String LABEL_TITOLO = "titolo";
         public static final String LABEL_MENU = "menu";
@@ -157,13 +117,13 @@ public class WebActivity extends Activity {
         final String titolo;
         final String menu;
 
-        public WebActivityData(Bundle savedInstanceState, Intent i) {
+        public Web3dActivityData(Bundle savedInstanceState, Intent i) {
             url = IntentUtil.getExtraString(i, savedInstanceState, LABEL_URL, null);
             titolo = IntentUtil.getExtraString(i, savedInstanceState, LABEL_TITOLO, null);
             menu = IntentUtil.getExtraString(i, savedInstanceState, LABEL_MENU, null);
         }
 
-        public WebActivityData(String url, String titolo, String menu) {
+        public Web3dActivityData(String url, String titolo, String menu) {
 
             this.url = url;
             this.titolo = titolo;
@@ -181,7 +141,7 @@ public class WebActivity extends Activity {
             Bundle b = new Bundle();
             saveTo(b);
 
-            Intent i = new Intent(a, WebActivity.class);
+            Intent i = new Intent(a, Web3DActivity.class);
             i.putExtras(b);
             return i;
 

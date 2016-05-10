@@ -6,17 +6,16 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/web_titolo" android:layout_alignParentTop="true"
+            android:id="@+id/web_titolo" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
             android:text="WEB" android:textSize="@dimen/app_textsize_titolo" android:padding="5dp"
             android:textStyle="bold" android:textColor="@color/template_colorred"
             android:layout_alignBottom="@+id/web_btn_external_open"
-            android:layout_toEndOf="@+id/imageView"/>
+            android:layout_toStartOf="@+id/web_btn_external_open"/>
     <WebView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/web_www"
-            android:layout_alignParentStart="true" android:layout_alignParentBottom="true"
-            android:layout_below="@+id/web_titolo"/>
+            android:layout_height="match_parent"
+            android:id="@+id/web_www" android:layout_alignParentStart="true"
+            android:layout_below="@+id/web_btn_external_open"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,4 +26,5 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView" android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
+
 </RelativeLayout>

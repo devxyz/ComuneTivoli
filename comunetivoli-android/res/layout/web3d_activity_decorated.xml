@@ -26,79 +26,30 @@
             android:paddingRight="10dp" android:paddingTop="10dp">
     
 
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/web_titolo" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:text="WEB" android:textSize="@dimen/app_textsize_titolo" android:padding="5dp"
+            android:textStyle="bold" android:textColor="@color/template_colorred"
+            android:layout_alignBottom="@+id/web_btn_external_open"
+            android:layout_toStartOf="@+id/web_btn_external_open"/>
+    <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/web_www" android:layout_alignParentStart="true"
+            android:layout_below="@+id/web_btn_external_open"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/web_btn_external_open" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+            android:src="@drawable/icona_down_arrow_red_50x25" android:background="@color/trasparent"
+            android:padding="5dp"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView3"
-            android:src="@drawable/logo_scuola_500x500"
-            android:layout_alignParentStart="true" android:layout_alignParentBottom="true"
-            android:layout_alignParentTop="true"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView4"
-            android:src="@drawable/crediti_people"
-            android:layout_alignParentBottom="true" android:layout_toEndOf="@+id/credits.grafica"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/credits.coordinatore"
-            android:text="@string/credits_coordinatore" android:textSize="@dimen/app_textsize_titolo"
-            android:textStyle="bold"
-            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/credits_grafico"
-            android:id="@+id/credits.grafico"
-            android:textSize="@dimen/app_textsize_titolo" android:textStyle="bold"
-            android:layout_below="@+id/home_facebook" android:layout_alignParentStart="true"
-            android:layout_marginTop="20dp"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/credits_alunnigrafica"
-            android:id="@+id/credits.alunnigrafica"
-            android:textSize="@dimen/app_textsize_titolo" android:textStyle="bold"
-            android:layout_below="@+id/credits.grafica" android:layout_alignParentStart="true"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/credits_coordinatorenomi"
-            android:id="@+id/credits.professore"
-            android:textSize="@dimen/app_textsize_sottotitolo"
-            android:visibility="visible"
-            android:layout_below="@+id/credits.coordinatore" android:layout_alignParentStart="true"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/credits_programmatorinomi"
-            android:id="@+id/home_facebook"
-            android:textSize="@dimen/app_textsize_sottotitolo"
-            android:visibility="visible"
-            android:layout_below="@+id/home_web" android:layout_alignParentStart="true"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/credits_graficonomi"
-            android:id="@+id/credits.grafica"
-            android:textSize="@dimen/app_textsize_sottotitolo"
-            android:visibility="visible"
-            android:layout_below="@+id/credits.grafico" android:layout_alignParentStart="true"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/credits_alunnigraficanomi"
-            android:id="@+id/credits.classegrafica"
-            android:textSize="@dimen/app_textsize_sottotitolo"
-            android:visibility="visible"
-            android:layout_below="@+id/credits.alunnigrafica" android:layout_alignParentStart="true"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/credits_programmatori"
-            android:id="@+id/home_web" android:layout_below="@+id/credits.professore"
-            android:layout_alignParentStart="true" android:textSize="@dimen/app_textsize_sottotitolo" android:textStyle="bold"/>
+            android:id="@+id/imageView" android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
+
 </RelativeLayout>
     <ImageButton
             android:layout_width="wrap_content"
