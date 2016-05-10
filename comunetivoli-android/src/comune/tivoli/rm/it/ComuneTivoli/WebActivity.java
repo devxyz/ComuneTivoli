@@ -21,7 +21,7 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 /**
  * fatto: rimuovere pulsante per link esterno, sostituirlo con pressione sul titolo
- * todo: aggiungere progress bar di caricamento
+ * done: aggiungere progress bar di caricamento
  */
 public class WebActivity extends Activity {
     TextView label_titolo;

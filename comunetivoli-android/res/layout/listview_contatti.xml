@@ -22,16 +22,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:src="@drawable/icona_blue_link_30x30"
+            android:src="@drawable/icona_down_arrow_red_50x25"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentEnd="true" android:paddingTop="5dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Testo"
             android:id="@+id/contatti_descrizione" android:layout_below="@+id/contatti_title"
-            android:layout_toLeftOf="@+id/contatti_image" android:layout_alignParentLeft="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" android:layout_marginLeft="10dp" android:gravity="fill_horizontal"
-    />
+            android:layout_alignEnd="@+id/contatti_image"/>
 
 </RelativeLayout>

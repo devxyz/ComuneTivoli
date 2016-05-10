@@ -85,7 +85,7 @@ public class ParserEngine {
         final Document doc = Jsoup.parse(htmlNormalizzato);
         final String textNormalizzato = CommonTextUtil.normalize_UTF8__to__ASCII(doc.body().text());
 
-        //todo: manca ricerca data nel documento
+        //done: manca ricerca data nel documento
         final Date date = ExtractDateNewsJavaccParser.extractDate(textNormalizzato);
 
         return new NotiziaWWWComuneTivoli(
