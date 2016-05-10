@@ -77,7 +77,7 @@ public class MonumentiDettagliActivity extends Activity {
                 tred_btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(WebActivity.prepare(MonumentiDettagliActivity.this, monumento.tred, monumento.titolo, "Panoramica 3D " + monumento.categoria));
+                        startActivity(Web3DActivity.prepare(MonumentiDettagliActivity.this, monumento.tred, monumento.titolo, "Panoramica 3D " + monumento.categoria));
 
                     }
                 });
