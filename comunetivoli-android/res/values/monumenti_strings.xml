@@ -668,8 +668,8 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-torre-campanaria-della-chiesa.jpg
     </string>
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_categoria">Luoghi di culto</string>
-    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotosmall">@drawable/ic_launcher</drawable>
-    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotobig">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotosmall">@drawable/monumenti_chiesa_san_pietro_carita</drawable>
+    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotobig">@drawable/monumenti_chiesa_san_pietro_carita_big</drawable>
 
 
 
