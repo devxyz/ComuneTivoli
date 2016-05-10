@@ -26,7 +26,7 @@ public class LoadExternalDataServlet extends HttpServlet {
         final List<GAE_NotiziaSitoDB_V1> elencoNotizie = ee.allEntities();
         Set<String> nodeLinksInDB = new TreeSet<>();
         for (GAE_NotiziaSitoDB_V1 x : elencoNotizie) {
-            nodeLinksInDB.add(x.getUrlPrint());
+            nodeLinksInDB.add(x.getKey());
         }
 
         MyToken t = new MyToken();

@@ -27,7 +27,8 @@ public class PrintNotizieServlet extends HttpServlet {
         int i = 1;
         for (GAE_NotiziaSitoDB_V1 c : cl.allEntities()) {
 
-            out.println("<tr><td rowspan=6>" + i + "</td><td><b>URL</b></td>  <td><a href='" + c.getUrlPrint() + "'>" + c.getUrlPrint() + "</a></td></tr>");
+            out.println("<tr><td rowspan=7>" + i + "</td><td><b>URL</b></td>  <td><a href='" + c.getUrlPrint() + "'>" + c.getUrlPrint() + "</a></td></tr>");
+            out.println("<tr><td><b>Key</b></td>  <td>" + c.getKey() + "</td></tr>");
             out.println("<tr><td><b>Data</b></td>  <td>" + c.getData() + "</td></tr>");
             out.println("<tr><td><b>Titolo</b></td>  <td>" + c.getTitolo() + "</td></tr>");
             out.println("<tr><td><b>Token</b></td>  <td>" + c.getToken() + "</td></tr>");

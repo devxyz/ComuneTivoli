@@ -8,6 +8,7 @@ import comune.tivoli.rm.it.ComuneTivoli.R;
 import comune.tivoli.rm.it.ComuneTivoli.db.DBHelperRunnable;
 import comune.tivoli.rm.it.ComuneTivoli.db.DbHelper;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.DaoSession;
+import comune.tivoli.rm.it.ComuneTivoli.db.dao.NotizieSitoDbSqlLite;
 import comune.tivoli.rm.it.ComuneTivoli.db.manager.ManagerNotizieSitoDbSqlLite;
 import comune.tivoli.rm.it.ComuneTivoli.util.StreamAndroidUtil;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerRequest;
@@ -19,6 +20,8 @@ import java.io.DataOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
@@ -158,11 +161,20 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
                 if (isCancelled()) return null;
                 final DbHelper db = new DbHelper(activity);
                 try {
-                   db.runInTransaction(new DBHelperRunnable() {
+                    db.runInTransaction(new DBHelperRunnable() {
                         @Override
                         public void run(DaoSession session, Context ctx) throws Throwable {
                             ManagerNotizieSitoDbSqlLite m = new ManagerNotizieSitoDbSqlLite();
-                            m.insertFromServer(session, resp.notizie);
+                            final Map<String, NotizieSitoDbSqlLite> map = m.listByKey(session);
+
+                            //ignora le news gia' presenti
+                            ArrayList<CommonNotiziaSito> notizieDaAggiungere = new ArrayList<CommonNotiziaSito>(resp.notizie.size());
+                            for (CommonNotiziaSito n : resp.notizie) {
+                                if (!map.containsKey(n.getKey()))
+                                    notizieDaAggiungere.add(n);
+                            }
+
+                            m.insertFromServer(session, notizieDaAggiungere);
                         }
                     });
 

@@ -29,7 +29,7 @@ public class JSonDataRequestServlet extends HttpServlet {
         if (param == null) throw new IOException("Parameter (param) not specified");
         final Gson g = new Gson();
         final CommonDataServerRequest req = g.fromJson(param, CommonDataServerRequest.class);
-
+        System.out.println("Richiesta "+req);
         try {
             final InMemoryCacheLayerNotiziaSitoDB ee = DataLayerBuilder.getLoaderNewsSito();
             final List<GAE_NotiziaSitoDB_V1> elencoNotizie = ee.allEntities();
