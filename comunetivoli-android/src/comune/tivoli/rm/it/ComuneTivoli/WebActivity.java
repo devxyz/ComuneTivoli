@@ -1,7 +1,6 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -14,6 +13,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
@@ -24,12 +24,13 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
  * done: aggiungere progress bar di caricamento
  * todo: gestire progress caricamento (si blocca con visite 3d)
  */
+// TODO: 10/05/16 - verifica correttezza OK
 public class WebActivity extends Activity {
     TextView label_titolo;
     ImageButton web_btn_external_open;
     WebView www;
     WebActivityData dati;
-    ProgressDialog prDialog;
+    ProgressBar bar;
 
     public static Intent prepare(Activity call, String url, String titolo, String titoloMenu) {
         WebActivityData dati = new WebActivityData(url, titolo, titoloMenu);
@@ -54,11 +55,14 @@ public class WebActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         dati = new WebActivityData(savedInstanceState, getIntent());
-        TemplateUtil.inizializzaActivity(this,"*"+ dati.menu, R.layout.web_activity, R.layout.web_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,  dati.menu, R.layout.web_activity, R.layout.web_activity_decorated);
 
         label_titolo = (TextView) findViewById(R.id.web_titolo);
         www = (WebView) findViewById(R.id.web_www);
         web_btn_external_open = (ImageButton) findViewById(R.id.web_btn_external_open);
+        bar = (ProgressBar) findViewById(R.id.web_progressbar);
+
+
         label_titolo.setText(dati.titolo);
 
         //www.getSettings().setDisplayZoomControls(true);
@@ -66,21 +70,14 @@ public class WebActivity extends Activity {
         www.getSettings().setSupportZoom(true);
         www.getSettings().setJavaScriptEnabled(true);
         www.getSettings().setSupportZoom(true);
-        www.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        www.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
         www.getSettings().setLoadWithOverviewMode(true);
         //www.getSettings().setUseWideViewPort(true);
         www.setWebChromeClient(
                 new WebChromeClient() {
                     public void onProgressChanged(WebView view, int progress) {
-                        if (prDialog == null) {
-                            prDialog = new ProgressDialog(WebActivity.this);
-                            prDialog.setMessage("Caricamento in corso ...");
-                            prDialog.setIndeterminate(false);
-                            prDialog.show();
-                        }
-
-
-                        prDialog.setProgress(progress);
+                        bar.setIndeterminate(false);
+                        bar.setProgress(progress);
                     }
                 }
         );
@@ -96,29 +93,22 @@ public class WebActivity extends Activity {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
-                if (prDialog == null) {
-                    prDialog = new ProgressDialog(WebActivity.this);
-                    prDialog.setMessage("Caricamento in corso ...");
-                    prDialog.setIndeterminate(true);
-                    prDialog.show();
-                }
+                bar.setVisibility(View.VISIBLE);
+                bar.setIndeterminate(true);
             }
 
 
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                if (prDialog != null) {
-                    prDialog.dismiss();
-                    prDialog = null;
-                }
+                bar.setVisibility(View.GONE);
             }
         });
 
 
         www.loadUrl(dati.url);
 
-        web_btn_external_open.setOnClickListener(new View.OnClickListener() {
+        final View.OnClickListener informazioni = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogUtil.openChooseDialog(WebActivity.this, "Scegli l'opzione",
@@ -145,7 +135,9 @@ public class WebActivity extends Activity {
                             }
                         }, null);
             }
-        });
+        };
+        web_btn_external_open.setOnClickListener(informazioni);
+        label_titolo.setOnClickListener(informazioni);
 
     }
 

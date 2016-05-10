@@ -15,6 +15,7 @@ public class TooltipUtil {
      * @param message
      */
     public static void setTooltipOnLongClick(final Context c, View b, final String message) {
+        if (b==null)return ;
         b.setLongClickable(true);
         b.setOnLongClickListener(new View.OnLongClickListener() {
             @Override

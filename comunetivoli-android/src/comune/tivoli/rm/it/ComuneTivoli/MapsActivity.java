@@ -24,6 +24,7 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
  * todo: aggiungere avvio del navigatore tra le opzioni del menu
  */
 
+// TODO: 10/05/16 - verifica correttezza OK
 public class MapsActivity extends Activity implements OnMapReadyCallback {
     TextView maps_text_titolo;
     ImageButton btn;
@@ -46,15 +47,19 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
 
         dati = new MapsActivityDati(savedInstanceState, getIntent());
 
-        TemplateUtil.inizializzaActivity(this,"T*"+ "Mappa", R.layout.maps_activity, R.layout.maps_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,  "Mappa", R.layout.maps_activity, R.layout.maps_activity_decorated);
 
         btn = (ImageButton) findViewById(R.id.maps_btn_open);
+        maps_text_titolo = (TextView) findViewById(R.id.maps_text_titolo);
+        mapFragment = (MapFragment) getFragmentManager()
+                .findFragmentById(R.id.map);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+
+        final View.OnClickListener informazioni = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogUtil.openChooseDialog(MapsActivity.this, "Scegli l'opzione",
-                        new CharSequence[]{"Vista Satellite", "Vista Stradale", "Centra Mappa", "Apri con Maps","Apri navigatore", "Informazioni", "Chiudi"},
+                        new CharSequence[]{"Vista Satellite", "Vista Stradale", "Centra Mappa", "Apri con Maps", "Apri navigatore", "Apri streetview", "Informazioni", "Chiudi"},
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -90,17 +95,23 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
                                         break;
                                     case 3:
                                         Intent mapsIntent;
-                                        mapsIntent = new Intent(android.content.Intent.ACTION_VIEW,
+                                        mapsIntent = new Intent(Intent.ACTION_VIEW,
                                                 Uri.parse("geo:0,0?q=" + dati.latitudine + "," + dati.longitudine + "(" + Uri.encode(dati.titolo) + ")" + "&z=16&"));
                                         startActivity(mapsIntent);
 
                                         break;
                                     case 4:
                                         Intent navigator;
-                                        navigator = new Intent(Intent.ACTION_VIEW,Uri.parse("google.navigation:q=" + dati.indirizzo));
+                                        navigator = new Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=" + dati.indirizzo));
                                         startActivity(navigator);
                                         break;
-                                    case 5:
+                                    case 5: {
+                                        Intent streetView = new Intent(Intent.ACTION_VIEW, Uri.parse("google.streetview:cbll=" + dati.latitudine + "," + dati.longitudine + "&cbp=1,10,,1,1&mz=10"));
+                                        startActivity(streetView);
+
+                                    }
+                                    break;
+                                    case 6:
                                         DialogUtil.openInfoDialog(MapsActivity.this,
                                                 "Informazioni",
                                                 dati.descrizione + "\n" +
@@ -116,15 +127,10 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
 
 
             }
-        });
-
-
-        maps_text_titolo = (TextView) findViewById(R.id.maps_text_titolo);
-        mapFragment = (MapFragment) getFragmentManager()
-                .findFragmentById(R.id.map);
-
+        };
+        btn.setOnClickListener(informazioni);
+        maps_text_titolo.setOnClickListener(informazioni);
         maps_text_titolo.setText(dati.titolo);
-
         mapFragment.getMapAsync(this);
 
     }

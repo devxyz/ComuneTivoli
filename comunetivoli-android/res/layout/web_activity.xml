@@ -3,28 +3,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/web_titolo" android:layout_alignParentTop="true"
-            android:text="WEB" android:textSize="@dimen/app_textsize_titolo" android:padding="5dp"
-            android:textStyle="bold" android:textColor="@color/template_colorred"
-            android:layout_alignBottom="@+id/web_btn_external_open"
-            android:layout_toEndOf="@+id/imageView"/>
-    <WebView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/web_www"
-            android:layout_alignParentStart="true" android:layout_alignParentBottom="true"
-            android:layout_below="@+id/web_titolo"/>
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/web_btn_external_open" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
-            android:src="@drawable/icona_down_arrow_red_50x25" android:background="@color/trasparent"
-            android:padding="5dp"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView" android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
+            android:layout_height="match_parent" android:gravity="top|left">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/web_titolo" android:layout_alignParentTop="true"
+                    android:text="WEB" android:textSize="@dimen/app_textsize_titolo" android:padding="5dp"
+                    android:textStyle="bold" android:textColor="@color/template_colorred"
+                    android:layout_alignBottom="@+id/web_btn_external_open"
+                    android:layout_toStartOf="@+id/web_btn_external_open"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/web_btn_external_open" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+                    android:src="@drawable/icona_down_arrow_red_50x25" android:background="@color/trasparent"
+                    android:padding="5dp"/>
+        </RelativeLayout>
+        <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/web_progressbar"
+                android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+                android:indeterminate="true"
+                style="?android:attr/progressBarStyleHorizontal" android:paddingBottom="5dp"
+                android:paddingTop="5dp" android:background="@color/template_colorblu"
+                android:layout_marginBottom="20dp" android:layout_marginTop="10dp"/>
+        <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/web_www"
+                android:layout_alignParentStart="true" android:layout_alignParentBottom="true"
+        />
+    </LinearLayout>
 </RelativeLayout>

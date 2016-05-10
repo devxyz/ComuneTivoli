@@ -13,15 +13,19 @@ import comune.tivoli.rm.it.ComuneTivoli.dialog.TooltipUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
+import java.text.MessageFormat;
+
 /**
  * Created by millozzi.stefano on 19/04/2016.
  */
+// TODO: 10/05/16 - verifica correttezza OK
 public class ContattiDettagliActivity extends Activity {
     TextView dettagli_titolo;
     TextView dettagli_descrizione;
     ImageButton btn_chiama;
     ImageButton btn_maps;
     ImageButton btn_email;
+    ImageButton contatti_btn_streetview_dettagli;
     ImageView screen;
     ContattiDettagliActivityData dati;
 
@@ -41,7 +45,7 @@ public class ContattiDettagliActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         //inizializza l'activiti ed eventualmente il menu
-        TemplateUtil.inizializzaActivity(this, "T*" + "Sedi comunali", R.layout.contattidettagli_activity, R.layout.contattidettagli_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,  "Sedi comunali", R.layout.contattidettagli_activity, R.layout.contattidettagli_activity_decorated);
         dati = new ContattiDettagliActivityData(savedInstanceState, getIntent());
 
         dettagli_titolo = (TextView) findViewById(R.id.titolo_dettagli);
@@ -51,9 +55,10 @@ public class ContattiDettagliActivity extends Activity {
         dettagli_titolo.setText(dati.titolo);
 
         dettagli_descrizione.setText(dati.descrizione);
-        btn_chiama = (ImageButton) findViewById(R.id.btn_chiama_dettagli);
-        btn_maps = (ImageButton) findViewById(R.id.btn_maps_dettagli);
-        btn_email = (ImageButton) findViewById(R.id.btn_email_dettagli);
+        btn_chiama = (ImageButton) findViewById(R.id.contatti_btn_chiama_dettagli);
+        btn_maps = (ImageButton) findViewById(R.id.contatti_btn_maps_dettagli);
+        btn_email = (ImageButton) findViewById(R.id.contatti_btn_email_dettagli);
+        contatti_btn_streetview_dettagli = (ImageButton) findViewById(R.id.contatti_btn_streetview_dettagli);
         screen = (ImageView) findViewById(R.id.screenmaps);
         screen.setImageResource(dati.image_id);
         //dettagli_descrizione.setText(getIntent().getExtras().getString("descrizione") + " \n ID IMMAGINE:" + idIMG);
@@ -62,6 +67,7 @@ public class ContattiDettagliActivity extends Activity {
         TooltipUtil.setTooltipOnLongClick(this, btn_email, "Invia una email a " + dati.titolo);
         TooltipUtil.setTooltipOnLongClick(this, btn_maps, "Cerca sulla mappa " + dati.titolo);
         TooltipUtil.setTooltipOnLongClick(this, screen, "Cerca sulla mappa " + dati.titolo);
+        TooltipUtil.setTooltipOnLongClick(this, contatti_btn_streetview_dettagli, "Streetview di " + dati.titolo);
 
         //=====================================================
         if (dati.telefono != null && dati.telefono.trim().length() > 0) {
@@ -113,8 +119,17 @@ public class ContattiDettagliActivity extends Activity {
                     startActivity(i);
                 }
             });
-        } else {
+            contatti_btn_streetview_dettagli.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent streetView = new Intent(android.content.Intent.ACTION_VIEW,Uri.parse("google.streetview:cbll="+ dati.latitudine+","+dati.longitudine+"&cbp=1,10,,1,1&mz=10"));
+                    startActivity(streetView);
 
+                }
+            });
+        } else {
+            btn_maps.setVisibility(View.GONE);
+            contatti_btn_streetview_dettagli.setVisibility(View.GONE);
         }
     }
 

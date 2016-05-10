@@ -14,9 +14,11 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 import java.util.ArrayList;
 
 /**
- * todo: correggere coordinate contatti in quanto imprecisi: usare il sito http://www.coordinate-gps.it/
+ * todo: correggere coordinate contatti in quanto imprecisi: usare il sito http://www.coordinate-gps.it/ (via del governo NON e' corretta . aggiornato al 10 maggio 2016
  *
  */
+
+// TODO: 10/05/16 - verifica correttezza OK
 public class ContattiActivity extends Activity {
 
     private ListView contattiListView;
@@ -27,7 +29,7 @@ public class ContattiActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TemplateUtil.inizializzaActivity(this,"T*"+ "Contatti", R.layout.contatti_activity_list, R.layout.contatti_activity_list_decorated);
+        TemplateUtil.inizializzaActivity(this,"Contatti", R.layout.contatti_activity_list, R.layout.contatti_activity_list_decorated);
 
         contattiListView = (ListView) findViewById(R.id.contatti_listView);
 
