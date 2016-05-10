@@ -173,6 +173,8 @@ public class DebugHomeActivity extends Activity {
                 notification.defaults |= Notification.DEFAULT_SOUND;
                 nm.notify(0, notification);
 
+
+
             }
         });
     }
