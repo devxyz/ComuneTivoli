@@ -24,7 +24,7 @@
     <string name="contatti_urp_tivoli_indirizzo">U.R.P. - Piazza del Governo, 2</string>
     <string name="contatti_urp_tivoli_email"></string>
     <string name="contatti_urp_tivoli_maps">
-        41.9637744,12.7967359
+        41.963697,12.7967359
     </string>
 
 
@@ -36,7 +36,7 @@
     </string>
     <string name="contatti_anagrafe_tivoli_email">anagrafe@pec.comune.tivoli.rm.it</string>
     <string name="contatti_anagrafe_tivoli_maps">
-        41.9635587,12.7964803
+        41.963569,12.798852
     </string>
 
 
@@ -49,7 +49,7 @@
     <string name="contatti_villa_adriana_indirizzo">Via di Villa Adriana, 178</string>
     <string name="contatti_villa_adriana_email"></string>
     <string name="contatti_villa_adriana_maps">
-        41.948848,12.7719295
+        41.948844,12.774118
     </string>
 
 
@@ -62,7 +62,7 @@
     <string name="contatti_tivoli_terme_indirizzo">Via Don Giovanni Minzoni , 9</string>
     <string name="contatti_tivoli_terme_email"></string>
     <string name="contatti_tivoli_terme_maps">
-        41.953692,12.7241943
+        41.953688,12.726383
     </string>
 
 
@@ -75,6 +75,6 @@
     </string>
     <string name="contatti_uff_elettorale_email">elettorale@pec.comune.tivoli.rm.it</string>
     <string name="contatti_uff_elettorale_maps">
-        41.9635587,12.7964803
+        41.963569,12.798852
     </string>
 </resources>

@@ -1,8 +1,13 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,8 +32,8 @@ public class DebugHomeActivity extends Activity {
     Button btn_chiudi;
     Button btn_abilita_dec;
     Button btn_disabilita_dec;
-
     Button btnscroll;
+    Button btnnotifica;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,7 @@ public class DebugHomeActivity extends Activity {
         btn_fb_ = (Button) findViewById(R.id.btn_fb);
         btn_crediti = (Button) findViewById(R.id.btn_crediti);
         btn_home = (Button) findViewById(R.id.btn_home);
+        btnnotifica = (Button) findViewById(R.id.btn_notifica);
 
         btn_disabilita_dec.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,6 +153,28 @@ public class DebugHomeActivity extends Activity {
             }
         });
 
+        btnnotifica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int icon = R.drawable.app_icona_di_sistema;
+                NotificationManager nm=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+                Context context = getApplicationContext();
+                Intent intent=new Intent(context,NewsActivity.class);
+                PendingIntent  pending=PendingIntent.getActivity(
+                        context, 0, intent, 0);
+                Notification notification;
+                notification = new Notification.Builder(context)
+                        .setContentTitle("Titolo")
+                        .setContentText(
+                                "Testo").setSmallIcon(icon)
+                        .setContentIntent(pending).setWhen(System.currentTimeMillis()).setAutoCancel(false)
+                        .build();
+                notification.flags |= Notification.FLAG_AUTO_CANCEL;
+                notification.defaults |= Notification.DEFAULT_SOUND;
+                nm.notify(0, notification);
+
+            }
+        });
     }
 
 

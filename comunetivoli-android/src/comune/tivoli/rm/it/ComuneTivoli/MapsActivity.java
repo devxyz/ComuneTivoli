@@ -54,7 +54,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
             @Override
             public void onClick(View v) {
                 DialogUtil.openChooseDialog(MapsActivity.this, "Scegli l'opzione",
-                        new CharSequence[]{"Vista Satellite", "Vista Stradale", "Centra Mappa", "Apri con Maps", "Informazioni", "Annulla"},
+                        new CharSequence[]{"Vista Satellite", "Vista Stradale", "Centra Mappa", "Apri con Maps","Apri navigatore", "Informazioni", "Chiudi"},
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -96,6 +96,11 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
 
                                         break;
                                     case 4:
+                                        Intent navigator;
+                                        navigator = new Intent(Intent.ACTION_VIEW,Uri.parse("google.navigation:q=" + dati.indirizzo));
+                                        startActivity(navigator);
+                                        break;
+                                    case 5:
                                         DialogUtil.openInfoDialog(MapsActivity.this,
                                                 "Informazioni",
                                                 dati.descrizione + "\n" +

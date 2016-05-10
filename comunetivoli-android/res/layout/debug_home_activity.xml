@@ -98,4 +98,9 @@
             android:id="@+id/btn_disabilit_decor" android:textSize="20dp" android:textStyle="bold"
             android:layout_below="@+id/btn_abilita_dec" android:layout_alignStart="@+id/btn_abilita_dec"
             android:layout_toStartOf="@+id/btn_contatti" android:layout_alignEnd="@+id/btn_abilita_dec"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification"
+            android:id="@+id/btn_notifica" android:layout_above="@+id/btn_fb" android:layout_alignStart="@+id/btn_chiudi"/>
 </RelativeLayout>
