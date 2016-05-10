@@ -22,6 +22,7 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 /**
  * fatto: rimuovere pulsante per link esterno, sostituirlo con pressione sul titolo
  * done: aggiungere progress bar di caricamento
+ * todo: gestire progress caricamento (si blocca con visite 3d)
  */
 public class WebActivity extends Activity {
     TextView label_titolo;
@@ -72,10 +73,10 @@ public class WebActivity extends Activity {
                 new WebChromeClient() {
                     public void onProgressChanged(WebView view, int progress) {
                         if (prDialog == null) {
-                            prDialog = new ProgressDialog(WebActivity.this);
+                            /*prDialog = new ProgressDialog(WebActivity.this);
                             prDialog.setMessage("Caricamento in corso ...");
                             prDialog.setIndeterminate(false);
-                            prDialog.show();
+                            prDialog.show();*/
                         }
 
                         prDialog.setProgress(progress);
@@ -95,10 +96,10 @@ public class WebActivity extends Activity {
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
                 if (prDialog == null) {
-                    prDialog = new ProgressDialog(WebActivity.this);
+                    /*prDialog = new ProgressDialog(WebActivity.this);
                     prDialog.setMessage("Caricamento in corso ...");
                     prDialog.setIndeterminate(true);
-                    prDialog.show();
+                    prDialog.show();*/
                 }
             }
 

@@ -23,7 +23,7 @@ public class ManagerNotizieSitoDbSqlLite {
         q.executeDeleteWithoutDetachingEntities();
     }
 
-    public Map<String, NotizieSitoDbSqlLite> listByKey(DaoSession session) {
+    public Map<String, NotizieSitoDbSqlLite> mapByKey(DaoSession session) {
         Map<String, NotizieSitoDbSqlLite> ris = new LinkedHashMap<>();
         final List<NotizieSitoDbSqlLite> list = list(session);
         for (NotizieSitoDbSqlLite x : list) {
@@ -42,6 +42,18 @@ public class ManagerNotizieSitoDbSqlLite {
             cache = new ArrayList<>(list);
         }
         return Collections.unmodifiableList(cache);
+    }
+
+    public NotizieSitoDbSqlLite listByKey(DaoSession session, String key) {
+        final QueryBuilder<NotizieSitoDbSqlLite> q = session.queryBuilder(NotizieSitoDbSqlLite.class);
+        q.where(NotizieSitoDbSqlLiteDao.Properties.Key.eq(key));
+        q.limit(1);
+        final Query<NotizieSitoDbSqlLite> build = q.build();
+        final List<NotizieSitoDbSqlLite> list = build.list();
+        long i = list.size();
+        if (i == 0) return null;
+        return list.get(0);
+
     }
 
     public long maxToken(DaoSession session) {

@@ -2,6 +2,7 @@ package comune.tivoli.rm.it.ComuneTivoli.listview;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,6 +83,11 @@ public class NewsComuneListAdapter extends BaseAdapter {
         }
         news_title.setText(nc.getTitolo());
         news_data.setText(DateUtil.toDDMMYYY(nc.getData()));
+        if (nc.getFlagContenutoLetto() == false) {
+            news_title.setTypeface(null, Typeface.BOLD);
+        } else {
+            news_title.setTypeface(null, Typeface.NORMAL);
+        }
         return listItem;
     }
 

@@ -165,7 +165,7 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
                         @Override
                         public void run(DaoSession session, Context ctx) throws Throwable {
                             ManagerNotizieSitoDbSqlLite m = new ManagerNotizieSitoDbSqlLite();
-                            final Map<String, NotizieSitoDbSqlLite> map = m.listByKey(session);
+                            final Map<String, NotizieSitoDbSqlLite> map = m.mapByKey(session);
 
                             //ignora le news gia' presenti
                             ArrayList<CommonNotiziaSito> notizieDaAggiungere = new ArrayList<CommonNotiziaSito>(resp.notizie.size());
