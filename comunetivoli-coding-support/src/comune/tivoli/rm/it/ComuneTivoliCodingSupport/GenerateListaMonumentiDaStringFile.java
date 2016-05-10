@@ -3,6 +3,7 @@ package comune.tivoli.rm.it.ComuneTivoliCodingSupport;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -30,8 +31,41 @@ public class GenerateListaMonumentiDaStringFile {
             }
         }
 
+        PrintStream out = new PrintStream(new File("/Users/stefano/DATA/dev/android/ComuneTivoliApp/ComuneTivoli/github/ComuneTivoli/comunetivoli-android/src/comune/tivoli/rm/it/ComuneTivoli/util/MonumentiUtil.java"));
+
+        out.println("package comune.tivoli.rm.it.ComuneTivoli.util;\n" +
+                "\n" +
+                "import android.app.Activity;\n" +
+                "import comune.tivoli.rm.it.ComuneTivoli.R;\n" +
+                "import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;\n" +
+                "\n" +
+                "import java.util.ArrayList;\n" +
+                "import java.util.Collections;\n" +
+                "import java.util.List;\n" +
+                "import java.util.TreeSet;\n" +
+                "\n" +
+                "/**\n" +
+                " * todo: aumentare la dimensione delle immagini \"big\", portandola ad almeno 400 pixel di larghezza\n" +
+                " */\n" +
+                "public class MonumentiUtil {\n" +
+                "    public static List<String> estraiCategorie(ArrayList<MonumentiComune> a) {\n" +
+                "        TreeSet<String> r = new TreeSet<>();\n" +
+                "        for (MonumentiComune monumentiComune : a) {\n" +
+                "            r.add(monumentiComune.categoria);\n" +
+                "        }\n" +
+                "        return new ArrayList<>(r);\n" +
+                "    }\n" +
+                "    private static ArrayList<MonumentiComune> monumenti;\n" +
+                "\n" +
+                "    public static List<MonumentiComune> elencoMonumenti(Activity a) {\n" +
+                "        if (monumenti!=null){\n" +
+                "            return Collections.unmodifiableList(monumenti);\n" +
+                "        }\n" +
+                "\n" +
+                "        monumenti = new ArrayList<>();");
+
         for (String n : nomi) {
-            System.out.println("//"+n);
+            out.println("   //" + n);
             final String s1 = ("new MonumentiComune(\n" +
                     "                a.getResources().getString(R.string.#_titolo),\n" +
                     "                a.getResources().getString(R.string.#_descrizione),\n" +
@@ -45,8 +79,12 @@ public class GenerateListaMonumentiDaStringFile {
                     "                a.getResources().getString(R.string.#_categoria),\n" +
                     "                a.getResources().getString(R.string.#_gallery)\n" +
                     "        )").replace("#", n);
-            System.out.println("monumenti.add("+s1+");");
+            out.println("monumenti.add(" + s1 + ");");
         }
 
+        out.println("        return monumenti;\n" +
+                "    }\n" +
+                "}\n");
+        out.close();
     }
 }

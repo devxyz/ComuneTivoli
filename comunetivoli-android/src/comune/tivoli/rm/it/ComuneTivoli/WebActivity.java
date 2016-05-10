@@ -54,7 +54,7 @@ public class WebActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         dati = new WebActivityData(savedInstanceState, getIntent());
-        TemplateUtil.inizializzaActivity(this, dati.menu, R.layout.web_activity, R.layout.web_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,"*"+ dati.menu, R.layout.web_activity, R.layout.web_activity_decorated);
 
         label_titolo = (TextView) findViewById(R.id.web_titolo);
         www = (WebView) findViewById(R.id.web_www);
@@ -68,7 +68,7 @@ public class WebActivity extends Activity {
         www.getSettings().setSupportZoom(true);
         www.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         www.getSettings().setLoadWithOverviewMode(true);
-        www.getSettings().setUseWideViewPort(true);
+        //www.getSettings().setUseWideViewPort(true);
         www.setWebChromeClient(
                 new WebChromeClient() {
                     public void onProgressChanged(WebView view, int progress) {

@@ -20,7 +20,7 @@ public class ImageScrollActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this, "Home", R.layout.imagescroll, R.layout.imagescroll_decorated);
+        TemplateUtil.inizializzaActivity(this,"*"+ "Home", R.layout.imagescroll, R.layout.imagescroll_decorated);
 
         imgurl = new ArrayList<>();
         imgurl = new ArrayList<>();

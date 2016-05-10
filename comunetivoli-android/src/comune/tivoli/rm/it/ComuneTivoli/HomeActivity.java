@@ -33,7 +33,7 @@ public class HomeActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TemplateUtil.inizializzaActivity(this, "Home", R.layout.home_activity_decorated, R.layout.home_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,"*"+ "Home", R.layout.home_activity_decorated, R.layout.home_activity_decorated);
 
 
         Activity view = this;

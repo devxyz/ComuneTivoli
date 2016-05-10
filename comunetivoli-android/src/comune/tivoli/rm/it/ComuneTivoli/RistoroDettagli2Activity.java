@@ -12,6 +12,6 @@ public class RistoroDettagli2Activity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TemplateUtil.inizializzaActivity(this, "Punti di ristoro",R.layout.ristorodettagli_activity,R.layout.ristorodettagli_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,"*"+ "Punti di ristoro",R.layout.ristorodettagli_activity,R.layout.ristorodettagli_activity_decorated);
     }
 }

@@ -46,7 +46,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
 
         dati = new MapsActivityDati(savedInstanceState, getIntent());
 
-        TemplateUtil.inizializzaActivity(this, "Mappa", R.layout.maps_activity, R.layout.maps_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,"T*"+ "Mappa", R.layout.maps_activity, R.layout.maps_activity_decorated);
 
         btn = (ImageButton) findViewById(R.id.maps_btn_open);
 

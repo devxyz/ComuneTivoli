@@ -19,14 +19,14 @@ public class FacebookActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this, "Facebook",R.layout.facebook_activity,R.layout.facebook_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,"*"+ "Facebook",R.layout.facebook_activity,R.layout.facebook_activity_decorated);
         lst_news_fb = (ListView) findViewById(R.id.Lst_News_FB);
 
         lst_news_fb.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i;
-                i = new Intent(FacebookActivity.this, FacebookdettagliActivity.class);
+                i = new Intent(FacebookActivity.this, FacebookDettaglixActivity.class);
                 startActivity(i);
                 return false;
             }

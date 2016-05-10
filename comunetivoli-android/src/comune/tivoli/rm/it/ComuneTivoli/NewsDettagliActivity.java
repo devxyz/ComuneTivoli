@@ -44,7 +44,7 @@ public class NewsDettagliActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this, "Notizie", R.layout.newsdettagli_activity, R.layout.newsdettagli_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,"*"+ "Notizie", R.layout.newsdettagli_activity, R.layout.newsdettagli_activity_decorated);
         news_titolo = (TextView) findViewById(R.id.news_titolo);
         news_data = (TextView) findViewById(R.id.news_data);
         www = (WebView) findViewById(R.id.news_html);

@@ -7,11 +7,11 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 /**
  * Created by millozzi.stefano on 15/03/2016.
  */
-public class FacebookdettagliActivity extends Activity {
+public class FacebookDettaglixActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TemplateUtil.inizializzaActivity(this, "Facebook",R.layout.facebookdettagli_activity,R.layout.facebookdettagli_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,"*"+ "Facebook",R.layout.facebookdettagli_activity,R.layout.facebookdettagli_activity_decorated);
     }
 }

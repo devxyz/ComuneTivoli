@@ -24,7 +24,7 @@ public class MonumentiActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this, "Monumenti", R.layout.monumenti_activity, R.layout.monumenti_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,"*"+ "Monumenti", R.layout.monumenti_activity, R.layout.monumenti_activity_decorated);
 
         monumenti_list = (ListView) findViewById(R.id.monumenti_listview);
         monumenti = MonumentiUtil.elencoMonumenti(this);

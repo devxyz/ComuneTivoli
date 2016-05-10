@@ -34,7 +34,7 @@ public class NewsActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this, "Notizie", R.layout.news_activity, R.layout.news_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,"*"+ "Notizie", R.layout.news_activity, R.layout.news_activity_decorated);
         newslist = (ListView) findViewById(R.id.news_listview);
         news = new ArrayList<>();
         search_btn = (ImageButton) findViewById(R.id.search_btn);

@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.android.gms.maps.GoogleMap;
+import comune.tivoli.rm.it.ComuneTivoli.dialog.TooltipUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
@@ -40,7 +41,7 @@ public class ContattiDettagliActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         //inizializza l'activiti ed eventualmente il menu
-        TemplateUtil.inizializzaActivity(this, "Sedi comunali", R.layout.contattidettagli_activity, R.layout.contattidettagli_activity_decorated);
+        TemplateUtil.inizializzaActivity(this, "T*" + "Sedi comunali", R.layout.contattidettagli_activity, R.layout.contattidettagli_activity_decorated);
         dati = new ContattiDettagliActivityData(savedInstanceState, getIntent());
 
         dettagli_titolo = (TextView) findViewById(R.id.titolo_dettagli);
@@ -54,45 +55,67 @@ public class ContattiDettagliActivity extends Activity {
         btn_maps = (ImageButton) findViewById(R.id.btn_maps_dettagli);
         btn_email = (ImageButton) findViewById(R.id.btn_email_dettagli);
         screen = (ImageView) findViewById(R.id.screenmaps);
-        screen.setBackgroundResource(dati.image_id);
+        screen.setImageResource(dati.image_id);
         //dettagli_descrizione.setText(getIntent().getExtras().getString("descrizione") + " \n ID IMMAGINE:" + idIMG);
 
+        TooltipUtil.setTooltipOnLongClick(this, btn_chiama, "Chiama " + dati.titolo);
+        TooltipUtil.setTooltipOnLongClick(this, btn_email, "Invia una email a " + dati.titolo);
+        TooltipUtil.setTooltipOnLongClick(this, btn_maps, "Cerca sulla mappa " + dati.titolo);
+        TooltipUtil.setTooltipOnLongClick(this, screen, "Cerca sulla mappa " + dati.titolo);
 
-        btn_chiama.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent callIntent;
-                callIntent = new Intent(Intent.ACTION_DIAL);
-                callIntent.setData(Uri.parse(dati.telefono));
-                startActivity(callIntent);
-            }
-        });
-        btn_maps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                screen.callOnClick();
-            }
-        });
+        //=====================================================
+        if (dati.telefono != null && dati.telefono.trim().length() > 0) {
+            btn_chiama.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent callIntent;
+                    callIntent = new Intent(Intent.ACTION_DIAL);
+                    callIntent.setData(Uri.parse("tel:" + dati.telefono));
+                    startActivity(callIntent);
+                }
+            });
+        } else {
+            btn_chiama.setVisibility(View.GONE);
+        }
 
-        btn_email.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent emailIntent;
-                emailIntent = new Intent(Intent.ACTION_VIEW);
-                Uri data = Uri.parse("mailto:"
-                        + dati.email
-                        + "?subject=" + "Richiesta informazioni" + "&body=" + "");
-                emailIntent.setData(data);
-                startActivity(emailIntent);
-            }
-        });
-        screen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Intent i = MapsActivity.createIntent(ContattiDettagliActivity.this, dati.titolo, dati.longitudine, dati.latitudine, dati.descrizione, 16, dati.indirizzo, GoogleMap.MAP_TYPE_TERRAIN);
-                startActivity(i);
-            }
-        });
+        //=====================================================
+        if (dati.email != null && dati.email.trim().length() > 0) {
+            btn_email.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent emailIntent;
+                    emailIntent = new Intent(Intent.ACTION_VIEW);
+                    Uri data = Uri.parse("mailto:"
+                            + dati.email
+                            + "?subject=" + "Richiesta informazioni" + "&body=" + "");
+                    emailIntent.setData(data);
+                    startActivity(emailIntent);
+                }
+            });
+
+        } else {
+            btn_email.setVisibility(View.GONE);
+        }
+
+        //=====================================================
+        if (dati.longitudine > 0 && dati.latitudine > 0) {
+            btn_maps.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    screen.callOnClick();
+                }
+            });
+
+            screen.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final Intent i = MapsActivity.createIntent(ContattiDettagliActivity.this, dati.titolo, dati.longitudine, dati.latitudine, dati.descrizione, 16, dati.indirizzo, GoogleMap.MAP_TYPE_TERRAIN);
+                    startActivity(i);
+                }
+            });
+        } else {
+
+        }
     }
 
     public static class ContattiDettagliActivityData {

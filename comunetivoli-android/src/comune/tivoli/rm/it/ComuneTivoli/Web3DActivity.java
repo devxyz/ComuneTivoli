@@ -49,7 +49,7 @@ public class Web3DActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         dati = new Web3dActivityData(savedInstanceState, getIntent());
-        TemplateUtil.inizializzaActivity(this, dati.menu, R.layout.web3d_activity, R.layout.web3d_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,"*"+ dati.menu, R.layout.web3d_activity, R.layout.web3d_activity_decorated);
 
         label_titolo = (TextView) findViewById(R.id.web_titolo);
         www = (WebView) findViewById(R.id.web_www);

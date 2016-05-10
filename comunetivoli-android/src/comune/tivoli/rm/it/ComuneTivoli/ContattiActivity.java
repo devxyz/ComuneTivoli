@@ -27,7 +27,7 @@ public class ContattiActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TemplateUtil.inizializzaActivity(this, "Contatti", R.layout.contatti_activity_list, R.layout.contatti_activity_list_decorated);
+        TemplateUtil.inizializzaActivity(this,"T*"+ "Contatti", R.layout.contatti_activity_list, R.layout.contatti_activity_list_decorated);
 
         contattiListView = (ListView) findViewById(R.id.contatti_listView);
 
