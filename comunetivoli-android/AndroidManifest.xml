@@ -46,7 +46,7 @@
                   android:name=".FacebookdettagliActivity"
                   android:label="facebookdettagli_activity"/>
         <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar"
-                  android:name=".EventiDettagliActivity"
+                  android:name=".EventiDettagliXActivity"
                   android:label="eventidettagli_activity"/>
         <activity android:screenOrientation="portrait" android:theme="@style/NoActionBar"
                   android:name=".ContattiActivity"

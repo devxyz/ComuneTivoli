@@ -7,7 +7,7 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 /**
  * Created by millozzi.stefano on 15/03/2016.
  */
-public class EventiDettagliActivity extends Activity {
+public class EventiDettagliXActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
