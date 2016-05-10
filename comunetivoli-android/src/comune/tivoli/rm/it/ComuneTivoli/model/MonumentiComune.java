@@ -1,6 +1,8 @@
 package comune.tivoli.rm.it.ComuneTivoli.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Created by millozzi.stefano on 19/04/2016.
@@ -16,7 +18,7 @@ public class MonumentiComune {
     public final String tred;
     public final String url;
     public final String categoria;
-    public final ArrayList<String> galleriaFoto;
+    public final List<String> galleriaFoto;
 
     public MonumentiComune(String titolo, String descrizione, String descrizione_big, int foto_small, int foto_big, String url, String latitudineLongitudineMaps, String tred, String video, String categoria, String urlGalleriaConcatenata) {
         this.titolo = titolo;
@@ -29,11 +31,13 @@ public class MonumentiComune {
         this.url = url;
         this.video = video;
         this.categoria = categoria;
-        galleriaFoto = new ArrayList<>();
+
+        List<String> gf = new ArrayList<>();
         final String[] split = urlGalleriaConcatenata.split("[\n ]+");
         for (String s : split) {
-            galleriaFoto.add(s.trim());
+            gf.add(s.trim());
         }
+        galleriaFoto = Collections.unmodifiableList(gf);
     }
 
     public double getLongitude() {
@@ -54,7 +58,7 @@ public class MonumentiComune {
         if (latitudineLongitudineMaps.length() == 0) return -1;
         final String[] split = latitudineLongitudineMaps.split(",");
         try {
-            return Integer.parseInt(split[v]);
+            return Double.parseDouble(split[v]);
         } catch (Throwable e) {
             return -1;
         }

@@ -2,6 +2,7 @@ package comune.tivoli.rm.it.ComuneTivoliServer.model;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import comune.tivoli.rm.it.ComuneTivoliServer.ServerConfiguration;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.CacheItem;
 
 import java.io.Serializable;
@@ -12,6 +13,9 @@ import java.util.Date;
  */
 @Entity
 public class GAE_NotiziaFacebook_V0_1 implements Serializable, Cloneable, CacheItem<String> {
+
+    public int version= ServerConfiguration.PERISTENCE_VERSION_NUMBER;
+
     public boolean flagDelete;
     @Id
     private String key;

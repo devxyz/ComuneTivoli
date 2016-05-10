@@ -36,19 +36,16 @@ public class ImageScrollActivity extends Activity {
         HorizontalScrollView horizontal_scroll = (HorizontalScrollView) findViewById(R.id.horizontal_scroll);
         for (int i = 0; i < imgurl.size(); i++) {
             ImageView imageView = new ImageView(this);
-            imageView.setPadding(10, 0, 0, 0);
+            imageView.setPadding(20, 0, 0, 0);
             imageView.setId(i);
-            imageView.setPadding(2, 2, 2, 2);
-            imageView.setImageBitmap(BitmapFactory.decodeResource(
+            imageView.setPadding(10, 2, 2, 2);
+            /*imageView.setImageBitmap(BitmapFactory.decodeResource(
                     getResources(), R.drawable.logo_scuola_500x500));
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setScaleType(ImageView.ScaleType.CENTER);*/
             layout.addView(imageView);
-            imageView.setImageBitmap(BitmapFactory.decodeResource(
-                    getResources(), R.drawable.ic_launcher));
 
 
             Picasso.with(this).load(imgurl.get(i))
-                    .resize(e, (int) (1.6 * e))
                     .into(imageView);
 
             /*ImageView imageView1 = new ImageView(this);

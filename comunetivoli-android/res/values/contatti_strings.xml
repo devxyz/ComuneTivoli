@@ -16,12 +16,12 @@
 
 
     <string name="contatti_urp_tivoli_titolo">Ufficio relazioni con il pubblico</string>
-    <string name="contatti_urp_tivoli_descrizione">U.R.P. (Piazza del Governo, 2) \n Telefono: 0774 453203 - 0774 453230
+    <string name="contatti_urp_tivoli_descrizione">U.R.P. - Piazza del Governo, 2\n Telefono: 0774 453203 - 0774 453230
         \n orari: dal
         Lunedí al Sabato 9.00-12.00 \n Martedí e Giovedí 15.00-17.00
     </string>
     <string name="contatti_urp_tivoli_telefono">0774453203</string>
-    <string name="contatti_urp_tivoli_indirizzo">U.R.P. (Piazza del Governo , 2 )</string>
+    <string name="contatti_urp_tivoli_indirizzo">U.R.P. - Piazza del Governo, 2</string>
     <string name="contatti_urp_tivoli_email"></string>
     <string name="contatti_urp_tivoli_maps">
         41.9637744,12.7967359
@@ -40,8 +40,8 @@
     </string>
 
 
-    <string name="contatti_villa_adriana_titolo">URP delegazione Villa Adriana</string>
-    <string name="contatti_villa_adriana_descrizione">Ufficio relazioni con il pubblico \n Via di Villa Adriana, 178 \n
+    <string name="contatti_villa_adriana_titolo">Ufficio Relazioni con il Pubblico - delegazione Villa Adriana</string>
+    <string name="contatti_villa_adriana_descrizione">Via di Villa Adriana, 178 \n
         Telefono 0774 453542
         \n orari: Giovedí 9.00-12.00 - 15.00-17.00
     </string>
@@ -53,9 +53,8 @@
     </string>
 
 
-    <string name="contatti_tivoli_terme_titolo">URP delegazione Tivoli Terme</string>
-    <string name="contatti_tivoli_terme_descrizione">Ufficio relazioni con il pubblico\n
-        Via Don Giovanni Minzoni, 9/a\n
+    <string name="contatti_tivoli_terme_titolo">Ufficio Relazioni con il Pubblico - delegazione Tivoli Terme</string>
+    <string name="contatti_tivoli_terme_descrizione">Via Don Giovanni Minzoni, 9/a\n
         Telefono 0774 354151\n
         orari: Martedí 9.00-12.00 - 15:00-17.00 e Venerdí 9.00-12.00
     </string>

@@ -222,6 +222,10 @@ public class DialogUtil {
     }
 
     public static void openErrorDialog(final Activity context, final String title, final String message, final Throwable error) {
+        openErrorDialog(context, title, message, error, null);
+    }
+
+    public static void openErrorDialog(final Activity context, final String title, final String message, final Throwable error, final Runnable action) {
         if (error != null)
             error.printStackTrace();
 
@@ -242,6 +246,8 @@ public class DialogUtil {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
+                        if (action != null)
+                            action.run();
                     }
                 });
         AlertDialog alert11 = builder1.create();

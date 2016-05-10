@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:weightSum="1" android:id="@+id/xyz"
+                android:background="@color/template_colorblu">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:id="@+id/textView4"
+            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
+            android:height="@dimen/template_height_barra_red_bottom"
+            android:background="@color/template_colorred" android:layout_alignParentRight="true"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/textView5"
+              android:background="@color/template_colorblu" android:text=" "
+              android:layout_above="@+id/textView4" android:layout_alignParentStart="true"
+              android:height="@dimen/template_height_barra_blu_bottom"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content"
+            android:layout_below="@+id/textView14" android:layout_above="@+id/textView5"
+            android:background="@color/white" android:paddingLeft="10dp"
+            android:paddingRight="10dp" android:paddingTop="10dp">
+    
+    <HorizontalScrollView
+            android:id="@+id/horizontal_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_above="@+id/textView3">
+
+        <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+        </LinearLayout>
+
+    </HorizontalScrollView>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ruotare il dispositivo per una migliore visualizzazione delle foto"
+            android:id="@+id/textView3" android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
+            android:textSize="@dimen/app_textsize_titolo"/>
+</RelativeLayout>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/template_btn_sx" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/template_trelinee"
+            android:layout_alignParentLeft="true" android:layout_alignBottom="@+id/template_titolo"
+            android:background="@color/trasparent"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/template_btn_dx"
+                 android:src="@drawable/template_left_arrow"
+                 android:paddingRight="5dp"
+                 android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+                 android:background="@color/trasparent" android:layout_above="@+id/textView14"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/template_titolo"
+            android:textSize="@dimen/template_text"
+            android:gravity="center_vertical" android:height="@dimen/template_height_barra_blu_top"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/white" android:textStyle="bold" android:layout_toEndOf="@+id/template_btn_sx"
+            android:layout_toLeftOf="@+id/template_rotate"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text=" "
+              android:id="@+id/textView14"
+              android:height="@dimen/template_height_barra_red_top" android:background="@color/template_colorred"
+              android:layout_below="@+id/template_btn_sx" android:layout_alignEnd="@+id/template_btn_dx"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/template_rotate" android:src="@drawable/icona_rotazione_50x50"
+                 android:layout_alignParentTop="true" android:layout_toStartOf="@+id/template_btn_dx"
+                 android:background="@color/trasparent" android:paddingRight="10dp"/>
+</RelativeLayout>

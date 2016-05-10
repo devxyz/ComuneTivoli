@@ -1,4 +1,4 @@
-package comune.tivoli.rm.it.ComuneTivoliCommon;
+package comune.tivoli.rm.it.ComuneTivoliCommon.util;
 
 /**
  * Created by stefano on 12/04/16.

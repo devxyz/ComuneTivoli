@@ -6,4 +6,7 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="Android 4.4.2 Google APIs" project-jdk-type="Android SDK">
     <output url="file://$PROJECT_DIR$/output" />
   </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
 </project>

@@ -10,7 +10,21 @@
     <string name="monumenti_acquedotti_url">http://www.visittivoli.eu/archeologia/acquedotto-anio-novus</string>
     <string name="monumenti_acquedotti_tred"></string>
     <string name="monumenti_acquedotti_maps">41.950792, 12.821954</string>
-    <string name="monumenti_acquedotti_gallery"></string>
+    <string name="monumenti_acquedotti_gallery">
+        http://www.visittivoli.eu/images/archeologia/anteprima-acquedotto-anio-novus.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-arcate-dell-acquedotto.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-canale-dell-acquedotto.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-particolare-superiore-dell-acquedotto.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-dall-arcata.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-dalla-strada.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-dei-resti.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-del-canale-dell-acquedotto.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-dell-acquedotto-anio-novus.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-dell-acquedotto.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-laterale-dell-acquedotto-anio-novus.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-posteriore-dell-acquedotto.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-tra-gli-alberi.jpg
+    </string>
     <string name="monumenti_acquedotti_categoria">Archeologia</string>
     <string name="monumenti_acquedotti_video">https://youtu.be/VKCjvOcru9k</string>
     <drawable name="monumenti_acquedotti_fotosmall">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia</drawable>
@@ -25,7 +39,19 @@
         Scoperto nel 1948 durante alcuni lavori per la realizzazione di un\'arteria stradale, dello storico anfiteatro che si trova nei pressi di Piazza Garibaldi, si possono ammirare solamente alcuni resti. Infatti la struttura originale venne distrutta durante i lavori di costruzione della Rocca Pia, voluta da papa Pio II Piccolomini come difesa dagli attacchi nemici. </string>
     <string name="monumenti_anfiteatro_url">http://www.visittivoli.eu/archeologia/anfiteatro-bleso</string>
     <string name="monumenti_anfiteatro_maps">41.960560, 12.798114</string>
-    <string name="monumenti_anfiteatro_gallery"></string>
+    <string name="monumenti_anfiteatro_gallery">
+        http://www.visittivoli.eu/images/archeologia/anteprima-antiche-mura-con-ingresso.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-antiche-mura-dell-anfiteatro-di-bleso.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-mura-antiche.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-mura-dell-anfiteatro-di-bleso.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-mura-dell-anfiteatro.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-particolare-delle-antiche-mura.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-resti-dell-anfiteatro.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-resti-delle-antiche-mura.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-dell-anfiteatro-di-bleso.jpg
+
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-laterale-dell-anfiteatro.jpg
+    </string>
     <string name="monumenti_anfiteatro_categoria">Archeologia</string>
     <string name="monumenti_anfiteatro_tred"></string>
     <string name="monumenti_anfiteatro_video"></string>
@@ -40,7 +66,9 @@
         L\'acquedotto aveva una portata di 180.000 metri cubi d\'acqua al giorno, e seguiva, per mantenersi in quota, un percorso tortuoso e lunghissimo (circa 64 km) quasi sempre sotterraneo. Una sezione dell\'acquedotto Vetus è conservato appena sopra l\'Acquedotto di Acqua Marcia: l\'Anio Vetus forma un angolo intorno alla città di Tivoli, parallelamente alla strada principale che porta al paese. Le sezioni rimaste dell\'Acquedotto sono conservate intatte presso il tratto dell\'Acquedotto di Acqua Marcia.</string>
     <string name="monumenti_arcata_dell_acquedotto_url">http://www.visittivoli.eu/archeologia/acquedotti-anio-vetus-e-aqua-marcia</string>
     <string name="monumenti_arcata_dell_acquedotto_maps">41.950467, 12.821217</string>
-    <string name="monumenti_arcata_dell_acquedotto_gallery"></string>
+    <string name="monumenti_arcata_dell_acquedotto_gallery">
+        http://www.visittivoli.eu/images/archeologia/anteprima-arcata-dell-acquedotto.jpg
+    </string>
     <string name="monumenti_arcata_dell_acquedotto_categoria">Archeologia</string>
     <string name="monumenti_arcata_dell_acquedotto_tred"></string>
     <string name="monumenti_arcata_dell_acquedotto_video"></string>
@@ -55,7 +83,18 @@
         Secondo alcuni studiosi e ricercatori, nei pressi di questa straordinaria testimonianza della magnificenza di Roma, doveva trovarsi anche una schola gladiatorum, ma di questa struttura non sono mai state ritrovate tracce.</string>
     <string name="monumenti_mensa_ponderaria_url">http://www.visittivoli.eu/archeologia/mensa-ponderaria</string>
     <string name="monumenti_mensa_ponderaria_maps">41.965536, 12.796817</string>
-    <string name="monumenti_mensa_ponderaria_gallery"></string>
+    <string name="monumenti_mensa_ponderaria_gallery">
+        http://www.visittivoli.eu/images/archeologia/anteprima-dettaglio-dei-resti.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-particolare-dei-resti.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-particolare-esterno.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-dei-resti-mensa-ponderaria.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-dell-ingresso.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-esterno-della-mensa-ponderaria.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-esterno.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-dell-esterno.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-vista-della-mensa.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-vista-esterna-della-mensa-ponderaria.jpg
+    </string>
     <string name="monumenti_mensa_ponderaria_categoria">Archeologia</string>
     <string name="monumenti_mensa_ponderaria_tred">http://www.visittivoli.eu/virtual-tour/mensa-ponderaria/</string>
     <string name="monumenti_mensa_ponderaria_video"></string>
@@ -70,8 +109,16 @@
         In passato la piazza rappresentava una parte della zona sulla quale si trovava la Villa romana di Publio Cornelio Scipione Nasica. Oggi l\'intera area è stata totalmente ristrutturata e la gradinata che la caratterizza è stata dedicata al grande acquerellista Ettore Franz, cittadino onorario della Città di Tivoli. A Piazza Campitelli si trova anche una bella meridiana, comunemente conosciuta come orologio solare. </string>
     <string name="monumenti_piazza_campitelli_url">http://www.visittivoli.eu/piazze/piazza-campitelli</string>
     <string name="monumenti_piazza_campitelli_maps"></string>
-    <string name="monumenti_piazza_campitelli_gallery"></string>
-    <string name="monumenti_piazza_campitelli_categoria">Piazza</string>
+    <string name="monumenti_piazza_campitelli_gallery">
+        http://www.visittivoli.eu/images/piazze/anteprima-particolari-dei-muri-con-edera.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-piazza-capitelli.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-scalinata-della-piazza.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-scalinata-e-scorcio-della-torre-campanaria.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-scorcio-della-piazza.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-scorcio-delle-case.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-scorcio-di-piazza-campitelli.jpg
+    </string>
+    <string name="monumenti_piazza_campitelli_categoria">Piazze</string>
     <string name="monumenti_piazza_campitelli_tred">http://www.visittivoli.eu/virtual-tour/piazza-campitelli/</string>
     <string name="monumenti_piazza_campitelli_video"></string>
     <drawable name="monumenti_piazza_campitelli_fotosmall">@drawable/monumenti_piazza_campitelli</drawable>
@@ -89,8 +136,20 @@
     <string name="monumenti_piazza_garibaldi_url">http://www.visittivoli.eu/piazze/piazza-garibaldi</string>
     <string name="monumenti_piazza_garibaldi_tred">http://www.visittivoli.eu/virtual-tour/piazza-garibaldi/</string>
     <string name="monumenti_piazza_garibaldi_maps"></string>
-    <string name="monumenti_piazza_garibaldi_gallery"></string>
-    <string name="monumenti_piazza_garibaldi_categoria">Piazza</string>
+    <string name="monumenti_piazza_garibaldi_gallery">
+        http://www.visittivoli.eu/images/piazze/anteprima-arco-con-scorcio-della-rocca-pia.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-arco-dei-padri-costituenti-e-convitto-nazionale.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-arco-dei-padri-costituenti.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-dettaglio-arco-dei-padri-costituenti.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-particolare-del-convitto-nazionale.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-particolare-dell-arco-dei-padri-costituenti.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-veduta-dell-arco-dei-padri-costituenti.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-veduta-di-piazza-garibaldi-con-arco.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-veduta-di-piazza-garibaldi.jpg
+        http://www.visittivoli.eu/images/piazze/anteprima-veduta-laterale-dell-arco-dei-padri-costituenti.jpg
+
+    </string>
+    <string name="monumenti_piazza_garibaldi_categoria">Piazze</string>
     <string name="monumenti_piazza_garibaldi_video"></string>
     <drawable name="monumenti_piazza_garibaldi_fotosmall">@drawable/monumenti_piazza_garibaldi</drawable>
     <drawable name="monumenti_piazza_garibaldi_fotobig">@drawable/monumenti_piazza_garibaldi_big</drawable>
@@ -105,8 +164,12 @@
         Dallo stesso ponte è possibile ammirare oltre alle splendide cascate di Villa Gregoriana, anche l\'antica acropoli di Tivoli con il Tempio di Vesta ed il Tempio della Sibilla.</string>
     <string name="monumenti_ponte_gregoriano_url">http://www.visittivoli.eu/edifici-storici/ponte-gregoriano</string>
     <string name="monumenti_ponte_gregoriano_maps">41.965545, 12.800222</string>
-    <string name="monumenti_ponte_gregoriano_gallery"></string>
-    <string name="monumenti_ponte_gregoriano_categoria">Archeologia</string>
+    <string name="monumenti_ponte_gregoriano_gallery">
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-cascatelle-di-villa-gregoriana.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-particolare-del-ponte-gregoriano.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-veduta-del-ponte-gregoriano-con-cascate.jpg
+    </string>
+    <string name="monumenti_ponte_gregoriano_categoria">Edifici Storici</string>
     <string name="monumenti_ponte_gregoriano_tred"></string>
     <string name="monumenti_ponte_gregoriano_video"></string>
     <drawable name="monumenti_ponte_gregoriano_fotosmall">@drawable/monumenti_ponte_gregoriano</drawable>
@@ -122,8 +185,21 @@
         Oggi questa struttura è chiusa al pubblico e resta in attesa di una nuova destinazione. </string>
     <string name="monumenti_rocca_pia_url">http://www.visittivoli.eu/edifici-storici/rocca-pia</string>
     <string name="monumenti_rocca_pia_maps">41.959910, 12.798124</string>
-    <string name="monumenti_rocca_pia_gallery"></string>
-    <string name="monumenti_rocca_pia_categoria">Archeologia</string>
+    <string name="monumenti_rocca_pia_gallery">
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-pano-della-rocca.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-particolare-della-torre-circolare-della-rocca-pia.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-particolare-della-torre-circolare.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-rocca-pia-e-resti-dell-anfiteatro.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-scorcio-della-rocca.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-torre-circolare.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-veduta-della-rocca-pia-e-dell-anfiteatro-di-bleso.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-veduta-della-rocca.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-veduta-laterale-della-rocca.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-TD3A0636.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-TD3A0763.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-TD3A0819.jpg
+    </string>
+    <string name="monumenti_rocca_pia_categoria">Edifici Storici</string>
     <string name="monumenti_rocca_pia_tred">http://www.visittivoli.eu/virtual-tour/rocca-pia/</string>
     <string name="monumenti_rocca_pia_video"></string>
     <drawable name="monumenti_rocca_pia_fotosmall">@drawable/monumenti_rocca_pia</drawable>
@@ -143,7 +219,24 @@
     <string name="monumenti_santuario_ercole_url">http://www.visittivoli.eu/archeologia/santuario-di-ercole-vincitore</string>
     <string name="monumenti_santuario_ercole_tred">http://www.visittivoli.eu/virtual-tour/santuario-di-ercole-vincitore/</string>
     <string name="monumenti_santuario_ercole_maps">41.964343, 12.793234</string>
-    <string name="monumenti_santuario_ercole_gallery"></string>
+    <string name="monumenti_santuario_ercole_gallery">
+        http://www.visittivoli.eu/images/archeologia/anteprima-TivoliChiama-ProcessoAGiulioCesare-SantuarioErcoleVincitore.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-antiche-mura-del-santuario-di-ercole-vincitore.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-antiche-mura-del-santuario-di-ercole.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-antiche-mura.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-antico-luogo-del-tempio.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-incisione.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-mura-del-santuario-di-ercole-vincitore.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-noa-gil-dor-anniversary-tour-anfiteatro.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-passeggiata-panoramica.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-portico-antico.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-resti-esterni-del-santuario-di-ercole-vincitore.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-dell-anfiteatro.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-torretta-del-santuario-di-ercole.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-del-santuario-di-ercole-vincitore.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-dell-anfiteatro.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-via-tecta.jpg
+    </string>
     <string name="monumenti_santuario_ercole_categoria">Archeologia</string>
     <string name="monumenti_santuario_ercole_video"></string>
     <drawable name="monumenti_santuario_ercole_fotosmall">@drawable/monumenti_santuario_ercole</drawable>
@@ -157,7 +250,16 @@
         Costruito intorno al II secolo a.C. con una caratteristica forma rettangolare, oggi offre una visuale spettacolare sia se visto dalla Piazza del Tempio di Vesta sia se ammirato dal suggestivo Ponte Gregoriano.</string>
     <string name="monumenti_tempio_della_sibilla_url">http://www.visittivoli.eu/archeologia/tempio-della-sibilla</string>
     <string name="monumenti_tempio_della_sibilla_tred"></string>
-    <string name="monumenti_tempio_della_sibilla_gallery"></string>
+    <string name="monumenti_tempio_della_sibilla_gallery">
+        http://www.visittivoli.eu/images/archeologia/anteprima-interno-del-tempio-della-sibilla.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-particolare-dell-interno-del-tempio.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-del-tempio-della-sibilla-e-di-vesta.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-aerea-del-tempio.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-dall-alto-del-tempio-della-sibilla-e-scorcio-del-tempio-di-vesta.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-del-tempio-della-sibilla-e-di-vesta.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-vista-del-tempio.jpg
+
+    </string>
     <string name="monumenti_tempio_della_sibilla_categoria">Archeologia</string>
     <string name="monumenti_tempio_della_sibilla_maps">41.966772, 12.800841</string>
     <string name="monumenti_tempio_della_sibilla_video"></string>
@@ -175,7 +277,16 @@
     <string name="monumenti_tempio_di_vesta_maps">41.891685, 12.486194</string>
     <string name="monumenti_tempio_di_vesta_tred">http://www.visittivoli.eu/virtual-tour/tempio-di-vesta/</string>
     <string name="monumenti_tempio_di_vesta_video"></string>
-    <string name="monumenti_tempio_di_vesta_gallery"></string>
+    <string name="monumenti_tempio_di_vesta_gallery">
+        http://www.visittivoli.eu/images/archeologia/anteprima-panorama-con-veduta-del-tempio.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-del-colonnato.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-del-tempio-di-vesta.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-del-tempio.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-del-tempio.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-posteriore-del-tempio-di-vesta.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-posteriore-del-tempio.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veuta-dentrale-del-tempio.jpg
+    </string>
     <string name="monumenti_tempio_di_vesta_categoria">Archeologia</string>
     <drawable name="monumenti_tempio_di_vesta_fotosmall">@drawable/monumenti_tempio_di_vesta</drawable>
     <drawable name="monumenti_tempio_di_vesta_fotobig">@drawable/monumenti_tempio_di_vesta_big</drawable>
@@ -192,7 +303,14 @@
     <string name="monumenti_tomba_dei_plauzi_tred">41.954583, 12.762467</string>
     <string name="monumenti_tomba_dei_plauzi_maps"></string>
     <string name="monumenti_tomba_dei_plauzi_video"></string>
-    <string name="monumenti_tomba_dei_plauzi_gallery"></string>
+    <string name="monumenti_tomba_dei_plauzi_gallery">
+        http://www.visittivoli.eu/images/archeologia/anteprima-tomba-dei-plauzi-e-ponte-lucano.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-tomba-dei-plauzi-vista-drone.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-aerea-della-tomba.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-dall-alto-della-tomba.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-dall-alto.jpg
+        http://www.visittivoli.eu/images/archeologia/anteprima-veduta-laterale-tomba-dei-plauzi.jpg
+    </string>
     <string name="monumenti_tomba_dei_plauzi_categoria">Archeologia</string>
     <drawable name="monumenti_tomba_dei_plauzi_fotosmall">@drawable/monumenti_tomba_dei_plauzi</drawable>
     <drawable name="monumenti_tomba_dei_plauzi_fotobig">@drawable/monumenti_tomba_dei_plauzi_big</drawable>
@@ -217,8 +335,28 @@
     <string name="monumenti_villa_adriana_maps">41.942681, 12.774496</string>
     <string name="monumenti_villa_adriana_tred">http://www.visittivoli.eu/virtual-tour/villa-adriana</string>
     <string name="monumenti_villa_adriana_video"></string>
-    <string name="monumenti_villa_adriana_gallery"></string>
-    <string name="monumenti_villa_adriana_categoria">Villa</string>
+    <string name="monumenti_villa_adriana_gallery">
+        http://www.visittivoli.eu/images/le-ville/anteprima-antiche-mura-di-villa-adriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-antinoeion-con-le-cento-camerelle.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-canopo-di-villa-adriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-colonnato-del-canopo.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-le-grandi-terme-di-villa-adriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-panorama-dei-resti.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-panorama-di-villa-adriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-particolare-del-canopo-con-statue-di-cariatidi.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-particolare-delle-cento-camerelle.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-particolare-di-piazza-d-oro.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-piazza-d-oro.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-prospettiva-del-canopo-con-statue.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-prospettiva-del-canopo-con-vasca-centrale.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-resti-archeologici-di-villa-adriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-scorcio-di-villa-adriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-statua-del-canopo-di-villa-adriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-statua-di-marte.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-statua-di-villa-adriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-vista-villa-adriana.jpg
+    </string>
+    <string name="monumenti_villa_adriana_categoria">Ville</string>
     <drawable name="monumenti_villa_adriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
     <drawable name="monumenti_villa_adriana_fotobig">@drawable/monumenti_villa_adriana_big</drawable>
 
@@ -237,8 +375,33 @@
     <string name="monumenti_villa_d_este_maps">41.963268, 12.795826</string>
     <string name="monumenti_villa_d_este_tred">http://www.visittivoli.eu/virtual-tour/villa-d-este/</string>
     <string name="monumenti_villa_d_este_video"></string>
-    <string name="monumenti_villa_d_este_gallery"></string>
-    <string name="monumenti_villa_d_este_categoria">Villa</string>
+    <string name="monumenti_villa_d_este_gallery">
+        http://www.visittivoli.eu/images/le-ville/anteprima-fontana-dei-draghi.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-fontana-del-nettuno.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-fontana-dell-organo.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-fontana-dell-ovato.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-fontana-di-villa-adriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-fontana-di-villa-d-este.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-fontana-rustica.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-giochi-d-acqua.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-la-peschiera.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-la-rometta.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-le-cento-fontane.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-le-peschiere.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-pano-vista-dalla-fontana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-panorama-della-fontana-dell-ovato.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-particolare-del-giardino-di-villa-d-este.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-particolare-della-fontana-del-nettuno.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-particolare-della-fontana-dell-abbondanza.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-particolare-della-villa.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-particolare-di-villa-d-este.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-roma-in-trono-con-lupa.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-scalinata-con-fontana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-viale-con-fontana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-viale-delle-cento-fontane.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-viale-di-villa-d-este.jpg
+    </string>
+    <string name="monumenti_villa_d_este_categoria">Ville</string>
     <drawable name="monumenti_villa_d_este_fotosmall">@drawable/monumenti_villa_deste</drawable>
     <drawable name="monumenti_villa_d_este_fotobig">@drawable/monumenti_villa_deste_big</drawable>
 
@@ -254,10 +417,33 @@
     <string name="monumenti_villa_gregoriana_tred"></string>
     <string name="monumenti_villa_gregoriana_maps">41.965386, 12.801773</string>
     <string name="monumenti_villa_gregoriana_video"></string>
-    <string name="monumenti_villa_gregoriana_gallery"></string>
-    <string name="monumenti_villa_gregoriana_categoria">Villa</string>
+    <string name="monumenti_villa_gregoriana_gallery">
+        http://www.visittivoli.eu/images/le-ville/anteprima-antica-statua-di-villa-gregoriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-antiche-mura-della-villa.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-cascata-del-fiume-aniene.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-cascata-di-villa-gregoriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-cascata.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-ceppo-commemorativo.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-corso-del-fiume-aniene.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-dettaglio-di-villa-gregoriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-ingresso-alle-grotte.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-interno-della-grotta-di-villa-gregoriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-panorama-della-cascata-di-villa-gregoriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-particolare-di-villa-gregoriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-passeggiata-con-veduta-delle-cascate.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-scorcio-del-tempio-di-vesta.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-scorcio-delle-cascate.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-scorcio-delle-cascatelle-di-villa-gregoriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-veduta-della-cascata.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-viale-di-villa-gregoriana.jpg
+        http://www.visittivoli.eu/images/le-ville/anteprima-vialetto-di-villa-gregoriana.jpg
+    </string>
+    <string name="monumenti_villa_gregoriana_categoria">Ville</string>
     <drawable name="monumenti_villa_gregoriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
     <drawable name="monumenti_villa_gregoriana_fotobig">@drawable/monumenti_villa_gregoriana_big</drawable>
+
+
+
 
     <string name="monumenti_Cattedrale_di_San_Lorenzo_titolo">Cattedrale di San Lorenzo</string>
     <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizione">La Cattedrale di San Lorenzo o Duomo di Tivoli, situato nell\'omonima piazza, a due passi dall\'antica Mensa Ponderaria, è il luogo di culto più rappresentativo della città.</string>
@@ -269,8 +455,23 @@
     <string name="monumenti_Cattedrale_di_San_Lorenzo_tred">http://www.visittivoli.eu/virtual-tour/cattedrale-di-san-lorenzo/</string>
     <string name="monumenti_Cattedrale_di_San_Lorenzo_maps">41.965527, 12.796840</string>
     <string name="monumenti_Cattedrale_di_San_Lorenzo_video"></string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_gallery"></string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_categoria">Luogo di Culto</string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_gallery">
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-affresco-della-trinita.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-cappella-laterale-della-cattedrale-di-san-lorenzo-martire.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-cornice-con-raggi.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-dettaglio-dell-abside-affrescato.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-dipinto-dell-cattedrale-di-san-lorenzo-martire.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-esterno-della-cattedrale-di-san-lorenzo-martire.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-navata-centrale.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-organo-a-canne.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-del-confessionale-ligneo.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-dell-abside-affrescato.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-scorcio-della-torre-campanaria-del-duomo-di-tivoli.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-trittico-del-ss-salvatore.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-veduta-dal-basso-della-torre-campanaria.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-veduta-laterale-della-cattedrale-di-san-lorenzo-martire.jpg
+    </string>
+    <string name="monumenti_Cattedrale_di_San_Lorenzo_categoria">Luoghi di Culto</string>
     <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotosmall">@drawable/ic_launcher</drawable>
     <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotobig">@drawable/ic_launcher</drawable>
 
@@ -290,8 +491,15 @@
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_tred"></string>
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_maps">41.971038, 12.792553</string>
     <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_video"></string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_gallery"></string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_categoria">Luogo di Culto</string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_gallery">
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-facciata-della-chiesa-della-maria-ss-di-quintiliolo.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-scorcio-della-chiesa-con-vista-del-chiostro.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-veduta-area-del-santuario.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-veduta-frontale-della-chiesa.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-vista-della-chiesa.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-vista-panoramica-della-chiesa.jpg
+    </string>
+    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_categoria">Luoghi di Culto</string>
     <drawable name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_fotosmall">@drawable/ic_launcher</drawable>
     <drawable name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_fotobig">@drawable/ic_launcher</drawable>
 
@@ -309,53 +517,153 @@
     <!--latitudine-longitudine-->
     <string name="monumenti_Chiesa_di_San_Biagio_maps">41.963303, 12.799990</string>
     <string name="monumenti_Chiesa_di_San_Biagio_video"></string>
-    <string name="monumenti_Chiesa_di_San_Biagio_gallery"></string>
-    <string name="monumenti_Chiesa_di_San_Biagio_categoria">Luogo di Culto</string>
+    <string name="monumenti_Chiesa_di_San_Biagio_gallery">
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-cappella-con-statua-di-padre-pio.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-cappella-laterale-della-chiesa-di-san-biagio.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-esterno-della-chiesa-di-san-biagio.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-navata-centrale-san-biagio.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-orologio-della-chiesa-di-san-biagio.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-del-portale.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-dell-interno-della-chiesa-di-san-biagio.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-superiore-del-portale.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-portale-della-chiesa-di-san-biagio.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-rosone-della-chiesa-di-san-biagio.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-statua-del-cristo-risorto.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-statua-di-san-biagio.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-statua-di-santa-caterina-da-siena.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-vetrate-decorate-dell-abside.jpg
+    </string>
+    <string name="monumenti_Chiesa_di_San_Biagio_categoria">Luoghi di culto</string>
     <drawable name="monumenti_Chiesa_di_San_Biagio_fotosmall">@drawable/ic_launcher</drawable>
     <drawable name="monumenti_Chiesa_di_San_Biagio_fotobig">@drawable/ic_launcher</drawable>
 
 
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_titolo"></string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizione"></string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizionebig"></string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_url"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_titolo">Chiesa di San Pietro alla Carità</string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizione">La Chiesa di San Pietro alla Carità di Tivoli, costruita in stile romanico sui resti di un\'antica villa romana, è caratterizzata da una facciata in mattoni e da uno splendido campanile.</string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizionebig">La Chiesa di Santa Maria Maggiore o più comunemente di San Francesco, è, insieme al Duomo di Tivoli, il luogo di culto più importante e probabilmente più bello della città.
+        Eretta su Piazza Trento per volere di papa Simplicio, è annessa all\'antico convento, sede dei frati benedettini di Farfa, ed è adiacente all\'ingresso di Villa d\'Este.
+        La chiesa si presenta esternamente con una meravigliosa facciata caratterizzata da un portale gotico in marmo, opera di Angelo da Tivoli, sormontato da un elegante rosone a raggi. Stupendo anche il campanile che si innalza sul lato sinistro della chiesa, realizzato con mattoni rossi e molto simile al campanile della Cattedrale di San Lorenzo.
+        Tra le opere più importanti presenti all\'interno della struttura troviamo, oltre alla "Tomba di Ippolito II d\'Este", storico governatore di Tivoli sepolto nel presbiterio, un crocefisso risalente al XV secolo; il "Polittico della Vergine"; il pavimento cosmatesco realizzato intorno al XIII secolo; la "tavola con la "Vergine orante"; la "tavola di "Sant\'Antonio da Padova", e l\'affresco della "Madonna con Bambino" racchiusa nel tabernacolo rinascimentale.
+        Ogni 14 agosto, nella piazza antistante la chiesa, si svolge la cosiddetta Festa dell\'Inchinata, rito religioso durante il quale l\'immagine del Santissimo Salvatore si incontra con la statua della Madonna delle Grazie, dando vita ad un suggestivo inchino reciproco.</string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-pietro-alla-carita</string>
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_tred"></string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_maps"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_maps">41.963944, 12.797062</string>
     <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_video"></string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_gallery"></string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_categoria"></string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_gallery">
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-del-portale-di-san-pietro-alla-carita.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-portale-della-chiesa-di-san-pietro-alla-carita.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-torre-campanaria-della-chiesa.jpg
+    </string>
+    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_categoria">Luoghi di culto</string>
     <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotosmall">@drawable/ic_launcher</drawable>
     <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotobig">@drawable/ic_launcher</drawable>
 
 
-    <string name="monumenti_Chiesa_di_San_Silvestro_titolo"></string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_descrizione"></string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_descrizionebig"></string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_url"></string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_tred"></string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_maps"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_titolo">Chiesa di San Silvestro</string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_descrizione">La Chiesa di San Silvestro è stata costruita nel XII secolo e si trova nell\'omonima piazza di Tivoli, su Via del Colle, nucleo del centro storico della città.</string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_descrizionebig">La Chiesa di San Silvestro è uno dei luoghi di culto più belli di Tivoli.
+        Situata nell’omonima piazza, su Via del Colle, la sua costruzione risalirebbe al XI-XII secolo, ed è legata a papa Silvestro.
+        Caratterizzata originariamente da tre navate con due file di 12 colonne in marmo, successivamente murate le prime e vendute le seconde, oggi si presenta con uno stile romanico lavorato su una facciata ornata da un portale con architrave e da tre finestre centrali. Questo luogo è molto amato dai cittadini di Tivoli, infatti viene spesso scelto come luogo per le celebrazioni di matrimoni ed altre ricorrenze.
+        All’interno della Chiesa di San Silvestro, nell\'abside, sono ancora ben conservati alcuni affreschi risalenti al XII secolo, uno nella parte superiore raffigurante il “Cristo che porge il rotolo della legga a San Pietro”, l\'altro in quella inferiore che riporta alcune scene della vita di San Silvestro legate alla conversione dell’imperatore Costantino. </string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-silvestro</string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_tred">http://www.visittivoli.eu/virtual-tour/chiesa-di-san-silvestro/</string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_maps">41.964407, 12.795011</string>
     <string name="monumenti_Chiesa_di_San_Silvestro_video"></string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_gallery"></string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_categoria"></string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_gallery">
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-altare-della-chiesa-di-san-silvestro.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-altare-ed-abside-affrescato.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-chiesa-di-san-silvestro.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-dettaglio-dell-abside-affrescato-san-silvestro.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-dettaglio-esterno.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-esterno-della-chiesa-di-san-silvestro.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-fontanile-esterno.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-navata-centrale-della-chiesa-di-san-silvestro.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-pano-affresco-dell-altare.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-pano-cripta.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-della-facciata.jpg
+    </string>
+    <string name="monumenti_Chiesa_di_San_Silvestro_categoria">Luoghi di culto</string>
     <drawable name="monumenti_Chiesa_di_San_Silvestro_fotosmall">@drawable/ic_launcher</drawable>
     <drawable name="monumenti_Chiesa_di_San_Silvestro_fotobig">@drawable/ic_launcher</drawable>
 
 
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_titolo"></string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_descrizione"></string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_descrizionebig"></string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_url"></string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_tred"></string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_maps"></string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_titolo">Chiesa di Santa Maria Maggiore</string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_descrizione">La Chiesa di Santa Maria Maggiore o di San Francesco, insieme all\'annesso convento è considerata uno dei luoghi di culto più belli della città.</string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_descrizionebig">Danneggiata durante i bombardamenti del 1944 e restaurata intorno al 1951, la Chiesa di San Pietro alla Carità o della Carità è caratterizzata da uno splendido stile romanico che la rende con molta probabilità uno dei luoghi di culto più belli di Tivoli.
+        Costruita sui resti di un’antica villa romana e voluta dal tiburtino papa Simplicio, si presenta con una facciata in cortina muraria di mattoni caratterizzata nella parte inferiore da tre portali che conducono direttamente alle tre navate interne e nella parte superiore da due finestre laterali ed un occhio centrale. Meraviglioso il campanile che svetta su tutta l’area circostante, abbellito da cornici e da finestre a tutto sesto sviluppate su due piani.
+        L’interno è caratterizzato da un pavimento cosmatesco che va ad ornare la navata centrale e da alcune opere d’arte situate nei pressi dell’abside e dell’altare maggiore, come il “Cristo crocifisso tra la Madonna e San Giovanni Evangelista”, risalente al XIV secolo e la “Madonna in trono fra i santi Pietro e Paolo”, risalente al XIII secolo.</string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-santa-maria-maggiore</string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_tred">http://www.visittivoli.eu/virtual-tour/chiesa-di-santa-maria-maggiore/</string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_maps">41.962182, 12.796640</string>
     <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_video"></string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_gallery"></string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_categoria"></string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_gallery">
+         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-altare-maggiore.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-candeliere-della-chiesa-di-santa-maria-maggiore.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-facciata-della-chiesa-di-santa-maria-maggiore.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-fontana-esterna-con-scorcio-della-chiesa.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-navata-laterale.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-ostensorio-della-chiesa-di-santa-maria-maggiore.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-pano-cappella.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-superiore-dell-altare.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-superiore-della-facciata.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-statua-della-vergine.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-torre-campanaria-della-chiesa-di-santa-maria-maggiore.jpg
+        http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-trittico-della-chiesa-di-santa-maria-maggiore.jpg
+
+
+    </string>
+    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_categoria">Luoghi di culto</string>
     <drawable name="monumenti_Chiesa_di_Santa_Maria_Maggiore_fotosmall">@drawable/ic_launcher</drawable>
     <drawable name="monumenti_Chiesa_di_Santa_Maria_Maggiore_fotobig">@drawable/ic_launcher</drawable>
 
 
+    <string name="monumenti_Casa_Gotica_titolo">Casa Gotica</string>
+    <string name="monumenti_Casa_Gotica_descrizione">La Casa Gotica è uno degli edifici più suggestivi della città, caratterizzata esternamente da una scenografica scala abbellita da un\'arcata in muratura e da alcune merlature.</string>
+    <string name="monumenti_Casa_Gotica_descrizionebig">Una delle più suggestive architetture di Tivoli è la cosiddetta Casa Gotica, abitazione tardo-medievale risalente al XIII secolo.
+        La struttura, costruita in tufo con inserti in travertino, affaccia su via Campitelli, ed ha un ingresso raggiungibile attraverso una scenografica scala esterna, il cosiddetto profferlo, caratterizzata da alcune merlature a da un\'arcata in muratura con edicola. La Casa Gotica si sviluppa su tre piani, il piano terra utilizzato in passato come bottega, il primo piano raggiungibile dalla scala esterna, ed il secondo piano raggiungibile da una scala interna.
+        La bellezza di questa abitazione risiede non solo nell\'estetica, ma soprattutto negli elementi stilistici utilizzati con semplicità ed in maniera scrupolosa. Oggi nei pressi del cortile della Casa Gotica è possibile ammirare una splendida fontana che riprende perfettamente lo stile di Villa d\'Este.</string>
+    <string name="monumenti_Casa_Gotica_tred"></string>
+    <string name="monumenti_Casa_Gotica_url">http://www.visittivoli.eu/edifici-storici/casa-gotica</string>
+    <string name="monumenti_Casa_Gotica_maps">41.964525, 12.795709</string>
+    <string name="monumenti_Casa_Gotica_video"></string>
+    <string name="monumenti_Casa_Gotica_gallery">
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-antica-colonna.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-scorcio-dalla-casa-gotica.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-veduta-della-casa-gotica.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-veduta-della-scala.jpg
+
+    </string>
+    <string name="monumenti_Casa_Gotica_categoria">Edifici Storici</string>
+    <drawable name="monumenti_Casa_Gotica_fotosmall">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti_Casa_Gotica_fotobig">@drawable/ic_launcher</drawable>
 
 
+    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_titolo">Palazzo della Missione Complesso Mauro Macera</string>
+    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_descrizione">Palazzo della Missione torna a svolgere la funzione di spazio museale, per la conservazione e la promozione del patrimonio storico e artistico di Tivoli.</string>
+    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_descrizionebig">In occasione del Giubileo Santo della Misericordia, indetto da Papa Francesco per mezzo della Bolla Pontificia Misericordia Vultus, ricorrente nel cinquantesimo della fine del Concilio Vaticano II, la città di Tivoli ha inaugurato il 22 dicembre 2015 il Museo Civico al Palazzo della Missione, con la mostra "Il Giubileo, percorsi della misericordia a Tivoli".
+        L\'edificio settecentesco della Missione è stato sede prima dei Missionari di San Vincenzo De\' Paoli, poi del Carcere minorile e, dopo il terribile bombardamento del maggio del 1944, ricovero degli sfollati e dei senzatetto.
+        Il Museo di Tivoli si apre con un allestimento temporaneo destinato a celebrare il Giubileo , che avrà la durata di un anno, così come la mostra: per questa straordinaria occasione la Diocesi di Tivoli, nella persona del Vescovo Mauro Parmeggiani, ha generosamente concesso di poter esporre l\'eccezionale Deposizione lignea della Cattedrale di Tivoli, forse l\'opera d\'arte più importante conservata in città: il Gruppo, datato ai primi decenni del XIII secolo, è uno degli esempi più rilevanti della scultura lignea medievale italiana.
+        Riguardanti il Giubileo anche i libri esposti all\'interno del Museo Civico, provenienti dal patrimonio, raro e prezioso, del comune di Tivoli custodito nel Fondo antico della Biblioteca Comunale, costituita nel 1773; gli argomenti illustrati, di carattere giubilare, riguardano indizioni, ritualità, pellegrinaggi, descrizione dei luoghi sacri, reliquie, cerimonie, episodi particolari; si espongono, tra gli altri, due importantissimi documenti tiburtini: una bolla pontificia e una lettera del Cardinale Ippolito d\'Este.
+        Da oggi, pertanto, grazie a tutti coloro che nel corso degli anni vi si sono adoperati, il complesso della Missione tornerà finalmente a svolgere un importante ruolo nella vita della città, quale spazio museale per la conservazione e la promozione del patrimonio storico e artistico di Tivoli, che avvia da qui la sua piena valorizzazione.</string>
+    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_url">http://www.visittivoli.eu/edifici-storici/palazzo-della-missione</string>
+    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_tred"></string>
+    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_maps">41.964028, 12.797562</string>
+    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_video">https://youtu.be/gouY0F5Rcc4</string>
+    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_gallery">
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-esposizione-interna-palazzo-della-missione.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-esposizione-interna.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-esposizione-libri-interna-complesso-mauro-macera.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-esposizione-libri.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-esposizone-libri-antichi.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-gruppo-della-deposizione-lignea-della-cattedrale-di-tivoli.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-gruppo-della-deposizione-lignea.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-interno-del-museo.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-interno-museo-civico.jpg
+        http://www.visittivoli.eu/images/edifici-storici/anteprima-libro-in-esposizione-museo-civico.jpg
+    </string>
+    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_categoria">Edifici Storici</string>
+    <drawable name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_fotosmall">@drawable/ic_launcher</drawable>
+    <drawable name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_fotobig">@drawable/ic_launcher</drawable>
 
 
 

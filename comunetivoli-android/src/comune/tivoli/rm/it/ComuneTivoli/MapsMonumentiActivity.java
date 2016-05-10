@@ -12,6 +12,8 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 /**
  * Created by millozzi.stefano on 15/03/2016.
+ * todo: da terminare mappa monumenti
+ * @deprecated
  */
 
 public class MapsMonumentiActivity extends Activity implements OnMapReadyCallback {

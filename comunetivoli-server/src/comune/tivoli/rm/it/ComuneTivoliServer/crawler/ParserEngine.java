@@ -1,5 +1,7 @@
 package comune.tivoli.rm.it.ComuneTivoliServer.crawler;
 
+import comune.tivoli.rm.it.ComuneTivoliCommon.util.CommonTextUtil;
+import comune.tivoli.rm.it.ComuneTivoliServer.javacc_parser.ExtractDateNewsJavaccParser;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -59,10 +61,11 @@ public class ParserEngine {
 
     public static NotiziaWWWComuneTivoli extractNewsFromPage(String baseUrl, String relativePathID) throws IOException {
         //versione stampabile
-        String complete = composeUrl(baseUrl, relativePathID, "/print");
-        System.out.println("Download " + complete + "( id " + relativePathID + ")");
-        final Document parse = Jsoup.parse(new URL(complete), 10000);
-        final Elements title_centro = parse.getElementsByClass("title_centro");
+        String urlPrint = composeUrl(baseUrl, relativePathID, "/print");
+        String urlOriginale = composeUrl(baseUrl, relativePathID);
+        System.out.println("Download " + urlPrint + "( id " + relativePathID + ")");
+        final Document parse = Jsoup.parse(new URL(urlPrint), 10000);
+        final Elements title_centro = parse.getElementsByClass("title");
         final Elements content = parse.getElementsByClass("content");
 
         final StringBuilder titolo = new StringBuilder();
@@ -75,7 +78,22 @@ public class ParserEngine {
             contenuto.append(t.html()).append(" ");
         }
 
-        return new NotiziaWWWComuneTivoli(titolo.toString(), contenuto.toString(), complete, null, relativePathID);
+        final String titoloNormalizzato = CommonTextUtil.normalize_UTF8__to__ASCII(Jsoup.parse("<html><body>" + titolo.toString().trim() + "</html></body>").body().text());
+        final String htmlOriginale = String.format("<html><head>\n<base href=\"http://www.comune.tivoli.rm.it/\">\n</head><body>%s</body></html>", contenuto.toString());
+        final String htmlNormalizzato = CommonTextUtil.normalizeTextFromHtml(htmlOriginale);
+
+        final Document doc = Jsoup.parse(htmlNormalizzato);
+        final String textNormalizzato = CommonTextUtil.normalize_UTF8__to__ASCII(doc.body().text());
+
+        //done: manca ricerca data nel documento
+        final Date date = ExtractDateNewsJavaccParser.extractDate(textNormalizzato);
+
+        return new NotiziaWWWComuneTivoli(
+                titoloNormalizzato,
+                htmlNormalizzato, textNormalizzato,
+                urlPrint, urlOriginale,
+                date,
+                relativePathID);
 
     }
 
@@ -88,7 +106,9 @@ public class ParserEngine {
 
 
         ArrayList<NotiziaWWWComuneTivoli> pagine = parseFromWeb(nodeLinksInDB);
-
+        for (NotiziaWWWComuneTivoli x : pagine) {
+            System.out.println(x);
+        }
         //System.out.println(pagine);
     }
 

@@ -5,11 +5,12 @@ import comune.tivoli.rm.it.ComuneTivoli.R;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.TreeSet;
 
 /**
- * Created by millozzi.stefano on 22/04/2016.
+ * todo: aumentare la dimensione delle immagini "big", portandola ad almeno 400 pixel di larghezza
  */
 public class MonumentiUtil {
     public static List<String> estraiCategorie(ArrayList<MonumentiComune> a) {
@@ -19,12 +20,29 @@ public class MonumentiUtil {
         }
         return new ArrayList<>(r);
     }
+    private static ArrayList<MonumentiComune> monumenti;
 
-    public static ArrayList<MonumentiComune> elencoMonumenti(Activity a) {
-        ArrayList<MonumentiComune> monumenti = new ArrayList<>();
+    public static List<MonumentiComune> elencoMonumenti(Activity a) {
+        if (monumenti!=null){
+            return Collections.unmodifiableList(monumenti);
+        }
 
-
-        //monumenti_Cattedrale_di_San_Lorenzo
+        monumenti = new ArrayList<>();
+//monumenti_Casa_Gotica
+        monumenti.add(new MonumentiComune(
+                a.getResources().getString(R.string.monumenti_Casa_Gotica_titolo),
+                a.getResources().getString(R.string.monumenti_Casa_Gotica_descrizione),
+                a.getResources().getString(R.string.monumenti_Casa_Gotica_descrizionebig),
+                (R.drawable.monumenti_Casa_Gotica_fotosmall),
+                (R.drawable.monumenti_Casa_Gotica_fotobig),
+                a.getResources().getString(R.string.monumenti_Casa_Gotica_url),
+                a.getResources().getString(R.string.monumenti_Casa_Gotica_maps),
+                a.getResources().getString(R.string.monumenti_Casa_Gotica_tred),
+                a.getResources().getString(R.string.monumenti_Casa_Gotica_video),
+                a.getResources().getString(R.string.monumenti_Casa_Gotica_categoria),
+                a.getResources().getString(R.string.monumenti_Casa_Gotica_gallery)
+        ));
+//monumenti_Cattedrale_di_San_Lorenzo
         monumenti.add(new MonumentiComune(
                 a.getResources().getString(R.string.monumenti_Cattedrale_di_San_Lorenzo_titolo),
                 a.getResources().getString(R.string.monumenti_Cattedrale_di_San_Lorenzo_descrizione),
@@ -80,7 +98,6 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_Chiesa_di_San_Pietro_alla_Carità_categoria),
                 a.getResources().getString(R.string.monumenti_Chiesa_di_San_Pietro_alla_Carità_gallery)
         ));
-
 //monumenti_Chiesa_di_San_Silvestro
         monumenti.add(new MonumentiComune(
                 a.getResources().getString(R.string.monumenti_Chiesa_di_San_Silvestro_titolo),
@@ -108,6 +125,20 @@ public class MonumentiUtil {
                 a.getResources().getString(R.string.monumenti_Chiesa_di_Santa_Maria_Maggiore_video),
                 a.getResources().getString(R.string.monumenti_Chiesa_di_Santa_Maria_Maggiore_categoria),
                 a.getResources().getString(R.string.monumenti_Chiesa_di_Santa_Maria_Maggiore_gallery)
+        ));
+//monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera
+        monumenti.add(new MonumentiComune(
+                a.getResources().getString(R.string.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_titolo),
+                a.getResources().getString(R.string.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_descrizione),
+                a.getResources().getString(R.string.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_descrizionebig),
+                (R.drawable.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_fotosmall),
+                (R.drawable.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_fotobig),
+                a.getResources().getString(R.string.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_url),
+                a.getResources().getString(R.string.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_maps),
+                a.getResources().getString(R.string.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_tred),
+                a.getResources().getString(R.string.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_video),
+                a.getResources().getString(R.string.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_categoria),
+                a.getResources().getString(R.string.monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_gallery)
         ));
 //monumenti_acquedotti
         monumenti.add(new MonumentiComune(
