@@ -19,6 +19,7 @@ import java.util.List;
 
 /**
  * Created by millozzi.stefano on 15/03/2016.
+ *  todo:inserire le immagini buone
  */
 
 /**
