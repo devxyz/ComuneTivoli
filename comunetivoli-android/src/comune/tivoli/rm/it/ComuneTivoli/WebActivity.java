@@ -79,7 +79,7 @@ public class WebActivity extends Activity {
                             prDialog.show();*/
                         }
 
-                        prDialog.setProgress(progress);
+                        //prDialog.setProgress(progress);
                     }
                 }
         );

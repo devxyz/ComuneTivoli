@@ -65,6 +65,7 @@ public class LoadingActivity extends Activity {
         loading_txt = (TextView) findViewById(R.id.loading_txt);
 
         final RemoteServerUpdateAsyncTask task = new RemoteServerUpdateAsyncTask(this);
+        //todo: skip loading
         //task.execute();
 
         final View.OnClickListener l = new View.OnClickListener() {
