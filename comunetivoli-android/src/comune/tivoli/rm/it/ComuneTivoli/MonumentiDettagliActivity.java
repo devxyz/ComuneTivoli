@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.android.gms.maps.GoogleMap;
 import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
-import comune.tivoli.rm.it.ComuneTivoli.model.ContattiComune;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
@@ -70,65 +69,68 @@ public class MonumentiDettagliActivity extends Activity {
         try {
             //DialogUtil.openInfoDialog(this, "debug", "Posizione " + position);
             List<MonumentiComune> mm = MonumentiUtil.elencoMonumenti(this);
-            final MonumentiComune monumento = mm.get(dati.id);
-            title_text.setText(monumento.titolo);
-            dettagli_text.setText(monumento.descrizione_big);
-            final Drawable foto_big = getResources().getDrawable(monumento.foto_big);
-            if (foto_big != null)
-                image_monumento.setBackgroundResource(monumento.foto_big);
-            else {
-                //image_monumento.setImageDrawable(null);
-            }
-
-            if (monumento.tred.length() > 0)
-                tred_btn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(WebActivity.prepare(MonumentiDettagliActivity.this, monumento.tred, monumento.titolo, "Panoramica 3D " + monumento.categoria));
-
-                    }
-                });
-            else
-                tred_btn.setVisibility(View.GONE);
+            final MonumentiComune monumento = MonumentiUtil.findById(mm, dati.id);
+            if (monumento != null) {
+                title_text.setText(monumento.titolo);
+                dettagli_text.setText(monumento.descrizione_big);
+                final Drawable foto_big = getResources().getDrawable(monumento.foto_big);
+                if (foto_big != null)
+                    image_monumento.setBackgroundResource(monumento.foto_big);
+                else {
+                    //image_monumento.setImageDrawable(null);
+                }
 
 
-            if (monumento.latitudineLongitudineMaps.length() > 0)
-                maps_btn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        final Intent intent = MapsActivity.createIntent(MonumentiDettagliActivity.this, monumento.titolo, monumento.getLongitude(), monumento.getLatitude(), monumento.descrizione, 18, "", GoogleMap.MAP_TYPE_SATELLITE);
-                        startActivity(intent);
+                if (monumento.tred.length() > 0)
+                    tred_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            startActivity(WebActivity.prepare(MonumentiDettagliActivity.this, monumento.tred, monumento.titolo, "Panoramica 3D " + monumento.categoria));
 
-                    }
-                });
-            else
-                maps_btn.setVisibility(View.GONE);
-
-
-            if (monumento.url.length() > 0)
-                web_btn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        final Intent prepare = WebActivity.prepare(MonumentiDettagliActivity.this, monumento.url, monumento.titolo, "Informazioni aggiuntive " + monumento.categoria);
-                        startActivity(prepare);
-
-                    }
-                });
-            else
-                web_btn.setVisibility(View.GONE);
+                        }
+                    });
+                else
+                    tred_btn.setVisibility(View.GONE);
 
 
-            if (monumento.galleriaFoto.size() > 0) {
-                foto_btn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        //todo: completare apertura galleria foto per monumenti
+                if (monumento.latitudineLongitudineMaps.length() > 0)
+                    maps_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            final Intent intent = MapsActivity.createIntent(MonumentiDettagliActivity.this, monumento.titolo, monumento.getLongitude(), monumento.getLatitude(), monumento.descrizione, 18, "", GoogleMap.MAP_TYPE_SATELLITE);
+                            startActivity(intent);
+
+                        }
+                    });
+                else
+                    maps_btn.setVisibility(View.GONE);
 
 
-                    }
-                });
-            } else {
-                foto_btn.setVisibility(View.GONE);
+                if (monumento.url.length() > 0)
+                    web_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            final Intent prepare = WebActivity.prepare(MonumentiDettagliActivity.this, monumento.url, monumento.titolo, "Informazioni aggiuntive " + monumento.categoria);
+                            startActivity(prepare);
+
+                        }
+                    });
+                else
+                    web_btn.setVisibility(View.GONE);
+
+
+                if (monumento.galleriaFoto.size() > 0) {
+                    foto_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            //todo: completare apertura galleria foto per monumenti
+
+
+                        }
+                    });
+                } else {
+                    foto_btn.setVisibility(View.GONE);
+                }
             }
 
         } catch (Throwable e) {

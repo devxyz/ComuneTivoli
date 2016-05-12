@@ -23,7 +23,8 @@ public class MonumentiUtil {
     public static MonumentiComune findById(List<MonumentiComune> a, int id) {
 
         for (MonumentiComune monumentiComune : a) {
-            if (monumentiComune.id == id) return monumentiComune;
+            if (monumentiComune.id == id)
+                return monumentiComune;
         }
         return null;
     }

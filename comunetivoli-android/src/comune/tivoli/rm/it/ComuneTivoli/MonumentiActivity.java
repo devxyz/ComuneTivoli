@@ -1,10 +1,12 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 import comune.tivoli.rm.it.ComuneTivoli.listview.MonumentiComuneListAdapter;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
@@ -17,6 +19,7 @@ import java.util.List;
 /**
  * Created by millozzi.stefano on 15/03/2016.
  */
+//todo manca corrispondenza tra monumenti nella lista e  nel dettaglio -- errore ID????
 public class MonumentiActivity extends Activity {
     ListView monumenti_list;
     private List<MonumentiComune> monumenti;
@@ -39,11 +42,14 @@ public class MonumentiActivity extends Activity {
         });
 
         MonumentiComuneListAdapter a = new MonumentiComuneListAdapter(this, monumenti);
+
         monumenti_list.setAdapter(a);
+
         monumenti_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(MonumentiDettagliActivity.preparaIntent(MonumentiActivity.this, monumenti.get(position)));
+                final Intent intent = MonumentiDettagliActivity.preparaIntent(MonumentiActivity.this, monumenti.get(position));
+                startActivity(intent);
             }
         });
 
