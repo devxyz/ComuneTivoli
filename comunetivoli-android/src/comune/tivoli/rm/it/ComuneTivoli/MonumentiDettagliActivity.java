@@ -68,8 +68,7 @@ public class MonumentiDettagliActivity extends Activity {
 
         try {
             //DialogUtil.openInfoDialog(this, "debug", "Posizione " + position);
-            List<MonumentiComune> mm = MonumentiUtil.elencoMonumenti(this);
-            final MonumentiComune monumento = MonumentiUtil.findById(mm, dati.id);
+            final MonumentiComune monumento = MonumentiUtil.findById(MonumentiUtil.elencoMonumenti(this), dati.id);
             if (monumento != null) {
                 title_text.setText(monumento.titolo);
                 dettagli_text.setText(monumento.descrizione_big);
@@ -123,8 +122,8 @@ public class MonumentiDettagliActivity extends Activity {
                     foto_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            //todo: completare apertura galleria foto per monumenti
-
+                            final Intent intent = ImageScrollActivity.prepareIntent(MonumentiDettagliActivity.this, monumento.galleriaFoto);
+                            startActivity(intent);
 
                         }
                     });

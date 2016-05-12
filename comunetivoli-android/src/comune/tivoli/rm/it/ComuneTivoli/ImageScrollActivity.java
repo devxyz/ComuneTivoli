@@ -1,34 +1,37 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
-import android.graphics.BitmapFactory;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import com.squareup.picasso.Picasso;
+import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by millozzi.stefano on 22/04/2016.
  */
 public class ImageScrollActivity extends Activity {
-    private ArrayList<String> imgurl;
+    private ImageScrollActivityData data;
+
+    public static Intent prepareIntent(Activity caller, List<String> imgUrlList) {
+        ImageScrollActivityData dati = new ImageScrollActivityData(imgUrlList);
+        return dati.toIntent(caller);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this,"*"+ "Home", R.layout.imagescroll, R.layout.imagescroll_decorated);
+        TemplateUtil.inizializzaActivity(this, "*" + "Home", R.layout.imagescroll, R.layout.imagescroll_decorated);
+        data = new ImageScrollActivityData(savedInstanceState, getIntent());
 
-        imgurl = new ArrayList<>();
-        imgurl = new ArrayList<>();
-        imgurl.add("http://www.visittivoli.eu/images/piazze/piazza-campitelli.jpg");
-        imgurl.add("http://www.visittivoli.eu/images/piazze/piazza-garibaldi.jpg");
-        imgurl.add("http://www.visittivoli.eu/images/le-ville/villa-adriana.jpg");
-        imgurl.add("http://www.visittivoli.eu/images/le-ville/villa-d-este.jpg");
-        imgurl.add("http://www.visittivoli.eu/images/le-ville/villa-gregoriana.jpg");
+        List<String> imgurl;
+        imgurl = new ArrayList<>(data.imgUrlList);
 
         final int e = this.getWindow().getDecorView().getHeight();
 
@@ -57,6 +60,46 @@ public class ImageScrollActivity extends Activity {
             layout.addView(imageView1);
 */
 
+        }
+    }
+
+
+    public static class ImageScrollActivityData {
+        public static final String LABEL_SIZE = "size";
+        public final ArrayList<String> imgUrlList;
+
+        public ImageScrollActivityData(Bundle savedInstanceState, Intent ix) {
+            int size = IntentUtil.getExtraInt(ix, savedInstanceState, LABEL_SIZE, 0);
+            imgUrlList = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                final String extraString = IntentUtil.getExtraString(ix, savedInstanceState, LABEL_IMG_I(i), "");
+                imgUrlList.add(extraString);
+            }
+
+        }
+
+        public ImageScrollActivityData(List<String> imgUrlList) {
+            this.imgUrlList = new ArrayList<>(imgUrlList);
+        }
+
+        public static String LABEL_IMG_I(int i) {
+            return "img_" + i;
+        }
+
+        public void saveTo(Bundle b) {
+            b.putInt(LABEL_SIZE, imgUrlList.size());
+            for (int i = 0; i < imgUrlList.size(); i++) {
+                b.putString(LABEL_IMG_I(i), imgUrlList.get(i));
+            }
+        }
+
+        public Intent toIntent(Activity a) {
+            Bundle b = new Bundle();
+            saveTo(b);
+
+            Intent i = new Intent(a, ImageScrollActivity.class);
+            i.putExtras(b);
+            return i;
         }
     }
 }
