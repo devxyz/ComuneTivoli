@@ -162,7 +162,7 @@ public class MonumentiDettagliActivity extends Activity {
             Bundle b = new Bundle();
             saveTo(b);
 
-            Intent i = new Intent(a, ContattiDettagliActivity.class);
+            Intent i = new Intent(a, MonumentiDettagliActivity.class);
             i.putExtras(b);
             return i;
         }

@@ -27,6 +27,7 @@ import java.util.Date;
 /**
  * Created by millozzi.stefano on 26/04/2016.
  */
+//todo gestire passaggio parametri tramite ID
 public class NewsDettagliActivity extends Activity {
     TextView news_titolo;
     TextView news_data;
@@ -36,7 +37,7 @@ public class NewsDettagliActivity extends Activity {
     ProgressBar bar;
 
 
-    //todo: gestire pagina html con webview - fixare colori - aggiugnere pulsante apri sul sito
+    //done: gestire pagina html con webview - fixare colori - aggiugnere pulsante apri sul sito
 
     public static Intent prepareIntent(Activity a, String titolo, Date data, String descrizione, String html, String key) {
         NewsDettagliActivityData n = new NewsDettagliActivityData(titolo, descrizione, data, html, key);
