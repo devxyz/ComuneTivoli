@@ -1,25 +1,26 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.db.DBHelperRunnable;
 import comune.tivoli.rm.it.ComuneTivoli.db.DbHelper;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.DaoSession;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.NotizieSitoDbSqlLite;
 import comune.tivoli.rm.it.ComuneTivoli.db.manager.ManagerNotizieSitoDbSqlLite;
+import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.DateUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
+import comune.tivoli.rm.it.ComuneTivoli.util.WebViewUtil;
 
 import java.util.Date;
 
@@ -29,10 +30,12 @@ import java.util.Date;
 public class NewsDettagliActivity extends Activity {
     TextView news_titolo;
     TextView news_data;
+    ImageButton news_button;
     WebView www;
     NewsDettagliActivityData dati;
+    ProgressBar bar;
 
-    ProgressDialog prDialog;
+
     //todo: gestire pagina html con webview - fixare colori - aggiugnere pulsante apri sul sito
 
     public static Intent prepareIntent(Activity a, String titolo, Date data, String descrizione, String html, String key) {
@@ -44,10 +47,12 @@ public class NewsDettagliActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this,"*"+ "Notizie", R.layout.newsdettagli_activity, R.layout.newsdettagli_activity_decorated);
+        TemplateUtil.inizializzaActivity(this, "*" + "Notizie", R.layout.newsdettagli_activity, R.layout.newsdettagli_activity_decorated);
         news_titolo = (TextView) findViewById(R.id.news_titolo);
         news_data = (TextView) findViewById(R.id.news_data);
         www = (WebView) findViewById(R.id.news_html);
+        bar = (ProgressBar) findViewById(R.id.news_progress);
+        news_button = (ImageButton) findViewById(R.id.news_btn);
 
         dati = new NewsDettagliActivityData(savedInstanceState, getIntent());
 
@@ -63,77 +68,53 @@ public class NewsDettagliActivity extends Activity {
         www.getSettings().setLoadWithOverviewMode(true);
         www.getSettings().setUseWideViewPort(true);
 
-        //dimensiona il testo
-        www.getSettings().setTextZoom(300);
+        news_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        www.setWebChromeClient(
-                new WebChromeClient() {
-                    public void onProgressChanged(WebView view, int progress) {
-                        if (prDialog == null) {
-                            prDialog = new ProgressDialog(NewsDettagliActivity.this);
-                            prDialog.setMessage("Caricamento in corso ...");
-                            prDialog.setIndeterminate(false);
-                            prDialog.show();
+                final DbHelper db = new DbHelper(NewsDettagliActivity.this);
+                try {
+
+                    db.runInTransaction(new DBHelperRunnable() {
+                        @Override
+                        public void run(DaoSession session, Context ctx) throws Throwable {
+                            ManagerNotizieSitoDbSqlLite m = new ManagerNotizieSitoDbSqlLite();
+                            final NotizieSitoDbSqlLite x = m.listByKey(session, dati.key);
+                            if (!x.getFlagContenutoLetto()) {
+                                x.setFlagContenutoLetto(true);
+                            }
+
+                            String msg = "NotizieSitoDbSqlLite{" +
+                                    "id=" + x.getId() +
+                                    "\ndataInserimento=" + x.getDataInserimento() +
+                                    "\ndata=" + x.getData() +
+                                    "\ntitolo='" + x.getTitolo() + '\'' +
+
+
+                                    "\ntoken=" + x.getToken() +
+                                    "\nversion=" + x.getVersion() +
+                                    "\nurl='" + x.getUrl() + '\'' +
+                                    "\nflagContenutoLetto=" + x.getFlagContenutoLetto() +
+                                    "\nkey='" + x.getKey() + '\'' +
+                                    '}';
+
+                            DialogUtil.openInfoDialog(NewsDettagliActivity.this, "Informazioni", msg);
                         }
-
-                        prDialog.setProgress(progress);
-                    }
-                }
-        );
+                    });
 
 
-        www.setWebViewClient(new WebViewClient() {
+                } catch (Throwable throwable) {
 
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-
-            @Override
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                super.onPageStarted(view, url, favicon);
-                if (prDialog == null) {
-                    prDialog = new ProgressDialog(NewsDettagliActivity.this);
-                    prDialog.setMessage("Caricamento in corso ...");
-                    prDialog.setIndeterminate(true);
-                    prDialog.show();
-                }
-            }
-
-
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-                if (prDialog != null) {
-                    prDialog.dismiss();
-                    prDialog = null;
+                } finally {
+                    db.close();
                 }
             }
         });
 
-        final DbHelper db = new DbHelper(NewsDettagliActivity.this);
-        try {
+        //dimensiona il testo
+        www.getSettings().setTextZoom(300);
 
-            db.runInTransaction(new DBHelperRunnable() {
-                @Override
-                public void run(DaoSession session, Context ctx) throws Throwable {
-                    ManagerNotizieSitoDbSqlLite m = new ManagerNotizieSitoDbSqlLite();
-                    final NotizieSitoDbSqlLite notizieSitoDbSqlLite = m.listByKey(session, dati.key);
-                    if (!notizieSitoDbSqlLite.getFlagContenutoLetto()) {
-                        notizieSitoDbSqlLite.setFlagContenutoLetto(true);
-                    }
-                    m.update(session, notizieSitoDbSqlLite);
-                }
-            });
-
-
-        } catch (Throwable throwable) {
-
-        } finally {
-            db.close();
-        }
-
+        WebViewUtil.webViewProgressBarLoader(www, bar);
 
     }
 

@@ -83,7 +83,7 @@ public class NewsComuneListAdapter extends BaseAdapter {
         }
         news_title.setText(nc.getTitolo());
         news_data.setText(DateUtil.toDDMMYYY(nc.getData()));
-        if (nc.getFlagContenutoLetto() == false) {
+        if (!nc.getFlagContenutoLetto()) {
             news_title.setTypeface(null, Typeface.BOLD);
         } else {
             news_title.setTypeface(null, Typeface.NORMAL);

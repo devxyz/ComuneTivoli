@@ -7,6 +7,6 @@ public class ServerConfiguration {
     /**
      * numero della versione dei dati
      */
-    public static final int PERISTENCE_VERSION_NUMBER = 3;
+    public static final int PERISTENCE_VERSION_NUMBER = 4;
 
 }

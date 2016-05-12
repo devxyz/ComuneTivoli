@@ -3,14 +3,14 @@
 
 
 
-    <string name="monumenti_acquedotti_titolo">Acquedotto Anio Novus</string>
-    <string name="monumenti_acquedotti_descrizione">L\'Acquedotto Anio Novus è un\'antica costruzione avviata dall\'Imperatore Caligola nel 38 d.C. A Tivoli, partendo dalla Via Empolitana si possono trovare molti reperti archeologici.</string>
-    <string name="monumenti_acquedotti_descrizionebig">L\'Acquedotto Anio Novus risale al 38 a.C., sotto l\'Impero di Caligola. Si possono trovare molti reperti archeologici dell\'Acquedotto lungo la Via Empolitana, che parte da Tivoli fino ad arrivare Ciciliano, passando per Castel Madama.\n
+    <string name="monumentixml_acquedotti_titolo">Acquedotto Anio Novus</string>
+    <string name="monumentixml_acquedotti_descrizione">L\'Acquedotto Anio Novus è un\'antica costruzione avviata dall\'Imperatore Caligola nel 38 d.C. A Tivoli, partendo dalla Via Empolitana si possono trovare molti reperti archeologici.</string>
+    <string name="monumentixml_acquedotti_descrizionebig">L\'Acquedotto Anio Novus risale al 38 a.C., sotto l\'Impero di Caligola. Si possono trovare molti reperti archeologici dell\'Acquedotto lungo la Via Empolitana, che parte da Tivoli fino ad arrivare Ciciliano, passando per Castel Madama.\n
         Il maggior numero di resti sono concentrati a 2 km di distanza dal Centro di Tivoli, precisamente nella zona Ponte degli Arci. L\'arcata dell\'Acquedotto più vicina alla città è la parte più corposa che rimane della costruzione del ponte, che attraversava l\'Acquedotto dell\'Acqua Marcia fino al Fosso degli Arci. Alcune rovine sono facilmente visibili, poiché due delle quali sono archi che attraversano le strade di percorrenza. Una seconda arcata dell\'Acquedotto, più imponente della prima, faceva parte di un altro ponte lungo circa 275 m e alto circa 35 m, che attraversava il fiume Aniene. Altri resti dell\'Acquedotto Anio Novus si possono ammirare a Valle Barberini, un piccolo immissario vicino il Fosso di San Gregorio.</string>
-    <string name="monumenti_acquedotti_url">http://www.visittivoli.eu/archeologia/acquedotto-anio-novus</string>
-    <string name="monumenti_acquedotti_tred"></string>
-    <string name="monumenti_acquedotti_maps">41.950792, 12.821954</string>
-    <string name="monumenti_acquedotti_gallery">
+    <string name="monumentixml_acquedotti_url">http://www.visittivoli.eu/archeologia/acquedotto-anio-novus</string>
+    <string name="monumentixml_acquedotti_tred"></string>
+    <string name="monumentixml_acquedotti_maps">41.950792, 12.821954</string>
+    <string name="monumentixml_acquedotti_gallery">
         http://www.visittivoli.eu/images/archeologia/anteprima-acquedotto-anio-novus.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-arcate-dell-acquedotto.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-canale-dell-acquedotto.jpg
@@ -25,10 +25,10 @@
         http://www.visittivoli.eu/images/archeologia/anteprima-veduta-posteriore-dell-acquedotto.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-veduta-tra-gli-alberi.jpg
     </string>
-    <string name="monumenti_acquedotti_categoria">Archeologia</string>
-    <string name="monumenti_acquedotti_video">https://youtu.be/VKCjvOcru9k</string>
-    <drawable name="monumenti_acquedotti_fotosmall">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia</drawable>
-    <drawable name="monumenti_acquedotti_fotobig">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia_big</drawable>
+    <string name="monumentixml_acquedotti_categoria">Archeologia</string>
+    <string name="monumentixml_acquedotti_video">https://youtu.be/VKCjvOcru9k</string>
+    <drawable name="monumentixml_acquedotti_fotosmall">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia</drawable>
+    <drawable name="monumentixml_acquedotti_fotobig">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia_big</drawable>
 
 
 
@@ -39,14 +39,14 @@
 
 
 
-    <string name="monumenti_anfiteatro_titolo">Anfiteatro di Bleso</string>
-    <string name="monumenti_anfiteatro_descrizione">L\'Anfiteatro di Bleso è un antico anfiteatro romano risalente al II secolo d.C., si trova accanto alla Rocca Pia e non molto lontano da Piazza Garibaldi.</string>
-    <string name="monumenti_anfiteatro_descrizionebig">L\'antico anfiteatro romano di Tivoli, conosciuto anche come Anfiteatro di Bleso, risale al II secolo dell\'età imperiale e tra i suoi spalti poteva accogliere fino a 2.000 spettatori.\n
+    <string name="monumentixml_anfiteatro_titolo">Anfiteatro di Bleso</string>
+    <string name="monumentixml_anfiteatro_descrizione">L\'Anfiteatro di Bleso è un antico anfiteatro romano risalente al II secolo d.C., si trova accanto alla Rocca Pia e non molto lontano da Piazza Garibaldi.</string>
+    <string name="monumentixml_anfiteatro_descrizionebig">L\'antico anfiteatro romano di Tivoli, conosciuto anche come Anfiteatro di Bleso, risale al II secolo dell\'età imperiale e tra i suoi spalti poteva accogliere fino a 2.000 spettatori.\n
         Secondo alcuni studiosi e ricercatori, nei pressi di questa straordinaria testimonianza della magnificenza di Roma, doveva trovarsi anche una schola gladiatorum, ma di questa struttura non sono mai state ritrovate tracce.\n
         Scoperto nel 1948 durante alcuni lavori per la realizzazione di un\'arteria stradale, dello storico anfiteatro che si trova nei pressi di Piazza Garibaldi, si possono ammirare solamente alcuni resti. Infatti la struttura originale venne distrutta durante i lavori di costruzione della Rocca Pia, voluta da papa Pio II Piccolomini come difesa dagli attacchi nemici. </string>
-    <string name="monumenti_anfiteatro_url">http://www.visittivoli.eu/archeologia/anfiteatro-bleso</string>
-    <string name="monumenti_anfiteatro_maps">41.960560, 12.798114</string>
-    <string name="monumenti_anfiteatro_gallery">
+    <string name="monumentixml_anfiteatro_url">http://www.visittivoli.eu/archeologia/anfiteatro-bleso</string>
+    <string name="monumentixml_anfiteatro_maps">41.960560, 12.798114</string>
+    <string name="monumentixml_anfiteatro_gallery">
         http://www.visittivoli.eu/images/archeologia/anteprima-antiche-mura-con-ingresso.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-antiche-mura-dell-anfiteatro-di-bleso.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-mura-antiche.jpg
@@ -59,11 +59,11 @@
 
         http://www.visittivoli.eu/images/archeologia/anteprima-veduta-laterale-dell-anfiteatro.jpg
     </string>
-    <string name="monumenti_anfiteatro_categoria">Archeologia</string>
-    <string name="monumenti_anfiteatro_tred"></string>
-    <string name="monumenti_anfiteatro_video"></string>
-    <drawable name="monumenti_anfiteatro_fotosmall">@drawable/monumenti_anfiteatro_di_bleso</drawable>
-    <drawable name="monumenti_anfiteatro_fotobig">@drawable/monumenti_anfiteatro_di_bleso_big</drawable>
+    <string name="monumentixml_anfiteatro_categoria">Archeologia</string>
+    <string name="monumentixml_anfiteatro_tred"></string>
+    <string name="monumentixml_anfiteatro_video"></string>
+    <drawable name="monumentixml_anfiteatro_fotosmall">@drawable/monumenti_anfiteatro_di_bleso</drawable>
+    <drawable name="monumentixml_anfiteatro_fotobig">@drawable/monumenti_anfiteatro_di_bleso_big</drawable>
 
 
 
@@ -73,20 +73,20 @@
 
 
 
-    <string name="monumenti_arcata_dell_acquedotto_titolo">Acquedotti Anio Vetus e Aqua Marcia</string>
-    <string name="monumenti_arcata_dell_acquedotto_descrizione">L\'acquedotto Anio Vetus risale al 272 e il 279 a.C., costruito dai censori Marcio Curio Dentato e Fulvio Flacco. L\'acquedotto aveva una portata di 180.000 metri cubi d\'acqua al giorno, seguendo un percorso di 64 km.</string>
-    <string name="monumenti_arcata_dell_acquedotto_descrizionebig">L\'acquedotto Anio Vetus fu il secondo acquedotto di Roma, costruito dai censori Marcio Curio Dentato e Fulvio Flacco tra il 272 e il 269 a.C. L\'acqua era captata dal fiume Aniene all\'altezza di Vicovaro, tramite un laghetto artificiale che permetteva la decantazione delle acque.\n
+    <string name="monumentixml_arcata_dell_acquedotto_titolo">Acquedotti Anio Vetus e Aqua Marcia</string>
+    <string name="monumentixml_arcata_dell_acquedotto_descrizione">L\'acquedotto Anio Vetus risale al 272 e il 279 a.C., costruito dai censori Marcio Curio Dentato e Fulvio Flacco. L\'acquedotto aveva una portata di 180.000 metri cubi d\'acqua al giorno, seguendo un percorso di 64 km.</string>
+    <string name="monumentixml_arcata_dell_acquedotto_descrizionebig">L\'acquedotto Anio Vetus fu il secondo acquedotto di Roma, costruito dai censori Marcio Curio Dentato e Fulvio Flacco tra il 272 e il 269 a.C. L\'acqua era captata dal fiume Aniene all\'altezza di Vicovaro, tramite un laghetto artificiale che permetteva la decantazione delle acque.\n
         L\'acquedotto aveva una portata di 180.000 metri cubi d\'acqua al giorno, e seguiva, per mantenersi in quota, un percorso tortuoso e lunghissimo (circa 64 km) quasi sempre sotterraneo. Una sezione dell\'acquedotto Vetus è conservato appena sopra l\'Acquedotto di Acqua Marcia: l\'Anio Vetus forma un angolo intorno alla città di Tivoli, parallelamente alla strada principale che porta al paese. Le sezioni rimaste dell\'Acquedotto sono conservate intatte presso il tratto dell\'Acquedotto di Acqua Marcia.</string>
-    <string name="monumenti_arcata_dell_acquedotto_url">http://www.visittivoli.eu/archeologia/acquedotti-anio-vetus-e-aqua-marcia</string>
-    <string name="monumenti_arcata_dell_acquedotto_maps">41.950467, 12.821217</string>
-    <string name="monumenti_arcata_dell_acquedotto_gallery">
+    <string name="monumentixml_arcata_dell_acquedotto_url">http://www.visittivoli.eu/archeologia/acquedotti-anio-vetus-e-aqua-marcia</string>
+    <string name="monumentixml_arcata_dell_acquedotto_maps">41.950467, 12.821217</string>
+    <string name="monumentixml_arcata_dell_acquedotto_gallery">
         http://www.visittivoli.eu/images/archeologia/anteprima-arcata-dell-acquedotto.jpg
     </string>
-    <string name="monumenti_arcata_dell_acquedotto_categoria">Archeologia</string>
-    <string name="monumenti_arcata_dell_acquedotto_tred"></string>
-    <string name="monumenti_arcata_dell_acquedotto_video"></string>
-    <drawable name="monumenti_arcata_dell_acquedotto_fotosmall">@drawable/monumenti_arcata_dell_acquedotto</drawable>
-    <drawable name="monumenti_arcata_dell_acquedotto_fotobig">@drawable/monumenti_arcata_dell_acquedotto_big</drawable>
+    <string name="monumentixml_arcata_dell_acquedotto_categoria">Archeologia</string>
+    <string name="monumentixml_arcata_dell_acquedotto_tred"></string>
+    <string name="monumentixml_arcata_dell_acquedotto_video"></string>
+    <drawable name="monumentixml_arcata_dell_acquedotto_fotosmall">@drawable/monumenti_arcata_dell_acquedotto</drawable>
+    <drawable name="monumentixml_arcata_dell_acquedotto_fotobig">@drawable/monumenti_arcata_dell_acquedotto_big</drawable>
 
 
 
@@ -98,13 +98,13 @@
 
 
 
-    <string name="monumenti_mensa_ponderaria_titolo">Mensa Ponderaria</string>
-    <string name="monumenti_mensa_ponderaria_descrizione">La Mensa Ponderaria, situata nei pressi del Duomo, è un antico locale di epoca romana risalente al I secolo d.C. adibito ad ufficio pubblico per il controllo dei pesi e delle misure.</string>
-    <string name="monumenti_mensa_ponderaria_descrizionebig">I resti dell\'antica Mensa Ponderaria, risalenti al I secolo d.C., si trovano nei pressi della Cattedrale di San Lorenzo e vennero scoperti solamente nel 1883 durante dei lavori.\n
+    <string name="monumentixml_mensa_ponderaria_titolo">Mensa Ponderaria</string>
+    <string name="monumentixml_mensa_ponderaria_descrizione">La Mensa Ponderaria, situata nei pressi del Duomo, è un antico locale di epoca romana risalente al I secolo d.C. adibito ad ufficio pubblico per il controllo dei pesi e delle misure.</string>
+    <string name="monumentixml_mensa_ponderaria_descrizionebig">I resti dell\'antica Mensa Ponderaria, risalenti al I secolo d.C., si trovano nei pressi della Cattedrale di San Lorenzo e vennero scoperti solamente nel 1883 durante dei lavori.\n
         Secondo alcuni studiosi e ricercatori, nei pressi di questa straordinaria testimonianza della magnificenza di Roma, doveva trovarsi anche una schola gladiatorum, ma di questa struttura non sono mai state ritrovate tracce.</string>
-    <string name="monumenti_mensa_ponderaria_url">http://www.visittivoli.eu/archeologia/mensa-ponderaria</string>
-    <string name="monumenti_mensa_ponderaria_maps">41.965536, 12.796817</string>
-    <string name="monumenti_mensa_ponderaria_gallery">
+    <string name="monumentixml_mensa_ponderaria_url">http://www.visittivoli.eu/archeologia/mensa-ponderaria</string>
+    <string name="monumentixml_mensa_ponderaria_maps">41.965536, 12.796817</string>
+    <string name="monumentixml_mensa_ponderaria_gallery">
         http://www.visittivoli.eu/images/archeologia/anteprima-dettaglio-dei-resti.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-particolare-dei-resti.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-particolare-esterno.jpg
@@ -116,11 +116,11 @@
         http://www.visittivoli.eu/images/archeologia/anteprima-vista-della-mensa.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-vista-esterna-della-mensa-ponderaria.jpg
     </string>
-    <string name="monumenti_mensa_ponderaria_categoria">Archeologia</string>
-    <string name="monumenti_mensa_ponderaria_tred">http://www.visittivoli.eu/virtual-tour/mensa-ponderaria/</string>
-    <string name="monumenti_mensa_ponderaria_video"></string>
-    <drawable name="monumenti_mensa_ponderaria_fotosmall">@drawable/monumenti_mensa_ponderaria</drawable>
-    <drawable name="monumenti_mensa_ponderaria_fotobig">@drawable/monumenti_mensa_ponderaria_big</drawable>
+    <string name="monumentixml_mensa_ponderaria_categoria">Archeologia</string>
+    <string name="monumentixml_mensa_ponderaria_tred">http://www.visittivoli.eu/virtual-tour/mensa-ponderaria/</string>
+    <string name="monumentixml_mensa_ponderaria_video"></string>
+    <drawable name="monumentixml_mensa_ponderaria_fotosmall">@drawable/monumenti_mensa_ponderaria</drawable>
+    <drawable name="monumentixml_mensa_ponderaria_fotobig">@drawable/monumenti_mensa_ponderaria_big</drawable>
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-    <string name="monumenti_piazza_campitelli_titolo">Piazza Campitelli</string>
-    <string name="monumenti_piazza_campitelli_descrizione">Piazza Campitelli è un grazioso spazio pubblico di Tivoli appena restaurato. Da qui si può raggiungere la Casa Gotica e la rinascimentale Villa d\'Este.</string>
-    <string name="monumenti_piazza_campitelli_descrizionebig">Piazza Campitelli è uno spazio pubblico situato alla fine dell\'omonima via, nei pressi della suggestiva Casa Gotica, delimitata a destra da uno degli accessi a Villa d\'Este ed a sinistra dal Palazzo delle Missioni. Al centro della piazza si trova anche la storica Chiesa di San Pietro alla Carità.\n
+    <string name="monumentixml_piazza_campitelli_titolo">Piazza Campitelli</string>
+    <string name="monumentixml_piazza_campitelli_descrizione">Piazza Campitelli è un grazioso spazio pubblico di Tivoli appena restaurato. Da qui si può raggiungere la Casa Gotica e la rinascimentale Villa d\'Este.</string>
+    <string name="monumentixml_piazza_campitelli_descrizionebig">Piazza Campitelli è uno spazio pubblico situato alla fine dell\'omonima via, nei pressi della suggestiva Casa Gotica, delimitata a destra da uno degli accessi a Villa d\'Este ed a sinistra dal Palazzo delle Missioni. Al centro della piazza si trova anche la storica Chiesa di San Pietro alla Carità.\n
         In passato la piazza rappresentava una parte della zona sulla quale si trovava la Villa romana di Publio Cornelio Scipione Nasica. Oggi l\'intera area è stata totalmente ristrutturata e la gradinata che la caratterizza è stata dedicata al grande acquerellista Ettore Franz, cittadino onorario della Città di Tivoli. A Piazza Campitelli si trova anche una bella meridiana, comunemente conosciuta come orologio solare. </string>
-    <string name="monumenti_piazza_campitelli_url">http://www.visittivoli.eu/piazze/piazza-campitelli</string>
-    <string name="monumenti_piazza_campitelli_maps"></string>
-    <string name="monumenti_piazza_campitelli_gallery">
+    <string name="monumentixml_piazza_campitelli_url">http://www.visittivoli.eu/piazze/piazza-campitelli</string>
+    <string name="monumentixml_piazza_campitelli_maps"></string>
+    <string name="monumentixml_piazza_campitelli_gallery">
         http://www.visittivoli.eu/images/piazze/anteprima-particolari-dei-muri-con-edera.jpg
         http://www.visittivoli.eu/images/piazze/anteprima-piazza-capitelli.jpg
         http://www.visittivoli.eu/images/piazze/anteprima-scalinata-della-piazza.jpg
@@ -146,11 +146,11 @@
         http://www.visittivoli.eu/images/piazze/anteprima-scorcio-delle-case.jpg
         http://www.visittivoli.eu/images/piazze/anteprima-scorcio-di-piazza-campitelli.jpg
     </string>
-    <string name="monumenti_piazza_campitelli_categoria">Piazze</string>
-    <string name="monumenti_piazza_campitelli_tred">http://www.visittivoli.eu/virtual-tour/piazza-campitelli/</string>
-    <string name="monumenti_piazza_campitelli_video"></string>
-    <drawable name="monumenti_piazza_campitelli_fotosmall">@drawable/monumenti_piazza_campitelli</drawable>
-    <drawable name="monumenti_piazza_campitelli_fotobig">@drawable/monumenti_piazza_campitelli_big</drawable>
+    <string name="monumentixml_piazza_campitelli_categoria">Piazze</string>
+    <string name="monumentixml_piazza_campitelli_tred">http://www.visittivoli.eu/virtual-tour/piazza-campitelli/</string>
+    <string name="monumentixml_piazza_campitelli_video"></string>
+    <drawable name="monumentixml_piazza_campitelli_fotosmall">@drawable/monumenti_piazza_campitelli</drawable>
+    <drawable name="monumentixml_piazza_campitelli_fotobig">@drawable/monumenti_piazza_campitelli_big</drawable>
 
 
 
@@ -161,17 +161,17 @@
 
 
 
-    <string name="monumenti_piazza_garibaldi_titolo">Piazza Garibaldi</string>
-    <string name="monumenti_piazza_garibaldi_descrizione">Piazza Garibaldi è un ampio spazio pubblico situato vicino la Rocca Pia e l\'anfiteatro romano. È abbellita dai giardini e dall\'Arco dei Padri Costituenti, opera di Arnaldo Pomodoro.</string>
-    <string name="monumenti_piazza_garibaldi_descrizionebig">Piazza Garibaldi è una delle piazze più grandi di Tivoli, un\'ampia area pubblica che si trova all\'ingresso della città caratterizzata dal verde, dalle aiuole dei giardini e dalle tre fontane centrali con i loro zampilli d\'acqua.\n
+    <string name="monumentixml_piazza_garibaldi_titolo">Piazza Garibaldi</string>
+    <string name="monumentixml_piazza_garibaldi_descrizione">Piazza Garibaldi è un ampio spazio pubblico situato vicino la Rocca Pia e l\'anfiteatro romano. È abbellita dai giardini e dall\'Arco dei Padri Costituenti, opera di Arnaldo Pomodoro.</string>
+    <string name="monumentixml_piazza_garibaldi_descrizionebig">Piazza Garibaldi è una delle piazze più grandi di Tivoli, un\'ampia area pubblica che si trova all\'ingresso della città caratterizzata dal verde, dalle aiuole dei giardini e dalle tre fontane centrali con i loro zampilli d\'acqua.\n
         Dedicata al cosiddetto Eroe dei Due Mondi, che qui giunse in fuga dai nemici dopo la caduta della Repubblica Romana, da questa piazza si può ammirare un bellissimo panorama su Roma e sulla campagna che circonda la città di Tivoli.\n
         A pochi passi da Piazza Garibaldi troviamo alcuni dei simboli storici e religiosi di Tivoli, come la Rocca Pia con il sottostante Anfiteatro di Bleso e la Chiesa di Santa Maria Maggiore.\n
         Nei pressi della piazza si trova anche il Convitto Nazionale Duca Amedeo di Savoia, luogo dove in passato la borghesia italiana mandava i propri figli per apprendere l\'educazione scolastica, oggi sede della Scuola Elementare e della Scuola Media. Menzione a parte va fatta per l\'Arco dei Padri Costituenti, preziosa scultura di Arnaldo Pomodoro realizzata nel 2009.
     </string>
-    <string name="monumenti_piazza_garibaldi_url">http://www.visittivoli.eu/piazze/piazza-garibaldi</string>
-    <string name="monumenti_piazza_garibaldi_tred">http://www.visittivoli.eu/virtual-tour/piazza-garibaldi/</string>
-    <string name="monumenti_piazza_garibaldi_maps"></string>
-    <string name="monumenti_piazza_garibaldi_gallery">
+    <string name="monumentixml_piazza_garibaldi_url">http://www.visittivoli.eu/piazze/piazza-garibaldi</string>
+    <string name="monumentixml_piazza_garibaldi_tred">http://www.visittivoli.eu/virtual-tour/piazza-garibaldi/</string>
+    <string name="monumentixml_piazza_garibaldi_maps"></string>
+    <string name="monumentixml_piazza_garibaldi_gallery">
         http://www.visittivoli.eu/images/piazze/anteprima-arco-con-scorcio-della-rocca-pia.jpg
         http://www.visittivoli.eu/images/piazze/anteprima-arco-dei-padri-costituenti-e-convitto-nazionale.jpg
         http://www.visittivoli.eu/images/piazze/anteprima-arco-dei-padri-costituenti.jpg
@@ -183,10 +183,10 @@
         http://www.visittivoli.eu/images/piazze/anteprima-veduta-di-piazza-garibaldi.jpg
         http://www.visittivoli.eu/images/piazze/anteprima-veduta-laterale-dell-arco-dei-padri-costituenti.jpg
     </string>
-    <string name="monumenti_piazza_garibaldi_categoria">Piazze</string>
-    <string name="monumenti_piazza_garibaldi_video"></string>
-    <drawable name="monumenti_piazza_garibaldi_fotosmall">@drawable/monumenti_piazza_garibaldi</drawable>
-    <drawable name="monumenti_piazza_garibaldi_fotobig">@drawable/monumenti_piazza_garibaldi_big</drawable>
+    <string name="monumentixml_piazza_garibaldi_categoria">Piazze</string>
+    <string name="monumentixml_piazza_garibaldi_video"></string>
+    <drawable name="monumentixml_piazza_garibaldi_fotosmall">@drawable/monumenti_piazza_garibaldi</drawable>
+    <drawable name="monumentixml_piazza_garibaldi_fotobig">@drawable/monumenti_piazza_garibaldi_big</drawable>
 
 
 
@@ -199,24 +199,24 @@
 
 
 
-    <string name="monumenti_ponte_gregoriano_titolo">Ponte Gregoriano</string>
-    <string name="monumenti_ponte_gregoriano_descrizione">Ponte Gregoriano collega il centro storico alla meravigliosa Villa Gregoriana. Voluto da papa Gregorio XVI, è anche scenario della processione della Madonna di Quintiliolo.</string>
-    <string name="monumenti_ponte_gregoriano_descrizionebig">Lo scenografico Ponte Gregoriano è una splendida passerella architettonica che collega il centro storico della città alla Villa Gregoriana.\n
+    <string name="monumentixml_ponte_gregoriano_titolo">Ponte Gregoriano</string>
+    <string name="monumentixml_ponte_gregoriano_descrizione">Ponte Gregoriano collega il centro storico alla meravigliosa Villa Gregoriana. Voluto da papa Gregorio XVI, è anche scenario della processione della Madonna di Quintiliolo.</string>
+    <string name="monumentixml_ponte_gregoriano_descrizionebig">Lo scenografico Ponte Gregoriano è una splendida passerella architettonica che collega il centro storico della città alla Villa Gregoriana.\n
         Fatto costruire da papa Gregorio XVI verso il 1834, la struttura, in travertino con un\'arcata unica che poggia su due piloni laterali, lega la sua storia a due eventi, il primo negativo risale al 27 maggio 1944, giorno in cui venne fatta saltare in aria dalle truppe tedesche in ritirata, il secondo all\'inaugurazione avvenuta la prima domenica di maggio dopo quella drammatica distruzione, con il passaggio trionfale della processione che portava l\'immagine della Madonna di Quintiliolo fino alla Cattedrale di San Lorenzo, da cui riparte per tornare indietro l\'8 settembre.\n
         Ancora oggi questa affascinante riproposizione religiosa richiama cristiani e turisti che assistono silenziosi alla processione ed al celebre rito della benedizione delle acque del fiume Aniene che avviene proprio sul Ponte Gregoriano.\n
         Dallo stesso ponte è possibile ammirare oltre alle splendide cascate di Villa Gregoriana, anche l\'antica acropoli di Tivoli con il Tempio di Vesta ed il Tempio della Sibilla.</string>
-    <string name="monumenti_ponte_gregoriano_url">http://www.visittivoli.eu/edifici-storici/ponte-gregoriano</string>
-    <string name="monumenti_ponte_gregoriano_maps">41.965545, 12.800222</string>
-    <string name="monumenti_ponte_gregoriano_gallery">
+    <string name="monumentixml_ponte_gregoriano_url">http://www.visittivoli.eu/edifici-storici/ponte-gregoriano</string>
+    <string name="monumentixml_ponte_gregoriano_maps">41.965545, 12.800222</string>
+    <string name="monumentixml_ponte_gregoriano_gallery">
         http://www.visittivoli.eu/images/edifici-storici/anteprima-cascatelle-di-villa-gregoriana.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-particolare-del-ponte-gregoriano.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-veduta-del-ponte-gregoriano-con-cascate.jpg
     </string>
-    <string name="monumenti_ponte_gregoriano_categoria">Edifici Storici</string>
-    <string name="monumenti_ponte_gregoriano_tred"></string>
-    <string name="monumenti_ponte_gregoriano_video"></string>
-    <drawable name="monumenti_ponte_gregoriano_fotosmall">@drawable/monumenti_ponte_gregoriano</drawable>
-    <drawable name="monumenti_ponte_gregoriano_fotobig">@drawable/monumenti_ponte_gregoriano_big</drawable>
+    <string name="monumentixml_ponte_gregoriano_categoria">Edifici Storici</string>
+    <string name="monumentixml_ponte_gregoriano_tred"></string>
+    <string name="monumentixml_ponte_gregoriano_video"></string>
+    <drawable name="monumentixml_ponte_gregoriano_fotosmall">@drawable/monumenti_ponte_gregoriano</drawable>
+    <drawable name="monumentixml_ponte_gregoriano_fotobig">@drawable/monumenti_ponte_gregoriano_big</drawable>
 
 
 
@@ -226,15 +226,15 @@
 
 
 
-    <string name="monumenti_rocca_pia_titolo">Rocca Pia</string>
-    <string name="monumenti_rocca_pia_descrizione">La Rocca Pia, voluta da papa Pio II Piccolomini, domina con le sue quattro torri circolari il centro storico della città e la campagna circostante. Affaccia sull\'antico anfiteatro romano.</string>
-    <string name="monumenti_rocca_pia_descrizionebig">Rocca Pia è il simbolo storico di Tivoli che troneggia a pochi passi dalla moderna  Piazza Garibaldi e dalla scultura di Arnoldo Pomodoro.\n
+    <string name="monumentixml_rocca_pia_titolo">Rocca Pia</string>
+    <string name="monumentixml_rocca_pia_descrizione">La Rocca Pia, voluta da papa Pio II Piccolomini, domina con le sue quattro torri circolari il centro storico della città e la campagna circostante. Affaccia sull\'antico anfiteatro romano.</string>
+    <string name="monumentixml_rocca_pia_descrizionebig">Rocca Pia è il simbolo storico di Tivoli che troneggia a pochi passi dalla moderna  Piazza Garibaldi e dalla scultura di Arnoldo Pomodoro.\n
         Fatta costruire da papa Pio II Piccolomini verso il 1461 sulla sommità di una collinetta, sia per controllare la città dall\'alto, sia per evitare eventuali insurrezioni popolari. La rocca ha una struttura quadrangolare con quattro torri circolari di altezza differente, dove la più alta raggiunge i 36,50 metri ed è livellata in adiacenza con l\'anfiteatro romano risalente al II secolo d.C., conosciuto anche come Anfiteatro di Bleso.\n
         Accessibile in passato attraverso un ponte levatoio, la Rocca Pia nell\'Ottocento venne utilizzata anche come carcere mandamentale, ed è rimasta tale fino al 1960.\n
         Oggi questa struttura è chiusa al pubblico e resta in attesa di una nuova destinazione. </string>
-    <string name="monumenti_rocca_pia_url">http://www.visittivoli.eu/edifici-storici/rocca-pia</string>
-    <string name="monumenti_rocca_pia_maps">41.959910, 12.798124</string>
-    <string name="monumenti_rocca_pia_gallery">
+    <string name="monumentixml_rocca_pia_url">http://www.visittivoli.eu/edifici-storici/rocca-pia</string>
+    <string name="monumentixml_rocca_pia_maps">41.959910, 12.798124</string>
+    <string name="monumentixml_rocca_pia_gallery">
         http://www.visittivoli.eu/images/edifici-storici/anteprima-pano-della-rocca.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-particolare-della-torre-circolare-della-rocca-pia.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-particolare-della-torre-circolare.jpg
@@ -248,11 +248,11 @@
         http://www.visittivoli.eu/images/edifici-storici/anteprima-TD3A0763.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-TD3A0819.jpg
     </string>
-    <string name="monumenti_rocca_pia_categoria">Edifici Storici</string>
-    <string name="monumenti_rocca_pia_tred">http://www.visittivoli.eu/virtual-tour/rocca-pia/</string>
-    <string name="monumenti_rocca_pia_video"></string>
-    <drawable name="monumenti_rocca_pia_fotosmall">@drawable/monumenti_rocca_pia</drawable>
-    <drawable name="monumenti_rocca_pia_fotobig">@drawable/monumenti_rocca_pia_big</drawable>
+    <string name="monumentixml_rocca_pia_categoria">Edifici Storici</string>
+    <string name="monumentixml_rocca_pia_tred">http://www.visittivoli.eu/virtual-tour/rocca-pia/</string>
+    <string name="monumentixml_rocca_pia_video"></string>
+    <drawable name="monumentixml_rocca_pia_fotosmall">@drawable/monumenti_rocca_pia</drawable>
+    <drawable name="monumentixml_rocca_pia_fotobig">@drawable/monumenti_rocca_pia_big</drawable>
 
 
 
@@ -263,19 +263,19 @@
 
 
 
-    <string name="monumenti_santuario_ercole_titolo">Santuario di Ercole Vincitore</string>
-    <string name="monumenti_santuario_ercole_descrizione">Il Santuario di Ercole vincitore, dedicato al dio Ercole, protettore dell\'antica Tibur Superbum, è considerato uno dei gioielli archeologici più belli della città.</string>
-    <string name="monumenti_santuario_ercole_descrizionebig">Il Santuario di Ercole vincitore era dedicato al dio protettore dell\'antica Tibur, e ricopriva una superficie molto vasta estesa ai piedi della città.\n
+    <string name="monumentixml_santuario_ercole_titolo">Santuario di Ercole Vincitore</string>
+    <string name="monumentixml_santuario_ercole_descrizione">Il Santuario di Ercole vincitore, dedicato al dio Ercole, protettore dell\'antica Tibur Superbum, è considerato uno dei gioielli archeologici più belli della città.</string>
+    <string name="monumentixml_santuario_ercole_descrizionebig">Il Santuario di Ercole vincitore era dedicato al dio protettore dell\'antica Tibur, e ricopriva una superficie molto vasta estesa ai piedi della città.\n
         La costruzione del complesso, durata all\'incirca una decina di anni, diede non pochi problemi agli architetti che la realizzarono, perchè dovettero prima scavare una via coperta sotto il santuario in modo da far passare l\'antica Tiburtina Valeria, la cosiddetta Via Tecta, poi furono costretti ad innalzare delle arcate per superare i burroni sul fiume Aniene.\n
         Originariamente il santuario occupava un\'area di 3.000 mq e si articolava in tre ambienti: un tempio, un teatro ed un\'enorme piazza che faceva da area sacra. Lo scopo principale del progetto era quello di colpire scenograficamente tutti coloro che giungevano a Tivoli da Roma, tanto era il suo splendore e la sua magnificenza (188 x 141 m), infatti la struttura utilizzata per le fondamenta si innalzava per circa 50 metri a strapiombo sul fiume Aniene.\n
         In passato all\'interno del santuario si trovava la statua di Ercole, dio venerato dai Salii, i quali organizzavano una cerimonia d\'onore durante le Idi di agosto, così come ci viene ricordato da Virgilio nell\'Eneide.\n
         L\'intera area del santuario, fino ad una cinquantina di anni fa, era occupata dalle Cartiere Tiburtine, stabilimenti industriali che trasformavano paglia e legno in varie qualità di carta grazie alla forza motrice prodotta dalle acque del vicino fiume Aniene.\n
         Grazie al meticoloso lavoro svolto in collaborazione con la Soprintendenza Archeologia del Lazio e dell\'Etruria Meridionale, il primo maggio del 2015 c\'è stata l\'apertura straordinaria al pubblico del santuario, in concomitanza con l\'inaugurazione di Expo 2015 e del 3230° anniversario della nascita di Tivoli, con lo scopo di rendere questo sito al centro della proposta culturale della città.\n
         Oggi questa struttura è chiusa al pubblico. </string>
-    <string name="monumenti_santuario_ercole_url">http://www.visittivoli.eu/archeologia/santuario-di-ercole-vincitore</string>
-    <string name="monumenti_santuario_ercole_tred">http://www.visittivoli.eu/virtual-tour/santuario-di-ercole-vincitore/</string>
-    <string name="monumenti_santuario_ercole_maps">41.964343, 12.793234</string>
-    <string name="monumenti_santuario_ercole_gallery">
+    <string name="monumentixml_santuario_ercole_url">http://www.visittivoli.eu/archeologia/santuario-di-ercole-vincitore</string>
+    <string name="monumentixml_santuario_ercole_tred">http://www.visittivoli.eu/virtual-tour/santuario-di-ercole-vincitore/</string>
+    <string name="monumentixml_santuario_ercole_maps">41.964343, 12.793234</string>
+    <string name="monumentixml_santuario_ercole_gallery">
         http://www.visittivoli.eu/images/archeologia/anteprima-TivoliChiama-ProcessoAGiulioCesare-SantuarioErcoleVincitore.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-antiche-mura-del-santuario-di-ercole-vincitore.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-antiche-mura-del-santuario-di-ercole.jpg
@@ -293,10 +293,10 @@
         http://www.visittivoli.eu/images/archeologia/anteprima-veduta-dell-anfiteatro.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-via-tecta.jpg
     </string>
-    <string name="monumenti_santuario_ercole_categoria">Archeologia</string>
-    <string name="monumenti_santuario_ercole_video"></string>
-    <drawable name="monumenti_santuario_ercole_fotosmall">@drawable/monumenti_santuario_ercole</drawable>
-    <drawable name="monumenti_santuario_ercole_fotobig">@drawable/monumenti_santuario_ercole_big</drawable>
+    <string name="monumentixml_santuario_ercole_categoria">Archeologia</string>
+    <string name="monumentixml_santuario_ercole_video"></string>
+    <drawable name="monumentixml_santuario_ercole_fotosmall">@drawable/monumenti_santuario_ercole</drawable>
+    <drawable name="monumentixml_santuario_ercole_fotobig">@drawable/monumenti_santuario_ercole_big</drawable>
 
 
 
@@ -307,13 +307,13 @@
 
 
 
-    <string name="monumenti_tempio_della_sibilla_titolo">Tempio della Sibilla</string>
-    <string name="monumenti_tempio_della_sibilla_descrizione">Il Tempio della Sibilla si trova sul punto più alto dell\'antica acropoli di Tivoli. Eretto intorno al II secolo d.C. è considerato uno dei più importanti resti archeologici della città.</string>
-    <string name="monumenti_tempio_della_sibilla_descrizionebig">Situato sul punto più alto dell\'acropoli della Tibur Superbum, l\'attuale Tivoli, il Tempio della Sibilla è un\'antica struttura di epoca romana che si innalza vicino al Tempio di Vesta.\n
+    <string name="monumentixml_tempio_della_sibilla_titolo">Tempio della Sibilla</string>
+    <string name="monumentixml_tempio_della_sibilla_descrizione">Il Tempio della Sibilla si trova sul punto più alto dell\'antica acropoli di Tivoli. Eretto intorno al II secolo d.C. è considerato uno dei più importanti resti archeologici della città.</string>
+    <string name="monumentixml_tempio_della_sibilla_descrizionebig">Situato sul punto più alto dell\'acropoli della Tibur Superbum, l\'attuale Tivoli, il Tempio della Sibilla è un\'antica struttura di epoca romana che si innalza vicino al Tempio di Vesta.\n
         Costruito intorno al II secolo a.C. con una caratteristica forma rettangolare, oggi offre una visuale spettacolare sia se visto dalla Piazza del Tempio di Vesta sia se ammirato dal suggestivo Ponte Gregoriano.</string>
-    <string name="monumenti_tempio_della_sibilla_url">http://www.visittivoli.eu/archeologia/tempio-della-sibilla</string>
-    <string name="monumenti_tempio_della_sibilla_tred"></string>
-    <string name="monumenti_tempio_della_sibilla_gallery">
+    <string name="monumentixml_tempio_della_sibilla_url">http://www.visittivoli.eu/archeologia/tempio-della-sibilla</string>
+    <string name="monumentixml_tempio_della_sibilla_tred"></string>
+    <string name="monumentixml_tempio_della_sibilla_gallery">
         http://www.visittivoli.eu/images/archeologia/anteprima-interno-del-tempio-della-sibilla.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-particolare-dell-interno-del-tempio.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-del-tempio-della-sibilla-e-di-vesta.jpg
@@ -322,11 +322,11 @@
         http://www.visittivoli.eu/images/archeologia/anteprima-veduta-del-tempio-della-sibilla-e-di-vesta.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-vista-del-tempio.jpg
     </string>
-    <string name="monumenti_tempio_della_sibilla_categoria">Archeologia</string>
-    <string name="monumenti_tempio_della_sibilla_maps">41.966772, 12.800841</string>
-    <string name="monumenti_tempio_della_sibilla_video"></string>
-    <drawable name="monumenti_tempio_della_sibilla_fotosmall">@drawable/monumenti_tempio_della_sibilla</drawable>
-    <drawable name="monumenti_tempio_della_sibilla_fotobig">@drawable/monumenti_tempio_della_sibilla_big</drawable>
+    <string name="monumentixml_tempio_della_sibilla_categoria">Archeologia</string>
+    <string name="monumentixml_tempio_della_sibilla_maps">41.966772, 12.800841</string>
+    <string name="monumentixml_tempio_della_sibilla_video"></string>
+    <drawable name="monumentixml_tempio_della_sibilla_fotosmall">@drawable/monumenti_tempio_della_sibilla</drawable>
+    <drawable name="monumentixml_tempio_della_sibilla_fotobig">@drawable/monumenti_tempio_della_sibilla_big</drawable>
 
 
 
@@ -339,16 +339,16 @@
 
 
 
-    <string name="monumenti_tempio_di_vesta_titolo">Tempio di Vesta</string>
-    <string name="monumenti_tempio_di_vesta_descrizione">Il Tempio di Vesta (I secolo a.C.) è uno dei monumenti archeologici più importanti di Tivoli. Situato sull\'Acropoli dell\'antica Tibur e dedicato a Vesta, la dea del focolare.</string>
-    <string name="monumenti_tempio_di_vesta_descrizionebig">Il Tempio di Vesta si trova a coronamento dell\'antica acropoli di Tivoli, adiacente all\'altrettanto importante Tempio della Sibilla.\n
+    <string name="monumentixml_tempio_di_vesta_titolo">Tempio di Vesta</string>
+    <string name="monumentixml_tempio_di_vesta_descrizione">Il Tempio di Vesta (I secolo a.C.) è uno dei monumenti archeologici più importanti di Tivoli. Situato sull\'Acropoli dell\'antica Tibur e dedicato a Vesta, la dea del focolare.</string>
+    <string name="monumentixml_tempio_di_vesta_descrizionebig">Il Tempio di Vesta si trova a coronamento dell\'antica acropoli di Tivoli, adiacente all\'altrettanto importante Tempio della Sibilla.\n
         Raggiungibile oltrepassando un cancello e visibile anche da Ponte Gregoriano, il tempio, risalente al I secolo a.C. è il monumento più conosciuto dell\'antica città di Tibur. E\' dedicato con molta probabilità a Vesta, la dea del focolare, il cui culto era affidato alle Vestali, o a Tiburno, l\'eroe che avrebbe dato il nome alla città. Oggi si presenta con una pianta rotonda caratterizzata da linee eleganti e dal suggestivo scenario paesaggistico che gli fa da scenografia. Nel corso dei secoli il Tempio di Vesta è diventato il soggetto più ritratto dagli artisti italiani e stranieri e dai ricchi aristocratici che nell\'Ottocento arrivavano a Tivoli per il cosiddetto Grand Tour.\n
     </string>
-    <string name="monumenti_tempio_di_vesta_url">http://www.visittivoli.eu/archeologia/tempio-di-vesta</string>
-    <string name="monumenti_tempio_di_vesta_maps">41.891685, 12.486194</string>
-    <string name="monumenti_tempio_di_vesta_tred">http://www.visittivoli.eu/virtual-tour/tempio-di-vesta/</string>
-    <string name="monumenti_tempio_di_vesta_video"></string>
-    <string name="monumenti_tempio_di_vesta_gallery">
+    <string name="monumentixml_tempio_di_vesta_url">http://www.visittivoli.eu/archeologia/tempio-di-vesta</string>
+    <string name="monumentixml_tempio_di_vesta_maps">41.891685, 12.486194</string>
+    <string name="monumentixml_tempio_di_vesta_tred">http://www.visittivoli.eu/virtual-tour/tempio-di-vesta/</string>
+    <string name="monumentixml_tempio_di_vesta_video"></string>
+    <string name="monumentixml_tempio_di_vesta_gallery">
         http://www.visittivoli.eu/images/archeologia/anteprima-panorama-con-veduta-del-tempio.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-del-colonnato.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-scorcio-del-tempio-di-vesta.jpg
@@ -358,9 +358,9 @@
         http://www.visittivoli.eu/images/archeologia/anteprima-veduta-posteriore-del-tempio.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-veuta-dentrale-del-tempio.jpg
     </string>
-    <string name="monumenti_tempio_di_vesta_categoria">Archeologia</string>
-    <drawable name="monumenti_tempio_di_vesta_fotosmall">@drawable/monumenti_tempio_di_vesta</drawable>
-    <drawable name="monumenti_tempio_di_vesta_fotobig">@drawable/monumenti_tempio_di_vesta_big</drawable>
+    <string name="monumentixml_tempio_di_vesta_categoria">Archeologia</string>
+    <drawable name="monumentixml_tempio_di_vesta_fotosmall">@drawable/monumenti_tempio_di_vesta</drawable>
+    <drawable name="monumentixml_tempio_di_vesta_fotobig">@drawable/monumenti_tempio_di_vesta_big</drawable>
 
 
 
@@ -371,17 +371,17 @@
 
 
 
-    <string name="monumenti_tomba_dei_plauzi_titolo">Tomba dei Plauzi</string>
-    <string name="monumenti_tomba_dei_plauzi_descrizione">La Tomba dei Plauzi, insieme al Ponte Lucano, è la porta d\'accesso all\'antica Tibur. La splendida torre cilindrica, la rende uno dei siti archeologici più importanti della città.</string>
-    <string name="monumenti_tomba_dei_plauzi_descrizionebig">Il Mausoleo dei Plauzi è uno dei siti archeologici più importanti di Tivoli, un\'antica torre circolare risalente al I secolo d.C. Situata non molto lontano dalla Villa di Adriano, Patrimonio Mondiale dell\'Umanità UNESCO, questo mausoleo, insieme al Ponte Lucano, rappresenta l\'accesso all\'antica Tibur Superbum.\n
+    <string name="monumentixml_tomba_dei_plauzi_titolo">Tomba dei Plauzi</string>
+    <string name="monumentixml_tomba_dei_plauzi_descrizione">La Tomba dei Plauzi, insieme al Ponte Lucano, è la porta d\'accesso all\'antica Tibur. La splendida torre cilindrica, la rende uno dei siti archeologici più importanti della città.</string>
+    <string name="monumentixml_tomba_dei_plauzi_descrizionebig">Il Mausoleo dei Plauzi è uno dei siti archeologici più importanti di Tivoli, un\'antica torre circolare risalente al I secolo d.C. Situata non molto lontano dalla Villa di Adriano, Patrimonio Mondiale dell\'Umanità UNESCO, questo mausoleo, insieme al Ponte Lucano, rappresenta l\'accesso all\'antica Tibur Superbum.\n
         Sviluppato su una base quadrangolare interrata sormontata da una torre circolare alta circa 35 metri, l\'interno è caratterizzato da un ambiente a forma di croce unito grazie ad un corridoio sferico, opera attribuita a Marco Plautio Silvano.\n
         Oggi il Mausoleo si presenta pieno di crepe, ricoperto da una fitta vegetazione selvaggia e parzialmente celato da un muro di contenimento costruito per bloccare gli straripamenti del vicino fiume Aniene.</string>
 
-    <string name="monumenti_tomba_dei_plauzi_url">http://www.visittivoli.eu/archeologia/tomba-dei-plauzi</string>
-    <string name="monumenti_tomba_dei_plauzi_tred">41.954583, 12.762467</string>
-    <string name="monumenti_tomba_dei_plauzi_maps"></string>
-    <string name="monumenti_tomba_dei_plauzi_video"></string>
-    <string name="monumenti_tomba_dei_plauzi_gallery">
+    <string name="monumentixml_tomba_dei_plauzi_url">http://www.visittivoli.eu/archeologia/tomba-dei-plauzi</string>
+    <string name="monumentixml_tomba_dei_plauzi_tred">41.954583, 12.762467</string>
+    <string name="monumentixml_tomba_dei_plauzi_maps"></string>
+    <string name="monumentixml_tomba_dei_plauzi_video"></string>
+    <string name="monumentixml_tomba_dei_plauzi_gallery">
         http://www.visittivoli.eu/images/archeologia/anteprima-tomba-dei-plauzi-e-ponte-lucano.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-tomba-dei-plauzi-vista-drone.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-veduta-aerea-della-tomba.jpg
@@ -389,9 +389,9 @@
         http://www.visittivoli.eu/images/archeologia/anteprima-veduta-dall-alto.jpg
         http://www.visittivoli.eu/images/archeologia/anteprima-veduta-laterale-tomba-dei-plauzi.jpg
     </string>
-    <string name="monumenti_tomba_dei_plauzi_categoria">Archeologia</string>
-    <drawable name="monumenti_tomba_dei_plauzi_fotosmall">@drawable/monumenti_tomba_dei_plauzi</drawable>
-    <drawable name="monumenti_tomba_dei_plauzi_fotobig">@drawable/monumenti_tomba_dei_plauzi_big</drawable>
+    <string name="monumentixml_tomba_dei_plauzi_categoria">Archeologia</string>
+    <drawable name="monumentixml_tomba_dei_plauzi_fotosmall">@drawable/monumenti_tomba_dei_plauzi</drawable>
+    <drawable name="monumentixml_tomba_dei_plauzi_fotobig">@drawable/monumenti_tomba_dei_plauzi_big</drawable>
 
 
 
@@ -401,9 +401,9 @@
 
 
 
-    <string name="monumenti_villa_adriana_titolo">Villa Adriana</string>
-    <string name="monumenti_villa_adriana_descrizione">Villa Adriana, Patrimonio Mondiale dell\'Umanità UNESCO, è il simbolo archeologico di Tivoli; antica dimora dell\'imperatore Adriano, testimonia la magnificenza dell\'Impero romano.</string>
-    <string name="monumenti_villa_adriana_descrizionebig">Villa Adriana a Tivoli è la testimonianza archeologica della grandezza dell\'antico Impero Romano, uno dei siti archeologici meglio mantenuto e più visitato d\'Italia.
+    <string name="monumentixml_villa_adriana_titolo">Villa Adriana</string>
+    <string name="monumentixml_villa_adriana_descrizione">Villa Adriana, Patrimonio Mondiale dell\'Umanità UNESCO, è il simbolo archeologico di Tivoli; antica dimora dell\'imperatore Adriano, testimonia la magnificenza dell\'Impero romano.</string>
+    <string name="monumentixml_villa_adriana_descrizionebig">Villa Adriana a Tivoli è la testimonianza archeologica della grandezza dell\'antico Impero Romano, uno dei siti archeologici meglio mantenuto e più visitato d\'Italia.
     Questo spiega perché l\'UNESCO l\'abbia inserita nel 1999 tra i Patrimoni Mondiali dell\'Umanità.\n
     Voluta dall\'Imperatore Adriano ai piedi dei Monti Tiburtini e costruita tra il 118 ed il 138 d.C., questa immensa dimora residenziale si estendeva per circa 120 ettari: si afferma comunemente che egli volle riprodurre nella sua villa i luoghi e i monumenti che più lo avevano colpito durante i suoi numerosi viaggi. Qui infatti erano presenti palazzi, terme, templi, caserme, teatri, giardini, fontane e ninfei. La villa è strutturata su due livelli, quello superiore diplomatico, silenzioso ed accogliente, mentre quello inferiore, riservato agli schiavi, dinamico e rumoroso.\n
     Oggi degli antichi fasti è possibile ammirare "soltanto" 40 ettari, che fortunatamente ancora certificano la magnificenza e l\'importanza del complesso. Alcuni degli ambienti sono stati costruiti per volere di Adriano e rappresentano le numerose province conquistate dall\'Impero Romano e visitate dall\'imperatore stesso:\n
@@ -415,11 +415,11 @@
     - la Biblioteca Greca e la Biblioteca Latina, ambienti del sapere.\n
     Di Grande rilievo il Teatro Marittimo, uno dei monumenti più noti e rappresentati di Villa Adriana e uno dei simboli dell\'unicità e della concezione innovativa dell\'impianto architettonico dell\'intero complesso residenziale. L\'Edificio prende il nome da un raffinato fregio figurato in marmo con soggetto marino, che ne decorava la trabeazione. Costituito da una forma circolare, sorretto da colonne ioniche e coperto da volta a botte, si riflette sull\'acqua di un ampio canale. Il Teatro Marittimo può essere identificato come una vera e propria domus, una sorta di residenza minore all\'interno della residenza imperiale.
 </string>
-    <string name="monumenti_villa_adriana_url">http://www.visittivoli.eu/le-ville/villa-adriana</string>
-    <string name="monumenti_villa_adriana_maps">41.942681, 12.774496</string>
-    <string name="monumenti_villa_adriana_tred">http://www.visittivoli.eu/virtual-tour/villa-adriana</string>
-    <string name="monumenti_villa_adriana_video"></string>
-    <string name="monumenti_villa_adriana_gallery">
+    <string name="monumentixml_villa_adriana_url">http://www.visittivoli.eu/le-ville/villa-adriana</string>
+    <string name="monumentixml_villa_adriana_maps">41.942681, 12.774496</string>
+    <string name="monumentixml_villa_adriana_tred">http://www.visittivoli.eu/virtual-tour/villa-adriana</string>
+    <string name="monumentixml_villa_adriana_video"></string>
+    <string name="monumentixml_villa_adriana_gallery">
         http://www.visittivoli.eu/images/le-ville/anteprima-antiche-mura-di-villa-adriana.jpg
         http://www.visittivoli.eu/images/le-ville/anteprima-antinoeion-con-le-cento-camerelle.jpg
         http://www.visittivoli.eu/images/le-ville/anteprima-canopo-di-villa-adriana.jpg
@@ -440,9 +440,9 @@
         http://www.visittivoli.eu/images/le-ville/anteprima-statua-di-villa-adriana.jpg
         http://www.visittivoli.eu/images/le-ville/anteprima-vista-villa-adriana.jpg
     </string>
-    <string name="monumenti_villa_adriana_categoria">Ville</string>
-    <drawable name="monumenti_villa_adriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
-    <drawable name="monumenti_villa_adriana_fotobig">@drawable/monumenti_villa_adriana_big</drawable>
+    <string name="monumentixml_villa_adriana_categoria">Ville</string>
+    <drawable name="monumentixml_villa_adriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
+    <drawable name="monumentixml_villa_adriana_fotobig">@drawable/monumenti_villa_adriana_big</drawable>
 
 
 
@@ -450,20 +450,20 @@
 
 
 
-    <string name="monumenti_villa_d_este_titolo">Villa d\'Este</string>
-    <string name="monumenti_villa_d_este_descrizione">Villa d\'Este è uno dei tesori di Tivoli, splendido esempio di architettura rinascimentale inserito dall\'UNESCO nella lista dei Patrimoni Mondiali dell\'Umanità.</string>
-    <string name="monumenti_villa_d_este_descrizionebig">Villa d\'Este è uno dei simboli del Rinascimento italiano, gioiello architettonico e scenografico di Tivoli dichiarato dall\'UNESCO Patrimonio Mondiale dell\'Umanità.\n
+    <string name="monumentixml_villa_d_este_titolo">Villa d\'Este</string>
+    <string name="monumentixml_villa_d_este_descrizione">Villa d\'Este è uno dei tesori di Tivoli, splendido esempio di architettura rinascimentale inserito dall\'UNESCO nella lista dei Patrimoni Mondiali dell\'Umanità.</string>
+    <string name="monumentixml_villa_d_este_descrizionebig">Villa d\'Este è uno dei simboli del Rinascimento italiano, gioiello architettonico e scenografico di Tivoli dichiarato dall\'UNESCO Patrimonio Mondiale dell\'Umanità.\n
     Oggi questo straordinario complesso è famoso in tutto il mondo per le splendide fontane che lo decorano, caratterizzate dai pregevoli e suggestivi giochi d\'acqua e per essere il "giardino all\'italiana" più bello d\'Europa.\n
     Voluta dal Cardinale Ippolito II d\'Este, storico governatore di Tivoli e figlio di Lucrezia Borgia, è opera dell\'ingegnoso architetto Pirro Logorio che, verso il 1550 diede il via ai lavori durati all\'incirca 20 anni, incontrando però numerosi problemi in corso d\'opera. Infatti l\'acqua che zampilla dalle numerose fontane e che ancora oggi si può ammirare nel massimo del suo splendore, viene presa direttamente dal fiume Aniene attraverso un canale sotterraneo lungo 600 metri.\n
     L\'intero complesso si estende per 4 ettari e comprende, oltre al palazzo residenziale, un giardino ornato da viali alberati e siepi, e da numerose fontane, vere e proprie opere d\'arte.\n
     Palazzo d\'Este è caratterizzato da un\'elegante facciata aperta dal cosiddetto Vialone, delimitato dalla Gran Loggia e dalla Fontana d\'Europa. Oltrepassando l\'ingresso si giunge ad una scalinata che porta ad un largo salone di rappresentanza, da qui si può arrivare direttamente agli affreschi dell\'Appartamento Nobile. Appena sotto il doppio loggiato a due ordini si trova un antico ninfeo che in passato custodiva la Fontana di Leda, conservata oggi alla Galleria Borghese di Roma. All\'interno dei tre piani del palazzo si sviluppano altri straordinari ambienti, come l\'Appartamento Vecchio o Superiore, la Sala delle Storie di Salomone e l\'Appartamento Inferiore, caratterizzato dal Salone della Fontanina e dall\'affresco di "Ercole Sassano".\n
     La maggior parte delle fontane esterne possono essere considerate dei teatri d\'acqua, come la Rometta, caratterizzata dalla scultura di Roma in trono, o l\'imponente Fontana dell\'Ovato, più comunemente chiamata Fontana di Tivoli, perla architettonica che conclude l\'altrettanto famoso Viale delle Cento Fontane. Di notevole interesse la Fontana del Bicchierone, opera di Gian Lorenzo Bernini e le cosiddette "fontane musicali", la Fontana degli Uccelli e la Fontana dell\'Organo, dotate di alcuni congegni azionati dall\'acqua che riproducono armonie musicali. Degna di nota invece la Fontana della Proserpina, composta da un ninfeo centrale protetto da due colonne tortili, pensata anticamente come la Fontana degli Imperatori. Più recente, ma altrettanto bella, è la Fontana del Nettuno, uno dei luoghi più fotografati da turisti e cittadini.
     </string>
-    <string name="monumenti_villa_d_este_url">http://www.visittivoli.eu/le-ville/villa-d-este</string>
-    <string name="monumenti_villa_d_este_maps">41.963268, 12.795826</string>
-    <string name="monumenti_villa_d_este_tred">http://www.visittivoli.eu/virtual-tour/villa-d-este/</string>
-    <string name="monumenti_villa_d_este_video"></string>
-    <string name="monumenti_villa_d_este_gallery">
+    <string name="monumentixml_villa_d_este_url">http://www.visittivoli.eu/le-ville/villa-d-este</string>
+    <string name="monumentixml_villa_d_este_maps">41.963268, 12.795826</string>
+    <string name="monumentixml_villa_d_este_tred">http://www.visittivoli.eu/virtual-tour/villa-d-este/</string>
+    <string name="monumentixml_villa_d_este_video"></string>
+    <string name="monumentixml_villa_d_este_gallery">
         http://www.visittivoli.eu/images/le-ville/anteprima-fontana-dei-draghi.jpg
         http://www.visittivoli.eu/images/le-ville/anteprima-fontana-del-nettuno.jpg
         http://www.visittivoli.eu/images/le-ville/anteprima-fontana-dell-organo.jpg
@@ -489,9 +489,9 @@
         http://www.visittivoli.eu/images/le-ville/anteprima-viale-delle-cento-fontane.jpg
         http://www.visittivoli.eu/images/le-ville/anteprima-viale-di-villa-d-este.jpg
     </string>
-    <string name="monumenti_villa_d_este_categoria">Ville</string>
-    <drawable name="monumenti_villa_d_este_fotosmall">@drawable/monumenti_villa_deste</drawable>
-    <drawable name="monumenti_villa_d_este_fotobig">@drawable/monumenti_villa_deste_big</drawable>
+    <string name="monumentixml_villa_d_este_categoria">Ville</string>
+    <drawable name="monumentixml_villa_d_este_fotosmall">@drawable/monumenti_villa_deste</drawable>
+    <drawable name="monumentixml_villa_d_este_fotobig">@drawable/monumenti_villa_deste_big</drawable>
 
 
 
@@ -501,17 +501,17 @@
 
 
 
-    <string name="monumenti_villa_gregoriana_titolo">Villa Gregoriana</string>
-    <string name="monumenti_villa_gregoriana_descrizione">Villa Gregoriana è la cartolina paesaggistica di Tivoli, un incantevole parco verde gestito dal FAI (Fondo Ambiente Italiano) e caratterizzato da boschi, grotte, sentieri e da una cascata.</string>
-    <string name="monumenti_villa_gregoriana_descrizionebig">Villa Gregoriana a Tivoli è un rosario di boschi, sentieri, cascate, grotte e vegetazione che si estende ai piedi dell\'antica acropoli, un suggestivo parco naturalistico immerso nel verde e situato a pochi passi da Roma.\n
+    <string name="monumentixml_villa_gregoriana_titolo">Villa Gregoriana</string>
+    <string name="monumentixml_villa_gregoriana_descrizione">Villa Gregoriana è la cartolina paesaggistica di Tivoli, un incantevole parco verde gestito dal FAI (Fondo Ambiente Italiano) e caratterizzato da boschi, grotte, sentieri e da una cascata.</string>
+    <string name="monumentixml_villa_gregoriana_descrizionebig">Villa Gregoriana a Tivoli è un rosario di boschi, sentieri, cascate, grotte e vegetazione che si estende ai piedi dell\'antica acropoli, un suggestivo parco naturalistico immerso nel verde e situato a pochi passi da Roma.\n
         Voluta da papa Gregorio XVI intorno al 1834, questo splendido luogo incontaminato fu meta imprescindibile di artisti ed aristocratici che nell\'Ottocento arrivarono nell\'antica "Tibur" per il famoso "Grand Tour".\n
         Dal 2005 l\'intero territorio della villa è sotto la tutela e la gestione del FAI (Fondo Ambiente Italiano) ed è considerato un unicum mondiale, luogo dove la natura e la costante opera dell\'uomo si fondono, tra straordinarie bellezze paesaggistiche ed i resti dell\'antica villa archeologica di Publio Manlio Vopisco.\n
         Villa Gregoriana è famosa in tutto il mondo sia per la Grande Cascata, scenografico e fotografato getto d\'acqua creato dal fiume Aniene, sia per le Grotte di Nettuno e Grotte delle Sirene, caverne erose dallo stesso fiume poste sotto la zona del Tempio di Vesta e raggiungibili attraverso una strada alberata ornata da una grande varietà di piante. Alla straordinaria villa si aggiunge la vicinanza del Ponte Gregoriano, affascinante struttura fatta costruire sempre da papa Gregorio XVI e che oggi collega il parco al centro storico di Tivoli. Da qui si può ammirare uno straordinario panorama della Valle dell\'Aniene e dell\'antica acropoli. </string>
-    <string name="monumenti_villa_gregoriana_url">http://www.visittivoli.eu/le-ville/villa-gregoriana</string>
-    <string name="monumenti_villa_gregoriana_tred"></string>
-    <string name="monumenti_villa_gregoriana_maps">41.965386, 12.801773</string>
-    <string name="monumenti_villa_gregoriana_video"></string>
-    <string name="monumenti_villa_gregoriana_gallery">
+    <string name="monumentixml_villa_gregoriana_url">http://www.visittivoli.eu/le-ville/villa-gregoriana</string>
+    <string name="monumentixml_villa_gregoriana_tred"></string>
+    <string name="monumentixml_villa_gregoriana_maps">41.965386, 12.801773</string>
+    <string name="monumentixml_villa_gregoriana_video"></string>
+    <string name="monumentixml_villa_gregoriana_gallery">
         http://www.visittivoli.eu/images/le-ville/anteprima-antica-statua-di-villa-gregoriana.jpg
         http://www.visittivoli.eu/images/le-ville/anteprima-antiche-mura-della-villa.jpg
         http://www.visittivoli.eu/images/le-ville/anteprima-cascata-del-fiume-aniene.jpg
@@ -532,9 +532,9 @@
         http://www.visittivoli.eu/images/le-ville/anteprima-viale-di-villa-gregoriana.jpg
         http://www.visittivoli.eu/images/le-ville/anteprima-vialetto-di-villa-gregoriana.jpg
     </string>
-    <string name="monumenti_villa_gregoriana_categoria">Ville</string>
-    <drawable name="monumenti_villa_gregoriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
-    <drawable name="monumenti_villa_gregoriana_fotobig">@drawable/monumenti_villa_gregoriana_big</drawable>
+    <string name="monumentixml_villa_gregoriana_categoria">Ville</string>
+    <drawable name="monumentixml_villa_gregoriana_fotosmall">@drawable/monumenti_villa_gregoriana</drawable>
+    <drawable name="monumentixml_villa_gregoriana_fotobig">@drawable/monumenti_villa_gregoriana_big</drawable>
 
 
 
@@ -545,17 +545,17 @@
 
 
 
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_titolo">Cattedrale di San Lorenzo</string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizione">La Cattedrale di San Lorenzo o Duomo di Tivoli, situato nell\'omonima piazza, a due passi dall\'antica Mensa Ponderaria, è il luogo di culto più rappresentativo della città.</string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_descrizionebig">La Cattedrale di San Lorenzo o Duomo di Tivoli è la massima espressione religiosa della città.
+    <string name="monumentixml_Cattedrale_di_San_Lorenzo_titolo">Cattedrale di San Lorenzo</string>
+    <string name="monumentixml_Cattedrale_di_San_Lorenzo_descrizione">La Cattedrale di San Lorenzo o Duomo di Tivoli, situato nell\'omonima piazza, a due passi dall\'antica Mensa Ponderaria, è il luogo di culto più rappresentativo della città.</string>
+    <string name="monumentixml_Cattedrale_di_San_Lorenzo_descrizionebig">La Cattedrale di San Lorenzo o Duomo di Tivoli è la massima espressione religiosa della città.
         Eretta nel medioevo e situata nel centro storico della città, a due passi dalla Mensa ponderaria. Il Duomo è rinomato per il suo meraviglioso campanile romanico alto 45 metri che domina l\'omonima piazza sottostante. Un\'antica leggenda associa la costruzione del duomo all\'imperatore Costantino, la realizzazione sarebbe avvenuta sopra le rovine dell\'antico Foro Tiburtino e l\'abside originale è ancora visibile all\'esterno dell\'edificio religioso.
         All\'interno della struttura ci sono tre capolavori degni di attenzione ammirabili ancora oggi: il "gruppo ligneo della Deposizione", capolavoro d\'arte romanica risalente al XIII secolo e conservato nella IV cappella della navata destra, la Custodia d\'argento del XV secolo lavorata a sbalzo, ed il "Trittico del Salvatore" raffigurante il Cristo, la Vergine e San Giovanni Evangelista, databile al XII secolo e custodito nella terza cappella della navata sinistra.
     </string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_url">http://www.visittivoli.eu/luoghi-di-culto/cattedrale-di-san-lorenzo</string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_tred">http://www.visittivoli.eu/virtual-tour/cattedrale-di-san-lorenzo/</string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_maps">41.965527, 12.796840</string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_video"></string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_gallery">
+    <string name="monumentixml_Cattedrale_di_San_Lorenzo_url">http://www.visittivoli.eu/luoghi-di-culto/cattedrale-di-san-lorenzo</string>
+    <string name="monumentixml_Cattedrale_di_San_Lorenzo_tred">http://www.visittivoli.eu/virtual-tour/cattedrale-di-san-lorenzo/</string>
+    <string name="monumentixml_Cattedrale_di_San_Lorenzo_maps">41.965527, 12.796840</string>
+    <string name="monumentixml_Cattedrale_di_San_Lorenzo_video"></string>
+    <string name="monumentixml_Cattedrale_di_San_Lorenzo_gallery">
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-affresco-della-trinita.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-cappella-laterale-della-cattedrale-di-san-lorenzo-martire.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-cornice-con-raggi.jpg
@@ -571,9 +571,9 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-veduta-dal-basso-della-torre-campanaria.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-veduta-laterale-della-cattedrale-di-san-lorenzo-martire.jpg
     </string>
-    <string name="monumenti_Cattedrale_di_San_Lorenzo_categoria">Luoghi di Culto</string>
-    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotosmall">@drawable/monumenti_cattedrale_san_lorenzo</drawable>
-    <drawable name="monumenti_Cattedrale_di_San_Lorenzo_fotobig">@drawable/monumenti_cattedrale_san_lorenzo_big</drawable>
+    <string name="monumentixml_Cattedrale_di_San_Lorenzo_categoria">Luoghi di Culto</string>
+    <drawable name="monumentixml_Cattedrale_di_San_Lorenzo_fotosmall">@drawable/monumenti_cattedrale_san_lorenzo</drawable>
+    <drawable name="monumentixml_Cattedrale_di_San_Lorenzo_fotobig">@drawable/monumenti_cattedrale_san_lorenzo_big</drawable>
 
 
 
@@ -585,18 +585,18 @@
 
 
 
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_titolo">Chiesa della Maria SS. di Quintiliolo</string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_descrizione">Il Santuario della Madonna di Quintiliolo si trova fuori dal centro storico di Tivoli e custodisce al suo interno l\'icona religiosa risalente al XIII secolo che la ritrae.</string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_descrizionebig">Il Santuario della Madonna di Quintiliolo si trova appena fuori il centro storico di Tivoli, su di una collina immersa nel verde degli ulivi.
+    <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_titolo">Chiesa della Maria SS. di Quintiliolo</string>
+    <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_descrizione">Il Santuario della Madonna di Quintiliolo si trova fuori dal centro storico di Tivoli e custodisce al suo interno l\'icona religiosa risalente al XIII secolo che la ritrae.</string>
+    <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_descrizionebig">Il Santuario della Madonna di Quintiliolo si trova appena fuori il centro storico di Tivoli, su di una collina immersa nel verde degli ulivi.
         Il nome Quintiliolo deriverebbe dal territorio in possesso della famiglia dei Quintili, qui infatti si trovava la loro villa, al margine della quale venne eretta la chiesa prima ed il convento poi. Questo splendido complesso religioso è dedicato alla sacra immagine della Vergine Maria, ritrovata, secondo una leggenda tiburtina, da un contadino che lavorava la terra con l\'aratro.
         Esternamente la chiesa si presenta con uno stile neoclassico diviso in due ordini e dominato da un alto campanile che svetta sul paesaggio circostante e sulla zona delle ex cartiere tiburtine, nei pressi del Santuario di Ercole vincitore. L\'interno è a navata unica con due cappelle laterali, in quella di sinistra è conservato il dipinto della Madonna Regina dei Santi, settecentesca opera di Francesco Serbucci da Tivoli.
         Ma è sull\'altare maggiore che si trova il simbolo del santuario, l\'Icona della Madonna di Quintiliolo, immagine sacra risalente al XIII secolo ed ancora oggi venerata dai tiburtini, raffigurante la Vergine in trono che sorregge Gesù bambino con il ginocchio sinistro. Ogni prima domenica di maggio questa splendida figura cristiana viene portata in processione dal santuario fino alla Cattedrale di San Lorenzo, dove resta fino all\'8 settembre, giorno in cui fa ritorno al santuario.
     </string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-della-maria-ss-di-quintiliolo</string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_tred"></string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_maps">41.971038, 12.792553</string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_video"></string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_gallery">
+    <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-della-maria-ss-di-quintiliolo</string>
+    <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_tred"></string>
+    <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_maps">41.971038, 12.792553</string>
+    <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_video"></string>
+    <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_gallery">
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-facciata-della-chiesa-della-maria-ss-di-quintiliolo.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-scorcio-della-chiesa-con-vista-del-chiostro.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-veduta-area-del-santuario.jpg
@@ -604,9 +604,9 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-vista-della-chiesa.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-vista-panoramica-della-chiesa.jpg
     </string>
-    <string name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_categoria">Luoghi di Culto</string>
-    <drawable name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_fotosmall">@drawable/monumenti_chiesa_maria_ss_quintiliolo</drawable>
-    <drawable name="monumenti_Chiesa_della_Maria_SS_di_Quintiliolo_fotobig">@drawable/monumenti_chiesa_maria_ss_quintiliolo_big</drawable>
+    <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_categoria">Luoghi di Culto</string>
+    <drawable name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_fotosmall">@drawable/monumenti_chiesa_maria_ss_quintiliolo</drawable>
+    <drawable name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_fotobig">@drawable/monumenti_chiesa_maria_ss_quintiliolo_big</drawable>
 
 
 
@@ -616,17 +616,17 @@
 
 
 
-    <string name="monumenti_Chiesa_di_San_Biagio_titolo">Chiesa di San Biagio</string>
-    <string name="monumenti_Chiesa_di_San_Biagio_descrizione">La Chiesa di San Biagio, costruita verso la fine del Trecento, conserva l\'affresco della Crocifissione risalente al 1200 ed il busto della Madonna con il Bambino.</string>
-    <string name="monumenti_Chiesa_di_San_Biagio_descrizionebig">La Chiesa di San Biagio di Tivoli fu ultimata da papa Bonifacio IX verso la fine del 1300 e si trova nella centrale Piazza del Plebiscito, spazio pubblico che decise l\'annessione della Città di Tivoli al regno d\'Italia.
+    <string name="monumentixml_Chiesa_di_San_Biagio_titolo">Chiesa di San Biagio</string>
+    <string name="monumentixml_Chiesa_di_San_Biagio_descrizione">La Chiesa di San Biagio, costruita verso la fine del Trecento, conserva l\'affresco della Crocifissione risalente al 1200 ed il busto della Madonna con il Bambino.</string>
+    <string name="monumentixml_Chiesa_di_San_Biagio_descrizionebig">La Chiesa di San Biagio di Tivoli fu ultimata da papa Bonifacio IX verso la fine del 1300 e si trova nella centrale Piazza del Plebiscito, spazio pubblico che decise l\'annessione della Città di Tivoli al regno d\'Italia.
         Esternamente questo luogo di culto si presenta con una facciata suddivisa in due ordini, in quella inferiore troviamo un portale centrale rialzato da tre gradini, mentre quella superiore è abbellita da un rosone centrale situato tra un orologio romano ed una meridiana. L\'interno della chiesa si presenta a navata unica caratterizzata da un altare maggiore, dalle cappelle laterali e dalle grandi finestre visibili nel presbiterio. Tra le opere conservate all\'interno delle cappelle troviamo la settecentesca tela di "Santa Caterina d\'Alessandria", il quadro del "Santissimo Nome di Gesù", ed il Fonte Battesimale. Notevoli anche gli affreschi raffiguranti la "Gloria di San Tommaso d\'Aquino" e la "Madonna in Gloria"che sorregge Gesù Bambino situati vicino la sagrestia. Nel timpano si può ammirare il busto marmoreo della "Madonna con il Bambino", nel presbiterio invece il bellissimo affresco della Crocifissione risalente alla seconda metà del 1200.
         Menzione a parte va fatta per i resti dell\'antico chiostro, oggi infatti dell\'antica struttura restano visibili soltanto le quattro arcate a tutto sesto poggiate sui pilastri affrescati. </string>
-    <string name="monumenti_Chiesa_di_San_Biagio_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-biagio</string>
-    <string name="monumenti_Chiesa_di_San_Biagio_tred"></string>
+    <string name="monumentixml_Chiesa_di_San_Biagio_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-biagio</string>
+    <string name="monumentixml_Chiesa_di_San_Biagio_tred"></string>
     <!--latitudine-longitudine-->
-    <string name="monumenti_Chiesa_di_San_Biagio_maps">41.963303, 12.799990</string>
-    <string name="monumenti_Chiesa_di_San_Biagio_video"></string>
-    <string name="monumenti_Chiesa_di_San_Biagio_gallery">
+    <string name="monumentixml_Chiesa_di_San_Biagio_maps">41.963303, 12.799990</string>
+    <string name="monumentixml_Chiesa_di_San_Biagio_video"></string>
+    <string name="monumentixml_Chiesa_di_San_Biagio_gallery">
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-cappella-con-statua-di-padre-pio.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-cappella-laterale-della-chiesa-di-san-biagio.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-esterno-della-chiesa-di-san-biagio.jpg
@@ -642,34 +642,34 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-statua-di-santa-caterina-da-siena.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-vetrate-decorate-dell-abside.jpg
     </string>
-    <string name="monumenti_Chiesa_di_San_Biagio_categoria">Luoghi di culto</string>
-    <drawable name="monumenti_Chiesa_di_San_Biagio_fotosmall">@drawable/monumenti_chiesa_san_biagio</drawable>
-    <drawable name="monumenti_Chiesa_di_San_Biagio_fotobig">@drawable/monumenti_chiesa_san_biagio_big</drawable>
+    <string name="monumentixml_Chiesa_di_San_Biagio_categoria">Luoghi di culto</string>
+    <drawable name="monumentixml_Chiesa_di_San_Biagio_fotosmall">@drawable/monumenti_chiesa_san_biagio</drawable>
+    <drawable name="monumentixml_Chiesa_di_San_Biagio_fotobig">@drawable/monumenti_chiesa_san_biagio_big</drawable>
 
 
 
 
 
 
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_titolo">Chiesa di San Pietro alla Carità</string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizione">La Chiesa di San Pietro alla Carità di Tivoli, costruita in stile romanico sui resti di un\'antica villa romana, è caratterizzata da una facciata in mattoni e da uno splendido campanile.</string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_descrizionebig">La Chiesa di Santa Maria Maggiore o più comunemente di San Francesco, è, insieme al Duomo di Tivoli, il luogo di culto più importante e probabilmente più bello della città.
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_titolo">Chiesa di San Pietro alla Carità</string>
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_descrizione">La Chiesa di San Pietro alla Carità di Tivoli, costruita in stile romanico sui resti di un\'antica villa romana, è caratterizzata da una facciata in mattoni e da uno splendido campanile.</string>
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_descrizionebig">La Chiesa di Santa Maria Maggiore o più comunemente di San Francesco, è, insieme al Duomo di Tivoli, il luogo di culto più importante e probabilmente più bello della città.
         Eretta su Piazza Trento per volere di papa Simplicio, è annessa all\'antico convento, sede dei frati benedettini di Farfa, ed è adiacente all\'ingresso di Villa d\'Este.
         La chiesa si presenta esternamente con una meravigliosa facciata caratterizzata da un portale gotico in marmo, opera di Angelo da Tivoli, sormontato da un elegante rosone a raggi. Stupendo anche il campanile che si innalza sul lato sinistro della chiesa, realizzato con mattoni rossi e molto simile al campanile della Cattedrale di San Lorenzo.
         Tra le opere più importanti presenti all\'interno della struttura troviamo, oltre alla "Tomba di Ippolito II d\'Este", storico governatore di Tivoli sepolto nel presbiterio, un crocefisso risalente al XV secolo; il "Polittico della Vergine"; il pavimento cosmatesco realizzato intorno al XIII secolo; la "tavola con la "Vergine orante"; la "tavola di "Sant\'Antonio da Padova", e l\'affresco della "Madonna con Bambino" racchiusa nel tabernacolo rinascimentale.
         Ogni 14 agosto, nella piazza antistante la chiesa, si svolge la cosiddetta Festa dell\'Inchinata, rito religioso durante il quale l\'immagine del Santissimo Salvatore si incontra con la statua della Madonna delle Grazie, dando vita ad un suggestivo inchino reciproco.</string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-pietro-alla-carita</string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_tred"></string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_maps">41.963944, 12.797062</string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_video"></string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_gallery">
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-pietro-alla-carita</string>
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_tred"></string>
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_maps">41.963944, 12.797062</string>
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_video"></string>
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_gallery">
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-del-portale-di-san-pietro-alla-carita.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-portale-della-chiesa-di-san-pietro-alla-carita.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-torre-campanaria-della-chiesa.jpg
     </string>
-    <string name="monumenti_Chiesa_di_San_Pietro_alla_Carità_categoria">Luoghi di culto</string>
-    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotosmall">@drawable/monumenti_chiesa_san_pietro_carita</drawable>
-    <drawable name="monumenti_Chiesa_di_San_Pietro_alla_Carità_fotobig">@drawable/monumenti_chiesa_san_pietro_carita_big</drawable>
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_categoria">Luoghi di culto</string>
+    <drawable name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_fotosmall">@drawable/monumenti_chiesa_san_pietro_carita</drawable>
+    <drawable name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_fotobig">@drawable/monumenti_chiesa_san_pietro_carita_big</drawable>
 
 
 
@@ -680,17 +680,17 @@
 
 
 
-    <string name="monumenti_Chiesa_di_San_Silvestro_titolo">Chiesa di San Silvestro</string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_descrizione">La Chiesa di San Silvestro è stata costruita nel XII secolo e si trova nell\'omonima piazza di Tivoli, su Via del Colle, nucleo del centro storico della città.</string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_descrizionebig">La Chiesa di San Silvestro è uno dei luoghi di culto più belli di Tivoli.
+    <string name="monumentixml_Chiesa_di_San_Silvestro_titolo">Chiesa di San Silvestro</string>
+    <string name="monumentixml_Chiesa_di_San_Silvestro_descrizione">La Chiesa di San Silvestro è stata costruita nel XII secolo e si trova nell\'omonima piazza di Tivoli, su Via del Colle, nucleo del centro storico della città.</string>
+    <string name="monumentixml_Chiesa_di_San_Silvestro_descrizionebig">La Chiesa di San Silvestro è uno dei luoghi di culto più belli di Tivoli.
         Situata nell’omonima piazza, su Via del Colle, la sua costruzione risalirebbe al XI-XII secolo, ed è legata a papa Silvestro.
         Caratterizzata originariamente da tre navate con due file di 12 colonne in marmo, successivamente murate le prime e vendute le seconde, oggi si presenta con uno stile romanico lavorato su una facciata ornata da un portale con architrave e da tre finestre centrali. Questo luogo è molto amato dai cittadini di Tivoli, infatti viene spesso scelto come luogo per le celebrazioni di matrimoni ed altre ricorrenze.
         All’interno della Chiesa di San Silvestro, nell\'abside, sono ancora ben conservati alcuni affreschi risalenti al XII secolo, uno nella parte superiore raffigurante il “Cristo che porge il rotolo della legga a San Pietro”, l\'altro in quella inferiore che riporta alcune scene della vita di San Silvestro legate alla conversione dell’imperatore Costantino. </string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-silvestro</string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_tred">http://www.visittivoli.eu/virtual-tour/chiesa-di-san-silvestro/</string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_maps">41.964407, 12.795011</string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_video"></string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_gallery">
+    <string name="monumentixml_Chiesa_di_San_Silvestro_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-san-silvestro</string>
+    <string name="monumentixml_Chiesa_di_San_Silvestro_tred">http://www.visittivoli.eu/virtual-tour/chiesa-di-san-silvestro/</string>
+    <string name="monumentixml_Chiesa_di_San_Silvestro_maps">41.964407, 12.795011</string>
+    <string name="monumentixml_Chiesa_di_San_Silvestro_video"></string>
+    <string name="monumentixml_Chiesa_di_San_Silvestro_gallery">
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-altare-della-chiesa-di-san-silvestro.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-altare-ed-abside-affrescato.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-chiesa-di-san-silvestro.jpg
@@ -703,9 +703,9 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-pano-cripta.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-della-facciata.jpg
     </string>
-    <string name="monumenti_Chiesa_di_San_Silvestro_categoria">Luoghi di culto</string>
-    <drawable name="monumenti_Chiesa_di_San_Silvestro_fotosmall">@drawable/monumenti_chiesa_san_silvestro</drawable>
-    <drawable name="monumenti_Chiesa_di_San_Silvestro_fotobig">@drawable/monumenti_chiesa_san_silvestro_big</drawable>
+    <string name="monumentixml_Chiesa_di_San_Silvestro_categoria">Luoghi di culto</string>
+    <drawable name="monumentixml_Chiesa_di_San_Silvestro_fotosmall">@drawable/monumenti_chiesa_san_silvestro</drawable>
+    <drawable name="monumentixml_Chiesa_di_San_Silvestro_fotobig">@drawable/monumenti_chiesa_san_silvestro_big</drawable>
 
 
 
@@ -716,16 +716,16 @@
 
 
 
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_titolo">Chiesa di Santa Maria Maggiore</string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_descrizione">La Chiesa di Santa Maria Maggiore o di San Francesco, insieme all\'annesso convento è considerata uno dei luoghi di culto più belli della città.</string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_descrizionebig">Danneggiata durante i bombardamenti del 1944 e restaurata intorno al 1951, la Chiesa di San Pietro alla Carità o della Carità è caratterizzata da uno splendido stile romanico che la rende con molta probabilità uno dei luoghi di culto più belli di Tivoli.
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_titolo">Chiesa di Santa Maria Maggiore</string>
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_descrizione">La Chiesa di Santa Maria Maggiore o di San Francesco, insieme all\'annesso convento è considerata uno dei luoghi di culto più belli della città.</string>
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_descrizionebig">Danneggiata durante i bombardamenti del 1944 e restaurata intorno al 1951, la Chiesa di San Pietro alla Carità o della Carità è caratterizzata da uno splendido stile romanico che la rende con molta probabilità uno dei luoghi di culto più belli di Tivoli.
         Costruita sui resti di un’antica villa romana e voluta dal tiburtino papa Simplicio, si presenta con una facciata in cortina muraria di mattoni caratterizzata nella parte inferiore da tre portali che conducono direttamente alle tre navate interne e nella parte superiore da due finestre laterali ed un occhio centrale. Meraviglioso il campanile che svetta su tutta l’area circostante, abbellito da cornici e da finestre a tutto sesto sviluppate su due piani.
         L’interno è caratterizzato da un pavimento cosmatesco che va ad ornare la navata centrale e da alcune opere d’arte situate nei pressi dell’abside e dell’altare maggiore, come il “Cristo crocifisso tra la Madonna e San Giovanni Evangelista”, risalente al XIV secolo e la “Madonna in trono fra i santi Pietro e Paolo”, risalente al XIII secolo.</string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-santa-maria-maggiore</string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_tred">http://www.visittivoli.eu/virtual-tour/chiesa-di-santa-maria-maggiore/</string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_maps">41.962182, 12.796640</string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_video"></string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_gallery">
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_url">http://www.visittivoli.eu/luoghi-di-culto/chiesa-di-santa-maria-maggiore</string>
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_tred">http://www.visittivoli.eu/virtual-tour/chiesa-di-santa-maria-maggiore/</string>
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_maps">41.962182, 12.796640</string>
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_video"></string>
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_gallery">
          http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-altare-maggiore.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-candeliere-della-chiesa-di-santa-maria-maggiore.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-facciata-della-chiesa-di-santa-maria-maggiore.jpg
@@ -739,9 +739,9 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-torre-campanaria-della-chiesa-di-santa-maria-maggiore.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-trittico-della-chiesa-di-santa-maria-maggiore.jpg
     </string>
-    <string name="monumenti_Chiesa_di_Santa_Maria_Maggiore_categoria">Luoghi di culto</string>
-    <drawable name="monumenti_Chiesa_di_Santa_Maria_Maggiore_fotosmall">@drawable/monumenti_chiesa_santa_maria_maggiore</drawable>
-    <drawable name="monumenti_Chiesa_di_Santa_Maria_Maggiore_fotobig">@drawable/monumenti_chiesa_santa_maria_maggiore_big</drawable>
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_categoria">Luoghi di culto</string>
+    <drawable name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_fotosmall">@drawable/monumenti_chiesa_santa_maria_maggiore</drawable>
+    <drawable name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_fotobig">@drawable/monumenti_chiesa_santa_maria_maggiore_big</drawable>
 
 
 
@@ -751,24 +751,24 @@
 
 
 
-    <string name="monumenti_Casa_Gotica_titolo">Casa Gotica</string>
-    <string name="monumenti_Casa_Gotica_descrizione">La Casa Gotica è uno degli edifici più suggestivi della città, caratterizzata esternamente da una scenografica scala abbellita da un\'arcata in muratura e da alcune merlature.</string>
-    <string name="monumenti_Casa_Gotica_descrizionebig">Una delle più suggestive architetture di Tivoli è la cosiddetta Casa Gotica, abitazione tardo-medievale risalente al XIII secolo.
+    <string name="monumentixml_Casa_Gotica_titolo">Casa Gotica</string>
+    <string name="monumentixml_Casa_Gotica_descrizione">La Casa Gotica è uno degli edifici più suggestivi della città, caratterizzata esternamente da una scenografica scala abbellita da un\'arcata in muratura e da alcune merlature.</string>
+    <string name="monumentixml_Casa_Gotica_descrizionebig">Una delle più suggestive architetture di Tivoli è la cosiddetta Casa Gotica, abitazione tardo-medievale risalente al XIII secolo.
         La struttura, costruita in tufo con inserti in travertino, affaccia su via Campitelli, ed ha un ingresso raggiungibile attraverso una scenografica scala esterna, il cosiddetto profferlo, caratterizzata da alcune merlature a da un\'arcata in muratura con edicola. La Casa Gotica si sviluppa su tre piani, il piano terra utilizzato in passato come bottega, il primo piano raggiungibile dalla scala esterna, ed il secondo piano raggiungibile da una scala interna.
         La bellezza di questa abitazione risiede non solo nell\'estetica, ma soprattutto negli elementi stilistici utilizzati con semplicità ed in maniera scrupolosa. Oggi nei pressi del cortile della Casa Gotica è possibile ammirare una splendida fontana che riprende perfettamente lo stile di Villa d\'Este.</string>
-    <string name="monumenti_Casa_Gotica_tred"></string>
-    <string name="monumenti_Casa_Gotica_url">http://www.visittivoli.eu/edifici-storici/casa-gotica</string>
-    <string name="monumenti_Casa_Gotica_maps">41.964525, 12.795709</string>
-    <string name="monumenti_Casa_Gotica_video"></string>
-    <string name="monumenti_Casa_Gotica_gallery">
+    <string name="monumentixml_Casa_Gotica_tred"></string>
+    <string name="monumentixml_Casa_Gotica_url">http://www.visittivoli.eu/edifici-storici/casa-gotica</string>
+    <string name="monumentixml_Casa_Gotica_maps">41.964525, 12.795709</string>
+    <string name="monumentixml_Casa_Gotica_video"></string>
+    <string name="monumentixml_Casa_Gotica_gallery">
         http://www.visittivoli.eu/images/edifici-storici/anteprima-antica-colonna.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-scorcio-dalla-casa-gotica.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-veduta-della-casa-gotica.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-veduta-della-scala.jpg
     </string>
-    <string name="monumenti_Casa_Gotica_categoria">Edifici Storici</string>
-    <drawable name="monumenti_Casa_Gotica_fotosmall">@drawable/monumenti_casa_gotica</drawable>
-    <drawable name="monumenti_Casa_Gotica_fotobig">@drawable/monumenti_casa_gotica_big</drawable>
+    <string name="monumentixml_Casa_Gotica_categoria">Edifici Storici</string>
+    <drawable name="monumentixml_Casa_Gotica_fotosmall">@drawable/monumenti_casa_gotica</drawable>
+    <drawable name="monumentixml_Casa_Gotica_fotobig">@drawable/monumenti_casa_gotica_big</drawable>
 
 
 
@@ -779,18 +779,18 @@
 
 
 
-    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_titolo">Palazzo della Missione Complesso Mauro Macera</string>
-    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_descrizione">Palazzo della Missione torna a svolgere la funzione di spazio museale, per la conservazione e la promozione del patrimonio storico e artistico di Tivoli.</string>
-    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_descrizionebig">In occasione del Giubileo Santo della Misericordia, indetto da Papa Francesco per mezzo della Bolla Pontificia Misericordia Vultus, ricorrente nel cinquantesimo della fine del Concilio Vaticano II, la città di Tivoli ha inaugurato il 22 dicembre 2015 il Museo Civico al Palazzo della Missione, con la mostra "Il Giubileo, percorsi della misericordia a Tivoli".
+    <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_titolo">Palazzo della Missione Complesso Mauro Macera</string>
+    <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_descrizione">Palazzo della Missione torna a svolgere la funzione di spazio museale, per la conservazione e la promozione del patrimonio storico e artistico di Tivoli.</string>
+    <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_descrizionebig">In occasione del Giubileo Santo della Misericordia, indetto da Papa Francesco per mezzo della Bolla Pontificia Misericordia Vultus, ricorrente nel cinquantesimo della fine del Concilio Vaticano II, la città di Tivoli ha inaugurato il 22 dicembre 2015 il Museo Civico al Palazzo della Missione, con la mostra "Il Giubileo, percorsi della misericordia a Tivoli".
         L\'edificio settecentesco della Missione è stato sede prima dei Missionari di San Vincenzo De\' Paoli, poi del Carcere minorile e, dopo il terribile bombardamento del maggio del 1944, ricovero degli sfollati e dei senzatetto.
         Il Museo di Tivoli si apre con un allestimento temporaneo destinato a celebrare il Giubileo , che avrà la durata di un anno, così come la mostra: per questa straordinaria occasione la Diocesi di Tivoli, nella persona del Vescovo Mauro Parmeggiani, ha generosamente concesso di poter esporre l\'eccezionale Deposizione lignea della Cattedrale di Tivoli, forse l\'opera d\'arte più importante conservata in città: il Gruppo, datato ai primi decenni del XIII secolo, è uno degli esempi più rilevanti della scultura lignea medievale italiana.
         Riguardanti il Giubileo anche i libri esposti all\'interno del Museo Civico, provenienti dal patrimonio, raro e prezioso, del comune di Tivoli custodito nel Fondo antico della Biblioteca Comunale, costituita nel 1773; gli argomenti illustrati, di carattere giubilare, riguardano indizioni, ritualità, pellegrinaggi, descrizione dei luoghi sacri, reliquie, cerimonie, episodi particolari; si espongono, tra gli altri, due importantissimi documenti tiburtini: una bolla pontificia e una lettera del Cardinale Ippolito d\'Este.
         Da oggi, pertanto, grazie a tutti coloro che nel corso degli anni vi si sono adoperati, il complesso della Missione tornerà finalmente a svolgere un importante ruolo nella vita della città, quale spazio museale per la conservazione e la promozione del patrimonio storico e artistico di Tivoli, che avvia da qui la sua piena valorizzazione.</string>
-    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_url">http://www.visittivoli.eu/edifici-storici/palazzo-della-missione</string>
-    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_tred"></string>
-    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_maps">41.964028, 12.797562</string>
-    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_video">https://youtu.be/gouY0F5Rcc4</string>
-    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_gallery">
+    <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_url">http://www.visittivoli.eu/edifici-storici/palazzo-della-missione</string>
+    <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_tred"></string>
+    <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_maps">41.964028, 12.797562</string>
+    <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_video">https://youtu.be/gouY0F5Rcc4</string>
+    <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_gallery">
         http://www.visittivoli.eu/images/edifici-storici/anteprima-esposizione-interna-palazzo-della-missione.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-esposizione-interna.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-esposizione-libri-interna-complesso-mauro-macera.jpg
@@ -802,9 +802,9 @@
         http://www.visittivoli.eu/images/edifici-storici/anteprima-interno-museo-civico.jpg
         http://www.visittivoli.eu/images/edifici-storici/anteprima-libro-in-esposizione-museo-civico.jpg
     </string>
-    <string name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_categoria">Edifici Storici</string>
-    <drawable name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_fotosmall">@drawable/monumenti_palazzo_missione</drawable>
-    <drawable name="monumenti_Palazzo_della_Missione_Complesso_Mauro_Macera_fotobig">@drawable/monumenti_palazzo_missione_big</drawable>
+    <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_categoria">Edifici Storici</string>
+    <drawable name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_fotosmall">@drawable/monumenti_palazzo_missione</drawable>
+    <drawable name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_fotobig">@drawable/monumenti_palazzo_missione_big</drawable>
 
 
 

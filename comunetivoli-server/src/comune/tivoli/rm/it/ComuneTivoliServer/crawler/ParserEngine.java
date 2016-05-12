@@ -15,7 +15,8 @@ import java.util.*;
  * Created by stefano on 27/03/16.
  */
 public class ParserEngine {
-    static final String baseUrl = "http://www.comune.tivoli.rm.it/";
+    public static final String baseUrl = "http://www.comune.tivoli.rm.it/";
+    private static final String MODE = "SITE";//"SITE" "PRINT"
 
     /**
      * estrae il numero di pagina da una url del genere:
@@ -59,7 +60,7 @@ public class ParserEngine {
         return sb.toString();
     }
 
-    public static NotiziaWWWComuneTivoli extractNewsFromPage(String baseUrl, String relativePathID) throws IOException {
+    public static NotiziaWWWComuneTivoli extractNewsFromPage_printVersion(String baseUrl, String relativePathID) throws IOException {
         //versione stampabile
         String urlPrint = composeUrl(baseUrl, relativePathID, "/print");
         String urlOriginale = composeUrl(baseUrl, relativePathID);
@@ -67,6 +68,45 @@ public class ParserEngine {
         final Document parse = Jsoup.parse(new URL(urlPrint), 10000);
         final Elements title_centro = parse.getElementsByClass("title");
         final Elements content = parse.getElementsByClass("content");
+
+        final StringBuilder titolo = new StringBuilder();
+        for (Element t : title_centro) {
+            titolo.append(t.html()).append(" ");
+        }
+
+        final StringBuilder contenuto = new StringBuilder();
+        for (Element t : content) {
+            contenuto.append(t.html()).append(" ");
+        }
+
+        final String titoloNormalizzato = CommonTextUtil.normalize_UTF8__to__ASCII(Jsoup.parse("<html><body>" + titolo.toString().trim() + "</html></body>").body().text());
+        final String htmlOriginale = String.format("<html><head>\n<base href=\"http://www.comune.tivoli.rm.it/\">\n</head><body>%s</body></html>", contenuto.toString());
+        final String htmlNormalizzato = CommonTextUtil.normalizeTextFromHtml(htmlOriginale);
+
+        final Document doc = Jsoup.parse(htmlNormalizzato);
+        final String textNormalizzato = CommonTextUtil.normalize_UTF8__to__ASCII(doc.body().text());
+
+        //done: manca ricerca data nel documento
+        final Date date = ExtractDateNewsJavaccParser.extractDate(textNormalizzato);
+
+        return new NotiziaWWWComuneTivoli(
+                titoloNormalizzato,
+                htmlNormalizzato, textNormalizzato,
+                urlPrint, urlOriginale,
+                date,
+                relativePathID);
+
+    }
+
+    public static NotiziaWWWComuneTivoli extractNewsFromPage_siteVersion(String baseUrl, String relativePathID) throws IOException {
+        //versione stampabile
+        String urlPrint = composeUrl(baseUrl, relativePathID);
+        String urlOriginale = composeUrl(baseUrl, relativePathID);
+        System.out.println("Download " + urlPrint + "( id " + relativePathID + ")");
+        final Document parse = Jsoup.parse(new URL(urlPrint), 10000);
+        final Elements title_centro = parse.getElementsByClass("title_centro");
+        final Element main = parse.getElementById("main");
+        final Elements content = main.getElementsByClass("content");
 
         final StringBuilder titolo = new StringBuilder();
         for (Element t : title_centro) {
@@ -126,9 +166,14 @@ public class ParserEngine {
 
         for (String urk : allLinkArticoli) {
 //            System.out.println("=============================================");
-            final NotiziaWWWComuneTivoli n = extractNewsFromPage(baseUrl, urk);
-            pagine.add(n);
-            //          System.out.println(n);
+            if (MODE.equals("PRINT")) {
+                final NotiziaWWWComuneTivoli n = extractNewsFromPage_printVersion(baseUrl, urk);
+                pagine.add(n);
+            } else {
+                final NotiziaWWWComuneTivoli n = extractNewsFromPage_siteVersion(baseUrl, urk);
+                pagine.add(n);
+            }
+
         }
         return pagine;
     }

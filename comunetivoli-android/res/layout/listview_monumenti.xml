@@ -20,14 +20,14 @@
             android:text="Descrizione"
             android:id="@+id/monumenti_descrizione"
             android:layout_toEndOf="@+id/monumenti_image"
-            android:padding="10dp" android:gravity="fill_horizontal" android:layout_below="@+id/monumenti_image"
+            android:padding="5dp" android:gravity="fill_horizontal" android:layout_below="@+id/monumenti_image"
             android:layout_alignParentStart="true"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/monumenti_image"
             android:src="@drawable/monumenti_mensa_ponderaria"
-            android:paddingBottom="10dp" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"
             android:layout_marginTop="5dp"/>
     <ImageView
             android:layout_width="wrap_content"

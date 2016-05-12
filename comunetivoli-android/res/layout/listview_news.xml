@@ -6,7 +6,7 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Titolo"
+            android:text="Titolo\nseconda"
             android:id="@+id/txt_titolo" android:layout_alignParentStart="true"
             android:layout_toStartOf="@+id/imageView6" android:textSize="@dimen/app_textsize_sottotitolo"
             android:textColor="@color/template_colorblu" android:textStyle="bold" android:padding="5dp"
@@ -14,10 +14,11 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Data"
+            android:text="12/02/2016"
             android:id="@+id/txt_data"
-            android:textSize="@dimen/app_textsize_normale"
-            android:layout_alignParentStart="true" android:paddingLeft="20dp" android:layout_below="@+id/txt_titolo"/>
+            android:textSize="10dp"
+            android:layout_alignBottom="@+id/txt_titolo"
+            android:layout_toEndOf="@+id/txt_titolo" android:gravity="center"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +26,7 @@
             android:id="@+id/txt_descrizione"
             android:textSize="@dimen/app_textsize_normale"
             android:layout_alignParentStart="true" android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="false" android:layout_below="@+id/txt_data"/>
+            android:layout_alignParentBottom="false" android:layout_below="@+id/txt_data" android:padding="5dp"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,5 +35,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView6" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
-            android:src="@drawable/icona_down_arrow_red_50x25" android:paddingTop="5dp"/>
+            android:src="@drawable/icona_down_arrow_red_50x25" android:paddingTop="5dp" android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
 </RelativeLayout>

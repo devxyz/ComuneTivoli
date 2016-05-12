@@ -3,26 +3,23 @@ package comune.tivoli.rm.it.ComuneTivoli;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
+import comune.tivoli.rm.it.ComuneTivoli.util.WebViewUtil;
 
 /**
  * fatto: rimuovere pulsante per link esterno, sostituirlo con pressione sul titolo
  * done: aggiungere progress bar di caricamento
- * todo: gestire progress caricamento (si blocca con visite 3d)
+ * done: gestire progress caricamento (si blocca con visite 3d) - NON USARE SETTING DELLA CACHE PER EVITARE IL BLOCCO!!!!
  */
 // TODO: 10/05/16 - verifica correttezza OK
 public class WebActivity extends Activity {
@@ -55,7 +52,7 @@ public class WebActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         dati = new WebActivityData(savedInstanceState, getIntent());
-        TemplateUtil.inizializzaActivity(this,  dati.menu, R.layout.web_activity, R.layout.web_activity_decorated);
+        TemplateUtil.inizializzaActivity(this, dati.menu, R.layout.web_activity, R.layout.web_activity_decorated);
 
         label_titolo = (TextView) findViewById(R.id.web_titolo);
         www = (WebView) findViewById(R.id.web_www);
@@ -70,41 +67,13 @@ public class WebActivity extends Activity {
         www.getSettings().setSupportZoom(true);
         www.getSettings().setJavaScriptEnabled(true);
         www.getSettings().setSupportZoom(true);
-        www.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+
+        //www.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);//DONE: NO SE si vuole accedere alle pagine 3d di tivoli
+
         www.getSettings().setLoadWithOverviewMode(true);
+
         //www.getSettings().setUseWideViewPort(true);
-        www.setWebChromeClient(
-                new WebChromeClient() {
-                    public void onProgressChanged(WebView view, int progress) {
-                        bar.setIndeterminate(false);
-                        bar.setProgress(progress);
-                    }
-                }
-        );
-
-        www.setWebViewClient(new WebViewClient() {
-
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-
-            @Override
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                super.onPageStarted(view, url, favicon);
-                bar.setVisibility(View.VISIBLE);
-                bar.setIndeterminate(true);
-            }
-
-
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-                bar.setVisibility(View.GONE);
-            }
-        });
-
+        WebViewUtil.webViewProgressBarLoader(www, bar);
 
         www.loadUrl(dati.url);
 
