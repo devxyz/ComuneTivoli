@@ -56,13 +56,15 @@ public class MonumentiComuneListAdapter extends BaseAdapter {
             listItem = layoutInflater.inflate(R.layout.listview_monumenti, null);
         }
 
-        TextView monumenti_titolo= (TextView) listItem.findViewById(R.id.monumenti_titolo);
-        TextView monumenti_descrizione= (TextView) listItem.findViewById(R.id.monumenti_descrizione);
-        ImageView monumenti_image= (ImageView) listItem.findViewById(R.id.monumenti_image);
+        TextView monumenti_categoria = (TextView) listItem.findViewById(R.id.monumenti_categoria);
+        TextView monumenti_titolo = (TextView) listItem.findViewById(R.id.monumenti_titolo);
+        TextView monumenti_descrizione = (TextView) listItem.findViewById(R.id.monumenti_descrizione);
+        ImageView monumenti_image = (ImageView) listItem.findViewById(R.id.monumenti_image);
 
         final MonumentiComune mc = monumenti.get(position);
         monumenti_descrizione.setText(mc.descrizione);
         monumenti_titolo.setText(mc.titolo);
+        monumenti_categoria.setText(mc.categoria);
 
         monumenti_image.setImageDrawable(activity.getResources().getDrawable(mc.foto_small));
 

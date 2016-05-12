@@ -41,8 +41,7 @@ public class ContattiActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ContattiComune cc = contatti.get(position);
-                Intent i = ContattiDettagliActivity.preparaIntent(ContattiActivity.this, cc.titolo, cc.descrizione, cc.telefono,
-                        cc.indirizzo, cc.email, cc.getLongitude(), cc.getLatitude(), cc.img);
+                Intent i = ContattiDettagliActivity.preparaIntent(ContattiActivity.this, cc);
                 startActivity(i);
             }
         });

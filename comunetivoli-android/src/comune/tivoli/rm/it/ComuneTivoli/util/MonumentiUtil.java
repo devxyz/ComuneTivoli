@@ -5,7 +5,6 @@ import comune.tivoli.rm.it.ComuneTivoli.R;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.TreeSet;
 
@@ -13,8 +12,6 @@ import java.util.TreeSet;
  * todo: aumentare la dimensione delle immagini "big", portandola ad almeno 400 pixel di larghezza
  */
 public class MonumentiUtil {
-    private static ArrayList<MonumentiComune> monumenti;
-
     public static List<String> estraiCategorie(ArrayList<MonumentiComune> a) {
         TreeSet<String> r = new TreeSet<>();
         for (MonumentiComune monumentiComune : a) {
@@ -23,15 +20,20 @@ public class MonumentiUtil {
         return new ArrayList<>(r);
     }
 
-    public static List<MonumentiComune> elencoMonumenti(Activity a) {
-        if (monumenti != null) {
-            return Collections.unmodifiableList(monumenti);
-        }
+    public static MonumentiComune findById(List<MonumentiComune> a, int id) {
 
+        for (MonumentiComune monumentiComune : a) {
+            if (monumentiComune.id == id) return monumentiComune;
+        }
+        return null;
+    }
+
+    public static List<MonumentiComune> elencoMonumenti(Activity a) {
+        ArrayList<MonumentiComune> monumenti;
         monumenti = new ArrayList<>();
         //monumentixml_Casa_Gotica
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_Casa_Gotica_titolo),
+                1, a.getResources().getString(R.string.monumentixml_Casa_Gotica_titolo),
                 a.getResources().getString(R.string.monumentixml_Casa_Gotica_descrizione),
                 a.getResources().getString(R.string.monumentixml_Casa_Gotica_descrizionebig),
                 (R.drawable.monumentixml_Casa_Gotica_fotosmall),
@@ -45,7 +47,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_Cattedrale_di_San_Lorenzo
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_Cattedrale_di_San_Lorenzo_titolo),
+                2, a.getResources().getString(R.string.monumentixml_Cattedrale_di_San_Lorenzo_titolo),
                 a.getResources().getString(R.string.monumentixml_Cattedrale_di_San_Lorenzo_descrizione),
                 a.getResources().getString(R.string.monumentixml_Cattedrale_di_San_Lorenzo_descrizionebig),
                 (R.drawable.monumentixml_Cattedrale_di_San_Lorenzo_fotosmall),
@@ -59,7 +61,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_titolo),
+                3, a.getResources().getString(R.string.monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_titolo),
                 a.getResources().getString(R.string.monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_descrizione),
                 a.getResources().getString(R.string.monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_descrizionebig),
                 (R.drawable.monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_fotosmall),
@@ -73,7 +75,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_Chiesa_di_San_Biagio
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Biagio_titolo),
+                4, a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Biagio_titolo),
                 a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Biagio_descrizione),
                 a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Biagio_descrizionebig),
                 (R.drawable.monumentixml_Chiesa_di_San_Biagio_fotosmall),
@@ -87,7 +89,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_Chiesa_di_San_Pietro_alla_Carità
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Pietro_alla_Carità_titolo),
+                5, a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Pietro_alla_Carità_titolo),
                 a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Pietro_alla_Carità_descrizione),
                 a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Pietro_alla_Carità_descrizionebig),
                 (R.drawable.monumentixml_Chiesa_di_San_Pietro_alla_Carità_fotosmall),
@@ -101,7 +103,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_Chiesa_di_San_Silvestro
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Silvestro_titolo),
+                6, a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Silvestro_titolo),
                 a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Silvestro_descrizione),
                 a.getResources().getString(R.string.monumentixml_Chiesa_di_San_Silvestro_descrizionebig),
                 (R.drawable.monumentixml_Chiesa_di_San_Silvestro_fotosmall),
@@ -115,7 +117,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_Chiesa_di_Santa_Maria_Maggiore
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_Chiesa_di_Santa_Maria_Maggiore_titolo),
+                7, a.getResources().getString(R.string.monumentixml_Chiesa_di_Santa_Maria_Maggiore_titolo),
                 a.getResources().getString(R.string.monumentixml_Chiesa_di_Santa_Maria_Maggiore_descrizione),
                 a.getResources().getString(R.string.monumentixml_Chiesa_di_Santa_Maria_Maggiore_descrizionebig),
                 (R.drawable.monumentixml_Chiesa_di_Santa_Maria_Maggiore_fotosmall),
@@ -129,7 +131,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_titolo),
+                8, a.getResources().getString(R.string.monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_titolo),
                 a.getResources().getString(R.string.monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_descrizione),
                 a.getResources().getString(R.string.monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_descrizionebig),
                 (R.drawable.monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_fotosmall),
@@ -143,7 +145,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_acquedotti
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_acquedotti_titolo),
+                9, a.getResources().getString(R.string.monumentixml_acquedotti_titolo),
                 a.getResources().getString(R.string.monumentixml_acquedotti_descrizione),
                 a.getResources().getString(R.string.monumentixml_acquedotti_descrizionebig),
                 (R.drawable.monumentixml_acquedotti_fotosmall),
@@ -157,7 +159,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_anfiteatro
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_anfiteatro_titolo),
+                10, a.getResources().getString(R.string.monumentixml_anfiteatro_titolo),
                 a.getResources().getString(R.string.monumentixml_anfiteatro_descrizione),
                 a.getResources().getString(R.string.monumentixml_anfiteatro_descrizionebig),
                 (R.drawable.monumentixml_anfiteatro_fotosmall),
@@ -171,7 +173,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_arcata_dell_acquedotto
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_arcata_dell_acquedotto_titolo),
+                11, a.getResources().getString(R.string.monumentixml_arcata_dell_acquedotto_titolo),
                 a.getResources().getString(R.string.monumentixml_arcata_dell_acquedotto_descrizione),
                 a.getResources().getString(R.string.monumentixml_arcata_dell_acquedotto_descrizionebig),
                 (R.drawable.monumentixml_arcata_dell_acquedotto_fotosmall),
@@ -185,7 +187,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_mensa_ponderaria
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_mensa_ponderaria_titolo),
+                12, a.getResources().getString(R.string.monumentixml_mensa_ponderaria_titolo),
                 a.getResources().getString(R.string.monumentixml_mensa_ponderaria_descrizione),
                 a.getResources().getString(R.string.monumentixml_mensa_ponderaria_descrizionebig),
                 (R.drawable.monumentixml_mensa_ponderaria_fotosmall),
@@ -199,7 +201,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_piazza_campitelli
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_piazza_campitelli_titolo),
+                13, a.getResources().getString(R.string.monumentixml_piazza_campitelli_titolo),
                 a.getResources().getString(R.string.monumentixml_piazza_campitelli_descrizione),
                 a.getResources().getString(R.string.monumentixml_piazza_campitelli_descrizionebig),
                 (R.drawable.monumentixml_piazza_campitelli_fotosmall),
@@ -213,7 +215,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_piazza_garibaldi
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_piazza_garibaldi_titolo),
+                14, a.getResources().getString(R.string.monumentixml_piazza_garibaldi_titolo),
                 a.getResources().getString(R.string.monumentixml_piazza_garibaldi_descrizione),
                 a.getResources().getString(R.string.monumentixml_piazza_garibaldi_descrizionebig),
                 (R.drawable.monumentixml_piazza_garibaldi_fotosmall),
@@ -227,7 +229,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_ponte_gregoriano
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_ponte_gregoriano_titolo),
+                15, a.getResources().getString(R.string.monumentixml_ponte_gregoriano_titolo),
                 a.getResources().getString(R.string.monumentixml_ponte_gregoriano_descrizione),
                 a.getResources().getString(R.string.monumentixml_ponte_gregoriano_descrizionebig),
                 (R.drawable.monumentixml_ponte_gregoriano_fotosmall),
@@ -241,7 +243,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_rocca_pia
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_rocca_pia_titolo),
+                16, a.getResources().getString(R.string.monumentixml_rocca_pia_titolo),
                 a.getResources().getString(R.string.monumentixml_rocca_pia_descrizione),
                 a.getResources().getString(R.string.monumentixml_rocca_pia_descrizionebig),
                 (R.drawable.monumentixml_rocca_pia_fotosmall),
@@ -255,7 +257,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_santuario_ercole
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_santuario_ercole_titolo),
+                17, a.getResources().getString(R.string.monumentixml_santuario_ercole_titolo),
                 a.getResources().getString(R.string.monumentixml_santuario_ercole_descrizione),
                 a.getResources().getString(R.string.monumentixml_santuario_ercole_descrizionebig),
                 (R.drawable.monumentixml_santuario_ercole_fotosmall),
@@ -269,7 +271,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_tempio_della_sibilla
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_tempio_della_sibilla_titolo),
+                18, a.getResources().getString(R.string.monumentixml_tempio_della_sibilla_titolo),
                 a.getResources().getString(R.string.monumentixml_tempio_della_sibilla_descrizione),
                 a.getResources().getString(R.string.monumentixml_tempio_della_sibilla_descrizionebig),
                 (R.drawable.monumentixml_tempio_della_sibilla_fotosmall),
@@ -283,7 +285,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_tempio_di_vesta
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_tempio_di_vesta_titolo),
+                19, a.getResources().getString(R.string.monumentixml_tempio_di_vesta_titolo),
                 a.getResources().getString(R.string.monumentixml_tempio_di_vesta_descrizione),
                 a.getResources().getString(R.string.monumentixml_tempio_di_vesta_descrizionebig),
                 (R.drawable.monumentixml_tempio_di_vesta_fotosmall),
@@ -297,7 +299,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_tomba_dei_plauzi
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_tomba_dei_plauzi_titolo),
+                20, a.getResources().getString(R.string.monumentixml_tomba_dei_plauzi_titolo),
                 a.getResources().getString(R.string.monumentixml_tomba_dei_plauzi_descrizione),
                 a.getResources().getString(R.string.monumentixml_tomba_dei_plauzi_descrizionebig),
                 (R.drawable.monumentixml_tomba_dei_plauzi_fotosmall),
@@ -311,7 +313,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_villa_adriana
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_villa_adriana_titolo),
+                21, a.getResources().getString(R.string.monumentixml_villa_adriana_titolo),
                 a.getResources().getString(R.string.monumentixml_villa_adriana_descrizione),
                 a.getResources().getString(R.string.monumentixml_villa_adriana_descrizionebig),
                 (R.drawable.monumentixml_villa_adriana_fotosmall),
@@ -325,7 +327,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_villa_d_este
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_villa_d_este_titolo),
+                22, a.getResources().getString(R.string.monumentixml_villa_d_este_titolo),
                 a.getResources().getString(R.string.monumentixml_villa_d_este_descrizione),
                 a.getResources().getString(R.string.monumentixml_villa_d_este_descrizionebig),
                 (R.drawable.monumentixml_villa_d_este_fotosmall),
@@ -339,7 +341,7 @@ public class MonumentiUtil {
         ));
         //monumentixml_villa_gregoriana
         monumenti.add(new MonumentiComune(
-                a.getResources().getString(R.string.monumentixml_villa_gregoriana_titolo),
+                23, a.getResources().getString(R.string.monumentixml_villa_gregoriana_titolo),
                 a.getResources().getString(R.string.monumentixml_villa_gregoriana_descrizione),
                 a.getResources().getString(R.string.monumentixml_villa_gregoriana_descrizionebig),
                 (R.drawable.monumentixml_villa_gregoriana_fotosmall),

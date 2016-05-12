@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.android.gms.maps.GoogleMap;
 import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
+import comune.tivoli.rm.it.ComuneTivoli.model.ContattiComune;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
@@ -19,7 +20,7 @@ import java.util.List;
 
 /**
  * Created by millozzi.stefano on 15/03/2016.
- *  todo:inserire le immagini buone
+ * todo:inserire le immagini buone
  */
 
 /**
@@ -39,6 +40,11 @@ public class MonumentiDettagliActivity extends Activity {
     ImageButton foto_btn;
     private MonumentiDettagliActivityData dati;
 
+    public static Intent preparaIntent(Activity caller, MonumentiComune c) {
+        MonumentiDettagliActivityData dati = new MonumentiDettagliActivityData(c);
+        return dati.toIntent(caller);
+    }
+
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -48,7 +54,7 @@ public class MonumentiDettagliActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this,"*"+ "Dettagli", R.layout.monumenti_dettagli_activity, R.layout.monumenti_dettagli_activity_decorated);
+        TemplateUtil.inizializzaActivity(this, "*" + "Dettagli", R.layout.monumenti_dettagli_activity, R.layout.monumenti_dettagli_activity_decorated);
         dati = new MonumentiDettagliActivityData(savedInstanceState, getIntent());
 
 
@@ -64,7 +70,7 @@ public class MonumentiDettagliActivity extends Activity {
         try {
             //DialogUtil.openInfoDialog(this, "debug", "Posizione " + position);
             List<MonumentiComune> mm = MonumentiUtil.elencoMonumenti(this);
-            final MonumentiComune monumento = mm.get(dati.posizione);
+            final MonumentiComune monumento = mm.get(dati.id);
             title_text.setText(monumento.titolo);
             dettagli_text.setText(monumento.descrizione_big);
             final Drawable foto_big = getResources().getDrawable(monumento.foto_big);
@@ -126,26 +132,30 @@ public class MonumentiDettagliActivity extends Activity {
             }
 
         } catch (Throwable e) {
-            DialogUtil.openErrorDialog(this, "Errore", "Errore inatteso " + dati.posizione, e);
+            DialogUtil.openErrorDialog(this, "Errore", "Errore inatteso " + dati.id, e);
         }
 
 
     }
 
     public static class MonumentiDettagliActivityData {
-        public static final String LABEL_POSIZIONE = "posizione";
-        public final int posizione;
+        public static final String LABEL_ID_MONUMENTO = "id";
+        public final int id;
 
         public MonumentiDettagliActivityData(Bundle savedInstanceState, Intent i) {
-            posizione = IntentUtil.getExtraInt(i, savedInstanceState, LABEL_POSIZIONE, 0);
+            id = IntentUtil.getExtraInt(i, savedInstanceState, LABEL_ID_MONUMENTO, 0);
         }
 
-        public MonumentiDettagliActivityData(int posizione) {
-            this.posizione = posizione;
+        public MonumentiDettagliActivityData(MonumentiComune m) {
+            this.id = m.id;
+        }
+
+        public MonumentiComune get(List<MonumentiComune> mm) {
+            return MonumentiUtil.findById(mm, id);
         }
 
         public void saveTo(Bundle b) {
-            b.putInt(LABEL_POSIZIONE, posizione);
+            b.putInt(LABEL_ID_MONUMENTO, id);
         }
 
         public Intent toIntent(Activity a) {

@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/news_listview"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/edit_search_news"/>
+                android:layout_below="@+id/edit_search_news" android:longClickable="true"/>
     </LinearLayout>
 </RelativeLayout>
     <ImageButton

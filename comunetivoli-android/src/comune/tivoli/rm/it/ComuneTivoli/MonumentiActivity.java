@@ -11,7 +11,8 @@ import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
-import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -24,10 +25,19 @@ public class MonumentiActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this,"*"+ "Monumenti", R.layout.monumenti_activity, R.layout.monumenti_activity_decorated);
+        TemplateUtil.inizializzaActivity(this, "*" + "Monumenti", R.layout.monumenti_activity, R.layout.monumenti_activity_decorated);
 
         monumenti_list = (ListView) findViewById(R.id.monumenti_listview);
         monumenti = MonumentiUtil.elencoMonumenti(this);
+
+        Collections.sort(monumenti, new Comparator<MonumentiComune>() {
+            @Override
+            public int compare(MonumentiComune a, MonumentiComune b) {
+                final int i1 = a.categoria.compareTo(b.categoria);
+                if (i1 != 0) return i1;
+                return a.titolo.compareTo(b.titolo);
+            }
+        });
 
         MonumentiComuneListAdapter a = new MonumentiComuneListAdapter(this, monumenti);
         monumenti_list.setAdapter(a);
@@ -38,7 +48,6 @@ public class MonumentiActivity extends Activity {
                 Intent i = new Intent(MonumentiActivity.this, MonumentiDettagliActivity.class);
                 i.putExtra("posizione", position);
                 startActivity(i);
-
             }
         });
 

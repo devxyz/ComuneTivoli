@@ -7,22 +7,24 @@ import android.util.Log;
  * longitudine intorno a 12
  */
 public class ContattiComune {
+    public final int id;
     public final String titolo;
     public final String descrizione;
     public final String telefono;
     public final String indirizzo;
     public final String email;
     public final String latitudineLongitudineMaps;
-    public final int img;
+    public final int id_image;
 
-    public ContattiComune(String titolo, String descrizione, String telefono, String indirizzo, String email, String latitudineLongitudineMaps, int img) {
+    public ContattiComune(int id,String titolo, String descrizione, String telefono, String indirizzo, String email, String latitudineLongitudineMaps, int id_image) {
+        this.id = id;
         this.titolo = titolo;
         this.descrizione = descrizione;
         this.telefono = telefono;
         this.indirizzo = indirizzo;
         this.email = email;
         this.latitudineLongitudineMaps = latitudineLongitudineMaps.trim();
-        this.img = img;
+        this.id_image = id_image;
 
     }
 

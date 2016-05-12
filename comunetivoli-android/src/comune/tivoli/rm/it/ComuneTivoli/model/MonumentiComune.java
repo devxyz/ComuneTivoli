@@ -8,6 +8,7 @@ import java.util.List;
  * Created by millozzi.stefano on 19/04/2016.
  */
 public class MonumentiComune {
+    public final int id;
     public final String titolo;
     public final String descrizione;
     public final String descrizione_big;
@@ -20,7 +21,9 @@ public class MonumentiComune {
     public final String categoria;
     public final List<String> galleriaFoto;
 
-    public MonumentiComune(String titolo, String descrizione, String descrizione_big, int foto_small, int foto_big, String url, String latitudineLongitudineMaps, String tred, String video, String categoria, String urlGalleriaConcatenata) {
+
+    public MonumentiComune(int id, String titolo, String descrizione, String descrizione_big, int foto_small, int foto_big, String url, String latitudineLongitudineMaps, String tred, String video, String categoria, String urlGalleriaConcatenata) {
+        this.id = id;
         this.titolo = titolo;
         this.descrizione = descrizione;
         this.descrizione_big = descrizione_big;

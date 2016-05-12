@@ -48,25 +48,32 @@ public class GenerateListaMonumentiDaStringFile {
                 " * todo: aumentare la dimensione delle immagini \"big\", portandola ad almeno 400 pixel di larghezza\n" +
                 " */\n" +
                 "public class MonumentiUtil {\n" +
-                "    public static List<String> estraiCategorie(ArrayList<MonumentiComune> a) {\n" +
+                "public static List<String> estraiCategorie(ArrayList<MonumentiComune> a) {\n" +
                 "        TreeSet<String> r = new TreeSet<>();\n" +
                 "        for (MonumentiComune monumentiComune : a) {\n" +
                 "            r.add(monumentiComune.categoria);\n" +
                 "        }\n" +
                 "        return new ArrayList<>(r);\n" +
                 "    }\n" +
-                "    private static ArrayList<MonumentiComune> monumenti;\n" +
+                "\n" +
+                "    public static MonumentiComune byId(ArrayList<MonumentiComune> a,int id) {\n" +
+                "        \n" +
+                "        for (MonumentiComune monumentiComune : a) {\n" +
+                "            if (monumentiComune.id==id)return monumentiComune;\n" +
+                "        }\n" +
+                "        return null;\n" +
+                "    }" +
+
+
                 "\n" +
                 "    public static List<MonumentiComune> elencoMonumenti(Activity a) {\n" +
-                "        if (monumenti!=null){\n" +
-                "            return Collections.unmodifiableList(monumenti);\n" +
-                "        }\n" +
-                "\n" +
+                "        ArrayList<MonumentiComune> monumenti;\n" +
                 "        monumenti = new ArrayList<>();");
 
+        int id = 1;
         for (String n : nomi) {
             out.println("   //" + n);
-            final String s1 = ("new MonumentiComune(\n" +
+            final String s1 = ("new MonumentiComune(\n" + id + ", " +
                     "                a.getResources().getString(R.string.#_titolo),\n" +
                     "                a.getResources().getString(R.string.#_descrizione),\n" +
                     "                a.getResources().getString(R.string.#_descrizionebig),\n" +
@@ -80,6 +87,7 @@ public class GenerateListaMonumentiDaStringFile {
                     "                a.getResources().getString(R.string.#_gallery)\n" +
                     "        )").replace("#", n);
             out.println("monumenti.add(" + s1 + ");");
+            id++;
         }
 
         out.println("        return monumenti;\n" +
