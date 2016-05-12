@@ -10,13 +10,13 @@ import comune.tivoli.rm.it.ComuneTivoli.db.DbHelper;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.DaoSession;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.NotizieSitoDbSqlLite;
 import comune.tivoli.rm.it.ComuneTivoli.db.manager.ManagerNotizieSitoDbSqlLite;
-import comune.tivoli.rm.it.ComuneTivoli.util.StreamAndroidUtil;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerRequest;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerResponse;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonNotiziaSito;
 
 import java.io.BufferedInputStream;
 import java.io.DataOutputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -118,10 +118,12 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
             ZipInputStream in = new ZipInputStream(new BufferedInputStream(con.getInputStream()));
             final ZipEntry nextEntry = in.getNextEntry();
 
-            final String content = StreamAndroidUtil.loadFileContent(in);
-            in.close();
+            //final String content = StreamAndroidUtil.loadFileContent(in);
+            //in.close();
+            //System.out.println("lunghezza contenuto: "+content.length());
             if (isCancelled()) return null;
-            final CommonDataServerResponse resp = g.fromJson(content, CommonDataServerResponse.class);
+            final CommonDataServerResponse resp = g.fromJson(new InputStreamReader(in), CommonDataServerResponse.class);
+            in.close();
             publishProgress(resp.notizie.size() + " nuove notizie");
 
             //prepara request

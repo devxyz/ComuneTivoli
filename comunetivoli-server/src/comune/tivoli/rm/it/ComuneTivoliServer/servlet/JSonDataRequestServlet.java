@@ -56,7 +56,7 @@ public class JSonDataRequestServlet extends HttpServlet {
                 out.putNextEntry(new ZipEntry("data.json"));
                 out.write(s.getBytes());
                 out.closeEntry();
-
+                out.flush();
                 out.close();
             } else {
                 final ServletOutputStream outputStream = response.getOutputStream();
