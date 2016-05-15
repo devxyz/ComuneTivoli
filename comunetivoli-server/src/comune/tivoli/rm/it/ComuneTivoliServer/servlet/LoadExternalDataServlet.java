@@ -20,6 +20,7 @@ import java.util.TreeSet;
  * Created by stefano on 31/03/16.
  */
 public class LoadExternalDataServlet extends HttpServlet {
+    public static final int MAX_NEW_PAGES_AT_TIME = 40;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final InMemoryCacheLayerNotiziaSitoDB ee = DataLayerBuilder.getLoaderNewsSito();
@@ -32,14 +33,20 @@ public class LoadExternalDataServlet extends HttpServlet {
         MyToken t = new MyToken();
         t.token = DataLayerBuilder.maxToken();
 
-        //todo debug:come demo per evitare il download totale di tutto il sito
-        nodeLinksInDB.add("/node/2585");
-
+        //DONE debug:come demo per evitare il download totale di tutto il sito
+        //nodeLinksInDB.add("/node/2585");
+        response.setContentType("text/plain");
         //download delle pagine non ancora analizzate
-        ArrayList<NotiziaWWWComuneTivoli> pagine = ParserEngine.parseFromWeb(nodeLinksInDB);
-        System.out.println("Found " + pagine.size() + " nodi");
+        System.out.println("Found " + nodeLinksInDB.size() + " pagine nel db");
+
+
+        ArrayList<NotiziaWWWComuneTivoli> pagine = ParserEngine.parseFromWeb(nodeLinksInDB, MAX_NEW_PAGES_AT_TIME);
+
+        System.out.println("Found " + pagine.size() + " nodes (limit " + MAX_NEW_PAGES_AT_TIME + ")");
+
 
         for (NotiziaWWWComuneTivoli p : pagine) {
+            System.out.println(" - Found " + p.urlOriginale + " - " + p.titolo + " nodi");
             final GAE_NotiziaSitoDB_V1 nv = new GAE_NotiziaSitoDB_V1();
             nv.setData(p.data);
             nv.setFlagDelete(false);

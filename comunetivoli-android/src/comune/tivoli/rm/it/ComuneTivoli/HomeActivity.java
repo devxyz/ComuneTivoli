@@ -30,12 +30,11 @@ public class HomeActivity extends Activity {
     protected ImageButton home_btn_aboutus;
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TemplateUtil.inizializzaActivity(this,"*"+ "Home", R.layout.home_activity_decorated, R.layout.home_activity_decorated);
+        TemplateUtil.inizializzaActivity(this, "*" + "Home", R.layout.home_activity_decorated, R.layout.home_activity_decorated);
 
 
         Activity view = this;
@@ -110,9 +109,11 @@ public class HomeActivity extends Activity {
         home_btn_fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent fb;
+                /*Intent fb;
                 fb = new Intent(HomeActivity.this, FacebookActivity.class);
-                startActivity(fb);
+                startActivity(fb);*/
+                final Intent facebook = WebActivity.prepare(HomeActivity.this, getResources().getString(R.string.url_facebook), "Comune di Tivoli", "Facebook");
+                startActivity(facebook);
 
             }
         });

@@ -119,14 +119,17 @@ public class MonumentiDettagliActivity extends Activity {
 
 
                 if (monumento.galleriaFoto.size() > 0) {
-                    foto_btn.setOnClickListener(new View.OnClickListener() {
+                    final View.OnClickListener l = new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            final Intent intent = ImageScrollActivity.prepareIntent(MonumentiDettagliActivity.this, monumento.galleriaFoto);
+                            String descrizione = "" + monumento.galleriaFoto.size() + " foto";
+                            final Intent intent = ImageScrollActivity.prepareIntent(MonumentiDettagliActivity.this, monumento.titolo, descrizione, monumento.galleriaFoto);
                             startActivity(intent);
 
                         }
-                    });
+                    };
+                    foto_btn.setOnClickListener(l);
+                    image_monumento.setOnClickListener(l);
                 } else {
                     foto_btn.setVisibility(View.GONE);
                 }

@@ -17,6 +17,7 @@ import java.util.*;
 public class ParserEngine {
     public static final String baseUrl = "http://www.comune.tivoli.rm.it/";
     private static final String MODE = "SITE";//"SITE" "PRINT"
+    private static final boolean DEBUG = true;
 
     /**
      * estrae il numero di pagina da una url del genere:
@@ -64,7 +65,8 @@ public class ParserEngine {
         //versione stampabile
         String urlPrint = composeUrl(baseUrl, relativePathID, "/print");
         String urlOriginale = composeUrl(baseUrl, relativePathID);
-        System.out.println("Download " + urlPrint + "( id " + relativePathID + ")");
+        if (DEBUG)
+            System.out.println("ParserEngine: " + "Download " + urlPrint + "( id " + relativePathID + ")");
         final Document parse = Jsoup.parse(new URL(urlPrint), 10000);
         final Elements title_centro = parse.getElementsByClass("title");
         final Elements content = parse.getElementsByClass("content");
@@ -102,7 +104,8 @@ public class ParserEngine {
         //versione stampabile
         String urlPrint = composeUrl(baseUrl, relativePathID);
         String urlOriginale = composeUrl(baseUrl, relativePathID);
-        System.out.println("Download " + urlPrint + "( id " + relativePathID + ")");
+        if (DEBUG)
+            System.out.println("ParserEngine: " + "Download " + urlPrint + "( id " + relativePathID + ")");
         final Document parse = Jsoup.parse(new URL(urlPrint), 10000);
         final Elements title_centro = parse.getElementsByClass("title_centro");
         final Element main = parse.getElementById("main");
@@ -142,30 +145,39 @@ public class ParserEngine {
 
         //ipotetico elenco di nodi gia' nel db
         final Set<String> nodeLinksInDB = new TreeSet<>();
-        nodeLinksInDB.add("/node/2585");
+        //   nodeLinksInDB.add("/node/2585");
 
 
-        ArrayList<NotiziaWWWComuneTivoli> pagine = parseFromWeb(nodeLinksInDB);
+        ArrayList<NotiziaWWWComuneTivoli> pagine = parseFromWeb(nodeLinksInDB, 10);
         for (NotiziaWWWComuneTivoli x : pagine) {
-            System.out.println(x);
+            System.out.println("ParserEngine: " + x);
         }
-        //System.out.println(pagine);
+        //System.out.println("ParserEngine: "+pagine);
     }
 
-    public static ArrayList<NotiziaWWWComuneTivoli> parseFromWeb(Set<String> nodeLinksInDB) throws IOException {
-        System.out.println("Check Homepage (searching page-index links)");
+    public static ArrayList<NotiziaWWWComuneTivoli> parseFromWeb(Set<String> nodeLinksInDB, int limit) throws IOException {
+        if (DEBUG)
+            System.out.println("ParserEngine: " + "Check Homepage (searching page-index links)");
         //dalla homepage individua tutte le pagine dei link esistenti, compresa la home
         final ArrayList<String> allIndexLinks = extractIndexPageUrlFromHomepage(baseUrl, -1);
-        System.out.println("Found page-index links: " + allIndexLinks.size() + " pages");
-        System.out.println("  - " + allIndexLinks);
+        if (DEBUG) System.out.println("ParserEngine: " + "Found page-index links: " + allIndexLinks.size() + " pages");
+        if (DEBUG) System.out.println("ParserEngine: " + "  - " + allIndexLinks);
         final ArrayList<String> allLinkArticoli = extractNodeUrlsFromIndexPages(baseUrl, nodeLinksInDB, allIndexLinks);
 
-        System.out.println("LINKS");
-        System.out.println(allLinkArticoli);
+        if (DEBUG) System.out.println("ParserEngine: " + "LINKS");
+        if (DEBUG) System.out.println("ParserEngine: " + allLinkArticoli);
         ArrayList<NotiziaWWWComuneTivoli> pagine = new ArrayList<>();
 
+        //dall'ultimo al primo
+        Collections.reverse(allLinkArticoli);
+
+
         for (String urk : allLinkArticoli) {
-//            System.out.println("=============================================");
+            //se limite, si ignorano altri
+            if (limit == 0) break;
+            limit--;
+
+//            System.out.println("ParserEngine: "+"=============================================");
             if (MODE.equals("PRINT")) {
                 final NotiziaWWWComuneTivoli n = extractNewsFromPage_printVersion(baseUrl, urk);
                 pagine.add(n);
@@ -184,13 +196,14 @@ public class ParserEngine {
         final ArrayList<String> allLinkArticoli = new ArrayList<>();
         boolean finish = false;
         for (String pageLink : allIndexLinks) {
-            System.out.println();
-            System.out.println("Checking index-page " + pageLink);
+            if (DEBUG)
+                System.out.println("ParserEngine: " + "Checking index-page " + pageLink);
             if (finish) break;
 
 
             final ArrayList<String> ris = extractNodeLinksFromPages(baseUrl, pageLink);
-            System.out.println("Found " + ris.size() + " nodes: " + ris);
+            if (DEBUG)
+                System.out.println("ParserEngine: " + "Found " + ris.size() + " nodes: " + ris);
             for (String x : ris) {
                 if (nodeLinksInDB.contains(x)) {
                     finish = true;
@@ -242,8 +255,6 @@ public class ParserEngine {
         }
         Collections.sort(linkPage, new SortAscPage());
         int lastPageNumber = linkPage.size() == 0 ? 0 : extractPageNumber(linkPage.get(linkPage.size() - 1));
-        //System.out.println(lastPageNumber);
-        //System.out.println(linkPage);
         final ArrayList<String> allPageLinks = new ArrayList<>();
         allPageLinks.add("/node");//link al primo indice (homepage)
         for (int i = 1; i <= lastPageNumber; i++) {

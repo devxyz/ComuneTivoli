@@ -48,7 +48,7 @@ public class GenerateListaMonumentiDaStringFile {
                 " * todo: aumentare la dimensione delle immagini \"big\", portandola ad almeno 400 pixel di larghezza\n" +
                 " */\n" +
                 "public class MonumentiUtil {\n" +
-                "public static List<String> estraiCategorie(ArrayList<MonumentiComune> a) {\n" +
+                "public static List<String> estraiCategorie(List<MonumentiComune> a) {\n" +
                 "        TreeSet<String> r = new TreeSet<>();\n" +
                 "        for (MonumentiComune monumentiComune : a) {\n" +
                 "            r.add(monumentiComune.categoria);\n" +
@@ -56,7 +56,7 @@ public class GenerateListaMonumentiDaStringFile {
                 "        return new ArrayList<>(r);\n" +
                 "    }\n" +
                 "\n" +
-                "    public static MonumentiComune byId(ArrayList<MonumentiComune> a,int id) {\n" +
+                "    public static MonumentiComune findById(List<MonumentiComune> a,int id) {\n" +
                 "        \n" +
                 "        for (MonumentiComune monumentiComune : a) {\n" +
                 "            if (monumentiComune.id==id)return monumentiComune;\n" +

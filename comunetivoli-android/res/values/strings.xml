@@ -3,5 +3,6 @@
     <dimen name="template_text">20dp</dimen>
     <string name="app_name">Comune di Tivoli</string>
     <string name="url_server_data_servlet">http://comune-tivoli.appspot.com/JSonDataRequestServlet</string>
+    <string name="url_facebook">https://www.facebook.com/giuseppeproiettisindaco/</string>
 
 </resources>
