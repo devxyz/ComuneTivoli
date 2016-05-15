@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * Created by stefano on 15/05/16.
@@ -27,17 +30,27 @@ public class ReportNotizieServlet extends HttpServlet {
                 "<td>url</td>" +
                 "<td>titolo</td>" +
                 "<td>Key</td>" +
-                "<td>Key</td>" +
+                "<td>Date</td>" +
+                "<td>N.</td>" +
                 "</tr>");
         final InMemoryCacheLayerNotiziaSitoDB cl = DataLayerBuilder.getLoaderNewsSito();
         int i = 1;
-        for (GAE_NotiziaSitoDB_V1 c : cl.allEntities()) {
+        final List<GAE_NotiziaSitoDB_V1> gae_notiziaSitoDB_v1s = cl.allEntities();
+        Collections.sort(gae_notiziaSitoDB_v1s, new Comparator<GAE_NotiziaSitoDB_V1>() {
+            @Override
+            public int compare(GAE_NotiziaSitoDB_V1 o1, GAE_NotiziaSitoDB_V1 o2) {
+                return -new Long(o1.getToken()).compareTo(o2.getToken());
+            }
+        });
+        for (GAE_NotiziaSitoDB_V1 c : gae_notiziaSitoDB_v1s) {
 
             out.print("<tr>" +
                     "<td>" + c.getToken() + "</td>" +
                     "<td><a href='" + c.getUrlOriginal() + "'>" + c.getUrlOriginal() + "</a></td>" +
                     "<td>" + c.getTitolo() + "</td>" +
                     "<td>" + c.getKey() + "</td>" +
+                    "<td>" + c.getData() + "</td>" +
+                    "<td>" + i + "</td>" +
                     "</tr>");
 
             i++;

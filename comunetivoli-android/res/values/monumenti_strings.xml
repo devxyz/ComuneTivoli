@@ -642,7 +642,7 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-statua-di-santa-caterina-da-siena.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-vetrate-decorate-dell-abside.jpg
     </string>
-    <string name="monumentixml_Chiesa_di_San_Biagio_categoria">Luoghi di culto</string>
+    <string name="monumentixml_Chiesa_di_San_Biagio_categoria">Luoghi di Culto</string>
     <drawable name="monumentixml_Chiesa_di_San_Biagio_fotosmall">@drawable/monumenti_chiesa_san_biagio</drawable>
     <drawable name="monumentixml_Chiesa_di_San_Biagio_fotobig">@drawable/monumenti_chiesa_san_biagio_big</drawable>
 
@@ -667,7 +667,7 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-portale-della-chiesa-di-san-pietro-alla-carita.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-torre-campanaria-della-chiesa.jpg
     </string>
-    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_categoria">Luoghi di culto</string>
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_categoria">Luoghi di Culto</string>
     <drawable name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_fotosmall">@drawable/monumenti_chiesa_san_pietro_carita</drawable>
     <drawable name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_fotobig">@drawable/monumenti_chiesa_san_pietro_carita_big</drawable>
 
@@ -703,7 +703,7 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-pano-cripta.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-particolare-della-facciata.jpg
     </string>
-    <string name="monumentixml_Chiesa_di_San_Silvestro_categoria">Luoghi di culto</string>
+    <string name="monumentixml_Chiesa_di_San_Silvestro_categoria">Luoghi di Culto</string>
     <drawable name="monumentixml_Chiesa_di_San_Silvestro_fotosmall">@drawable/monumenti_chiesa_san_silvestro</drawable>
     <drawable name="monumentixml_Chiesa_di_San_Silvestro_fotobig">@drawable/monumenti_chiesa_san_silvestro_big</drawable>
 
@@ -739,7 +739,7 @@
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-torre-campanaria-della-chiesa-di-santa-maria-maggiore.jpg
         http://www.visittivoli.eu/images/luoghi-di-culto/anteprima-trittico-della-chiesa-di-santa-maria-maggiore.jpg
     </string>
-    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_categoria">Luoghi di culto</string>
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_categoria">Luoghi di Culto</string>
     <drawable name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_fotosmall">@drawable/monumenti_chiesa_santa_maria_maggiore</drawable>
     <drawable name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_fotobig">@drawable/monumenti_chiesa_santa_maria_maggiore_big</drawable>
 

@@ -20,7 +20,7 @@ import java.util.TreeSet;
  * Created by stefano on 31/03/16.
  */
 public class LoadExternalDataServlet extends HttpServlet {
-    public static final int MAX_NEW_PAGES_AT_TIME = 40;
+    public static final int MAX_NEW_PAGES_AT_TIME = 200;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final InMemoryCacheLayerNotiziaSitoDB ee = DataLayerBuilder.getLoaderNewsSito();
