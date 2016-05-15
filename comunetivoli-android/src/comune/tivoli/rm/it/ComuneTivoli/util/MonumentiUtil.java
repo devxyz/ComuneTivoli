@@ -13,6 +13,14 @@ import java.util.TreeSet;
  * todo: aumentare la dimensione delle immagini "big", portandola ad almeno 400 pixel di larghezza
  */
 public class MonumentiUtil {
+    public static List<MonumentiComune> filtraByCategoria(List<MonumentiComune> a, String categoria) {
+        List<MonumentiComune> ris = new ArrayList<>();
+        for (MonumentiComune monumentiComune : a) {
+            if (monumentiComune.categoria.equalsIgnoreCase(categoria))
+                ris.add(monumentiComune);
+        }
+        return ris;
+    }
 public static List<String> estraiCategorie(List<MonumentiComune> a) {
         TreeSet<String> r = new TreeSet<>();
         for (MonumentiComune monumentiComune : a) {

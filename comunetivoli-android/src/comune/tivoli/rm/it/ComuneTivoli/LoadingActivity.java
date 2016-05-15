@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.autoUpdate.RemoteServerUpdateAsyncTask;
-import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
+import comune.tivoli.rm.it.ComuneTivoli.guicomponents.DialogUtil;
 
 /**
  * todo: nei telefonini con android 4.3 non si vede lo sfondo...

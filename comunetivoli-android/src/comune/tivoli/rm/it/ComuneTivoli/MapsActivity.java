@@ -15,7 +15,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
+import comune.tivoli.rm.it.ComuneTivoli.guicomponents.DialogUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 

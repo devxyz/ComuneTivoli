@@ -26,39 +26,59 @@
             android:paddingRight="10dp" android:paddingTop="10dp">
     
 
-    <TextView
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/turismo_monumenti"
-            android:id="@+id/textView10"
-            android:textSize="@dimen/app_textsize_titolo"
-            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
-    <ImageButton
+            android:layout_height="match_parent" android:id="@+id/linear_left" android:padding="10dp"
+            android:gravity="center_horizontal">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/turismo_monumenti"
+                android:id="@+id/textView10"
+                android:textSize="@dimen/app_textsize_titolo"
+                android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+                android:gravity="center_horizontal" android:textStyle="bold"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/turismo_btn_monumenti"
+                android:src="@drawable/turismo_tivoli_montaggio_monumenti_150x110"
+                android:background="@color/trasparent"
+                android:layout_below="@+id/textView10" android:layout_alignParentStart="true"
+                android:paddingBottom="20dp"/>
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/turismo_listview_cosavedere"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/turismo_btn_monumenti"
-            android:src="@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia"
-            android:background="@color/trasparent"
-            android:layout_below="@+id/textView10" android:layout_alignParentStart="true"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:text="@string/turismo_dove_mangiare" android:id="@+id/textView11"
-              android:textSize="@dimen/app_textsize_titolo"
-              android:layout_alignParentTop="true" android:layout_alignParentEnd="true"/>
-    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
-                 android:id="@+id/turismo_btn_cosa_mangiare"
-                 android:src="@drawable/internet_icon"
-                 android:background="@color/trasparent"
-                 android:layout_below="@+id/textView11" android:layout_alignParentEnd="true"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:text="@string/turismo_mappa" android:id="@+id/textView12"
-              android:textSize="@dimen/app_textsize_titolo"
-              android:layout_below="@+id/turismo_btn_cosa_mangiare" android:layout_alignParentStart="true"
-              android:layout_marginTop="48dp"/>
-    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
-                 android:id="@+id/turismo_btn_mappa" android:src="@drawable/icona_maps_96x96"
-                 android:background="@color/trasparent"
-                 android:layout_marginTop="21dp" android:layout_below="@+id/textView12"
-                 android:layout_alignStart="@+id/turismo_btn_monumenti"/>
+            android:layout_height="match_parent" android:id="@+id/linear_right" android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" android:layout_toRightOf="@+id/linear_left" android:padding="10dp"
+            android:gravity="center_horizontal">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="@string/turismo_dove_mangiare" android:id="@+id/textView11"
+                  android:textSize="@dimen/app_textsize_titolo"
+                  android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+                  android:gravity="center_horizontal" android:textStyle="bold"/>
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:id="@+id/turismo_btn_cosa_mangiare"
+                     android:src="@drawable/turismo_pasta_forchetta_150x110"
+                     android:background="@color/trasparent"
+                     android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="Dove dormire" android:id="@+id/textView12"
+                  android:textSize="@dimen/app_textsize_titolo"
+                  android:layout_marginTop="22dp" android:layout_below="@+id/turismo_btn_cosa_mangiare"
+                  android:layout_alignParentEnd="true" android:layout_alignStart="@+id/textView11"
+                  android:gravity="center_horizontal" android:textStyle="bold"/>
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:id="@+id/turismo_btn_dormire" android:src="@drawable/turismo_dove_dormire_150x110"
+                     android:background="@color/trasparent"
+                     android:layout_below="@+id/turismo_btn_monumenti" android:layout_alignParentEnd="true"/>
+    </LinearLayout>
 </RelativeLayout>
     <ImageButton
             android:layout_width="wrap_content"

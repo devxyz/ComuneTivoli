@@ -1,4 +1,4 @@
-package comune.tivoli.rm.it.ComuneTivoli.dialog;
+package comune.tivoli.rm.it.ComuneTivoli.guicomponents;
 
 import android.content.Context;
 import android.view.View;

@@ -16,7 +16,7 @@ import comune.tivoli.rm.it.ComuneTivoli.db.DbHelper;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.DaoSession;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.NotizieSitoDbSqlLite;
 import comune.tivoli.rm.it.ComuneTivoli.db.manager.ManagerNotizieSitoDbSqlLite;
-import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
+import comune.tivoli.rm.it.ComuneTivoli.guicomponents.DialogUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.DateUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;

@@ -1,9 +1,8 @@
-package comune.tivoli.rm.it.ComuneTivoli.dialog.listener;
+package comune.tivoli.rm.it.ComuneTivoli.guicomponents.listener;
 
 import android.app.Activity;
-import android.util.Log;
 import android.view.View;
-import comune.tivoli.rm.it.ComuneTivoli.dialog.DialogUtil;
+import comune.tivoli.rm.it.ComuneTivoli.guicomponents.DialogUtil;
 
 /**
  * Created by stefano on 19/03/15.

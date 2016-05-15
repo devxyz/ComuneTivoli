@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.android.gms.maps.GoogleMap;
-import comune.tivoli.rm.it.ComuneTivoli.dialog.TooltipUtil;
+import comune.tivoli.rm.it.ComuneTivoli.guicomponents.TooltipUtil;
 import comune.tivoli.rm.it.ComuneTivoli.model.ContattiComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.ContattiUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;

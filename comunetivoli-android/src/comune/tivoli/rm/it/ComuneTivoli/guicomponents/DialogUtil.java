@@ -1,4 +1,4 @@
-package comune.tivoli.rm.it.ComuneTivoli.dialog;
+package comune.tivoli.rm.it.ComuneTivoli.guicomponents;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,7 +10,7 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.R;
-import comune.tivoli.rm.it.ComuneTivoli.dialog.listener.OnClickListenerDialogErrorCheck;
+import comune.tivoli.rm.it.ComuneTivoli.guicomponents.listener.OnClickListenerDialogErrorCheck;
 
 import java.util.ArrayList;
 import java.util.Map;
