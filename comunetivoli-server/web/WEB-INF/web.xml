@@ -33,6 +33,10 @@
         <servlet-name>ResetDataServlet</servlet-name>
         <servlet-class>comune.tivoli.rm.it.ComuneTivoliServer.servlet.ResetDataServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReportNotizieServlet</servlet-name>
+        <servlet-class>comune.tivoli.rm.it.ComuneTivoliServer.servlet.ReportNotizieServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>LoadExternalDataServlet</servlet-name>
@@ -42,6 +46,11 @@
     <servlet-mapping>
         <servlet-name>PrintNotizieServlet</servlet-name>
         <url-pattern>/PrintNotizieServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ReportNotizieServlet</servlet-name>
+        <url-pattern>/ReportNotizieServlet</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

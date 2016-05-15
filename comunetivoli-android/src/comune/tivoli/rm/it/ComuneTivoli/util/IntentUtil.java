@@ -1,12 +1,18 @@
 package comune.tivoli.rm.it.ComuneTivoli.util;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 /**
  * Created by stefano on 04/05/16.
  */
 public class IntentUtil {
+    public static Intent openWebBrowser(String url){
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        return i;
+    }
     /**
      * ritorna il valore dell'intent, e in mancanza di esso quello del boundle
      *

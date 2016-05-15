@@ -1,7 +1,7 @@
 package comune.tivoli.rm.it.ComuneTivoliServer.test;
 
 import comune.tivoli.rm.it.ComuneTivoliServer.crawler.NotiziaWWWComuneTivoli;
-import comune.tivoli.rm.it.ComuneTivoliServer.crawler.ParserEngine;
+import comune.tivoli.rm.it.ComuneTivoliServer.crawler.ParserNotizieEngine;
 
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public class MainTest {
     public static void main(String[] args) throws IOException {
-        final NotiziaWWWComuneTivoli notiziaWWWComuneTivoli = ParserEngine.extractNewsFromPage_siteVersion(ParserEngine.baseUrl, "node/2617");
+        final NotiziaWWWComuneTivoli notiziaWWWComuneTivoli = ParserNotizieEngine.extractNewsFromPage_siteVersion(ParserNotizieEngine.baseUrl, "node/732");
         System.out.println(notiziaWWWComuneTivoli);
     }
 }

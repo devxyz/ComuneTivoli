@@ -44,6 +44,16 @@ public class ManagerNotizieSitoDbSqlLite {
         return Collections.unmodifiableList(cache);
     }
 
+    public List<NotizieSitoDbSqlLite> latestNews(DaoSession session, int n) {
+
+
+        final QueryBuilder<NotizieSitoDbSqlLite> q = session.queryBuilder(NotizieSitoDbSqlLite.class);
+        q.orderDesc(NotizieSitoDbSqlLiteDao.Properties.Id).limit(n);
+        final Query<NotizieSitoDbSqlLite> build = q.build();
+        final List<NotizieSitoDbSqlLite> list = build.list();
+        return new ArrayList<>(list);
+    }
+
     public NotizieSitoDbSqlLite listByKey(DaoSession session, String key) {
         final QueryBuilder<NotizieSitoDbSqlLite> q = session.queryBuilder(NotizieSitoDbSqlLite.class);
         q.where(NotizieSitoDbSqlLiteDao.Properties.Key.eq(key));

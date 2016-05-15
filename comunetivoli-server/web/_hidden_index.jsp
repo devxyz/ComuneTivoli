@@ -13,7 +13,8 @@
   <body>
   <a href="/LoadExternalDataServlet" target="_blank">LoadExternalDataServlet</a><br>
   <a href="/ResetDataServlet" target="_blank">ResetDataServlet</a><br>
-  <a href="/PrintNotizieServlet" target="_blank">PrintNotizieServlet</a><br>
+  <a href="/PrintNotizieServlet" target="_blank">PrintNotizieServlet (stampa estesa)</a><br>
+  <a href="/ReportNotizieServlet" target="_blank">ReportNotizieServlet (stampa sintetica)</a><br>
   <a href="/JSonDataRequestServlet?param" target="_blank">JSonDataRequestServlet</a><br>
 
   </body>

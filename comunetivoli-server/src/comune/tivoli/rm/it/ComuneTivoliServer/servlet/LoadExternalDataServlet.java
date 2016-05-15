@@ -1,7 +1,7 @@
 package comune.tivoli.rm.it.ComuneTivoliServer.servlet;
 
 import comune.tivoli.rm.it.ComuneTivoliServer.crawler.NotiziaWWWComuneTivoli;
-import comune.tivoli.rm.it.ComuneTivoliServer.crawler.ParserEngine;
+import comune.tivoli.rm.it.ComuneTivoliServer.crawler.ParserNotizieEngine;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.DataLayerBuilder;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.InMemoryCacheLayerNotiziaSitoDB;
 import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V1;
@@ -40,13 +40,13 @@ public class LoadExternalDataServlet extends HttpServlet {
         System.out.println("Found " + nodeLinksInDB.size() + " pagine nel db");
 
 
-        ArrayList<NotiziaWWWComuneTivoli> pagine = ParserEngine.parseFromWeb(nodeLinksInDB, MAX_NEW_PAGES_AT_TIME);
+        ArrayList<NotiziaWWWComuneTivoli> pagine = ParserNotizieEngine.parseFromWeb(nodeLinksInDB, MAX_NEW_PAGES_AT_TIME);
 
         System.out.println("Found " + pagine.size() + " nodes (limit " + MAX_NEW_PAGES_AT_TIME + ")");
 
 
         for (NotiziaWWWComuneTivoli p : pagine) {
-            System.out.println(" - Found " + p.urlOriginale + " - " + p.titolo + " nodi");
+            System.out.println(" - Found " + p.urlSito + " - " + p.titolo + " nodi");
             final GAE_NotiziaSitoDB_V1 nv = new GAE_NotiziaSitoDB_V1();
             nv.setData(p.data);
             nv.setFlagDelete(false);
@@ -56,7 +56,7 @@ public class LoadExternalDataServlet extends HttpServlet {
             nv.setTesto(p.testo);
             nv.setToken(t.token);
             nv.setUrlPrint(p.urlPrint);
-            nv.setUrlOriginal(p.urlOriginale);
+            nv.setUrlOriginal(p.urlSito);
             nv.setKey(p.keyPath);
             ee.insert(nv);
         }

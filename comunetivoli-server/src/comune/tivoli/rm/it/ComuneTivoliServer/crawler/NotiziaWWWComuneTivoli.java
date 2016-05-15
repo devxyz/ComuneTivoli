@@ -15,19 +15,19 @@ public class NotiziaWWWComuneTivoli {
      * link asoluto all'articolo (versione stampabile)
      */
     public final String urlPrint;
-    public final String urlOriginale;
+    public final String urlSito;
 
     /**
      * percorso del tipo /node/2576 che identifica l'articolo
      */
     public final String keyPath;
 
-    public NotiziaWWWComuneTivoli(String titolo, String html, String testo, String urlPrint, String urlOriginale,Date data, String keyPath) {
+    public NotiziaWWWComuneTivoli(String titolo, String html, String testo, String urlPrint, String urlSito, Date data, String keyPath) {
         this.titolo = titolo;
         this.html = html;
         this.testo = testo;
         this.urlPrint = urlPrint;
-        this.urlOriginale = urlOriginale;
+        this.urlSito = urlSito;
         this.data = data;
         this.keyPath = keyPath;
     }

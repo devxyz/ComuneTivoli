@@ -14,7 +14,7 @@ import java.util.*;
 /**
  * Created by stefano on 27/03/16.
  */
-public class ParserEngine {
+public class ParserNotizieEngine {
     public static final String baseUrl = "http://www.comune.tivoli.rm.it/";
     private static final String MODE = "SITE";//"SITE" "PRINT"
     private static final boolean DEBUG = true;
@@ -63,11 +63,11 @@ public class ParserEngine {
 
     public static NotiziaWWWComuneTivoli extractNewsFromPage_printVersion(String baseUrl, String relativePathID) throws IOException {
         //versione stampabile
-        String urlPrint = composeUrl(baseUrl, relativePathID, "/print");
-        String urlOriginale = composeUrl(baseUrl, relativePathID);
+        String url = composeUrl(baseUrl, relativePathID, "/print");
+
         if (DEBUG)
-            System.out.println("ParserEngine: " + "Download " + urlPrint + "( id " + relativePathID + ")");
-        final Document parse = Jsoup.parse(new URL(urlPrint), 10000);
+            System.out.println("ParserEngine: " + "Download " + url + "( id " + relativePathID + ")");
+        final Document parse = Jsoup.parse(new URL(url), 10000);
         final Elements title_centro = parse.getElementsByClass("title");
         final Elements content = parse.getElementsByClass("content");
 
@@ -94,7 +94,7 @@ public class ParserEngine {
         return new NotiziaWWWComuneTivoli(
                 titoloNormalizzato,
                 htmlNormalizzato, textNormalizzato,
-                urlPrint, urlOriginale,
+                composeUrl(baseUrl, relativePathID, "print"), composeUrl(baseUrl, relativePathID),
                 date,
                 relativePathID);
 
@@ -102,14 +102,14 @@ public class ParserEngine {
 
     public static NotiziaWWWComuneTivoli extractNewsFromPage_siteVersion(String baseUrl, String relativePathID) throws IOException {
         //versione stampabile
-        String urlPrint = composeUrl(baseUrl, relativePathID);
-        String urlOriginale = composeUrl(baseUrl, relativePathID);
+        String url = composeUrl(baseUrl, relativePathID);
+
         if (DEBUG)
-            System.out.println("ParserEngine: " + "Download " + urlPrint + "( id " + relativePathID + ")");
-        final Document parse = Jsoup.parse(new URL(urlPrint), 10000);
+            System.out.println("ParserEngine: " + "Download " + url + "( id " + relativePathID + ")");
+        final Document parse = Jsoup.parse(new URL(url), 10000);
         final Elements title_centro = parse.getElementsByClass("title_centro");
         final Element main = parse.getElementById("main");
-        final Elements content = main.getElementsByClass("content");
+        final Elements content = main == null ? null : main.getElementsByClass("content");
 
         final StringBuilder titolo = new StringBuilder();
         for (Element t : title_centro) {
@@ -117,9 +117,10 @@ public class ParserEngine {
         }
 
         final StringBuilder contenuto = new StringBuilder();
-        for (Element t : content) {
-            contenuto.append(t.html()).append(" ");
-        }
+        if (content != null)
+            for (Element t : content) {
+                contenuto.append(t.html()).append(" ");
+            }
 
         final String titoloNormalizzato = CommonTextUtil.normalize_UTF8__to__ASCII(Jsoup.parse("<html><body>" + titolo.toString().trim() + "</html></body>").body().text());
         final String htmlOriginale = String.format("<html><head>\n<base href=\"http://www.comune.tivoli.rm.it/\">\n</head><body>%s</body></html>", contenuto.toString());
@@ -134,7 +135,7 @@ public class ParserEngine {
         return new NotiziaWWWComuneTivoli(
                 titoloNormalizzato,
                 htmlNormalizzato, textNormalizzato,
-                urlPrint, urlOriginale,
+                composeUrl(baseUrl, relativePathID, "print"), url,
                 date,
                 relativePathID);
 
@@ -172,17 +173,26 @@ public class ParserEngine {
         Collections.reverse(allLinkArticoli);
 
 
-        for (String urk : allLinkArticoli) {
+        for (String url : allLinkArticoli) {
             //se limite, si ignorano altri
             if (limit == 0) break;
             limit--;
 
 //            System.out.println("ParserEngine: "+"=============================================");
-            if (MODE.equals("PRINT")) {
-                final NotiziaWWWComuneTivoli n = extractNewsFromPage_printVersion(baseUrl, urk);
-                pagine.add(n);
-            } else {
-                final NotiziaWWWComuneTivoli n = extractNewsFromPage_siteVersion(baseUrl, urk);
+            try {
+                if (MODE.equals("PRINT")) {
+                    final NotiziaWWWComuneTivoli n = extractNewsFromPage_printVersion(baseUrl, url);
+                    pagine.add(n);
+                } else {
+                    final NotiziaWWWComuneTivoli n = extractNewsFromPage_siteVersion(baseUrl, url);
+                    pagine.add(n);
+                }
+            } catch (Exception e) {
+                //ignora le pagine che non vengono caricate
+                String urlPrint = composeUrl(baseUrl, url, "print");
+                String urlOriginale = composeUrl(baseUrl, url);
+
+                NotiziaWWWComuneTivoli n = new NotiziaWWWComuneTivoli("Pagina non trovata", null, null, urlPrint, urlOriginale, null, url);
                 pagine.add(n);
             }
 

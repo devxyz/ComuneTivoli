@@ -4,5 +4,8 @@
     <string name="app_name">Comune di Tivoli</string>
     <string name="url_server_data_servlet">http://comune-tivoli.appspot.com/JSonDataRequestServlet</string>
     <string name="url_facebook">https://www.facebook.com/giuseppeproiettisindaco/</string>
+    <string name="url_comune_tivoli">http://www.comune.tivoli.rm.it/node</string>
+    <string name="url_eventi_archivio">http://www.visittivoli.eu/news-ed-eventi/archivio.php</string>
+    <string name="url_eventi_">http://www.visittivoli.eu/news-ed-eventi.php?lang=IT</string>
 
 </resources>
