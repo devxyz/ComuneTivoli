@@ -216,7 +216,7 @@ public class HomeActivity extends Activity {
     }
 
     private class ThreadAggiornamentoImmagineMonumentiComune extends Thread {
-        private static final int SLEEP_SEC = 4000;
+        private static final int SLEEP_SEC = 5000;
         protected final Random r;
         protected List<MonumentiComune> monumenti;
         protected volatile boolean stop = false;
@@ -305,20 +305,21 @@ public class HomeActivity extends Activity {
                 }
 
                 HomeActivity.this.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
+                                                    @Override
+                                                    public void run() {
+                                                        StringBuilder sb = new StringBuilder();
+                                                        for (NotizieSitoDbSqlLite x : news) {
+                                                            if (x.getData() != null) {
+                                                                sb.append(DateUtil.toDDMMYYY(x.getData()) + " - " + x.getTitolo()).append("\n\n");
+                                                            } else {
+                                                                sb.append(x.getTitolo()).append("\n\n");
+                                                            }
 
-                        if (news.size() > 0) {
-                            final NotizieSitoDbSqlLite x = news.get(newsIndex);
-                            if (x.getData() != null) {
-                                home_text_news.setText(DateUtil.toDDMMYYY(x.getData()) + " - " + x.getTitolo());
-                            } else {
-                                home_text_news.setText(x.getTitolo());
-                            }
-                            newsIndex = (newsIndex + 1) % news.size();
-                        }
-                    }
-                });
+                                                        }
+                                                        home_text_news.setText(sb.toString());
+                                                    }
+                                                }
+                );
 
                 try {
                     Thread.sleep(SLEEP_SEC);
