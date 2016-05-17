@@ -3,6 +3,7 @@
     <properties maven-id="org.jsoup:jsoup:1.9.1" />
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/jsoup/jsoup-1.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/comunetivoli-server/lib/jsoup/jsoup-1.9.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

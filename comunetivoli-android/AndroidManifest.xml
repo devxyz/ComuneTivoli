@@ -81,5 +81,6 @@
                   android:name=".MenuActivity" android:label="menu_activity"/>
         <activity android:theme="@style/NoActionBar"
                   android:name=".WebActivity" android:label="web_activity"/>
+        <activity android:name=".DoveMangiare"/>
     </application>
 </manifest>

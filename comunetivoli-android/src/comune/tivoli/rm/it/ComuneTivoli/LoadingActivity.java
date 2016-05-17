@@ -10,7 +10,7 @@ import comune.tivoli.rm.it.ComuneTivoli.autoUpdate.RemoteServerUpdateAsyncTask;
 import comune.tivoli.rm.it.ComuneTivoli.guicomponents.DialogUtil;
 
 /**
- * todo: nei telefonini con android 4.3 non si vede lo sfondo...
+ * todo: nei telefonini con android 4.3 non si vede lo sfondo... 17/05/2016 update: testato su galaxys3 neo android 4.3 e non ci sono problemi
  */
 public class LoadingActivity extends Activity {
     /**
