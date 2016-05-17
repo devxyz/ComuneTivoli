@@ -10,6 +10,7 @@ import java.util.List;
 /**
  * Created by millozzi.stefano on 17/05/2016.
  */
+
 public class DoveMangiareUtil {
     public static DoveMangiareComune findById(List<DoveMangiareComune> cc, int id) {
         for (DoveMangiareComune x : cc) {
@@ -19,7 +20,7 @@ public class DoveMangiareUtil {
         return null;
     }
 
-    public static ArrayList<DoveMangiareComune> elencoContatti(Activity caller) {
+    public static ArrayList<DoveMangiareComune> elencoPuntiRistoro(Activity caller) {
         ArrayList<DoveMangiareComune> dovemangiare = new ArrayList<>();
         DoveMangiareComune il_maniero = new DoveMangiareComune(1,
                 caller.getResources().getString(R.string.dovemangiare_il_maniero_titolo),

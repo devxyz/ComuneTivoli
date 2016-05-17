@@ -14,6 +14,7 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 /**
  * Created by millozzi.stefano on 15/03/2016.
+ *
  */
 
 
@@ -32,6 +33,7 @@ public class DebugHomeActivity extends Activity {
     Button btn_disabilita_dec;
     Button btnscroll;
     Button btnnotifica;
+    Button btndovemangiare;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class DebugHomeActivity extends Activity {
         btn_crediti = (Button) findViewById(R.id.btn_crediti);
         btn_home = (Button) findViewById(R.id.btn_home);
         btnnotifica = (Button) findViewById(R.id.btn_notifica);
+        btndovemangiare = (Button) findViewById(R.id.btn_dove_mangiare);
 
         btn_disabilita_dec.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,6 +173,14 @@ public class DebugHomeActivity extends Activity {
                 notification.flags |= Notification.FLAG_AUTO_CANCEL;
                 notification.defaults |= Notification.DEFAULT_SOUND;
                 nm.notify(0, notification);
+            }
+        });
+
+        btndovemangiare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DebugHomeActivity.this,DoveMangiareActivity.class);
+                startActivity(i);
             }
         });
     }
