@@ -172,7 +172,7 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
                             //ignora le news gia' presenti
                             ArrayList<CommonNotiziaSito> notizieDaAggiungere = new ArrayList<CommonNotiziaSito>(resp.notizie.size());
                             for (CommonNotiziaSito n : resp.notizie) {
-                                if (!map.containsKey(n.getKey()) && n.getTitolo() != null)
+                                if (!map.containsKey(n.getKey()) && n.getTitolo() != null && n.getTesto() != null)
                                     notizieDaAggiungere.add(n);
                             }
 
