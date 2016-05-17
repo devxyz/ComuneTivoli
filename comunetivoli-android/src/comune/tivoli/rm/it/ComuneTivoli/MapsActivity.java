@@ -21,7 +21,7 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 /**
  * done: implementare mappa su singolo punto, con possibilità di avviare maps esterno e navigatore
- * todo: aggiungere avvio del navigatore tra le opzioni del menu
+ * todo: aggiungere avvio del navigatore tra le opzioni del menu FATTO
  */
 
 // TODO: 10/05/16 - verifica correttezza OK

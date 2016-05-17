@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  * todo: correggere coordinate contatti in quanto imprecisi: usare il sito http://www.coordinate-gps.it/ (via del governo NON e' corretta . aggiornato al 10 maggio 2016
- *
+ * nuove coordinate inserite
  */
 
 // TODO: 10/05/16 - verifica correttezza OK
