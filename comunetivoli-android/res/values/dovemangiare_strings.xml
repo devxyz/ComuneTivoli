@@ -1,3 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="dovemangiare_il_maniero_titolo">Il Maniero</string>
+    <string name="dovemangiare_il_maniero_testo"></string>
+    <string name="dovemangiare_il_maniero_indirizzo">Via di Villa Adriana, 39/41 - 00019 Tivoli (RM)</string>
+    <string name="dovemangiare_il_maniero_telefono">0774-533515</string>
+    <string name="dovemangiare_il_maniero_sito">www.hotelmaniero.it</string>
+    <string name="dovemangiare_il_maniero_email"></string>
+    <string name="dovemangiare_il_maniero_maps"></string>
+    <string name="dovemangiare_il_maniero_tripadvisorlink"></string>
+
+    <string name="dovemangiare_l_angolino_di_mirko_titolo"></string>
+    <string name="dovemangiare_l_angolino_di_mirko_testo"></string>
+    <string name="dovemangiare_l_angolino_di_mirko_indirizzo"></string>
+    <string name="dovemangiare_l_angolino_di_mirko_telefono"></string>
+    <string name="dovemangiare_l_angolino_di_mirko_sito"></string>
+    <string name="dovemangiare_l_angolino_di_mirko_email"></string>
+    <string name="dovemangiare_l_angolino_di_mirko_maps"></string>
+    <string name="dovemangiare_l_angolino_di_mirko_tripadvisorlink"></string>
+
+
+
+    <string name="dovemangiare_colle_paciocco_titolo"></string>
+    <string name="dovemangiare_colle_paciocco_testo"></string>
+    <string name="dovemangiare_colle_paciocco_indirizzo"></string>
+    <string name="dovemangiare_colle_paciocco_telefono"></string>
+    <string name="dovemangiare_colle_paciocco_sito"></string>
+    <string name="dovemangiare_colle_paciocco_email"></string>
+    <string name="dovemangiare_colle_paciocco_maps"></string>
+    <string name="dovemangiare_colle_paciocco_tripadvisorlink"></string>
+
+
+
+    <string name="dovemangiare_la_ferrata_titolo"></string>
+    <string name="dovemangiare_la_ferrata_testo"></string>
+    <string name="dovemangiare_la_ferrata_indirizzo"></string>
+    <string name="dovemangiare_la_ferrata_telefono"></string>
+    <string name="dovemangiare_la_ferrata_sito"></string>
+    <string name="dovemangiare_la_ferrata_email"></string>
+    <string name="dovemangiare_la_ferrata_maps"></string>
+    <string name="dovemangiare_la_ferrata_tripadvisorlink"></string>
+
+
+
+
+    <string name="dovemangiare_ai_portici_titolo"></string>
+    <string name="dovemangiare_ai_portici_testo"></string>
+    <string name="dovemangiare_ai_portici_indirizzo"></string>
+    <string name="dovemangiare_ai_portici_telefono"></string>
+    <string name="dovemangiare_ai_portici_sito"></string>
+    <string name="dovemangiare_ai_portici_email"></string>
+    <string name="dovemangiare_ai_portici_maps"></string>
+    <string name="dovemangiare_ai_portici_tripadvisorlink"></string>
+
+
+
+    <string name="dovemangiare_alessandra_castorani_e_c_sas_titolo"></string>
+    <string name="dovemangiare_alessandra_castorani_e_c_sas_testo"></string>
+    <string name="dovemangiare_alessandra_castorani_e_c_sas_indirizzo"></string>
+    <string name="dovemangiare_alessandra_castorani_e_c_sas_telefono"></string>
+    <string name="dovemangiare_alessandra_castorani_e_c_sas_sito"></string>
+    <string name="dovemangiare_alessandra_castorani_e_c_sas_email"></string>
+    <string name="dovemangiare_alessandra_castorani_e_c_sas_maps"></string>
+    <string name="dovemangiare_alessandra_castorani_e_c_sas_tripadvisorlink"></string>
+
+
+
+    <string name="dovemangiare_anselmo_pub_titolo"></string>
+    <string name="dovemangiare_anselmo_pub_testo"></string>
+    <string name="dovemangiare_anselmo_pub_indirizzo"></string>
+    <string name="dovemangiare_anselmo_pub_telefono"></string>
+    <string name="dovemangiare_anselmo_pub_sito"></string>
+    <string name="dovemangiare_anselmo_pub_email"></string>
+    <string name="dovemangiare_anselmo_pub_maps"></string>
+    <string name="dovemangiare_anselmo_pub_tripadvisorlink"></string>
+
+
+
+    <string name="dovemangiare_baky_bar_titolo"></string>
+    <string name="dovemangiare_baky_bar_testo"></string>
+    <string name="dovemangiare_baky_bar_indirizzo"></string>
+    <string name="dovemangiare_baky_bar_telefono"></string>
+    <string name="dovemangiare_baky_bar_sito"></string>
+    <string name="dovemangiare_baky_bar_email"></string>
+    <string name="dovemangiare_baky_bar_maps"></string>
+    <string name="dovemangiare_baky_bar_tripadvisorlink"></string>
+
+
+
+
+
+    <string name="dovemangiare__titolo"></string>
+    <string name="dovemangiare__testo"></string>
+    <string name="dovemangiare__indirizzo"></string>
+    <string name="dovemangiare__telefono"></string>
+    <string name="dovemangiare__sito"></string>
+    <string name="dovemangiare__email"></string>
+    <string name="dovemangiare__maps"></string>
+    <string name="dovemangiare__tripadvisorlink"></string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>
