@@ -24,7 +24,7 @@ public class DoveMangiareActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TemplateUtil.inizializzaActivity(this,"Dove mangiare", R.layout.dove_mangiare_activity_list, R.layout.dove_mangiare_activity_list_decorated);
+        TemplateUtil.inizializzaActivity(this,"Dove mangiare", R.layout.dove_mangiare_activity, R.layout.dove_mangiare_activity_decorated);
 
         dovemangiareListview = (ListView) findViewById(R.id.dovemangiare_listView);
 
@@ -37,6 +37,7 @@ public class DoveMangiareActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 DoveMangiareComune dmc = dovemangiare.get(position);
                 //apri dettagli
+
             }
         });
     }

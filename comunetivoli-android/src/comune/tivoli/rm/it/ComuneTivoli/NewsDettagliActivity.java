@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.db.DBHelperRunnable;
@@ -31,7 +30,6 @@ import java.util.Date;
 public class NewsDettagliActivity extends Activity {
     TextView news_titolo;
     TextView news_data;
-    ImageButton news_button;
     WebView www;
     NewsDettagliActivityData dati;
     ProgressBar bar;
@@ -53,7 +51,6 @@ public class NewsDettagliActivity extends Activity {
         news_data = (TextView) findViewById(R.id.news_data);
         www = (WebView) findViewById(R.id.news_html);
         bar = (ProgressBar) findViewById(R.id.news_progress);
-        news_button = (ImageButton) findViewById(R.id.news_btn);
 
         dati = new NewsDettagliActivityData(savedInstanceState, getIntent());
 
@@ -61,7 +58,7 @@ public class NewsDettagliActivity extends Activity {
         www.loadData(dati.html, "text/html", "UTF8");
         news_data.setText(DateUtil.toDDMMYYY(dati.data));
 
-        www.getSettings().setBuiltInZoomControls(true);
+        www.getSettings().setBuiltInZoomControls(false);
         www.getSettings().setSupportZoom(true);
         www.getSettings().setJavaScriptEnabled(true);
 
@@ -69,7 +66,7 @@ public class NewsDettagliActivity extends Activity {
         www.getSettings().setLoadWithOverviewMode(true);
         www.getSettings().setUseWideViewPort(true);
 
-        news_button.setOnClickListener(new View.OnClickListener() {
+        news_titolo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -115,7 +112,7 @@ public class NewsDettagliActivity extends Activity {
         //dimensiona il testo
         www.getSettings().setTextZoom(300);
 
-        WebViewUtil.webViewProgressBarLoader(www, bar);
+        WebViewUtil.webViewProgressBarLoaderLoadUrlExternally(this, www, bar);
 
     }
 

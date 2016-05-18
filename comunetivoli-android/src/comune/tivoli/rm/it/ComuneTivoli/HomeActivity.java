@@ -259,7 +259,7 @@ public class HomeActivity extends Activity {
      * aggiorna elenco news
      */
     private class ThreadAggiornamentoNotizieSitoDbSqlLite extends Thread {
-        private static final int SLEEP_SEC = 2000;
+        private static final int SLEEP_SEC = 5000;
         protected final Random r;
         protected List<NotizieSitoDbSqlLite> news;
         protected volatile boolean stop = false;
@@ -317,7 +317,7 @@ public class HomeActivity extends Activity {
                                                     @Override
                                                     public void run() {
                                                         if (news.size() > 0) {
-                                                            final NotizieSitoDbSqlLite x = news.remove(0);
+                                                            final NotizieSitoDbSqlLite x = news.get(0);
 
                                                             adapter.clear();
                                                             if (x.getData() != null)
@@ -325,6 +325,7 @@ public class HomeActivity extends Activity {
                                                             else
                                                                 adapter.add(DateUtil.toDDMMYYY(x.getDataInserimento()));
                                                             adapter.add(x.getTitolo().toUpperCase());
+                                                            adapter.add(x.getTesto());
 
                                                         }
                                                     }

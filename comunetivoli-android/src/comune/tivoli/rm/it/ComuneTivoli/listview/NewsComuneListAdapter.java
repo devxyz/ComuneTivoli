@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class NewsComuneListAdapter extends BaseAdapter {
 
-    private static final int MAX_DESC_SIZE = 300;
+    private static final int MAX_DESC_SIZE = 150;
     private List<NotizieSitoDbSqlLite> news;
     private LayoutInflater layoutInflater;
 

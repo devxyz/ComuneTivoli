@@ -73,7 +73,7 @@ public class WebActivity extends Activity {
         www.getSettings().setLoadWithOverviewMode(true);
 
         //www.getSettings().setUseWideViewPort(true);
-        WebViewUtil.webViewProgressBarLoader(www, bar);
+        WebViewUtil.webViewProgressBarLoaderLoadUrlInternally(www, bar);
 
         www.loadUrl(dati.url);
 

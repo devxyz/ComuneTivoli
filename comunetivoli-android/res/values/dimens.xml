@@ -8,7 +8,7 @@
     <dimen name="app_textsize_titolo_big">24dp</dimen>
     <dimen name="app_textsize_titolo">20dp</dimen>
     <dimen name="app_textsize_sottotitolo">18dp</dimen>
-    <dimen name="app_textsize_normale">12dp</dimen>
+    <dimen name="app_textsize_normale">14dp</dimen>
 
 
 
