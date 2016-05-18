@@ -36,7 +36,7 @@ public class ManagerNotizieSitoDbSqlLite {
         if (cache == null) {
 
             final QueryBuilder<NotizieSitoDbSqlLite> q = session.queryBuilder(NotizieSitoDbSqlLite.class);
-            q.orderDesc(NotizieSitoDbSqlLiteDao.Properties.Id);
+            q.orderDesc(NotizieSitoDbSqlLiteDao.Properties.Token);
             final Query<NotizieSitoDbSqlLite> build = q.build();
             final List<NotizieSitoDbSqlLite> list = build.list();
             cache = new ArrayList<>(list);
@@ -48,7 +48,7 @@ public class ManagerNotizieSitoDbSqlLite {
 
 
         final QueryBuilder<NotizieSitoDbSqlLite> q = session.queryBuilder(NotizieSitoDbSqlLite.class);
-        q.orderDesc(NotizieSitoDbSqlLiteDao.Properties.Id).limit(n);
+        q.orderDesc(NotizieSitoDbSqlLiteDao.Properties.Token).limit(n);
         final Query<NotizieSitoDbSqlLite> build = q.build();
         final List<NotizieSitoDbSqlLite> list = build.list();
         return new ArrayList<>(list);

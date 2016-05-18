@@ -55,11 +55,11 @@
                   android:layout_alignEnd="@+id/home_text_news" android:gravity="center_horizontal"
                   android:textColor="@color/template_colorblu" android:textStyle="bold"
                   android:layout_marginTop="10dp"/>
-        <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+        <ListView android:layout_width="match_parent" android:layout_height="match_parent"
                   android:id="@+id/home_text_news"
                   android:src="@drawable/home_latestnews_165x315"
                   android:layout_below="@+id/home_news" android:layout_alignParentStart="true"
-                  android:background="@drawable/home_latestnews_165x315"/>
+        />
     </LinearLayout>
     <LinearLayout android:orientation="vertical" android:layout_width="wrap_content"
                   android:layout_height="match_parent"

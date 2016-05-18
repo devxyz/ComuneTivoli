@@ -24,7 +24,7 @@ public class DoveMangiareActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TemplateUtil.inizializzaActivity(this,"Dove mangiare", R.layout.dove_mangiare_activity_list, R.layout.dove_mangiare_activity_list);
+        TemplateUtil.inizializzaActivity(this,"Dove mangiare", R.layout.dove_mangiare_activity_list, R.layout.dove_mangiare_activity_list_decorated);
 
         dovemangiareListview = (ListView) findViewById(R.id.dovemangiare_listView);
 

@@ -28,11 +28,12 @@ public class MenuActivity extends Activity {
 
         final List<MenuApplicazione> vociMenu = new ArrayList<>();
         vociMenu.add(new MenuApplicazione("Home", HomeActivity.class));
-        vociMenu.add(new MenuApplicazione("Informazioni turistiche", TurismoActivity.class));
-        vociMenu.add(new MenuApplicazione("Notizie Istituzionali", NewsActivity.class));
-        vociMenu.add(new MenuApplicazione("News dai Social", NewsActivity.class));
+        vociMenu.add(new MenuApplicazione("Uffici", ContattiActivity.class));
+        vociMenu.add(new MenuApplicazione("Monumenti", TurismoActivity.class));
+        vociMenu.add(new MenuApplicazione("Notizie", NewsActivity.class));
+        vociMenu.add(new MenuApplicazione("News in tempo reale", NewsActivity.class));
         vociMenu.add(new MenuApplicazione("Credits", CreditiActivity.class));
-        vociMenu.add(new MenuApplicazione("Mappa", MapsActivity.class));
+        //vociMenu.add(new MenuApplicazione("Mappa", MapsActivity.class));
         vociMenu.add(new MenuApplicazione("DEBUG", DebugHomeActivity.class));
 
         final ArrayAdapter<String> a = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);

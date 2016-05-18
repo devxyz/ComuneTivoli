@@ -4,12 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.widget.*;
 import comune.tivoli.rm.it.ComuneTivoli.db.DBHelperRunnable;
 import comune.tivoli.rm.it.ComuneTivoli.db.DbHelper;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.DaoSession;
@@ -32,7 +29,7 @@ public class HomeActivity extends Activity {
     protected ImageButton home_btn_turismo;
     protected ImageButton home_btn_eventi;
     protected TextView home_news;
-    protected TextView home_text_news;
+    protected ListView home_text_news;
     protected TextView home_facebook;
     protected ImageButton home_btn_fb;
     protected ImageButton home_btn_web;
@@ -44,6 +41,7 @@ public class HomeActivity extends Activity {
 
     private ThreadAggiornamentoImmagineMonumentiComune task;
     private ThreadAggiornamentoNotizieSitoDbSqlLite task2;
+    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onResume() {
@@ -79,7 +77,7 @@ public class HomeActivity extends Activity {
         home_btn_turismo = (ImageButton) view.findViewById(R.id.home_btn_turismo);
         home_btn_eventi = (ImageButton) view.findViewById(R.id.home_btn_eventi);
         home_news = (TextView) view.findViewById(R.id.home_news);
-        home_text_news = (TextView) view.findViewById(R.id.home_text_news);
+        home_text_news = (ListView) view.findViewById(R.id.home_text_news);
         home_facebook = (TextView) view.findViewById(R.id.home_facebook);
         home_btn_fb = (ImageButton) view.findViewById(R.id.home_btn_fb);
         home_btn_web = (ImageButton) view.findViewById(R.id.home_btn_web);
@@ -89,9 +87,8 @@ public class HomeActivity extends Activity {
         home_aboutus = (TextView) view.findViewById(R.id.home_aboutus);
         home_btn_aboutus = (ImageButton) view.findViewById(R.id.home_btn_aboutus);
 
-
-        Drawable newsBackground = home_text_news.getBackground();
-        newsBackground.setAlpha(80);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
+        home_text_news.setAdapter(adapter);
 
 
         home_btn_turismo.setOnClickListener(new View.OnClickListener() {
@@ -128,9 +125,9 @@ public class HomeActivity extends Activity {
         });
 
         //===================================================
-        home_text_news.setOnClickListener(new View.OnClickListener() {
+        home_text_news.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent news;
                 news = new Intent(HomeActivity.this, NewsActivity.class);
                 startActivity(news);
@@ -216,7 +213,7 @@ public class HomeActivity extends Activity {
     }
 
     private class ThreadAggiornamentoImmagineMonumentiComune extends Thread {
-        private static final int SLEEP_SEC = 5000;
+        private static final int SLEEP_SEC = 8000;
         protected final Random r;
         protected List<MonumentiComune> monumenti;
         protected volatile boolean stop = false;
@@ -262,11 +259,10 @@ public class HomeActivity extends Activity {
      * aggiorna elenco news
      */
     private class ThreadAggiornamentoNotizieSitoDbSqlLite extends Thread {
-        private static final int SLEEP_SEC = 3000;
+        private static final int SLEEP_SEC = 2000;
         protected final Random r;
         protected List<NotizieSitoDbSqlLite> news;
         protected volatile boolean stop = false;
-        int newsIndex = 0;
 
         public ThreadAggiornamentoNotizieSitoDbSqlLite() {
 
@@ -297,26 +293,40 @@ public class HomeActivity extends Activity {
                 db.close();
             }
 
+            HomeActivity.this.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    for (NotizieSitoDbSqlLite x : news) {
+                        if (x.getData() != null)
+                            adapter.add(DateUtil.toDDMMYYY(x.getData()) + " " + x.getTitolo());
+                        else
+                            adapter.add("- " + x.getTitolo());
+                    }
+
+                }
+            });
+
             ////////////////////////////////
             while (!stop) {
                 if (news.size() > 0) {
-                    final NotizieSitoDbSqlLite remove = news.remove(news.size() - 1);
-                    news.add(0, remove);
+                    final NotizieSitoDbSqlLite remove = news.remove(0);
+                    news.add(remove);
                 }
 
                 HomeActivity.this.runOnUiThread(new Runnable() {
                                                     @Override
                                                     public void run() {
-                                                        StringBuilder sb = new StringBuilder();
-                                                        for (NotizieSitoDbSqlLite x : news) {
-                                                            if (x.getData() != null) {
-                                                                sb.append(DateUtil.toDDMMYYY(x.getData()) + " - " + x.getTitolo()).append("\n\n");
-                                                            } else {
-                                                                sb.append(x.getTitolo()).append("\n\n");
-                                                            }
+                                                        if (news.size() > 0) {
+                                                            final NotizieSitoDbSqlLite x = news.remove(0);
+
+                                                            adapter.clear();
+                                                            if (x.getData() != null)
+                                                                adapter.add(DateUtil.toDDMMYYY(x.getData()));
+                                                            else
+                                                                adapter.add(DateUtil.toDDMMYYY(x.getDataInserimento()));
+                                                            adapter.add(x.getTitolo().toUpperCase());
 
                                                         }
-                                                        home_text_news.setText(sb.toString());
                                                     }
                                                 }
                 );
