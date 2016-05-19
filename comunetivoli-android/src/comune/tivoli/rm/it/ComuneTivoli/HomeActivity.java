@@ -4,9 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.*;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import comune.tivoli.rm.it.ComuneTivoli.db.DBHelperRunnable;
 import comune.tivoli.rm.it.ComuneTivoli.db.DbHelper;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.DaoSession;
@@ -29,8 +32,10 @@ public class HomeActivity extends Activity {
     protected ImageButton home_btn_turismo;
     protected ImageButton home_btn_eventi;
     protected TextView home_news;
-    protected ListView home_text_news;
     protected TextView home_facebook;
+    protected TextView home_news_data;
+    protected TextView home_news_titolo;
+    protected TextView home_news_descrizione;
     protected ImageButton home_btn_fb;
     protected ImageButton home_btn_web;
     protected TextView home_web;
@@ -41,7 +46,7 @@ public class HomeActivity extends Activity {
 
     private ThreadAggiornamentoImmagineMonumentiComune task;
     private ThreadAggiornamentoNotizieSitoDbSqlLite task2;
-    private ArrayAdapter<String> adapter;
+
 
     @Override
     protected void onResume() {
@@ -77,7 +82,11 @@ public class HomeActivity extends Activity {
         home_btn_turismo = (ImageButton) view.findViewById(R.id.home_btn_turismo);
         home_btn_eventi = (ImageButton) view.findViewById(R.id.home_btn_eventi);
         home_news = (TextView) view.findViewById(R.id.home_news);
-        home_text_news = (ListView) view.findViewById(R.id.home_text_news);
+        home_news_data = (TextView) view.findViewById(R.id.home_news_data);
+        home_news_titolo = (TextView) view.findViewById(R.id.home_news_titolo);
+        home_news_descrizione = (TextView) view.findViewById(R.id.home_news_descrizione);
+
+
         home_facebook = (TextView) view.findViewById(R.id.home_facebook);
         home_btn_fb = (ImageButton) view.findViewById(R.id.home_btn_fb);
         home_btn_web = (ImageButton) view.findViewById(R.id.home_btn_web);
@@ -86,9 +95,6 @@ public class HomeActivity extends Activity {
         home_btn_contatti = (ImageButton) view.findViewById(R.id.home_btn_contatti);
         home_aboutus = (TextView) view.findViewById(R.id.home_aboutus);
         home_btn_aboutus = (ImageButton) view.findViewById(R.id.home_btn_aboutus);
-
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
-        home_text_news.setAdapter(adapter);
 
 
         home_btn_turismo.setOnClickListener(new View.OnClickListener() {
@@ -125,21 +131,18 @@ public class HomeActivity extends Activity {
         });
 
         //===================================================
-        home_text_news.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        final View.OnClickListener l = new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onClick(View v) {
                 Intent news;
                 news = new Intent(HomeActivity.this, NewsActivity.class);
                 startActivity(news);
-
             }
-        });
-        home_news.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                home_text_news.callOnClick();
-            }
-        });
+        };
+        home_news_titolo.setOnClickListener(l);
+        home_news.setOnClickListener(l);
+        home_news_descrizione.setOnClickListener(l);
+        home_news_data.setOnClickListener(l);
 
         //===================================================
         home_btn_fb.setOnClickListener(new View.OnClickListener() {
@@ -232,10 +235,24 @@ public class HomeActivity extends Activity {
 
             monumenti = new ArrayList<>(MonumentiUtil.elencoMonumenti(HomeActivity.this));
 
+            {
+                final Point size = ScreenUtil.getSize(HomeActivity.this);
+                final Bitmap bitmap = ScreenUtil.drawableToBitmap(HomeActivity.this.getResources().getDrawable(R.drawable.home_eventi_170x220));
+                final Bitmap bitmap1 = bitmap == null ? null : ScreenUtil.scaleAndAdaptWith(bitmap, size.x / 2-40);
+                HomeActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        home_btn_eventi.setImageBitmap(bitmap1);
+                    }
+                });
+
+            }
+
             while (!stop) {
+                final Point size = ScreenUtil.getSize(HomeActivity.this);
                 final MonumentiComune m = monumenti.size() == 0 ? null : monumenti.get(r.nextInt(monumenti.size()));
                 final Bitmap bitmap = m == null ? null : ScreenUtil.drawableToBitmap(HomeActivity.this.getResources().getDrawable(m.foto_small));
-                final Bitmap bitmap1 = bitmap == null ? null : ScreenUtil.scaleExactly(bitmap, 350, 180);
+                final Bitmap bitmap1 = bitmap == null ? null : ScreenUtil.scaleAndAdaptWith(bitmap, size.x / 2);
 
                 HomeActivity.this.runOnUiThread(new Runnable() {
                     @Override
@@ -293,18 +310,6 @@ public class HomeActivity extends Activity {
                 db.close();
             }
 
-            HomeActivity.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    for (NotizieSitoDbSqlLite x : news) {
-                        if (x.getData() != null)
-                            adapter.add(DateUtil.toDDMMYYY(x.getData()) + " " + x.getTitolo());
-                        else
-                            adapter.add("- " + x.getTitolo());
-                    }
-
-                }
-            });
 
             ////////////////////////////////
             while (!stop) {
@@ -313,23 +318,22 @@ public class HomeActivity extends Activity {
                     news.add(remove);
                 }
 
-                HomeActivity.this.runOnUiThread(new Runnable() {
-                                                    @Override
-                                                    public void run() {
-                                                        if (news.size() > 0) {
-                                                            final NotizieSitoDbSqlLite x = news.get(0);
+                HomeActivity.this.runOnUiThread(
+                        new Runnable() {
+                            @Override
+                            public void run() {
+                                if (news.size() > 0) {
+                                    final NotizieSitoDbSqlLite x = news.get(0);
 
-                                                            adapter.clear();
-                                                            if (x.getData() != null)
-                                                                adapter.add(DateUtil.toDDMMYYY(x.getData()));
-                                                            else
-                                                                adapter.add(DateUtil.toDDMMYYY(x.getDataInserimento()));
-                                                            adapter.add(x.getTitolo().toUpperCase());
-                                                            adapter.add(x.getTesto());
-
-                                                        }
-                                                    }
-                                                }
+                                    if (x.getData() != null)
+                                        home_news_data.setText(DateUtil.toDDMMYYY(x.getData()));
+                                    else
+                                        home_news_data.setText("");
+                                    home_news_titolo.setText(x.getTitolo());
+                                    home_news_descrizione.setText(x.getTesto());
+                                }
+                            }
+                        }
                 );
 
                 try {

@@ -80,6 +80,27 @@ public class ScreenUtil {
             return bitmap;
     }
 
+    public static Bitmap scaleAndAdaptWith(Bitmap bitmap, int width) {
+
+        if (width > 0 && bitmap != null) {
+            double scaleX = width / (bitmap.getWidth() * 1.);
+
+            double scaleXY = scaleX;
+            int newWidth = (int) (bitmap.getWidth() * scaleXY);
+            int newHeight = (int) (bitmap.getHeight() * scaleXY);
+            Bitmap resized = Bitmap.createScaledBitmap(bitmap, newWidth, newHeight, true);
+
+            // bitmap.recycle();
+            if (DEBUG__ScreenUtil)
+                System.out.println(" RESIZE preferred size = " + width +
+                        " - original size = " + bitmap.getWidth() + "," + bitmap.getHeight() +
+                        " - scale " + scaleXY + " new size:" + newWidth + "," + newHeight);
+
+            return resized;
+        } else
+            return bitmap;
+    }
+
     public static Bitmap scaleExactly(Bitmap bitmap, int width, int height) {
 
         if (width > 0 && height > 0 && bitmap != null) {
