@@ -83,7 +83,7 @@ public class ImageScrollActivity extends Activity {
             });
 
 
-            Picasso.with(this).load(path)
+            Picasso.with(this).load(path).placeholder(R.drawable.icona_picture)
                     .into(imageView);
 
             /*ImageView imageView1 = new ImageView(this);

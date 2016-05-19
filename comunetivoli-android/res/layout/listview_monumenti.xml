@@ -36,6 +36,6 @@
             android:id="@+id/monumenti_categoria"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/monumenti_image" android:textStyle="bold"
-            android:textColor="@color/template_colorred" android:gravity="left" android:paddingLeft="10dp"
-            android:layout_alignParentEnd="true" android:paddingBottom="10dp"/>
+            android:textColor="@color/template_colorred" android:paddingLeft="10dp"
+            android:layout_alignParentEnd="true" android:paddingBottom="10dp" android:gravity="center_vertical|center_horizontal"/>
 </RelativeLayout>

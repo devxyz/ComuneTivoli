@@ -28,7 +28,7 @@
     <string name="monumentixml_acquedotti_categoria">Archeologia</string>
     <string name="monumentixml_acquedotti_video">https://youtu.be/VKCjvOcru9k</string>
     <drawable name="monumentixml_acquedotti_fotosmall">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia</drawable>
-    <drawable name="monumentixml_acquedotti_fotobig">@drawable/monumenti_acquedotti_anio_vetus_e_aqua_marcia_big</drawable>
+    <string name="monumentixml_acquedotti_fotobigurl">http://www.visittivoli.eu/images/copertine/acquedotti-anio-vetus-e-aqua-marcia.jpg</string>
 
 
 
@@ -63,7 +63,7 @@
     <string name="monumentixml_anfiteatro_tred"></string>
     <string name="monumentixml_anfiteatro_video"></string>
     <drawable name="monumentixml_anfiteatro_fotosmall">@drawable/monumenti_anfiteatro_di_bleso</drawable>
-    <drawable name="monumentixml_anfiteatro_fotobig">@drawable/monumenti_anfiteatro_di_bleso_big</drawable>
+    <string name="monumentixml_anfiteatro_fotobigurl">http://www.visittivoli.eu/images/copertine/anfiteatro-bleso.jpg</string>
 
 
 
@@ -86,7 +86,7 @@
     <string name="monumentixml_arcata_dell_acquedotto_tred"></string>
     <string name="monumentixml_arcata_dell_acquedotto_video"></string>
     <drawable name="monumentixml_arcata_dell_acquedotto_fotosmall">@drawable/monumenti_arcata_dell_acquedotto</drawable>
-    <drawable name="monumentixml_arcata_dell_acquedotto_fotobig">@drawable/monumenti_arcata_dell_acquedotto_big</drawable>
+    <string name="monumentixml_arcata_dell_acquedotto_fotobigurl"></string>
 
 
 
@@ -120,7 +120,7 @@
     <string name="monumentixml_mensa_ponderaria_tred">http://www.visittivoli.eu/virtual-tour/mensa-ponderaria/</string>
     <string name="monumentixml_mensa_ponderaria_video"></string>
     <drawable name="monumentixml_mensa_ponderaria_fotosmall">@drawable/monumenti_mensa_ponderaria</drawable>
-    <drawable name="monumentixml_mensa_ponderaria_fotobig">@drawable/monumenti_mensa_ponderaria_big</drawable>
+    <string name="monumentixml_mensa_ponderaria_fotobigurl"></string>
 
 
 
@@ -150,7 +150,7 @@
     <string name="monumentixml_piazza_campitelli_tred">http://www.visittivoli.eu/virtual-tour/piazza-campitelli/</string>
     <string name="monumentixml_piazza_campitelli_video"></string>
     <drawable name="monumentixml_piazza_campitelli_fotosmall">@drawable/monumenti_piazza_campitelli</drawable>
-    <drawable name="monumentixml_piazza_campitelli_fotobig">@drawable/monumenti_piazza_campitelli_big</drawable>
+    <string name="monumentixml_piazza_campitelli_fotobigurl"></string>
 
 
 
@@ -186,7 +186,7 @@
     <string name="monumentixml_piazza_garibaldi_categoria">Piazze</string>
     <string name="monumentixml_piazza_garibaldi_video"></string>
     <drawable name="monumentixml_piazza_garibaldi_fotosmall">@drawable/monumenti_piazza_garibaldi</drawable>
-    <drawable name="monumentixml_piazza_garibaldi_fotobig">@drawable/monumenti_piazza_garibaldi_big</drawable>
+    <string name="monumentixml_piazza_garibaldi_fotobigurl"></string>
 
 
 
@@ -216,7 +216,7 @@
     <string name="monumentixml_ponte_gregoriano_tred"></string>
     <string name="monumentixml_ponte_gregoriano_video"></string>
     <drawable name="monumentixml_ponte_gregoriano_fotosmall">@drawable/monumenti_ponte_gregoriano</drawable>
-    <drawable name="monumentixml_ponte_gregoriano_fotobig">@drawable/monumenti_ponte_gregoriano_big</drawable>
+    <string name="monumentixml_ponte_gregoriano_fotobigurl"></string>
 
 
 
@@ -252,7 +252,7 @@
     <string name="monumentixml_rocca_pia_tred">http://www.visittivoli.eu/virtual-tour/rocca-pia/</string>
     <string name="monumentixml_rocca_pia_video"></string>
     <drawable name="monumentixml_rocca_pia_fotosmall">@drawable/monumenti_rocca_pia</drawable>
-    <drawable name="monumentixml_rocca_pia_fotobig">@drawable/monumenti_rocca_pia_big</drawable>
+    <string name="monumentixml_rocca_pia_fotobigurl"></string>
 
 
 
@@ -296,7 +296,7 @@
     <string name="monumentixml_santuario_ercole_categoria">Archeologia</string>
     <string name="monumentixml_santuario_ercole_video"></string>
     <drawable name="monumentixml_santuario_ercole_fotosmall">@drawable/monumenti_santuario_ercole</drawable>
-    <drawable name="monumentixml_santuario_ercole_fotobig">@drawable/monumenti_santuario_ercole_big</drawable>
+    <string name="monumentixml_santuario_ercole_fotobigurl"></string>
 
 
 
@@ -326,7 +326,7 @@
     <string name="monumentixml_tempio_della_sibilla_maps">41.966772, 12.800841</string>
     <string name="monumentixml_tempio_della_sibilla_video"></string>
     <drawable name="monumentixml_tempio_della_sibilla_fotosmall">@drawable/monumenti_tempio_della_sibilla</drawable>
-    <drawable name="monumentixml_tempio_della_sibilla_fotobig">@drawable/monumenti_tempio_della_sibilla_big</drawable>
+    <string name="monumentixml_tempio_della_sibilla_fotobigurl"></string>
 
 
 
@@ -360,7 +360,7 @@
     </string>
     <string name="monumentixml_tempio_di_vesta_categoria">Archeologia</string>
     <drawable name="monumentixml_tempio_di_vesta_fotosmall">@drawable/monumenti_tempio_di_vesta</drawable>
-    <drawable name="monumentixml_tempio_di_vesta_fotobig">@drawable/monumenti_tempio_di_vesta_big</drawable>
+    <string name="monumentixml_tempio_di_vesta_fotobigurl"></string>
 
 
 
@@ -391,7 +391,7 @@
     </string>
     <string name="monumentixml_tomba_dei_plauzi_categoria">Archeologia</string>
     <drawable name="monumentixml_tomba_dei_plauzi_fotosmall">@drawable/monumenti_tomba_dei_plauzi</drawable>
-    <drawable name="monumentixml_tomba_dei_plauzi_fotobig">@drawable/monumenti_tomba_dei_plauzi_big</drawable>
+    <string name="monumentixml_tomba_dei_plauzi_fotobigurl"></string>
 
 
 
@@ -442,7 +442,7 @@
     </string>
     <string name="monumentixml_villa_adriana_categoria">Ville</string>
     <drawable name="monumentixml_villa_adriana_fotosmall">@drawable/monumenti_villa_adriana</drawable>
-    <drawable name="monumentixml_villa_adriana_fotobig">@drawable/monumenti_villa_adriana_big</drawable>
+    <string name="monumentixml_villa_adriana_fotobigurl"></string>
 
 
 
@@ -491,7 +491,7 @@
     </string>
     <string name="monumentixml_villa_d_este_categoria">Ville</string>
     <drawable name="monumentixml_villa_d_este_fotosmall">@drawable/monumenti_villa_deste</drawable>
-    <drawable name="monumentixml_villa_d_este_fotobig">@drawable/monumenti_villa_deste_big</drawable>
+    <string name="monumentixml_villa_d_este_fotobigurl"></string>
 
 
 
@@ -534,7 +534,7 @@
     </string>
     <string name="monumentixml_villa_gregoriana_categoria">Ville</string>
     <drawable name="monumentixml_villa_gregoriana_fotosmall">@drawable/monumenti_villa_gregoriana</drawable>
-    <drawable name="monumentixml_villa_gregoriana_fotobig">@drawable/monumenti_villa_gregoriana_big</drawable>
+    <string name="monumentixml_villa_gregoriana_fotobigurl"></string>
 
 
 
@@ -573,7 +573,7 @@
     </string>
     <string name="monumentixml_Cattedrale_di_San_Lorenzo_categoria">Luoghi di Culto</string>
     <drawable name="monumentixml_Cattedrale_di_San_Lorenzo_fotosmall">@drawable/monumenti_cattedrale_san_lorenzo</drawable>
-    <drawable name="monumentixml_Cattedrale_di_San_Lorenzo_fotobig">@drawable/monumenti_cattedrale_san_lorenzo_big</drawable>
+    <string name="monumentixml_Cattedrale_di_San_Lorenzo_fotobigurl"></string>
 
 
 
@@ -606,7 +606,7 @@
     </string>
     <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_categoria">Luoghi di Culto</string>
     <drawable name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_fotosmall">@drawable/monumenti_chiesa_maria_ss_quintiliolo</drawable>
-    <drawable name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_fotobig">@drawable/monumenti_chiesa_maria_ss_quintiliolo_big</drawable>
+    <string name="monumentixml_Chiesa_della_Maria_SS_di_Quintiliolo_fotobigurl"></string>
 
 
 
@@ -644,7 +644,7 @@
     </string>
     <string name="monumentixml_Chiesa_di_San_Biagio_categoria">Luoghi di Culto</string>
     <drawable name="monumentixml_Chiesa_di_San_Biagio_fotosmall">@drawable/monumenti_chiesa_san_biagio</drawable>
-    <drawable name="monumentixml_Chiesa_di_San_Biagio_fotobig">@drawable/monumenti_chiesa_san_biagio_big</drawable>
+    <string name="monumentixml_Chiesa_di_San_Biagio_fotobigurl"></string>
 
 
 
@@ -669,7 +669,7 @@
     </string>
     <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_categoria">Luoghi di Culto</string>
     <drawable name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_fotosmall">@drawable/monumenti_chiesa_san_pietro_carita</drawable>
-    <drawable name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_fotobig">@drawable/monumenti_chiesa_san_pietro_carita_big</drawable>
+    <string name="monumentixml_Chiesa_di_San_Pietro_alla_Carità_fotobigurl"></string>
 
 
 
@@ -705,7 +705,7 @@
     </string>
     <string name="monumentixml_Chiesa_di_San_Silvestro_categoria">Luoghi di Culto</string>
     <drawable name="monumentixml_Chiesa_di_San_Silvestro_fotosmall">@drawable/monumenti_chiesa_san_silvestro</drawable>
-    <drawable name="monumentixml_Chiesa_di_San_Silvestro_fotobig">@drawable/monumenti_chiesa_san_silvestro_big</drawable>
+    <string name="monumentixml_Chiesa_di_San_Silvestro_fotobigurl"></string>
 
 
 
@@ -741,7 +741,7 @@
     </string>
     <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_categoria">Luoghi di Culto</string>
     <drawable name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_fotosmall">@drawable/monumenti_chiesa_santa_maria_maggiore</drawable>
-    <drawable name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_fotobig">@drawable/monumenti_chiesa_santa_maria_maggiore_big</drawable>
+    <string name="monumentixml_Chiesa_di_Santa_Maria_Maggiore_fotobigurl"></string>
 
 
 
@@ -768,7 +768,7 @@
     </string>
     <string name="monumentixml_Casa_Gotica_categoria">Edifici Storici</string>
     <drawable name="monumentixml_Casa_Gotica_fotosmall">@drawable/monumenti_casa_gotica</drawable>
-    <drawable name="monumentixml_Casa_Gotica_fotobig">@drawable/monumenti_casa_gotica_big</drawable>
+    <string name="monumentixml_Casa_Gotica_fotobigurl"></string>
 
 
 
@@ -804,7 +804,7 @@
     </string>
     <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_categoria">Edifici Storici</string>
     <drawable name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_fotosmall">@drawable/monumenti_palazzo_missione</drawable>
-    <drawable name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_fotobig">@drawable/monumenti_palazzo_missione_big</drawable>
+    <string name="monumentixml_Palazzo_della_Missione_Complesso_Mauro_Macera_fotobigurl"></string>
 
 
 

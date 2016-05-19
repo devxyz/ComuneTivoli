@@ -7,38 +7,23 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <RelativeLayout
-                android:orientation="horizontal"
+        <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="New Text\nseconda linea"
-                    android:id="@+id/maps_text_titolo"
-                    android:textColor="@color/template_colorred" android:textSize="@dimen/app_textsize_titolo"
-                    android:padding="5dp" android:textStyle="bold"
-                    android:layout_alignParentTop="true" android:layout_alignParentStart="true"
-                    android:layout_toStartOf="@+id/maps_btn_open"/>
-            <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Livelli"
-                    android:id="@+id/maps_btn_open"
-                    android:src="@drawable/icona_down_arrow_red_50x25"
-                    android:background="@color/trasparent"
-                    android:padding="5dp"
-                    android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
-                    android:scaleType="fitStart"/>
-        </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:text="New Text\nseconda linea"
+                android:id="@+id/maps_text_titolo"
+                android:textColor="@color/template_colorred" android:textSize="@dimen/app_textsize_titolo"
+                android:padding="5dp" android:textStyle="bold"
+                android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/maps_btn_open"/>
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-                      android:name="com.google.android.gms.maps.MapFragment"
-                      android:id="@+id/map"
-                      android:layout_width="match_parent"
-                      android:layout_height="fill_parent"
-                      android:layout_alignParentLeft="true"
-                      android:layout_alignParentBottom="true" android:layout_alignParentRight="true"
-                      android:layout_alignParentEnd="false" android:layout_alignParentStart="false"
-                      android:layout_below="@+id/maps_text_titolo"/>
+                  android:name="com.google.android.gms.maps.MapFragment"
+                  android:id="@+id/map"
+                  android:layout_width="match_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentBottom="true" android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="false" android:layout_alignParentStart="false"
+                  android:layout_below="@+id/maps_text_titolo"/>
     </LinearLayout>
 </RelativeLayout>

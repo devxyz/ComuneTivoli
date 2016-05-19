@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -27,7 +26,7 @@ import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 // TODO: 10/05/16 - verifica correttezza OK
 public class MapsActivity extends Activity implements OnMapReadyCallback {
     TextView maps_text_titolo;
-    ImageButton btn;
+
     MapsActivityDati dati;
     private MapFragment mapFragment;
     private MapOperation operation = null;
@@ -36,9 +35,16 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
     /**
      * GoogleMap.MAP_TYPE_SATELLITE o MAP_TYPE_TERRAIN
      */
-    public static Intent createIntent(Activity a, String titolo, double longitudine, double latitudine, String descrizione, int zoom, String indirizzo, int mapType) {
+    public static Intent createIntentMapsActivity(Activity a, String titolo, double longitudine, double latitudine, String descrizione, int zoom, String indirizzo, int mapType) {
         MapsActivityDati dati = new MapsActivityDati(longitudine, latitudine, zoom, titolo, descrizione, indirizzo, mapType);
         return dati.toIntent(a);
+    }
+
+    public static Intent createIntentOpenGoogleMaps(Activity a, String titolo, double longitudine, double latitudine, String descrizione, int zoom, String indirizzo, int mapType) {
+        Intent mapsIntent;
+        mapsIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("geo:0,0?q=" + latitudine + "," + longitudine + "(" + Uri.encode(titolo) + ")" + "&z=16&"));
+        return mapsIntent;
     }
 
     @Override
@@ -47,9 +53,9 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
 
         dati = new MapsActivityDati(savedInstanceState, getIntent());
 
-        TemplateUtil.inizializzaActivity(this,  "Mappa", R.layout.maps_activity, R.layout.maps_activity_decorated);
+        TemplateUtil.inizializzaActivity(this, "Mappa", R.layout.maps_activity, R.layout.maps_activity_decorated);
 
-        btn = (ImageButton) findViewById(R.id.maps_btn_open);
+
         maps_text_titolo = (TextView) findViewById(R.id.maps_text_titolo);
         mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
@@ -128,7 +134,6 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
 
             }
         };
-        btn.setOnClickListener(informazioni);
         maps_text_titolo.setOnClickListener(informazioni);
         maps_text_titolo.setText(dati.titolo);
         mapFragment.getMapAsync(this);
@@ -146,7 +151,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
 
             final Marker marker = map.addMarker(new MarkerOptions()
                     .title(dati.titolo)
-                    .snippet(dati.descrizione)
+                    .snippet(dati.indirizzo)
                     .position(pos));
             marker.showInfoWindow();
         }

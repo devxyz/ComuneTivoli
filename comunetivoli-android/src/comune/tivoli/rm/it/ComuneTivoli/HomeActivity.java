@@ -234,7 +234,7 @@ public class HomeActivity extends Activity {
 
             while (!stop) {
                 final MonumentiComune m = monumenti.size() == 0 ? null : monumenti.get(r.nextInt(monumenti.size()));
-                final Bitmap bitmap = m == null ? null : ScreenUtil.drawableToBitmap(HomeActivity.this.getResources().getDrawable(m.foto_big));
+                final Bitmap bitmap = m == null ? null : ScreenUtil.drawableToBitmap(HomeActivity.this.getResources().getDrawable(m.foto_small));
                 final Bitmap bitmap1 = bitmap == null ? null : ScreenUtil.scaleExactly(bitmap, 350, 180);
 
                 HomeActivity.this.runOnUiThread(new Runnable() {

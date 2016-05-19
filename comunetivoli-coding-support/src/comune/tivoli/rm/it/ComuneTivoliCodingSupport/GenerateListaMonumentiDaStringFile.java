@@ -86,7 +86,7 @@ public class GenerateListaMonumentiDaStringFile {
                     "                a.getResources().getString(R.string.#_descrizione),\n" +
                     "                a.getResources().getString(R.string.#_descrizionebig),\n" +
                     "                (R.drawable.#_fotosmall),\n" +
-                    "                (R.drawable.#_fotobig),\n" +
+                    "                a.getResources().getString(R.string.#_fotobigurl),\n" +
                     "                a.getResources().getString(R.string.#_url),\n" +
                     "                a.getResources().getString(R.string.#_maps),\n" +
                     "                a.getResources().getString(R.string.#_tred),\n" +

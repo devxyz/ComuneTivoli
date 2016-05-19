@@ -1,25 +1,34 @@
 package comune.tivoli.rm.it.ComuneTivoli;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.google.android.gms.maps.GoogleMap;
+import com.squareup.picasso.Picasso;
 import comune.tivoli.rm.it.ComuneTivoli.guicomponents.DialogUtil;
+import comune.tivoli.rm.it.ComuneTivoli.guicomponents.listener.OnClickListenerDialogErrorCheck;
+import comune.tivoli.rm.it.ComuneTivoli.guicomponents.listener.OnClickListenerViewErrorCheck;
 import comune.tivoli.rm.it.ComuneTivoli.model.MonumentiComune;
 import comune.tivoli.rm.it.ComuneTivoli.util.IntentUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.MonumentiUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by millozzi.stefano on 15/03/2016.
- * todo:inserire le immagini buone
+ * todo: nel file xml inserire la URL delle immagini BIG prelevandole dal sito (per evitare dimensione troppo alta)
  */
 
 /**
@@ -37,7 +46,10 @@ public class MonumentiDettagliActivity extends Activity {
     ImageButton tred_btn;
     ImageButton maps_btn;
     ImageButton foto_btn;
+    ImageButton monumenti_btn_voice;
     private MonumentiDettagliActivityData dati;
+    private ProgressDialog dialog;
+    private TextToSpeech engine;
 
     public static Intent preparaIntent(Activity caller, MonumentiComune c) {
         MonumentiDettagliActivityData dati = new MonumentiDettagliActivityData(c);
@@ -64,6 +76,9 @@ public class MonumentiDettagliActivity extends Activity {
         tred_btn = (ImageButton) findViewById(R.id.monumenti_view3d_btn);
         maps_btn = (ImageButton) findViewById(R.id.monumenti_maps_btn);
         foto_btn = (ImageButton) findViewById(R.id.monumenti_btn_gallery);
+        monumenti_btn_voice = (ImageButton) findViewById(R.id.monumenti_btn_voice);
+
+        tred_btn.setLongClickable(true);
 
 
         try {
@@ -72,15 +87,27 @@ public class MonumentiDettagliActivity extends Activity {
             if (monumento != null) {
                 title_text.setText(monumento.titolo);
                 dettagli_text.setText(monumento.descrizione_big);
-                final Drawable foto_big = getResources().getDrawable(monumento.foto_big);
+
+                String urlImmagine = monumento.url_foto_big;
+                if (urlImmagine.length() == 0) {
+                    if (monumento.galleriaFoto.size() > 0)
+                        urlImmagine = monumento.galleriaFoto.get(0);
+                }
+                if (urlImmagine.length() > 0) {
+                    Picasso.with(this).load(urlImmagine).placeholder(monumento.foto_small)
+                            .into(image_monumento);
+                }
+
+                 /*
+                final Drawable foto_big = getResources().getDrawable(monumento.url_foto_big);
                 if (foto_big != null)
-                    image_monumento.setBackgroundResource(monumento.foto_big);
+                    image_monumento.setImageResource(monumento.url_foto_big);
                 else {
                     //image_monumento.setImageDrawable(null);
                 }
+                */
 
-
-                if (monumento.tred.length() > 0)
+                if (monumento.tred.length() > 0) {
                     tred_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -90,20 +117,39 @@ public class MonumentiDettagliActivity extends Activity {
 
                         }
                     });
-                else
+                    /*
+                    todo: visualizzazione 3d in webview ha problemi di performance gravi
+                    tred_btn.setOnLongClickListener(new View.OnLongClickListener() {
+                        @Override
+                        public boolean onLongClick(View v) {
+                            startActivity(WebActivity.prepare(MonumentiDettagliActivity.this, monumento.tred, monumento.titolo, "Panoramica 3D " + monumento.categoria));
+                            return true;
+                        }
+                    });
+                    */
+                } else
                     tred_btn.setVisibility(View.GONE);
 
 
-                if (monumento.latitudineLongitudineMaps.length() > 0)
+                if (monumento.latitudineLongitudineMaps.length() > 0) {
                     maps_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            final Intent intent = MapsActivity.createIntent(MonumentiDettagliActivity.this, monumento.titolo, monumento.getLongitude(), monumento.getLatitude(), monumento.descrizione, 18, "", GoogleMap.MAP_TYPE_SATELLITE);
+                            final Intent intent = MapsActivity.createIntentMapsActivity(MonumentiDettagliActivity.this, monumento.titolo, monumento.getLongitude(), monumento.getLatitude(), monumento.descrizione, 18, "", GoogleMap.MAP_TYPE_SATELLITE);
                             startActivity(intent);
 
                         }
                     });
-                else
+                    maps_btn.setLongClickable(true);
+                    maps_btn.setOnLongClickListener(new View.OnLongClickListener() {
+                        @Override
+                        public boolean onLongClick(View v) {
+                            final Intent i = MapsActivity.createIntentOpenGoogleMaps(MonumentiDettagliActivity.this, monumento.titolo, monumento.getLongitude(), monumento.getLatitude(), monumento.descrizione, 18, "", GoogleMap.MAP_TYPE_SATELLITE);
+                            startActivity(i);
+                            return true;
+                        }
+                    });
+                } else
                     maps_btn.setVisibility(View.GONE);
 
 
@@ -135,6 +181,81 @@ public class MonumentiDettagliActivity extends Activity {
                 } else {
                     foto_btn.setVisibility(View.GONE);
                 }
+
+                monumenti_btn_voice.setVisibility(View.GONE);
+                engine = new TextToSpeech(MonumentiDettagliActivity.this, new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int status) {
+                        Log.d("Speech", "OnInit - Status [" + status + "]");
+
+                        if (status == TextToSpeech.SUCCESS) {
+                            Log.d("Speech", "Success!");
+                            engine.setLanguage(Locale.ITALY);
+                            monumenti_btn_voice.setVisibility(View.VISIBLE);
+                        } else {
+                            monumenti_btn_voice.setVisibility(View.GONE);
+                            engine = null;
+                            Toast.makeText(MonumentiDettagliActivity.this, "Sintesi vocale non disponibile", Toast.LENGTH_LONG).show();
+
+                            // missing data, install it
+                            Intent installIntent = new Intent();
+                            installIntent.setAction(
+                                    TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+                            startActivity(installIntent);
+                        }
+                    }
+                });
+
+
+                monumenti_btn_voice.setOnClickListener(new OnClickListenerViewErrorCheck(MonumentiDettagliActivity.this) {
+                    @Override
+                    protected void onClickImpl(View v) throws Throwable {
+                        try {
+                            if (engine == null) return;
+
+                            final String msg = "Sintesi vocale " + monumento.titolo;
+
+                            final OnClickListenerDialogErrorCheck v1 = new OnClickListenerDialogErrorCheck(MonumentiDettagliActivity.this) {
+                                @Override
+                                protected void onClickImpl(DialogInterface dialog, int which) throws Throwable {
+                                    engine.stop();
+                                }
+                            };
+                            final DialogInterface.OnKeyListener v2 = new DialogInterface.OnKeyListener() {
+                                @Override
+                                public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                                        onStop();
+                                    }
+                                    return true;
+                                }
+                            };
+                            dialog = DialogUtil.openProgressDialog(MonumentiDettagliActivity.this, "Riproduzione in corso", monumento.titolo, "Ok", v1, v2);
+
+                            engine.setPitch(1.0f);
+                            engine.setSpeechRate(1f);
+
+                            engine.speak(monumento.titolo + ".\n" + monumento.descrizione_big, TextToSpeech.QUEUE_FLUSH, null);
+
+                        /*final String[] tt = normalizedText.split("[\n\\.]");
+                        for (String phrase : tt) {
+                            engine.speak(phrase, TextToSpeech.QUEUE_FLUSH, null);
+                        }*/
+                        } catch (Throwable e) {
+                            Toast.makeText(MonumentiDettagliActivity.this, "Sintesi vocale non disponibile", Toast.LENGTH_LONG).show();
+                            if (dialog != null)
+                                dialog.cancel();
+                            dialog = null;
+                            if (engine != null) {
+                                engine.stop();
+                            }
+
+                        }
+
+                    }
+                });
+
+
             }
 
         } catch (Throwable e) {
@@ -142,6 +263,22 @@ public class MonumentiDettagliActivity extends Activity {
         }
 
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (engine != null) {
+            engine.stop();
+            engine.shutdown();
+            engine = null;
+        }
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 
     public static class MonumentiDettagliActivityData {

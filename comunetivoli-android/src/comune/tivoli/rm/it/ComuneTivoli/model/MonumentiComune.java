@@ -13,7 +13,7 @@ public class MonumentiComune {
     public final String descrizione;
     public final String descrizione_big;
     public final int foto_small;
-    public final int foto_big;
+    public final String url_foto_big;
     public final String latitudineLongitudineMaps;
     public final String video;
     public final String tred;
@@ -22,7 +22,7 @@ public class MonumentiComune {
     public final List<String> galleriaFoto;
 
 
-    public MonumentiComune(int id, String titolo, String descrizione, String descrizione_big, int foto_small, int foto_big, String url, String latitudineLongitudineMaps, String tred, String video, String categoria, String urlGalleriaConcatenata) {
+    public MonumentiComune(int id, String titolo, String descrizione, String descrizione_big, int foto_small, String url_foto_big, String url, String latitudineLongitudineMaps, String tred, String video, String categoria, String urlGalleriaConcatenata) {
         this.id = id;
         this.titolo = titolo;
         this.descrizione = descrizione;
@@ -30,7 +30,7 @@ public class MonumentiComune {
         this.tred = tred;
         this.foto_small = foto_small;
         this.latitudineLongitudineMaps = latitudineLongitudineMaps;
-        this.foto_big = foto_big;
+        this.url_foto_big = url_foto_big;
         this.url = url;
         this.video = video;
         this.categoria = categoria;

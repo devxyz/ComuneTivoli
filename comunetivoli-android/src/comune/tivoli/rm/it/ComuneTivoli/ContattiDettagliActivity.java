@@ -121,7 +121,7 @@ public class ContattiDettagliActivity extends Activity {
             screen.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    final Intent i = MapsActivity.createIntent(ContattiDettagliActivity.this, contatto.titolo, contatto.getLongitude(), contatto.getLatitude(), contatto.descrizione, 16, contatto.indirizzo, GoogleMap.MAP_TYPE_TERRAIN);
+                    final Intent i = MapsActivity.createIntentMapsActivity(ContattiDettagliActivity.this, contatto.titolo, contatto.getLongitude(), contatto.getLatitude(), contatto.descrizione, 16, contatto.indirizzo, GoogleMap.MAP_TYPE_TERRAIN);
                     startActivity(i);
                 }
             });

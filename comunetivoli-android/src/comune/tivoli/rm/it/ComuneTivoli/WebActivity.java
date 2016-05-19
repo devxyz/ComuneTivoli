@@ -66,7 +66,6 @@ public class WebActivity extends Activity {
         www.getSettings().setBuiltInZoomControls(true);
         www.getSettings().setSupportZoom(true);
         www.getSettings().setJavaScriptEnabled(true);
-        www.getSettings().setSupportZoom(true);
 
         //www.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);//DONE: NO SE si vuole accedere alle pagine 3d di tivoli
 
