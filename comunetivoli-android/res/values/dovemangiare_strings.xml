@@ -87,16 +87,68 @@
 
 
 
+    <string name="dovemangiare_bar_cioppona_giulia_titolo"></string>
+    <string name="dovemangiare_bar_cioppona_giulia_testo"></string>
+    <string name="dovemangiare_bar_cioppona_giulia_indirizzo"></string>
+    <string name="dovemangiare_bar_cioppona_giulia_telefono"></string>
+    <string name="dovemangiare_bar_cioppona_giulia_sito"></string>
+    <string name="dovemangiare_bar_cioppona_giulia_email"></string>
+    <string name="dovemangiare_bar_cioppona_giulia_maps"></string>
+    <string name="dovemangiare_bar_cioppona_giulia_tripadvisorlink"></string>
 
 
-    <string name="dovemangiare__titolo"></string>
-    <string name="dovemangiare__testo"></string>
-    <string name="dovemangiare__indirizzo"></string>
-    <string name="dovemangiare__telefono"></string>
-    <string name="dovemangiare__sito"></string>
-    <string name="dovemangiare__email"></string>
-    <string name="dovemangiare__maps"></string>
-    <string name="dovemangiare__tripadvisorlink"></string>
+    <string name="dovemangiare_bar_crocetta_titolo"></string>
+    <string name="dovemangiare_bar_crocetta_testo"></string>
+    <string name="dovemangiare_bar_crocetta_indirizzo"></string>
+    <string name="dovemangiare_bar_crocetta_telefono"></string>
+    <string name="dovemangiare_bar_crocetta_sito"></string>
+    <string name="dovemangiare_bar_crocetta_email"></string>
+    <string name="dovemangiare_bar_crocetta_maps"></string>
+    <string name="dovemangiare_bar_crocetta_tripadvisorlink"></string>
+
+
+    <string name="dovemangiare_bar_dell_orologio_titolo"></string>
+    <string name="dovemangiare_bar_dell_orologio_testo"></string>
+    <string name="dovemangiare_bar_dell_orologio_indirizzo"></string>
+    <string name="dovemangiare_bar_dell_orologio_telefono"></string>
+    <string name="dovemangiare_bar_dell_orologio_sito"></string>
+    <string name="dovemangiare_bar_dell_orologio_email"></string>
+    <string name="dovemangiare_bar_dell_orologio_maps"></string>
+    <string name="dovemangiare_bar_dell_orologio_tripadvisorlink"></string>
+
+    <string name="dovemangiare_bar_della_scaletta_titolo"></string>
+    <string name="dovemangiare_bar_della_scaletta_testo"></string>
+    <string name="dovemangiare_bar_della_scaletta_indirizzo"></string>
+    <string name="dovemangiare_bar_della_scaletta_telefono"></string>
+    <string name="dovemangiare_bar_della_scaletta_sito"></string>
+    <string name="dovemangiare_bar_della_scaletta_email"></string>
+    <string name="dovemangiare_bar_della_scaletta_maps"></string>
+    <string name="dovemangiare_bar_della_scaletta_tripadvisorlink"></string>
+
+
+    <string name="dovemangiare_bar_dello_sport_titolo"></string>
+    <string name="dovemangiare_bar_dello_sport_testo"></string>
+    <string name="dovemangiare_bar_dello_sport_indirizzo"></string>
+    <string name="dovemangiare_bar_dello_sport_telefono"></string>
+    <string name="dovemangiare_bar_dello_sport_sito"></string>
+    <string name="dovemangiare_bar_dello_sport_email"></string>
+    <string name="dovemangiare_bar_dello_sport_maps"></string>
+    <string name="dovemangiare_bar_dello_sport_tripadvisorlink"></string>
+
+
+    <string name="dovemangiare_bar_di_romanzi_emanuele_e_gnocchi_massimo_titolo"></string>
+    <string name="dovemangiare_bar_di_romanzi_emanuele_e_gnocchi_massimo_testo"></string>
+    <string name="dovemangiare_bar_di_romanzi_emanuele_e_gnocchi_massimo_indirizzo"></string>
+    <string name="dovemangiare_bar_di_romanzi_emanuele_e_gnocchi_massimo_email"></string>
+    <string name="dovemangiare_bar_di_romanzi_emanuele_e_gnocchi_massimo_maps"></string>
+    <string name="dovemangiare_bar_di_romanzi_emanuele_e_gnocchi_massimo_tripadvisorlink"></string>
+
+    
+
+
+
+
+
 
 
 

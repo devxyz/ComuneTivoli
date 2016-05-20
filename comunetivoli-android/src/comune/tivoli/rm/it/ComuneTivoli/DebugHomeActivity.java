@@ -53,6 +53,7 @@ public class DebugHomeActivity extends Activity {
         btn_home = (Button) findViewById(R.id.btn_home);
         btnnotifica = (Button) findViewById(R.id.btn_notifica);
         btndovemangiare = (Button) findViewById(R.id.btn_dove_mangiare);
+        btndovemangiare = (Button) findViewById(R.id.btn_dovemangiare);
 
         btn_disabilita_dec.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -175,11 +176,11 @@ public class DebugHomeActivity extends Activity {
                 nm.notify(0, notification);
             }
         });
-
         btndovemangiare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DebugHomeActivity.this,DoveMangiareActivity.class);
+                Intent i = new Intent(DebugHomeActivity.this,DoveMangiare.class);
+
                 startActivity(i);
             }
         });
