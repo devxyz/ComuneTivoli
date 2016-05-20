@@ -24,7 +24,7 @@ import comune.tivoli.rm.it.ComuneTivoli.util.WebViewUtil;
 // TODO: 10/05/16 - verifica correttezza OK
 public class WebActivity extends Activity {
     TextView label_titolo;
-    ImageButton web_btn_external_open;
+
     WebView www;
     WebActivityData dati;
     ProgressBar bar;
@@ -56,7 +56,6 @@ public class WebActivity extends Activity {
 
         label_titolo = (TextView) findViewById(R.id.web_titolo);
         www = (WebView) findViewById(R.id.web_www);
-        web_btn_external_open = (ImageButton) findViewById(R.id.web_btn_external_open);
         bar = (ProgressBar) findViewById(R.id.web_progressbar);
 
 
@@ -104,7 +103,6 @@ public class WebActivity extends Activity {
                         }, null);
             }
         };
-        web_btn_external_open.setOnClickListener(informazioni);
         label_titolo.setOnClickListener(informazioni);
 
     }
