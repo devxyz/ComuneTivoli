@@ -52,11 +52,8 @@ public class DebugHomeActivity extends Activity {
         btn_crediti = (Button) findViewById(R.id.btn_crediti);
         btn_home = (Button) findViewById(R.id.btn_home);
         btnnotifica = (Button) findViewById(R.id.btn_notifica);
-<<<<<<< Updated upstream
         btndovemangiare = (Button) findViewById(R.id.btn_dove_mangiare);
-=======
         btndovemangiare = (Button) findViewById(R.id.btn_dovemangiare);
->>>>>>> Stashed changes
 
         btn_disabilita_dec.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -179,18 +176,11 @@ public class DebugHomeActivity extends Activity {
                 nm.notify(0, notification);
             }
         });
-<<<<<<< Updated upstream
-
-        btndovemangiare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DebugHomeActivity.this,DoveMangiareActivity.class);
-=======
         btndovemangiare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(DebugHomeActivity.this,DoveMangiare.class);
->>>>>>> Stashed changes
+
                 startActivity(i);
             }
         });
