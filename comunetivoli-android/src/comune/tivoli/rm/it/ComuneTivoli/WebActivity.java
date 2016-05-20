@@ -103,6 +103,7 @@ public class WebActivity extends Activity {
                         }, null);
             }
         };
+
         label_titolo.setOnClickListener(informazioni);
 
     }
