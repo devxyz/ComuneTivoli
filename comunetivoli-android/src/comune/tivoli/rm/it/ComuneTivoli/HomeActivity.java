@@ -72,7 +72,7 @@ public class HomeActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TemplateUtil.inizializzaActivity(this, "*" + "Home", R.layout.home_activity_decorated, R.layout.home_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,  "Home", R.layout.home_activity_decorated, R.layout.home_activity_decorated);
 
 
         Activity view = this;
@@ -117,9 +117,11 @@ public class HomeActivity extends Activity {
         home_btn_eventi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent eventi;
+                /*Intent eventi;
                 eventi = new Intent(HomeActivity.this, EventiActivity.class);
                 startActivity(eventi);
+                */
+                startActivity(IntentUtil.openWebBrowser(getResources().getString(R.string.url_eventi_)));
 
             }
         });

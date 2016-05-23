@@ -28,7 +28,7 @@ public class TurismoActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this, "*" + "Turismo", R.layout.turismo_activity, R.layout.turismo_activity_decorated);
+        TemplateUtil.inizializzaActivity(this,  "Turismo", R.layout.turismo_activity, R.layout.turismo_activity_decorated);
         turismo_btn_monumenti = (ImageButton) findViewById(R.id.turismo_btn_monumenti);
         turismo_btn_cosa_mangiare = (ImageButton) findViewById(R.id.turismo_btn_cosa_mangiare);
         turismo_btn_dormire = (ImageButton) findViewById(R.id.turismo_btn_dormire);
