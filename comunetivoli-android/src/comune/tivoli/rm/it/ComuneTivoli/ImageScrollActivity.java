@@ -39,14 +39,12 @@ public class ImageScrollActivity extends Activity {
         txt = (TextView) findViewById(R.id.image_text);
         titolo = (TextView) findViewById(R.id.image_titolo);
         image_linear = (LinearLayout) findViewById(R.id.image_linear);
-        txt.setText(data.descrizione + " - click prolungato per aprire");
+        txt.setText(data.descrizione + " - touch prolungato");
         titolo.setText(data.titolo);
 
         List<String> imgurl;
         imgurl = new ArrayList<>(data.imgUrlList);
 
-
-        LinearLayout layout = (LinearLayout) findViewById(R.id.image_linear);
 
         int padding_up_down = 0;
         int padding_left_right = 0;
@@ -70,7 +68,7 @@ public class ImageScrollActivity extends Activity {
             /*imageView.setImageBitmap(BitmapFactory.decodeResource(
                     getResources(), R.drawable.logo_scuola_500x500));
             imageView.setScaleType(ImageView.ScaleType.CENTER);*/
-            layout.addView(imageView);
+            image_linear.addView(imageView);
             imageView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {

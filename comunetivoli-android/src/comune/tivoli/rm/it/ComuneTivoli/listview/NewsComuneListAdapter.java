@@ -82,7 +82,11 @@ public class NewsComuneListAdapter extends BaseAdapter {
             news_descrizione.setText(sb.toString());
         }
         news_title.setText(nc.getTitolo());
-        news_data.setText(DateUtil.toDDMMYYY(nc.getData()));
+        if (nc.getData() != null) {
+            news_data.setText(DateUtil.toDDMMYYY(nc.getData()));
+            news_data.setVisibility(View.VISIBLE);
+        } else
+            news_data.setVisibility(View.INVISIBLE);
         if (!nc.getFlagContenutoLetto()) {
             news_title.setTypeface(null, Typeface.BOLD);
         } else {

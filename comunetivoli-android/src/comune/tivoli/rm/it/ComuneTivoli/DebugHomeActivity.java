@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import comune.tivoli.rm.it.ComuneTivoli.guicomponents.DialogUtil;
 import comune.tivoli.rm.it.ComuneTivoli.util.TemplateUtil;
 
@@ -33,7 +34,7 @@ public class DebugHomeActivity extends Activity {
     Button btn_disabilita_dec;
     Button btnscroll;
     Button btnnotifica;
-    Button btndovemangiare;
+    ImageButton btndovemangiare;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,8 +53,7 @@ public class DebugHomeActivity extends Activity {
         btn_crediti = (Button) findViewById(R.id.btn_crediti);
         btn_home = (Button) findViewById(R.id.btn_home);
         btnnotifica = (Button) findViewById(R.id.btn_notifica);
-        btndovemangiare = (Button) findViewById(R.id.btn_dove_mangiare);
-        btndovemangiare = (Button) findViewById(R.id.btn_dovemangiare);
+        btndovemangiare = (ImageButton) findViewById(R.id.btn_dovemangiare);
 
         btn_disabilita_dec.setOnClickListener(new View.OnClickListener() {
             @Override

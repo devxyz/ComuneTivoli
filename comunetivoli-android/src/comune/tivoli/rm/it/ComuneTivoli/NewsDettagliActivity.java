@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -46,7 +45,7 @@ public class NewsDettagliActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TemplateUtil.inizializzaActivity(this, "*" + "Notizie", R.layout.newsdettagli_activity, R.layout.newsdettagli_activity_decorated);
+        TemplateUtil.inizializzaActivity(this, "Notizie", R.layout.newsdettagli_activity, R.layout.newsdettagli_activity_decorated);
         news_titolo = (TextView) findViewById(R.id.news_titolo);
         news_data = (TextView) findViewById(R.id.news_data);
         www = (WebView) findViewById(R.id.news_html);
@@ -56,13 +55,18 @@ public class NewsDettagliActivity extends Activity {
 
         news_titolo.setText(dati.titolo);
         www.loadData(dati.html, "text/html", "UTF8");
-        news_data.setText(DateUtil.toDDMMYYY(dati.data));
+        //se e' una data...
+        if (dati.data != null && dati.data.getTime() > 100) {
+            news_data.setText(DateUtil.toDDMMYYY(dati.data));
+            news_data.setVisibility(View.VISIBLE);
+        } else
+            news_data.setVisibility(View.INVISIBLE);
 
         www.getSettings().setBuiltInZoomControls(false);
-        www.getSettings().setSupportZoom(true);
+        //www.getSettings().setSupportZoom(true);
         www.getSettings().setJavaScriptEnabled(true);
 
-        www.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        //www.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         www.getSettings().setLoadWithOverviewMode(true);
         www.getSettings().setUseWideViewPort(true);
 

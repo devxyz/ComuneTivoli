@@ -130,9 +130,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DoveMangiare"
-            android:id="@+id/btn_dove_mangiare" android:layout_alignBottom="@+id/btnscroll"
-            android:layout_alignTop="@+id/btnscroll" android:layout_alignEnd="@+id/btn_home"
-            android:layout_alignStart="@+id/btn_home"/>
+            android:id="@+id/btn_dovemangiare" android:layout_alignBottom="@+id/btnscroll"
+            android:layout_toEndOf="@+id/btn_news"/>
 </RelativeLayout>
     <ImageButton
             android:layout_width="wrap_content"
