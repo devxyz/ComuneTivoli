@@ -38,6 +38,11 @@
         <servlet-class>comune.tivoli.rm.it.ComuneTivoliServer.servlet.ReportNotizieServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>UpdateExternalDataServlet</servlet-name>
+        <servlet-class>comune.tivoli.rm.it.ComuneTivoliServer.servlet.UpdateExternalDataServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>LoadExternalDataServlet</servlet-name>
         <url-pattern>/LoadExternalDataServlet</url-pattern>
@@ -61,6 +66,11 @@
     <servlet-mapping>
         <servlet-name>ResetDataServlet</servlet-name>
         <url-pattern>/ResetDataServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UpdateExternalDataServlet</servlet-name>
+        <url-pattern>/UpdateExternalDataServlet</url-pattern>
     </servlet-mapping>
 
 
