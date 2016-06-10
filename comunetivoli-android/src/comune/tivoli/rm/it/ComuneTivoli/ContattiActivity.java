@@ -18,7 +18,7 @@ import java.util.ArrayList;
  * nuove coordinate inserite
  */
 
-// TODO: 10/05/16 - verifica correttezza OK
+// TODO: 10/05/16 - verifica correttezza URP (coordinate gps errate)
 public class ContattiActivity extends Activity {
 
     private ListView contattiListView;

@@ -3,7 +3,8 @@ package comune.tivoli.rm.it.ComuneTivoliServer.crawler;
 import java.util.Date;
 
 /**
- * Created by stefano on 15/04/16.
+ * Created
+ * TODO: verificare parsing nodo 2633: importata solo la lettera a...
  */
 public class NotiziaWWWComuneTivoli {
     public final String titolo;
