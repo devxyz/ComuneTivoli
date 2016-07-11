@@ -7,6 +7,7 @@ import java.util.Date;
  * TODO: verificare parsing nodo 2633: importata solo la lettera a...
  */
 public class NotiziaWWWComuneTivoli {
+    public final String categoria;
     public final String titolo;
     public final String html;
     public final String testo;
@@ -23,7 +24,8 @@ public class NotiziaWWWComuneTivoli {
      */
     public final String keyPath;
 
-    public NotiziaWWWComuneTivoli(String titolo, String html, String testo, String urlPrint, String urlSito, Date data, String keyPath) {
+    public NotiziaWWWComuneTivoli(String categoria, String titolo, String html, String testo, String urlPrint, String urlSito, Date data, String keyPath) {
+        this.categoria = categoria;
         this.titolo = titolo;
         this.html = html;
         this.testo = testo;
@@ -36,10 +38,11 @@ public class NotiziaWWWComuneTivoli {
     @Override
     public String toString() {
         return "NotiziaWWWComuneTivoli{" +
-                "titolo='" + titolo + '\'' +
-                "\n, html='" + html + '\'' +
-                "\n, testo='" + testo + '\'' +
-                "\n, data=" + data +
+                "categoria='" + categoria + '\'' +
+                ", titolo='" + titolo + '\'' +
+                ", testo='" + testo + '\'' +
+                ", data=" + data +
+                ", keyPath='" + keyPath + '\'' +
                 '}';
     }
 }

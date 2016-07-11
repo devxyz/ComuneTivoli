@@ -5,8 +5,9 @@ package comune.tivoli.rm.it.ComuneTivoliServer.ofy;
  */
 
 import com.googlecode.objectify.ObjectifyService;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaFacebook_V0_1;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V1;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_EventiSitoDB_V2;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaFacebook_V0_2;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V2;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -20,8 +21,9 @@ public class OfyHelper implements ServletContextListener {
     public void contextInitialized(ServletContextEvent event) {
         // This will be invoked as part of a warmup request, or the first user
         // request if no warmup request was invoked.
-        ObjectifyService.register(GAE_NotiziaFacebook_V0_1.class);
-        ObjectifyService.register(GAE_NotiziaSitoDB_V1.class);
+        ObjectifyService.register(GAE_NotiziaFacebook_V0_2.class);
+        ObjectifyService.register(GAE_NotiziaSitoDB_V2.class);
+        ObjectifyService.register(GAE_EventiSitoDB_V2.class);
 
     }
 

@@ -2,7 +2,7 @@ package comune.tivoli.rm.it.ComuneTivoliServer.servlet;
 
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.DataLayerBuilder;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.InMemoryCacheLayerNotiziaSitoDB;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V1;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V2;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,14 +35,14 @@ public class ReportNotizieServlet extends HttpServlet {
                 "</tr>");
         final InMemoryCacheLayerNotiziaSitoDB cl = DataLayerBuilder.getLoaderNewsSito();
         int i = 1;
-        final List<GAE_NotiziaSitoDB_V1> gae_notiziaSitoDB_v1s = cl.allEntities();
-        Collections.sort(gae_notiziaSitoDB_v1s, new Comparator<GAE_NotiziaSitoDB_V1>() {
+        final List<GAE_NotiziaSitoDB_V2> gae_notiziaSitoDB_v1s = cl.allEntities();
+        Collections.sort(gae_notiziaSitoDB_v1s, new Comparator<GAE_NotiziaSitoDB_V2>() {
             @Override
-            public int compare(GAE_NotiziaSitoDB_V1 o1, GAE_NotiziaSitoDB_V1 o2) {
+            public int compare(GAE_NotiziaSitoDB_V2 o1, GAE_NotiziaSitoDB_V2 o2) {
                 return -new Long(o1.getToken()).compareTo(o2.getToken());
             }
         });
-        for (GAE_NotiziaSitoDB_V1 c : gae_notiziaSitoDB_v1s) {
+        for (GAE_NotiziaSitoDB_V2 c : gae_notiziaSitoDB_v1s) {
 
             out.print("<tr>" +
                     "<td>" + c.getToken() + "</td>" +

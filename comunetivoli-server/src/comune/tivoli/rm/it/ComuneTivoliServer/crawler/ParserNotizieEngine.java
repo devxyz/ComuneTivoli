@@ -15,8 +15,8 @@ import java.util.*;
  * Created by stefano on 27/03/16.
  */
 public class ParserNotizieEngine {
-    public static final String baseUrl = "http://www.comune.tivoli.rm.it/";
-    private static final String MODE = "SITE";//"SITE" "PRINT"
+    public static final String BASE_URL = "http://www.comune.tivoli.rm.it/";
+
     private static final boolean DEBUG = true;
 
     /**
@@ -26,7 +26,7 @@ public class ParserNotizieEngine {
      * @param s
      * @return
      */
-    private static int extractPageNumber(String s) {
+    private static int __extractPageNumber(String s) {
         final String[] s1 = s.split("=");
         return Integer.parseInt(s1[s1.length - 1]);
     }
@@ -38,12 +38,12 @@ public class ParserNotizieEngine {
      * @param s
      * @return
      */
-    private static int extractNodeNumber(String s) {
+    private static int __extractNodeNumber(String s) {
         final String[] s1 = s.split("/");
         return Integer.parseInt(s1[s1.length - 1]);
     }
 
-    private static String composeUrl(String... ss) {
+    private static String __composeUrl(String... ss) {
         StringBuilder sb = new StringBuilder();
         if (ss.length == 0) return "";
 
@@ -61,54 +61,24 @@ public class ParserNotizieEngine {
         return sb.toString();
     }
 
-    public static NotiziaWWWComuneTivoli extractNewsFromPage_printVersion(String baseUrl, String relativePathID) throws IOException {
+
+    /**
+     * parsing
+     *
+     * @param relativePathID: in genere nella forma node/1234 (percorso relativo rispetto al sito comune di tivoli)
+     * @return
+     * @throws IOException
+     */
+    public static NotiziaWWWComuneTivoli parse(String relativePathID) throws IOException {
         //versione stampabile
-        String url = composeUrl(baseUrl, relativePathID, "/print");
-
-        if (DEBUG)
-            System.out.println("ParserEngine: " + "Download " + url + "( id " + relativePathID + ")");
-        final Document parse = Jsoup.parse(new URL(url), 10000);
-        final Elements title_centro = parse.getElementsByClass("title");
-        final Elements content = parse.getElementsByClass("content");
-
-        final StringBuilder titolo = new StringBuilder();
-        for (Element t : title_centro) {
-            titolo.append(t.html()).append(" ");
-        }
-
-        final StringBuilder contenuto = new StringBuilder();
-        for (Element t : content) {
-            contenuto.append(t.html()).append(" ");
-        }
-
-        final String titoloNormalizzato = CommonTextUtil.normalize_UTF8__to__ASCII(Jsoup.parse("<html><body>" + titolo.toString().trim() + "</html></body>").body().text());
-        final String htmlOriginale = String.format("<html><head>\n<base href=\"http://www.comune.tivoli.rm.it/\">\n</head><body>%s</body></html>", contenuto.toString());
-        final String htmlNormalizzato = CommonTextUtil.normalizeTextFromHtml(htmlOriginale);
-
-        final Document doc = Jsoup.parse(htmlNormalizzato);
-        final String textNormalizzato = CommonTextUtil.normalize_UTF8__to__ASCII(doc.body().text());
-
-        //done: manca ricerca data nel documento
-        final Date date = ExtractDateNewsJavaccParser.extractDate(textNormalizzato);
-
-        return new NotiziaWWWComuneTivoli(
-                titoloNormalizzato,
-                htmlNormalizzato, textNormalizzato,
-                composeUrl(baseUrl, relativePathID, "print"), composeUrl(baseUrl, relativePathID),
-                date,
-                relativePathID);
-
-    }
-
-    public static NotiziaWWWComuneTivoli extractNewsFromPage_siteVersion(String baseUrl, String relativePathID) throws IOException {
-        //versione stampabile
-        String url = composeUrl(baseUrl, relativePathID);
+        String url = __composeUrl(BASE_URL, relativePathID);
 
         if (DEBUG)
             System.out.println("ParserEngine: " + "Download " + url + "( id " + relativePathID + ")");
         final Document parse = Jsoup.parse(new URL(url), 10000);
         final Elements title_centro = parse.getElementsByClass("title_centro");
         final Element main = parse.getElementById("main");
+        final Elements nodeCategory = parse.getElementsByClass("sticky");
         final Elements content = main == null ? null : main.getElementsByClass("content");
 
         final StringBuilder titolo = new StringBuilder();
@@ -122,6 +92,18 @@ public class ParserNotizieEngine {
                 contenuto.append(t.html()).append(" ");
             }
 
+        //rimuove i commenti alla ricerca della categoria
+        final String categoria;
+        final String replace = nodeCategory.toString().replace("<!--", "").replace("-->", "");
+        {
+            final String html = "<html><body>" + replace + "</html></body>";
+            //System.out.println(html);
+            final Document parse1 = Jsoup.parse(html);
+            final Elements taxonomy = parse1.getElementsByClass("taxonomy");
+
+            categoria = taxonomy.text().trim().toLowerCase();
+        }
+
         final String titoloNormalizzato = CommonTextUtil.normalize_UTF8__to__ASCII(Jsoup.parse("<html><body>" + titolo.toString().trim() + "</html></body>").body().text());
         final String htmlOriginale = String.format("<html><head>\n<base href=\"http://www.comune.tivoli.rm.it/\">\n</head><body>%s</body></html>", contenuto.toString());
         final String htmlNormalizzato = CommonTextUtil.normalizeTextFromHtml(htmlOriginale);
@@ -132,10 +114,11 @@ public class ParserNotizieEngine {
         //done: manca ricerca data nel documento
         final Date date = ExtractDateNewsJavaccParser.extractDate(textNormalizzato);
 
+
         return new NotiziaWWWComuneTivoli(
-                titoloNormalizzato,
+                categoria, titoloNormalizzato,
                 htmlNormalizzato, textNormalizzato,
-                composeUrl(baseUrl, relativePathID, "print"), url,
+                __composeUrl(BASE_URL, relativePathID, "print"), url,
                 date,
                 relativePathID);
 
@@ -160,10 +143,10 @@ public class ParserNotizieEngine {
         if (DEBUG)
             System.out.println("ParserEngine: " + "Check Homepage (searching page-index links)");
         //dalla homepage individua tutte le pagine dei link esistenti, compresa la home
-        final ArrayList<String> allIndexLinks = extractIndexPageUrlFromHomepage(baseUrl, -1);
+        final ArrayList<String> allIndexLinks = __extractIndexPageUrlFromHomepage(BASE_URL, -1);
         if (DEBUG) System.out.println("ParserEngine: " + "Found page-index links: " + allIndexLinks.size() + " pages");
         if (DEBUG) System.out.println("ParserEngine: " + "  - " + allIndexLinks);
-        final ArrayList<String> allLinkArticoli = extractNodeUrlsFromIndexPages(baseUrl, nodeLinksInDB, allIndexLinks);
+        final ArrayList<String> allLinkArticoli = __extractNodeUrlsFromIndexPages(BASE_URL, nodeLinksInDB, allIndexLinks);
 
         if (DEBUG) System.out.println("ParserEngine: " + "LINKS");
         if (DEBUG) System.out.println("ParserEngine: " + allLinkArticoli);
@@ -180,19 +163,14 @@ public class ParserNotizieEngine {
 
 //            System.out.println("ParserEngine: "+"=============================================");
             try {
-                if (MODE.equals("PRINT")) {
-                    final NotiziaWWWComuneTivoli n = extractNewsFromPage_printVersion(baseUrl, url);
-                    pagine.add(n);
-                } else {
-                    final NotiziaWWWComuneTivoli n = extractNewsFromPage_siteVersion(baseUrl, url);
-                    pagine.add(n);
-                }
+                final NotiziaWWWComuneTivoli n = parse(url);
+                pagine.add(n);
             } catch (Exception e) {
                 //ignora le pagine che non vengono caricate
-                String urlPrint = composeUrl(baseUrl, url, "print");
-                String urlOriginale = composeUrl(baseUrl, url);
+                String urlPrint = __composeUrl(BASE_URL, url, "print");
+                String urlOriginale = __composeUrl(BASE_URL, url);
 
-                NotiziaWWWComuneTivoli n = new NotiziaWWWComuneTivoli("Pagina non trovata", null, null, urlPrint, urlOriginale, null, url);
+                NotiziaWWWComuneTivoli n = new NotiziaWWWComuneTivoli(null, "Pagina non trovata", null, null, urlPrint, urlOriginale, null, url);
                 pagine.add(n);
             }
 
@@ -201,7 +179,7 @@ public class ParserNotizieEngine {
     }
 
 
-    private static ArrayList<String> extractNodeUrlsFromIndexPages(String baseUrl, Set<String> nodeLinksInDB, ArrayList<String> allIndexLinks) throws IOException {
+    private static ArrayList<String> __extractNodeUrlsFromIndexPages(String baseUrl, Set<String> nodeLinksInDB, ArrayList<String> allIndexLinks) throws IOException {
         //================================================================
         final ArrayList<String> allLinkArticoli = new ArrayList<>();
         boolean finish = false;
@@ -211,7 +189,7 @@ public class ParserNotizieEngine {
             if (finish) break;
 
 
-            final ArrayList<String> ris = extractNodeLinksFromPages(baseUrl, pageLink);
+            final ArrayList<String> ris = __extractNodeLinksFromPages(baseUrl, pageLink);
             if (DEBUG)
                 System.out.println("ParserEngine: " + "Found " + ris.size() + " nodes: " + ris);
             for (String x : ris) {
@@ -225,9 +203,9 @@ public class ParserNotizieEngine {
         return allLinkArticoli;
     }
 
-    private static ArrayList<String> extractNodeLinksFromPages(String baseUrl, String pageLink) throws IOException {
+    private static ArrayList<String> __extractNodeLinksFromPages(String baseUrl, String pageLink) throws IOException {
         final ArrayList<String> ris = new ArrayList<>();
-        final Document node = Jsoup.parse(new URL(composeUrl(baseUrl, pageLink)), 10000);
+        final Document node = Jsoup.parse(new URL(__composeUrl(baseUrl, pageLink)), 10000);
         final Elements elementsByClass = node.getElementsByClass("title");
         for (Element e : elementsByClass) {
 
@@ -249,7 +227,7 @@ public class ParserNotizieEngine {
      * @return
      * @throws IOException
      */
-    private static ArrayList<String> extractIndexPageUrlFromHomepage(String baseUrl, int limit) throws IOException {
+    private static ArrayList<String> __extractIndexPageUrlFromHomepage(String baseUrl, int limit) throws IOException {
         String mainUrl = baseUrl + "node";
         final Document parse = Jsoup.parse(new URL(mainUrl), 10000);
 
@@ -264,7 +242,7 @@ public class ParserNotizieEngine {
 
         }
         Collections.sort(linkPage, new SortAscPage());
-        int lastPageNumber = linkPage.size() == 0 ? 0 : extractPageNumber(linkPage.get(linkPage.size() - 1));
+        int lastPageNumber = linkPage.size() == 0 ? 0 : __extractPageNumber(linkPage.get(linkPage.size() - 1));
         final ArrayList<String> allPageLinks = new ArrayList<>();
         allPageLinks.add("/node");//link al primo indice (homepage)
         for (int i = 1; i <= lastPageNumber; i++) {
@@ -292,8 +270,8 @@ public class ParserNotizieEngine {
 
         @Override
         public int compare(String o1, String o2) {
-            Integer v1 = extractPageNumber(o1);
-            Integer v2 = extractPageNumber(o2);
+            Integer v1 = __extractPageNumber(o1);
+            Integer v2 = __extractPageNumber(o2);
             return v1.compareTo(v2);
         }
     }
@@ -315,8 +293,8 @@ public class ParserNotizieEngine {
 
         @Override
         public int compare(String o1, String o2) {
-            Integer v1 = extractNodeNumber(o1);
-            Integer v2 = extractNodeNumber(o2);
+            Integer v1 = __extractNodeNumber(o1);
+            Integer v2 = __extractNodeNumber(o2);
             return v1.compareTo(v2);
         }
     }

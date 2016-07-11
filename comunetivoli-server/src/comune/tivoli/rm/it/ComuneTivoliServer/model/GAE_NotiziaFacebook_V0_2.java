@@ -12,10 +12,11 @@ import java.util.Date;
  * Created by stefano on 03/03/16.
  */
 @Entity
-public class GAE_NotiziaFacebook_V0_1 implements Serializable, Cloneable, CacheItem<String> {
+public class GAE_NotiziaFacebook_V0_2 implements Serializable, Cloneable, CacheItem<String> {
 
-    public int version= ServerConfiguration.PERISTENCE_VERSION_NUMBER;
+    public int version = ServerConfiguration.PERISTENCE_VERSION_NUMBER;
 
+    public String categoria;
     public boolean flagDelete;
     @Id
     private String key;
@@ -42,11 +43,18 @@ public class GAE_NotiziaFacebook_V0_1 implements Serializable, Cloneable, CacheI
     private String contenuto;
     private String fullimageLink;
     private String thumbimageLink;
-
     /**
      * Not-null value.
      */
     private Date dataInserimento;
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
 
     public long getToken() {
         return token;
@@ -56,9 +64,9 @@ public class GAE_NotiziaFacebook_V0_1 implements Serializable, Cloneable, CacheI
         this.token = token;
     }
 
-    public GAE_NotiziaFacebook_V0_1 clone() {
+    public GAE_NotiziaFacebook_V0_2 clone() {
         try {
-            return (GAE_NotiziaFacebook_V0_1) super.clone();
+            return (GAE_NotiziaFacebook_V0_2) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new IllegalArgumentException(e);
         }

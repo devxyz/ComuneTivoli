@@ -7,7 +7,7 @@ import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonNotiziaSito;
 import comune.tivoli.rm.it.ComuneTivoliServer.ServerConfiguration;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.DataLayerBuilder;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.InMemoryCacheLayerNotiziaSitoDB;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V1;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V2;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -32,10 +32,10 @@ public class JSonDataRequestServlet extends HttpServlet {
         System.out.println("Richiesta "+req);
         try {
             final InMemoryCacheLayerNotiziaSitoDB ee = DataLayerBuilder.getLoaderNewsSito();
-            final List<GAE_NotiziaSitoDB_V1> elencoNotizie = ee.allEntities();
+            final List<GAE_NotiziaSitoDB_V2> elencoNotizie = ee.allEntities();
             ArrayList<CommonNotiziaSito> notizie = new ArrayList<>();
 
-            for (GAE_NotiziaSitoDB_V1 x : elencoNotizie) {
+            for (GAE_NotiziaSitoDB_V2 x : elencoNotizie) {
                 if (x.token > req.maxClientToken || req.version != ServerConfiguration.PERISTENCE_VERSION_NUMBER) {
                     //invia l'url originale
                     CommonNotiziaSito n = new CommonNotiziaSito(x.token, x.titolo, x.testo, x.html, x.data, x.key, x.urlOriginal, x.flagDelete, x.version);

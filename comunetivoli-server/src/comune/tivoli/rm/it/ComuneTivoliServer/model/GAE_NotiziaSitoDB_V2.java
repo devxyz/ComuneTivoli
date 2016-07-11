@@ -12,29 +12,36 @@ import java.util.Date;
  * Created by stefano on 01/08/15.
  */
 @Entity
-public class GAE_NotiziaSitoDB_V1 implements Serializable, CacheItem<String> {
+public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
     public long token;
     public String titolo;
     public String testo;
+    public String categoria;
     public String html;
     public Date data;
     public int version = ServerConfiguration.PERISTENCE_VERSION_NUMBER;
-
     @Id
     public String key;
     /**
      * url pagina print
      */
     public String urlPrint;
-
     /**
      * url pagina originale
      */
     public String urlOriginal;
     public boolean flagDelete;
 
-    public GAE_NotiziaSitoDB_V1() {
+    public GAE_NotiziaSitoDB_V2() {
         flagDelete = false;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
     public String getUrlOriginal() {
@@ -138,8 +145,8 @@ public class GAE_NotiziaSitoDB_V1 implements Serializable, CacheItem<String> {
         this.key = key;
     }
 
-    public GAE_NotiziaSitoDB_V1 clone() {
-        final GAE_NotiziaSitoDB_V1 c = new GAE_NotiziaSitoDB_V1();
+    public GAE_NotiziaSitoDB_V2 clone() {
+        final GAE_NotiziaSitoDB_V2 c = new GAE_NotiziaSitoDB_V2();
         c.titolo = titolo;
         c.testo = testo;
         c.data = data;

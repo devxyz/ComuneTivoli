@@ -4,7 +4,7 @@ import comune.tivoli.rm.it.ComuneTivoliServer.crawler.NotiziaWWWComuneTivoli;
 import comune.tivoli.rm.it.ComuneTivoliServer.crawler.ParserNotizieEngine;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.DataLayerBuilder;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.InMemoryCacheLayerNotiziaSitoDB;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V1;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V2;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,9 +24,9 @@ public class LoadExternalDataServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final InMemoryCacheLayerNotiziaSitoDB ee = DataLayerBuilder.getLoaderNewsSito();
-        final List<GAE_NotiziaSitoDB_V1> elencoNotizie = ee.allEntities();
+        final List<GAE_NotiziaSitoDB_V2> elencoNotizie = ee.allEntities();
         Set<String> nodeLinksInDB = new TreeSet<>();
-        for (GAE_NotiziaSitoDB_V1 x : elencoNotizie) {
+        for (GAE_NotiziaSitoDB_V2 x : elencoNotizie) {
             nodeLinksInDB.add(x.getKey());
         }
 
@@ -47,7 +47,7 @@ public class LoadExternalDataServlet extends HttpServlet {
 
         for (NotiziaWWWComuneTivoli p : pagine) {
             System.out.println(" - Found " + p.urlSito + " - " + p.titolo + " nodi");
-            final GAE_NotiziaSitoDB_V1 nv = new GAE_NotiziaSitoDB_V1();
+            final GAE_NotiziaSitoDB_V2 nv = new GAE_NotiziaSitoDB_V2();
             nv.setData(p.data);
             nv.setFlagDelete(false);
             t.token++;

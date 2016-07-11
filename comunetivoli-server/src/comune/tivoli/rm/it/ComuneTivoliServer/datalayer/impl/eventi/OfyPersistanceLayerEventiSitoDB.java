@@ -1,10 +1,10 @@
-package comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.news;
+package comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.eventi;
 
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.cmd.Loader;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.OfyPersistanceLayer;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaFacebook_V0_2;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_EventiSitoDB_V2;
 import comune.tivoli.rm.it.ComuneTivoliServer.util.DebugUtil;
 
 import java.util.ArrayList;
@@ -13,21 +13,15 @@ import java.util.List;
 /**
  * Created by stefano on 13/03/16.
  */
-public class OfyPersistanceLayerNotiziaFacebookDB extends OfyPersistanceLayer<String, GAE_NotiziaFacebook_V0_2> {
+public class OfyPersistanceLayerEventiSitoDB extends OfyPersistanceLayer<String, GAE_EventiSitoDB_V2> {
     //ultimo elenco dei dati
-    private List<GAE_NotiziaFacebook_V0_2> cacheList;
-
+    private List<GAE_EventiSitoDB_V2> cacheList;
     private int numRead = 0;
     private int numByKey = 0;
     private int numWrite = 0;
 
-    public OfyPersistanceLayerNotiziaFacebookDB(Objectify ofy) {
+    public OfyPersistanceLayerEventiSitoDB(Objectify ofy) {
         super(ofy);
-    }
-
-    @Override
-    protected String _toStatImpl() {
-        return "Entities in cache: " + (cacheList == null ? "NULL CACHE" : cacheList.size() + " entities") + "\nnumRead=" + numRead + ", numWrite=" + numWrite + ", numByKey=" + numByKey;
     }
 
     @Override
@@ -36,18 +30,23 @@ public class OfyPersistanceLayerNotiziaFacebookDB extends OfyPersistanceLayer<St
     }
 
     @Override
-    protected GAE_NotiziaFacebook_V0_2 _getImpl(String key) {
+    protected String _toStatImpl() {
+        return "Entities in cache: " + (cacheList == null ? "NULL CACHE" : cacheList.size() + " entities") + "\nnumRead=" + numRead + ", numWrite=" + numWrite + ", numByKey=" + numByKey;
+    }
+
+    @Override
+    protected GAE_EventiSitoDB_V2 _getImpl(String key) {
         if (cacheList != null) {
-            for (GAE_NotiziaFacebook_V0_2 x : cacheList) {
+            for (GAE_EventiSitoDB_V2 x : cacheList) {
                 if (x.getKey().equals(key))
                     return x;
             }
             cacheList = null;
         }
-        DebugUtil.debug(getClass().getSimpleName(), "GET BY ID ", key);
 
         final Loader load = ofy.load();
-        final Key<GAE_NotiziaFacebook_V0_2> k = Key.create(GAE_NotiziaFacebook_V0_2.class, key);
+        DebugUtil.debug(getClass().getSimpleName(), "GET BY ID ", key);
+        final Key<GAE_EventiSitoDB_V2> k = Key.create(GAE_EventiSitoDB_V2.class, key);
         numByKey++;
         return load.key(k).now();
     }
@@ -56,13 +55,13 @@ public class OfyPersistanceLayerNotiziaFacebookDB extends OfyPersistanceLayer<St
     protected List<String> _allKeys() {
         if (cacheList == null) {
             final Loader load = ofy.load();
-            cacheList = load.type(GAE_NotiziaFacebook_V0_2.class).list();
+            cacheList = load.type(GAE_EventiSitoDB_V2.class).list();
             numRead++;
         }
 
-        DebugUtil.debug(getClass().getSimpleName(), "ALL KEYS");
+        DebugUtil.debug(getClass().getSimpleName(), "ALLKEYS");
         List<String> ris = new ArrayList<>(cacheList.size());
-        for (GAE_NotiziaFacebook_V0_2 x : cacheList) {
+        for (GAE_EventiSitoDB_V2 x : cacheList) {
             ris.add(x.getKey());
         }
         return ris;
@@ -71,15 +70,15 @@ public class OfyPersistanceLayerNotiziaFacebookDB extends OfyPersistanceLayer<St
     }
 
     @Override
-    protected void _insertImpl(String key, GAE_NotiziaFacebook_V0_2 value) {
-        DebugUtil.debug(getClass().getSimpleName(), "INSERT BY ID ", key);
+    protected void _insertImpl(String key, GAE_EventiSitoDB_V2 value) {
+        DebugUtil.debug(getClass().getSimpleName(), "SAVE BY ID ", key);
         ofy.save().entity(value).now();
         numWrite++;
         cacheList = null;
     }
 
     @Override
-    protected void _updateImpl(String key, GAE_NotiziaFacebook_V0_2 value) {
+    protected void _updateImpl(String key, GAE_EventiSitoDB_V2 value) {
         DebugUtil.debug(getClass().getSimpleName(), "UPDATE BY ID ", key);
         ofy.save().entity(value).now();
         numWrite++;
@@ -95,7 +94,8 @@ public class OfyPersistanceLayerNotiziaFacebookDB extends OfyPersistanceLayer<St
     }
 
     @Override
-    public String getKey(GAE_NotiziaFacebook_V0_2 value) {
+    public String getKey(GAE_EventiSitoDB_V2 value) {
         return value.getKey();
     }
+
 }

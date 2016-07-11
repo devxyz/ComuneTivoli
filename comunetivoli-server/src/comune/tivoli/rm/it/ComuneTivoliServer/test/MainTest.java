@@ -10,7 +10,8 @@ import java.io.IOException;
  */
 public class MainTest {
     public static void main(String[] args) throws IOException {
-        final NotiziaWWWComuneTivoli notiziaWWWComuneTivoli = ParserNotizieEngine.extractNewsFromPage_siteVersion(ParserNotizieEngine.baseUrl, "node/2633");
+        //http://www.comune.tivoli.rm.it/node/2664
+        final NotiziaWWWComuneTivoli notiziaWWWComuneTivoli = ParserNotizieEngine.parse("node/2663");
         System.out.println(notiziaWWWComuneTivoli);
     }
 }
