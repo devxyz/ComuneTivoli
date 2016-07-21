@@ -10,8 +10,8 @@ import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.OfyPersis
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.news.InMemoryCacheLayerNotiziaFacebookDB;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.news.MemcacheCacheLayerNotiziaFacebookDB;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.news.OfyPersistanceLayerNotiziaFacebookDB;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaFacebook_V0_2;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V2;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.NotiziaFacebookSERVERDB;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.NotiziaSitoSERVERDB;
 
 import java.util.List;
 
@@ -47,13 +47,13 @@ public class DataLayerBuilder {
 
     public static long maxToken() {
         long max = 0;
-        final List<GAE_NotiziaSitoDB_V2> gae_circolareDB_v2s = getLoaderNewsSito().allEntities();
-        for (GAE_NotiziaSitoDB_V2 x : gae_circolareDB_v2s) {
+        final List<NotiziaSitoSERVERDB> gae_circolareDB_v2s = getLoaderNewsSito().allEntities();
+        for (NotiziaSitoSERVERDB x : gae_circolareDB_v2s) {
             max = Math.max(max, x.getToken());
         }
 
-        final List<GAE_NotiziaFacebook_V0_2> gae_newsDB_v2s = getLoaderNewsFacebook().allEntities();
-        for (GAE_NotiziaFacebook_V0_2 x : gae_newsDB_v2s) {
+        final List<NotiziaFacebookSERVERDB> gae_newsDB_v2s = getLoaderNewsFacebook().allEntities();
+        for (NotiziaFacebookSERVERDB x : gae_newsDB_v2s) {
             max = Math.max(max, x.getToken());
         }
         return max;

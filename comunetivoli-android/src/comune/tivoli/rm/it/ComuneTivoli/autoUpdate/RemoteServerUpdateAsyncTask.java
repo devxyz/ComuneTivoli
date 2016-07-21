@@ -12,7 +12,7 @@ import comune.tivoli.rm.it.ComuneTivoli.db.dao.NotizieSitoDbSqlLite;
 import comune.tivoli.rm.it.ComuneTivoli.db.manager.ManagerNotizieSitoDbSqlLite;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerRequest;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerResponse;
-import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonNotiziaSito;
+import comune.tivoli.rm.it.ComuneTivoliCommon.data.NotiziaSitoDTO;
 
 import java.io.BufferedInputStream;
 import java.io.DataOutputStream;
@@ -153,7 +153,7 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
 
             if (DEBUG) {
                 StringBuilder sb = new StringBuilder();
-                for (CommonNotiziaSito n : resp.notizie) {
+                for (NotiziaSitoDTO n : resp.notizie) {
                     sb.append(n.getKey()).append("\n");
                 }
                 System.out.println("KEYS: " + sb);
@@ -170,8 +170,8 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
                             final Map<String, NotizieSitoDbSqlLite> map = m.mapByKey(session);
 
                             //ignora le news gia' presenti
-                            ArrayList<CommonNotiziaSito> notizieDaAggiungere = new ArrayList<CommonNotiziaSito>(resp.notizie.size());
-                            for (CommonNotiziaSito n : resp.notizie) {
+                            ArrayList<NotiziaSitoDTO> notizieDaAggiungere = new ArrayList<NotiziaSitoDTO>(resp.notizie.size());
+                            for (NotiziaSitoDTO n : resp.notizie) {
                                 if (!map.containsKey(n.getKey()) && n.getTitolo() != null && n.getTesto() != null)
                                     notizieDaAggiungere.add(n);
                             }

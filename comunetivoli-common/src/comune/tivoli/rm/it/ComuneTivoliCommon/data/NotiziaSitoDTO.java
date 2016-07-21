@@ -7,10 +7,11 @@ import java.util.Date;
  * Created by stefano on 01/08/15.
  */
 
-public class CommonNotiziaSito implements Serializable {
+public class NotiziaSitoDTO implements Serializable, INotiziaSito {
     private long token;
     private int version;
     private String titolo;
+    private String categoria;
     private String testo;
     private String html;
     private Date data;
@@ -19,24 +20,30 @@ public class CommonNotiziaSito implements Serializable {
     private String url;
     private boolean flagDelete;
 
-    public CommonNotiziaSito(long token, String titolo, String testo, String html, Date data, String key, String url, boolean flagDelete, int version) {
+    public NotiziaSitoDTO(long token, int version, String titolo, String categoria, String testo, String html, Date data, String key, String url, boolean flagDelete) {
         this.token = token;
+        this.version = version;
         this.titolo = titolo;
+        this.categoria = categoria;
         this.testo = testo;
         this.html = html;
-
         this.data = data;
         this.key = key;
         this.url = url;
         this.flagDelete = flagDelete;
-
-
-        this.version = version;
-
     }
 
-    public CommonNotiziaSito() {
+    public NotiziaSitoDTO() {
         flagDelete = false;
+    }
+
+    @Override
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
     public int getVersion() {

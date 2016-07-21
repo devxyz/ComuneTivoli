@@ -12,7 +12,7 @@ import java.util.Date;
  * Created by stefano on 03/03/16.
  */
 @Entity
-public class GAE_NotiziaFacebook_V0_2 implements Serializable, Cloneable, CacheItem<String> {
+public class NotiziaFacebookSERVERDB implements Serializable, Cloneable, CacheItem<String> {
 
     public int version = ServerConfiguration.PERISTENCE_VERSION_NUMBER;
 
@@ -64,9 +64,9 @@ public class GAE_NotiziaFacebook_V0_2 implements Serializable, Cloneable, CacheI
         this.token = token;
     }
 
-    public GAE_NotiziaFacebook_V0_2 clone() {
+    public NotiziaFacebookSERVERDB clone() {
         try {
-            return (GAE_NotiziaFacebook_V0_2) super.clone();
+            return (NotiziaFacebookSERVERDB) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new IllegalArgumentException(e);
         }

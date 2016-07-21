@@ -2,12 +2,12 @@ package comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.eventi;
 
 import com.google.appengine.api.memcache.MemcacheService;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.MemcacheCacheLayer;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_EventiSitoDB_V2;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.EventoSitoSERVERDB;
 
 /**
  * Created by stefano on 13/03/16.
  */
-public class MemcacheCacheLayerEventiSitoDB extends MemcacheCacheLayer<String, GAE_EventiSitoDB_V2> {
+public class MemcacheCacheLayerEventiSitoDB extends MemcacheCacheLayer<String, EventoSitoSERVERDB> {
 
 
     public MemcacheCacheLayerEventiSitoDB(MemcacheService mcservice, OfyPersistanceLayerEventiSitoDB next) {
@@ -15,7 +15,7 @@ public class MemcacheCacheLayerEventiSitoDB extends MemcacheCacheLayer<String, G
     }
 
     @Override
-    public String getKey(GAE_EventiSitoDB_V2 value) {
+    public String getKey(EventoSitoSERVERDB value) {
         return value.getKey();
     }
 }

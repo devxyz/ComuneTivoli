@@ -1,9 +1,4 @@
-package comune.tivoli.rm.it.ComuneTivoliServer.model;
-
-import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
-import comune.tivoli.rm.it.ComuneTivoliServer.ServerConfiguration;
-import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.CacheItem;
+package comune.tivoli.rm.it.ComuneTivoliCommon.data;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -11,16 +6,15 @@ import java.util.Date;
 /**
  * Created by stefano on 01/08/15.
  */
-@Entity
-public class GAE_EventiSitoDB_V2 implements Serializable, CacheItem<String> {
+
+public class EventoSitoDTO implements Serializable {
     public long token;
     public String titolo;
     public String testo;
     public String categoria;
     public String html;
     public Date data;
-    public int version = ServerConfiguration.PERISTENCE_VERSION_NUMBER;
-    @Id
+    public int version;
     public String key;
     /**
      * url pagina print
@@ -32,7 +26,7 @@ public class GAE_EventiSitoDB_V2 implements Serializable, CacheItem<String> {
     public String urlOriginal;
     public boolean flagDelete;
 
-    public GAE_EventiSitoDB_V2() {
+    public EventoSitoDTO() {
         flagDelete = false;
     }
 
@@ -52,31 +46,6 @@ public class GAE_EventiSitoDB_V2 implements Serializable, CacheItem<String> {
         this.urlOriginal = urlOriginal;
     }
 
-    private void _assert(boolean cond) {
-        if (!cond)
-            throw new AssertionError("ERROR");
-    }
-
-    public void check() {
-        _assert(token >= 0);
-        _assert(titolo != null);
-        _assert(data != null);
-        _assert(key != null);
-    }
-
-    @Override
-    public String toString() {
-        return "GAE_CircolareDB{" +
-                "token=" + token +
-                ", titolo='" + titolo + '\'' +
-                ", testo='" + "...(NON INSERITO NELLA STAMPA)..." + '\'' +
-                ", html=" + html +
-                ", data=" + data +
-                ", key='" + key + '\'' +
-                ", url='" + urlPrint + '\'' +
-                ", flagDelete=" + flagDelete +
-                '}';
-    }
 
     public boolean isFlagDelete() {
         return flagDelete;
@@ -145,14 +114,5 @@ public class GAE_EventiSitoDB_V2 implements Serializable, CacheItem<String> {
         this.key = key;
     }
 
-    public GAE_EventiSitoDB_V2 clone() {
-        final GAE_EventiSitoDB_V2 c = new GAE_EventiSitoDB_V2();
-        c.titolo = titolo;
-        c.testo = testo;
-        c.data = data;
-        c.key = key;
-        c.urlPrint = urlPrint;
-        c.token = token;
-        return c;
-    }
+
 }

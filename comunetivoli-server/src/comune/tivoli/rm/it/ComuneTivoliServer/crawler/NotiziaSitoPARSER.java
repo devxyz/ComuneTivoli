@@ -6,7 +6,7 @@ import java.util.Date;
  * Created
  * TODO: verificare parsing nodo 2633: importata solo la lettera a...
  */
-public class NotiziaWWWComuneTivoli {
+public class NotiziaSitoPARSER {
     public final String categoria;
     public final String titolo;
     public final String html;
@@ -14,23 +14,21 @@ public class NotiziaWWWComuneTivoli {
     public final Date data;
 
     /**
-     * link asoluto all'articolo (versione stampabile)
+     * link assoluto all'articolo (versione stampabile)
      */
-    public final String urlPrint;
-    public final String urlSito;
+    public final String url;
 
     /**
      * percorso del tipo /node/2576 che identifica l'articolo
      */
     public final String keyPath;
 
-    public NotiziaWWWComuneTivoli(String categoria, String titolo, String html, String testo, String urlPrint, String urlSito, Date data, String keyPath) {
+    public NotiziaSitoPARSER(String categoria, String titolo, String html, String testo, String url, Date data, String keyPath) {
         this.categoria = categoria;
         this.titolo = titolo;
         this.html = html;
         this.testo = testo;
-        this.urlPrint = urlPrint;
-        this.urlSito = urlSito;
+        this.url = url;
         this.data = data;
         this.keyPath = keyPath;
     }

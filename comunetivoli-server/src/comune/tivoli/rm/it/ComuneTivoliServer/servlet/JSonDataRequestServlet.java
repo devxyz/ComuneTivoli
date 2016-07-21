@@ -3,11 +3,12 @@ package comune.tivoli.rm.it.ComuneTivoliServer.servlet;
 import com.google.appengine.repackaged.com.google.gson.Gson;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerRequest;
 import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonDataServerResponse;
-import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonNotiziaSito;
+import comune.tivoli.rm.it.ComuneTivoliCommon.data.NotiziaSitoDTO;
 import comune.tivoli.rm.it.ComuneTivoliServer.ServerConfiguration;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.DataLayerBuilder;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.InMemoryCacheLayerNotiziaSitoDB;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V2;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.NotiziaSitoSERVERDB;
+import comune.tivoli.rm.it.ComuneTivoliServer.util.CopyUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -29,16 +30,16 @@ public class JSonDataRequestServlet extends HttpServlet {
         if (param == null) throw new IOException("Parameter (param) not specified");
         final Gson g = new Gson();
         final CommonDataServerRequest req = g.fromJson(param, CommonDataServerRequest.class);
-        System.out.println("Richiesta "+req);
+        System.out.println("Richiesta " + req);
         try {
             final InMemoryCacheLayerNotiziaSitoDB ee = DataLayerBuilder.getLoaderNewsSito();
-            final List<GAE_NotiziaSitoDB_V2> elencoNotizie = ee.allEntities();
-            ArrayList<CommonNotiziaSito> notizie = new ArrayList<>();
+            final List<NotiziaSitoSERVERDB> elencoNotizie = ee.allEntities();
+            ArrayList<NotiziaSitoDTO> notizie = new ArrayList<>();
 
-            for (GAE_NotiziaSitoDB_V2 x : elencoNotizie) {
+            for (NotiziaSitoSERVERDB x : elencoNotizie) {
                 if (x.token > req.maxClientToken || req.version != ServerConfiguration.PERISTENCE_VERSION_NUMBER) {
                     //invia l'url originale
-                    CommonNotiziaSito n = new CommonNotiziaSito(x.token, x.titolo, x.testo, x.html, x.data, x.key, x.urlOriginal, x.flagDelete, x.version);
+                    NotiziaSitoDTO n = CopyUtil.convertToDTO(x);
                     notizie.add(n);
                 }
             }

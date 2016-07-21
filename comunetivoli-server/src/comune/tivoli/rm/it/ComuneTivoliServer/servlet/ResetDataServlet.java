@@ -4,8 +4,8 @@ import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyService;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.DataLayerBuilder;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.InMemoryCacheLayerNotiziaSitoDB;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaFacebook_V0_2;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V2;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.NotiziaFacebookSERVERDB;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.NotiziaSitoSERVERDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,13 +25,13 @@ public class ResetDataServlet extends HttpServlet {
 
         final Objectify ofy = ObjectifyService.ofy();
         {
-            final List<GAE_NotiziaSitoDB_V2> list = ofy.load().type(GAE_NotiziaSitoDB_V2.class).list();
+            final List<NotiziaSitoSERVERDB> list = ofy.load().type(NotiziaSitoSERVERDB.class).list();
             final PrintWriter out = response.getWriter();
             out.println(list.size() + " notizie nel datastore cancellate\n");
             ofy.delete().entities(list).now();
         }
 {
-            final List<GAE_NotiziaFacebook_V0_2> list = ofy.load().type(GAE_NotiziaFacebook_V0_2.class).list();
+            final List<NotiziaFacebookSERVERDB> list = ofy.load().type(NotiziaFacebookSERVERDB.class).list();
             final PrintWriter out = response.getWriter();
             out.println(list.size() + " notizie nel datastore cancellate\n");
             ofy.delete().entities(list).now();

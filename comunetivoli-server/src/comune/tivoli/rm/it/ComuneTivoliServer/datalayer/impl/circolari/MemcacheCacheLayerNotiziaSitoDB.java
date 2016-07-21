@@ -2,12 +2,12 @@ package comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari;
 
 import com.google.appengine.api.memcache.MemcacheService;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.MemcacheCacheLayer;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V2;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.NotiziaSitoSERVERDB;
 
 /**
  * Created by stefano on 13/03/16.
  */
-public class MemcacheCacheLayerNotiziaSitoDB extends MemcacheCacheLayer<String, GAE_NotiziaSitoDB_V2> {
+public class MemcacheCacheLayerNotiziaSitoDB extends MemcacheCacheLayer<String, NotiziaSitoSERVERDB> {
 
 
     public MemcacheCacheLayerNotiziaSitoDB(MemcacheService mcservice, OfyPersistanceLayerNotiziaSitoDB next) {
@@ -15,7 +15,7 @@ public class MemcacheCacheLayerNotiziaSitoDB extends MemcacheCacheLayer<String, 
     }
 
     @Override
-    public String getKey(GAE_NotiziaSitoDB_V2 value) {
+    public String getKey(NotiziaSitoSERVERDB value) {
         return value.getKey();
     }
 }

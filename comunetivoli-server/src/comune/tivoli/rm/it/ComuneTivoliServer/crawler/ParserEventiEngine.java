@@ -50,7 +50,7 @@ public class ParserEventiEngine {
 
     public static void main(String[] args) {
 
-        final EventoWWWComuneTivoli parse;
+        final EventoSitoPARSER parse;
         try {
             parse = parse("/news-ed-eventi/55/tivoli-festival");
             System.out.println(parse);
@@ -72,7 +72,7 @@ public class ParserEventiEngine {
         }*/
     }
 
-    public static EventoWWWComuneTivoli parse(String relativeUrl) throws Exception {
+    public static EventoSitoPARSER parse(String relativeUrl) throws Exception {
         final Document parse = Jsoup.parse(new URL(BASE_URL_EVENTI + relativeUrl), timeout_millisec);
 
         final Elements container1 = parse.getElementsByClass("container");
@@ -89,8 +89,8 @@ public class ParserEventiEngine {
 
         //System.out.println(container.html());
         //System.out.println("=======================");
-        System.out.println(content1.html());
-        System.out.flush();
+        // System.out.println(content1.html());
+        // System.out.flush();
 
 
         final Element imageContainer = content1.getElementsByClass("col-lg-3").get(0);
@@ -99,18 +99,33 @@ public class ParserEventiEngine {
         final Element titoloContainer = textContainerContainer.select("h4.fontTitolo").get(0);
         final Element dateContainer = textContainerContainer.select("h5.verdeScuro").get(0);
 
-        final String imageUrl = imageContainer.getElementsByTag("img").get(0).attr("href");
+        final String imageUrl = BASE_URL_EVENTI + imageContainer.getElementsByTag("img").get(0).attr("src");
 
-        String categoria = categoryContainer.text();
+        String categoria = categoryContainer.text().toLowerCase();
         String titolo = titoloContainer.text();
 
 
         final Element elementTextContent = textContainerContainer.getElementsByTag("p").get(0);
 
-        final String htmlOriginale = String.format("<html><head>\n<base href=\"http://www.comune.tivoli.rm.it/\">\n</head><body>%s</body></html>", elementTextContent.html());
-        final String htmlNormalizzato = CommonTextUtil.normalizeTextFromHtml(htmlOriginale);
-        String html = htmlNormalizzato;
-        String testo = elementTextContent.text();
+
+        final String html;
+        final String testo;
+
+
+        if (content2 != null) {
+            final String htmlOriginale = String.format("<html><head>\n<base href=\"%s\">\n</head><body>%s</body></html>",
+                    BASE_URL_EVENTI, elementTextContent.html() + " " + content2.html()
+            );
+            html = CommonTextUtil.normalizeTextFromHtml(htmlOriginale);
+            testo = elementTextContent.text() + " " + content2.text();
+        } else {
+            final String htmlOriginale = String.format("<html><head>\n<base href=\"%s\">\n</head><body>%s</body></html>",
+                    BASE_URL_EVENTI, elementTextContent.html()
+            );
+            html = CommonTextUtil.normalizeTextFromHtml(htmlOriginale);
+            testo = elementTextContent.text();
+
+        }
 
 
         Date dataInizio;
@@ -127,10 +142,10 @@ public class ParserEventiEngine {
         String keyPath = relativeUrl;
 
 
-        return new EventoWWWComuneTivoli(categoria, titolo, html, testo, dataInizio, dataFine, imageUrl, keyPath);
+        return new EventoSitoPARSER(categoria, titolo, html, testo, dataInizio, dataFine, imageUrl, keyPath);
     }
 
-    public static List<EventoWWWComuneTivoli> parse(Set<String> databaseUrl, boolean parseArchive) throws Exception {
+    public static List<EventoSitoPARSER> parse(Set<String> databaseUrl, boolean parseArchive) throws Exception {
         final Set<String> strings = new TreeSet<>(listAllActiveEvents());
         if (parseArchive) {
             strings.addAll(listAllArchivedEvents());
@@ -139,7 +154,7 @@ public class ParserEventiEngine {
         if (databaseUrl != null)
             strings.removeAll(databaseUrl);
 
-        List<EventoWWWComuneTivoli> ris = new ArrayList<>(strings.size());
+        List<EventoSitoPARSER> ris = new ArrayList<>(strings.size());
 
         return ris;
     }

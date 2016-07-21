@@ -69,7 +69,7 @@ public class ParserNotizieEngine {
      * @return
      * @throws IOException
      */
-    public static NotiziaWWWComuneTivoli parse(String relativePathID) throws IOException {
+    public static NotiziaSitoPARSER parse(String relativePathID) throws IOException {
         //versione stampabile
         String url = __composeUrl(BASE_URL, relativePathID);
 
@@ -115,10 +115,10 @@ public class ParserNotizieEngine {
         final Date date = ExtractDateNewsJavaccParser.extractDate(textNormalizzato);
 
 
-        return new NotiziaWWWComuneTivoli(
+        return new NotiziaSitoPARSER(
                 categoria, titoloNormalizzato,
                 htmlNormalizzato, textNormalizzato,
-                __composeUrl(BASE_URL, relativePathID, "print"), url,
+                url,
                 date,
                 relativePathID);
 
@@ -132,14 +132,14 @@ public class ParserNotizieEngine {
         //   nodeLinksInDB.add("/node/2585");
 
 
-        ArrayList<NotiziaWWWComuneTivoli> pagine = parseFromWeb(nodeLinksInDB, 10);
-        for (NotiziaWWWComuneTivoli x : pagine) {
+        ArrayList<NotiziaSitoPARSER> pagine = parseFromWeb(nodeLinksInDB, 10);
+        for (NotiziaSitoPARSER x : pagine) {
             System.out.println("ParserEngine: " + x);
         }
         //System.out.println("ParserEngine: "+pagine);
     }
 
-    public static ArrayList<NotiziaWWWComuneTivoli> parseFromWeb(Set<String> nodeLinksInDB, int limit) throws IOException {
+    public static ArrayList<NotiziaSitoPARSER> parseFromWeb(Set<String> nodeLinksInDB, int limit) throws IOException {
         if (DEBUG)
             System.out.println("ParserEngine: " + "Check Homepage (searching page-index links)");
         //dalla homepage individua tutte le pagine dei link esistenti, compresa la home
@@ -150,7 +150,7 @@ public class ParserNotizieEngine {
 
         if (DEBUG) System.out.println("ParserEngine: " + "LINKS");
         if (DEBUG) System.out.println("ParserEngine: " + allLinkArticoli);
-        ArrayList<NotiziaWWWComuneTivoli> pagine = new ArrayList<>();
+        ArrayList<NotiziaSitoPARSER> pagine = new ArrayList<>();
 
         //dall'ultimo al primo
         Collections.reverse(allLinkArticoli);
@@ -163,14 +163,14 @@ public class ParserNotizieEngine {
 
 //            System.out.println("ParserEngine: "+"=============================================");
             try {
-                final NotiziaWWWComuneTivoli n = parse(url);
+                final NotiziaSitoPARSER n = parse(url);
                 pagine.add(n);
             } catch (Exception e) {
                 //ignora le pagine che non vengono caricate
-                String urlPrint = __composeUrl(BASE_URL, url, "print");
+
                 String urlOriginale = __composeUrl(BASE_URL, url);
 
-                NotiziaWWWComuneTivoli n = new NotiziaWWWComuneTivoli(null, "Pagina non trovata", null, null, urlPrint, urlOriginale, null, url);
+                NotiziaSitoPARSER n = new NotiziaSitoPARSER(null, "Pagina non trovata", null, null, urlOriginale, null, url);
                 pagine.add(n);
             }
 

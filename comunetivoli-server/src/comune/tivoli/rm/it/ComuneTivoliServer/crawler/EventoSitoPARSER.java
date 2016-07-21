@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created
  */
-public class EventoWWWComuneTivoli {
+public class EventoSitoPARSER {
     public final String categoria;
     public final String titolo;
     public final String html;
@@ -28,10 +28,11 @@ public class EventoWWWComuneTivoli {
                 "\ndataFine=" + dataFine +
                 "\nimageUrl='" + imageUrl + '\'' +
                 "\ntesto='" + testo + '\'' +
+                "\nhtml='" + html + '\'' +
                 '}';
     }
 
-    public EventoWWWComuneTivoli(String categoria, String titolo, String html, String testo, Date dataInizio, Date dataFine, String imageUrl, String keyPath) {
+    public EventoSitoPARSER(String categoria, String titolo, String html, String testo, Date dataInizio, Date dataFine, String imageUrl, String keyPath) {
         this.categoria = categoria;
         this.titolo = titolo;
         this.html = html;

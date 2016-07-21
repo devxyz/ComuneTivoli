@@ -3,7 +3,7 @@ package comune.tivoli.rm.it.ComuneTivoli.db.manager;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.DaoSession;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.NotizieSitoDbSqlLite;
 import comune.tivoli.rm.it.ComuneTivoli.db.dao.NotizieSitoDbSqlLiteDao;
-import comune.tivoli.rm.it.ComuneTivoliCommon.data.CommonNotiziaSito;
+import comune.tivoli.rm.it.ComuneTivoliCommon.data.NotiziaSitoDTO;
 import de.greenrobot.dao.query.DeleteQuery;
 import de.greenrobot.dao.query.Query;
 import de.greenrobot.dao.query.QueryBuilder;
@@ -90,9 +90,9 @@ public class ManagerNotizieSitoDbSqlLite {
         return maxVersion = list.get(0).getVersion();
     }
 
-    public void insertFromServer(DaoSession session, List<CommonNotiziaSito> l) {
+    public void insertFromServer(DaoSession session, List<NotiziaSitoDTO> l) {
         List<NotizieSitoDbSqlLite> x = new ArrayList<>();
-        for (CommonNotiziaSito commonNotiziaSito : l) {
+        for (NotiziaSitoDTO commonNotiziaSito : l) {
             x.add(convert(commonNotiziaSito));
         }
         final NotizieSitoDbSqlLiteDao n = session.getNotizieSitoDbSqlLiteDao();
@@ -121,7 +121,7 @@ public class ManagerNotizieSitoDbSqlLite {
         n.update(l);
     }
 
-    public NotizieSitoDbSqlLite convert(CommonNotiziaSito s) {
+    public NotizieSitoDbSqlLite convert(NotiziaSitoDTO s) {
         NotizieSitoDbSqlLite x = new NotizieSitoDbSqlLite(null, new Date(), s.getData(), s.getTitolo(), s.getTesto(), s.getHtml(), s.getToken(), s.getVersion(), s.getUrl(), false, s.getKey());
         return x;
     }

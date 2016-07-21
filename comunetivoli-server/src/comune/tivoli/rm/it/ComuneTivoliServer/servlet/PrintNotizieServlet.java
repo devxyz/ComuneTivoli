@@ -2,7 +2,7 @@ package comune.tivoli.rm.it.ComuneTivoliServer.servlet;
 
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.DataLayerBuilder;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.InMemoryCacheLayerNotiziaSitoDB;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V2;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.NotiziaSitoSERVERDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,22 +31,22 @@ public class PrintNotizieServlet extends HttpServlet {
         out.print("<tr><td>Progressivo</td><td>Tipo</td><td>Contenuto</td></tr>");
         final InMemoryCacheLayerNotiziaSitoDB cl = DataLayerBuilder.getLoaderNewsSito();
         int i = 1;
-        final List<GAE_NotiziaSitoDB_V2> x = new ArrayList<>(cl.allEntities(n));
+        final List<NotiziaSitoSERVERDB> x = new ArrayList<>(cl.allEntities(n));
 
-        Collections.sort(x, new Comparator<GAE_NotiziaSitoDB_V2>() {
+        Collections.sort(x, new Comparator<NotiziaSitoSERVERDB>() {
             @Override
-            public int compare(GAE_NotiziaSitoDB_V2 o1, GAE_NotiziaSitoDB_V2 o2) {
+            public int compare(NotiziaSitoSERVERDB o1, NotiziaSitoSERVERDB o2) {
                 return -Long.valueOf(o1.token).compareTo(o2.token);
             }
         });
 
 
-        for (GAE_NotiziaSitoDB_V2 c : x) {
+        for (NotiziaSitoSERVERDB c : x) {
             n--;
             if (n < 0) {
                 break;
             }
-            out.println("<tr><td rowspan=7>" + i + "</td><td><b>URL</b></td>  <td><a href='" + c.getUrlPrint() + "'>" + c.getUrlPrint() + "</a></td></tr>");
+            out.println("<tr><td rowspan=7>" + i + "</td><td><b>URL</b></td>  <td><a href='" + c.getUrl() + "'>" + c.getUrl() + "</a></td></tr>");
             out.println("<tr><td><b>Key</b></td>  <td>" + c.getKey() + "</td></tr>");
             out.println("<tr><td><b>Data</b></td>  <td>" + c.getData() + "</td></tr>");
             out.println("<tr><td><b>Titolo</b></td>  <td>" + c.getTitolo() + "</td></tr>");

@@ -2,6 +2,7 @@ package comune.tivoli.rm.it.ComuneTivoliServer.model;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import comune.tivoli.rm.it.ComuneTivoliCommon.data.INotiziaSito;
 import comune.tivoli.rm.it.ComuneTivoliServer.ServerConfiguration;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.CacheItem;
 
@@ -12,7 +13,7 @@ import java.util.Date;
  * Created by stefano on 01/08/15.
  */
 @Entity
-public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
+public class NotiziaSitoSERVERDB implements Serializable, CacheItem<String>, INotiziaSito {
     public long token;
     public String titolo;
     public String testo;
@@ -23,19 +24,29 @@ public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
     @Id
     public String key;
     /**
-     * url pagina print
-     */
-    public String urlPrint;
-    /**
      * url pagina originale
      */
-    public String urlOriginal;
+    public String url;
     public boolean flagDelete;
 
-    public GAE_NotiziaSitoDB_V2() {
+    public NotiziaSitoSERVERDB(long token, String titolo, String testo, String categoria, String html, Date data, int version, String key, String url, boolean flagDelete) {
+        this.token = token;
+        this.titolo = titolo;
+        this.testo = testo;
+        this.categoria = categoria;
+        this.html = html;
+        this.data = data;
+        this.version = version;
+        this.key = key;
+        this.url = url;
+        this.flagDelete = flagDelete;
+    }
+
+    public NotiziaSitoSERVERDB() {
         flagDelete = false;
     }
 
+    @Override
     public String getCategoria() {
         return categoria;
     }
@@ -44,38 +55,13 @@ public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
         this.categoria = categoria;
     }
 
-    public String getUrlOriginal() {
-        return urlOriginal;
-    }
-
-    public void setUrlOriginal(String urlOriginal) {
-        this.urlOriginal = urlOriginal;
-    }
-
-    private void _assert(boolean cond) {
-        if (!cond)
-            throw new AssertionError("ERROR");
-    }
-
-    public void check() {
-        _assert(token >= 0);
-        _assert(titolo != null);
-        _assert(data != null);
-        _assert(key != null);
-    }
-
     @Override
-    public String toString() {
-        return "GAE_CircolareDB{" +
-                "token=" + token +
-                ", titolo='" + titolo + '\'' +
-                ", testo='" + "...(NON INSERITO NELLA STAMPA)..." + '\'' +
-                ", html=" + html +
-                ", data=" + data +
-                ", key='" + key + '\'' +
-                ", url='" + urlPrint + '\'' +
-                ", flagDelete=" + flagDelete +
-                '}';
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public boolean isFlagDelete() {
@@ -87,6 +73,7 @@ public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
     }
 
 
+    @Override
     public long getToken() {
         return token;
     }
@@ -96,6 +83,7 @@ public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
     }
 
 
+    @Override
     public String getTitolo() {
         return titolo;
     }
@@ -104,6 +92,7 @@ public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
         this.titolo = titolo;
     }
 
+    @Override
     public String getTesto() {
         return testo;
     }
@@ -112,6 +101,7 @@ public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
         this.testo = testo;
     }
 
+    @Override
     public String getHtml() {
         return html;
     }
@@ -120,6 +110,7 @@ public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
         this.html = html;
     }
 
+    @Override
     public Date getData() {
         return data;
     }
@@ -128,15 +119,8 @@ public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
         this.data = data;
     }
 
-    public String getUrlPrint() {
-        return urlPrint;
-    }
 
-    public void setUrlPrint(String urlPrint) {
-        this.urlPrint = urlPrint;
-    }
-
-
+    @Override
     public String getKey() {
         return key;
     }
@@ -145,14 +129,13 @@ public class GAE_NotiziaSitoDB_V2 implements Serializable, CacheItem<String> {
         this.key = key;
     }
 
-    public GAE_NotiziaSitoDB_V2 clone() {
-        final GAE_NotiziaSitoDB_V2 c = new GAE_NotiziaSitoDB_V2();
-        c.titolo = titolo;
-        c.testo = testo;
-        c.data = data;
-        c.key = key;
-        c.urlPrint = urlPrint;
-        c.token = token;
-        return c;
+
+    @Override
+    public int getVersion() {
+        return version;
+    }
+
+    public void setVersion(int version) {
+        this.version = version;
     }
 }

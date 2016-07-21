@@ -12,6 +12,7 @@
           <element id="library" level="project" name="org.jsoup:jsoup:1.9.1" />
           <element id="library" level="project" name="gson-2.3.1-javadoc1" />
           <element id="library" level="application" name="appengine-remote-api" />
+          <element id="file-copy" path="$PROJECT_DIR$/comunetivoli-server/lib/facebook4j-core-2.4.6.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="comunetivoli-server/web/Web" />

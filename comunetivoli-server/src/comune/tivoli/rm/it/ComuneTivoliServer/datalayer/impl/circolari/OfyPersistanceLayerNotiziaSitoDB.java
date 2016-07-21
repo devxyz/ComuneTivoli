@@ -4,7 +4,7 @@ import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.cmd.Loader;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.OfyPersistanceLayer;
-import comune.tivoli.rm.it.ComuneTivoliServer.model.GAE_NotiziaSitoDB_V2;
+import comune.tivoli.rm.it.ComuneTivoliServer.model.NotiziaSitoSERVERDB;
 import comune.tivoli.rm.it.ComuneTivoliServer.util.DebugUtil;
 
 import java.util.ArrayList;
@@ -13,9 +13,9 @@ import java.util.List;
 /**
  * Created by stefano on 13/03/16.
  */
-public class OfyPersistanceLayerNotiziaSitoDB extends OfyPersistanceLayer<String, GAE_NotiziaSitoDB_V2> {
+public class OfyPersistanceLayerNotiziaSitoDB extends OfyPersistanceLayer<String, NotiziaSitoSERVERDB> {
     //ultimo elenco dei dati
-    private List<GAE_NotiziaSitoDB_V2> cacheList;
+    private List<NotiziaSitoSERVERDB> cacheList;
     private int numRead = 0;
     private int numByKey = 0;
     private int numWrite = 0;
@@ -35,9 +35,9 @@ public class OfyPersistanceLayerNotiziaSitoDB extends OfyPersistanceLayer<String
     }
 
     @Override
-    protected GAE_NotiziaSitoDB_V2 _getImpl(String key) {
+    protected NotiziaSitoSERVERDB _getImpl(String key) {
         if (cacheList != null) {
-            for (GAE_NotiziaSitoDB_V2 x : cacheList) {
+            for (NotiziaSitoSERVERDB x : cacheList) {
                 if (x.getKey().equals(key))
                     return x;
             }
@@ -46,7 +46,7 @@ public class OfyPersistanceLayerNotiziaSitoDB extends OfyPersistanceLayer<String
 
         final Loader load = ofy.load();
         DebugUtil.debug(getClass().getSimpleName(), "GET BY ID ", key);
-        final Key<GAE_NotiziaSitoDB_V2> k = Key.create(GAE_NotiziaSitoDB_V2.class, key);
+        final Key<NotiziaSitoSERVERDB> k = Key.create(NotiziaSitoSERVERDB.class, key);
         numByKey++;
         return load.key(k).now();
     }
@@ -55,13 +55,13 @@ public class OfyPersistanceLayerNotiziaSitoDB extends OfyPersistanceLayer<String
     protected List<String> _allKeys() {
         if (cacheList == null) {
             final Loader load = ofy.load();
-            cacheList = load.type(GAE_NotiziaSitoDB_V2.class).list();
+            cacheList = load.type(NotiziaSitoSERVERDB.class).list();
             numRead++;
         }
 
         DebugUtil.debug(getClass().getSimpleName(), "ALLKEYS");
         List<String> ris = new ArrayList<>(cacheList.size());
-        for (GAE_NotiziaSitoDB_V2 x : cacheList) {
+        for (NotiziaSitoSERVERDB x : cacheList) {
             ris.add(x.getKey());
         }
         return ris;
@@ -70,7 +70,7 @@ public class OfyPersistanceLayerNotiziaSitoDB extends OfyPersistanceLayer<String
     }
 
     @Override
-    protected void _insertImpl(String key, GAE_NotiziaSitoDB_V2 value) {
+    protected void _insertImpl(String key, NotiziaSitoSERVERDB value) {
         DebugUtil.debug(getClass().getSimpleName(), "SAVE BY ID ", key);
         ofy.save().entity(value).now();
         numWrite++;
@@ -78,7 +78,7 @@ public class OfyPersistanceLayerNotiziaSitoDB extends OfyPersistanceLayer<String
     }
 
     @Override
-    protected void _updateImpl(String key, GAE_NotiziaSitoDB_V2 value) {
+    protected void _updateImpl(String key, NotiziaSitoSERVERDB value) {
         DebugUtil.debug(getClass().getSimpleName(), "UPDATE BY ID ", key);
         ofy.save().entity(value).now();
         numWrite++;
@@ -94,7 +94,7 @@ public class OfyPersistanceLayerNotiziaSitoDB extends OfyPersistanceLayer<String
     }
 
     @Override
-    public String getKey(GAE_NotiziaSitoDB_V2 value) {
+    public String getKey(NotiziaSitoSERVERDB value) {
         return value.getKey();
     }
 

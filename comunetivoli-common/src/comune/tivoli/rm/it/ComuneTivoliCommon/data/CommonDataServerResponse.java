@@ -7,9 +7,9 @@ import java.util.ArrayList;
  */
 public class CommonDataServerResponse {
     public int version;
-    public ArrayList<CommonNotiziaSito> notizie;
+    public ArrayList<NotiziaSitoDTO> notizie;
 
-    public CommonDataServerResponse(int version, ArrayList<CommonNotiziaSito> notizie) {
+    public CommonDataServerResponse(int version, ArrayList<NotiziaSitoDTO> notizie) {
         this.version = version;
         this.notizie = notizie;
     }
