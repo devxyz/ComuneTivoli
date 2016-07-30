@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -15,6 +18,17 @@ import java.util.concurrent.TimeUnit;
  * Created by stefano on 11/07/16.
  */
 public class MainFacebook {
+    public static String toDDMMYYY(Date d) {
+        if (d == null) return "--/--/---";
+        // Create an instance of SimpleDateFormat used for formatting
+        // the string representation of date (month/day/year)
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+
+        // Using DateFormat format method we can create a string
+        // representation of a date with the defined format.
+        return df.format(d);
+    }
+
     private static String parseName(String s, StringBuilder sb) {
         sb.setLength(0);
 
@@ -92,23 +106,47 @@ public class MainFacebook {
         Facebook facebook = new FacebookFactory().getInstance();
 
         facebook.setOAuthAppId("543019475885107", "d872b23ffa043528f76676b0eb38e265");
-        facebook.setOAuthPermissions("user_friends,user_about_me,public_profile");
+        facebook.setOAuthPermissions("user_friends,user_about_me,public_profile,user_posts,user_photos");
         final AccessToken s = facebook.getOAuthAppAccessToken();
         System.out.println(s);
+
+
+        Reading r = new Reading().limit(10);
+        r = r.order(Ordering.CHRONOLOGICAL);
+
+
         final String giuseppeproiettisindacoID = "giuseppeproiettisindaco";
         final User sindaco = facebook.users().getUser(giuseppeproiettisindacoID);
-        final ResponseList<Post> activities = facebook.getFeed(giuseppeproiettisindacoID);
+        final ResponseList<Post> pp = facebook.getFeed(giuseppeproiettisindacoID, r);
+        //facebook.getsh
+
+
+
         System.out.println(sindaco);
         System.out.println("===========================");
-        for (Post a : activities) {
+        for (Post a : pp) {
+            //if (a.getMessage()==null)continue;
+            //System.out.println(a);
+            System.out.println(toDDMMYYY(a.getCreatedTime()) + " " + a.getId());
+            System.out.println("Actions: " + a.getActions());
+            System.out.println("Caption: " + a.getCaption());
+            System.out.println("Name: " + a.getName());
+            System.out.println("Status Type: " + a.getStatusType());
+            System.out.println("Story: " + a.getStory());
+            System.out.println("Type: " + a.getType());
+            System.out.println("From: " + a.getFrom());
+            System.out.println("ParentId: " + a.getParentId());
+            System.out.println("Link: " + a.getLink());
+            System.out.println("Picture: " + a.getFullPicture());
+            System.out.println("Icon: " + a.getIcon());
+            System.out.println("Picture: " + a.getPicture());
+            System.out.println("Tags: " + a.getMessageTags());
+            System.out.println("Source: " + a.getSource());
 
-            System.out.println(a.getCreatedTime());
-            //System.out.println(a.getDescription());
-            //System.out.println(a.getMessage());
-            System.out.println("================================");
+            System.out.println("Description: " + a.getDescription());
+            System.out.println("Message: " + a.getMessage());
+            System.out.println("================================================================================================================================");
         }
-
-
 
 
 //        final String code1 = doWeb(driver, facebook);
