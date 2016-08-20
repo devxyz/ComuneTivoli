@@ -20,7 +20,6 @@ public interface INotiziaSito {
 
     Date getData();
 
-    String getKey();
 
     int getVersion();
 

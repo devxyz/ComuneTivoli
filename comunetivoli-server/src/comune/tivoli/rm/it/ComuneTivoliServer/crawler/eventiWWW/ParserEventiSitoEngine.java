@@ -1,4 +1,4 @@
-package comune.tivoli.rm.it.ComuneTivoliServer.crawler;
+package comune.tivoli.rm.it.ComuneTivoliServer.crawler.eventiWWW;
 
 import comune.tivoli.rm.it.ComuneTivoliCommon.util.CommonTextUtil;
 import org.jsoup.Jsoup;
@@ -13,7 +13,7 @@ import java.util.*;
 /**
  * Created by stefano on 09/07/16.
  */
-public class ParserEventiEngine {
+public class ParserEventiSitoEngine {
     private static final String URL_EVENTI_ATTIVI = "/news-ed-eventi.php?lang=IT";
     private static final String URL_EVENTI_ARCHIVIATI = "/news-ed-eventi/archivio.php";
     private static final String BASE_URL_EVENTI = "http://www.visittivoli.eu";

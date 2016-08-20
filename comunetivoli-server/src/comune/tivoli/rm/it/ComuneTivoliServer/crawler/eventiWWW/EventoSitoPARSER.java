@@ -1,4 +1,4 @@
-package comune.tivoli.rm.it.ComuneTivoliServer.crawler;
+package comune.tivoli.rm.it.ComuneTivoliServer.crawler.eventiWWW;
 
 import java.util.Date;
 

@@ -34,7 +34,6 @@ public class GreenDaoGenerator {
             circolare.addIntProperty("version").notNull();
             circolare.addStringProperty("url").notNull().unique();
             circolare.addBooleanProperty("flagContenutoLetto").notNull();
-            circolare.addStringProperty("key").notNull().unique();
 
             //index
             /*Index indexCircolare = new Index();

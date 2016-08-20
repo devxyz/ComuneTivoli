@@ -59,7 +59,7 @@ public class PrintNotizieServlet extends HttpServlet {
                 out.println("<tr><td><b>Html</b></td>  <td> NULL </td></tr>");
             }
             out.println("<tr><td> <form action='http://comune-tivoli.appspot.com/UpdateExternalDataServlet' target='_blank'>\n" +
-                    "    node number (example 2633): <input name='NODE' type=\"text\" maxlength='50' value='"+ c.key+"' >\n" +
+                    "    node number (example 2633): <input name='NODE' type=\"text\" maxlength='50' value='"+ c.url+"' >\n" +
                     "    <input type='submit' value='UPDATE'>\n" +
                     "</form>\n</td>  <td> ----------------------------- </td></tr>");
             out.println("<tr><td> ------- </td>  <td> ----------------------------- </td></tr>");

@@ -97,7 +97,6 @@ public class NewsDettagliActivity extends Activity {
                                     "\nversion=" + x.getVersion() +
                                     "\nurl='" + x.getUrl() + '\'' +
                                     "\nflagContenutoLetto=" + x.getFlagContenutoLetto() +
-                                    "\nkey='" + x.getKey() + '\'' +
                                     '}';
 
                             DialogUtil.openInfoDialog(NewsDettagliActivity.this, "Informazioni", msg);

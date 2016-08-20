@@ -33,7 +33,6 @@ public class NotizieSitoDbSqlLiteDao extends AbstractDao<NotizieSitoDbSqlLite, L
         public final static Property Version = new Property(7, int.class, "version", false, "VERSION");
         public final static Property Url = new Property(8, String.class, "url", false, "URL");
         public final static Property FlagContenutoLetto = new Property(9, boolean.class, "flagContenutoLetto", false, "FLAG_CONTENUTO_LETTO");
-        public final static Property Key = new Property(10, String.class, "key", false, "KEY");
     };
 
 
@@ -58,8 +57,7 @@ public class NotizieSitoDbSqlLiteDao extends AbstractDao<NotizieSitoDbSqlLite, L
                 "'TOKEN' INTEGER NOT NULL ," + // 6: token
                 "'VERSION' INTEGER NOT NULL ," + // 7: version
                 "'URL' TEXT NOT NULL UNIQUE ," + // 8: url
-                "'FLAG_CONTENUTO_LETTO' INTEGER NOT NULL ," + // 9: flagContenutoLetto
-                "'KEY' TEXT NOT NULL UNIQUE );"); // 10: key
+                "'FLAG_CONTENUTO_LETTO' INTEGER NOT NULL );"); // 9: flagContenutoLetto
     }
 
     /** Drops the underlying database table. */
@@ -90,7 +88,6 @@ public class NotizieSitoDbSqlLiteDao extends AbstractDao<NotizieSitoDbSqlLite, L
         stmt.bindLong(8, entity.getVersion());
         stmt.bindString(9, entity.getUrl());
         stmt.bindLong(10, entity.getFlagContenutoLetto() ? 1l: 0l);
-        stmt.bindString(11, entity.getKey());
     }
 
     /** @inheritdoc */
@@ -112,8 +109,7 @@ public class NotizieSitoDbSqlLiteDao extends AbstractDao<NotizieSitoDbSqlLite, L
             cursor.getLong(offset + 6), // token
             cursor.getInt(offset + 7), // version
             cursor.getString(offset + 8), // url
-            cursor.getShort(offset + 9) != 0, // flagContenutoLetto
-            cursor.getString(offset + 10) // key
+            cursor.getShort(offset + 9) != 0 // flagContenutoLetto
         );
         return entity;
     }
@@ -131,7 +127,6 @@ public class NotizieSitoDbSqlLiteDao extends AbstractDao<NotizieSitoDbSqlLite, L
         entity.setVersion(cursor.getInt(offset + 7));
         entity.setUrl(cursor.getString(offset + 8));
         entity.setFlagContenutoLetto(cursor.getShort(offset + 9) != 0);
-        entity.setKey(cursor.getString(offset + 10));
      }
     
     /** @inheritdoc */

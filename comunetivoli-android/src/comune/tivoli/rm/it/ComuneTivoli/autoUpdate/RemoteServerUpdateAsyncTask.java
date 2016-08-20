@@ -154,7 +154,7 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
             if (DEBUG) {
                 StringBuilder sb = new StringBuilder();
                 for (NotiziaSitoDTO n : resp.notizie) {
-                    sb.append(n.getKey()).append("\n");
+                    sb.append(n.getUrl()).append("\n");
                 }
                 System.out.println("KEYS: " + sb);
             }
@@ -172,7 +172,7 @@ public class RemoteServerUpdateAsyncTask extends AsyncTask<Void, String, Void> {
                             //ignora le news gia' presenti
                             ArrayList<NotiziaSitoDTO> notizieDaAggiungere = new ArrayList<NotiziaSitoDTO>(resp.notizie.size());
                             for (NotiziaSitoDTO n : resp.notizie) {
-                                if (!map.containsKey(n.getKey()) && n.getTitolo() != null && n.getTesto() != null)
+                                if (!map.containsKey(n.getUrl()) && n.getTitolo() != null && n.getTesto() != null)
                                     notizieDaAggiungere.add(n);
                             }
 

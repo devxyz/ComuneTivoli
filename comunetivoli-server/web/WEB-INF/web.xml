@@ -18,49 +18,6 @@
     </listener>
 
 
-    <servlet>
-        <servlet-name>signin</servlet-name>
-        <servlet-class>facebook4j.examples.signin.SignInServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>callback</servlet-name>
-        <servlet-class>facebook4j.examples.signin.CallbackServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>logout</servlet-name>
-        <servlet-class>facebook4j.examples.signin.LogoutServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>post</servlet-name>
-        <servlet-class>facebook4j.examples.signin.PostServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>tokenInfo</servlet-name>
-        <servlet-class>facebook4j.examples.signin.TokenInfoServlet</servlet-class>
-    </servlet>
-
-
-    <servlet-mapping>
-        <servlet-name>signin</servlet-name>
-        <url-pattern>/signin</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>callback</servlet-name>
-        <url-pattern>/callback</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>logout</servlet-name>
-        <url-pattern>/logout</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>post</servlet-name>
-        <url-pattern>/post</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>tokenInfo</servlet-name>
-        <url-pattern>/tokenInfo</url-pattern>
-    </servlet-mapping>
-
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>

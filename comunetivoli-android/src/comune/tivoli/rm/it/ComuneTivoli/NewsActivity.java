@@ -88,7 +88,7 @@ public class NewsActivity extends Activity {
 
                 //eseguito quando si fa click su una voce
                 final Intent intent = NewsDettagliActivity.prepareIntent(
-                        NewsActivity.this, nc.getTitolo(), nc.getData(), nc.getTesto(), nc.getHtml(), nc.getKey());
+                        NewsActivity.this, nc.getTitolo(), nc.getData(), nc.getTesto(), nc.getHtml(), nc.getUrl());
                 startActivity(intent);
             }
         });

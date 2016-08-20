@@ -98,7 +98,6 @@ public class MainFacebook {
 
 
     public static void main(String[] args) throws FacebookException {
-        FirefoxProfile profile = new FirefoxProfile();
 
         //HtmlUnitDriver driver = new HtmlUnitDriver();
         //FirefoxDriver driver = new FirefoxDriver(profile);

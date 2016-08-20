@@ -16,11 +16,10 @@ public class NotiziaSitoDTO implements Serializable, INotiziaSito {
     private String html;
     private Date data;
 
-    private String key;
     private String url;
     private boolean flagDelete;
 
-    public NotiziaSitoDTO(long token, int version, String titolo, String categoria, String testo, String html, Date data, String key, String url, boolean flagDelete) {
+    public NotiziaSitoDTO(long token, int version, String titolo, String categoria, String testo, String html, Date data, String url, boolean flagDelete) {
         this.token = token;
         this.version = version;
         this.titolo = titolo;
@@ -28,7 +27,6 @@ public class NotiziaSitoDTO implements Serializable, INotiziaSito {
         this.testo = testo;
         this.html = html;
         this.data = data;
-        this.key = key;
         this.url = url;
         this.flagDelete = flagDelete;
     }
@@ -110,12 +108,5 @@ public class NotiziaSitoDTO implements Serializable, INotiziaSito {
         this.url = url;
     }
 
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
 
 }

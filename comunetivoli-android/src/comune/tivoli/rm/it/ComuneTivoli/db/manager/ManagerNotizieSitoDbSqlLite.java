@@ -27,7 +27,7 @@ public class ManagerNotizieSitoDbSqlLite {
         Map<String, NotizieSitoDbSqlLite> ris = new LinkedHashMap<>();
         final List<NotizieSitoDbSqlLite> list = list(session);
         for (NotizieSitoDbSqlLite x : list) {
-            ris.put(x.getKey(), x);
+            ris.put(x.getUrl(), x);
         }
         return ris;
     }
@@ -56,7 +56,7 @@ public class ManagerNotizieSitoDbSqlLite {
 
     public NotizieSitoDbSqlLite listByKey(DaoSession session, String key) {
         final QueryBuilder<NotizieSitoDbSqlLite> q = session.queryBuilder(NotizieSitoDbSqlLite.class);
-        q.where(NotizieSitoDbSqlLiteDao.Properties.Key.eq(key));
+        q.where(NotizieSitoDbSqlLiteDao.Properties.Url.eq(key));
         q.limit(1);
         final Query<NotizieSitoDbSqlLite> build = q.build();
         final List<NotizieSitoDbSqlLite> list = build.list();
@@ -122,7 +122,7 @@ public class ManagerNotizieSitoDbSqlLite {
     }
 
     public NotizieSitoDbSqlLite convert(NotiziaSitoDTO s) {
-        NotizieSitoDbSqlLite x = new NotizieSitoDbSqlLite(null, new Date(), s.getData(), s.getTitolo(), s.getTesto(), s.getHtml(), s.getToken(), s.getVersion(), s.getUrl(), false, s.getKey());
+        NotizieSitoDbSqlLite x = new NotizieSitoDbSqlLite(null, new Date(), s.getData(), s.getTitolo(), s.getTesto(), s.getHtml(), s.getToken(), s.getVersion(), s.getUrl(), false);
         return x;
     }
 }

@@ -1,4 +1,4 @@
-package comune.tivoli.rm.it.ComuneTivoliServer.crawler;
+package comune.tivoli.rm.it.ComuneTivoliServer.crawler.notizieWWW;
 
 import comune.tivoli.rm.it.ComuneTivoliCommon.util.CommonTextUtil;
 import comune.tivoli.rm.it.ComuneTivoliServer.javacc_parser.ExtractDateNewsJavaccParser;
@@ -14,8 +14,8 @@ import java.util.*;
 /**
  * Created by stefano on 27/03/16.
  */
-public class ParserNotizieEngine {
-    public static final String BASE_URL = "http://www.comune.tivoli.rm.it/";
+public class ParserNotizieSitoEngine {
+    public static final String BASE_URL_NEWS = "http://www.comune.tivoli.rm.it/";
 
     private static final boolean DEBUG = true;
 
@@ -65,17 +65,15 @@ public class ParserNotizieEngine {
     /**
      * parsing
      *
-     * @param relativePathID: in genere nella forma node/1234 (percorso relativo rispetto al sito comune di tivoli)
+     * @param url in genere nella forma http://xxxx/node/1234 (percorso relativo rispetto al sito comune di tivoli)
      * @return
      * @throws IOException
      */
-    public static NotiziaSitoPARSER parse(String relativePathID) throws IOException {
-        //versione stampabile
-        String url = __composeUrl(BASE_URL, relativePathID);
+    public static NotiziaSitoPARSER parse(NotiziaSitoPARSER_URL_NewsPage url) throws IOException {
 
         if (DEBUG)
-            System.out.println("ParserEngine: " + "Download " + url + "( id " + relativePathID + ")");
-        final Document parse = Jsoup.parse(new URL(url), 10000);
+            System.out.println("ParserEngine: " + "Download " + url + "( id " + url + ")");
+        final Document parse = Jsoup.parse(new URL(url.absoluteUrl), 10000);
         final Elements title_centro = parse.getElementsByClass("title_centro");
         final Element main = parse.getElementById("main");
         final Elements nodeCategory = parse.getElementsByClass("sticky");
@@ -118,9 +116,8 @@ public class ParserNotizieEngine {
         return new NotiziaSitoPARSER(
                 categoria, titoloNormalizzato,
                 htmlNormalizzato, textNormalizzato,
-                url,
-                date,
-                relativePathID);
+                url.absoluteUrl,
+                date);
 
     }
 
@@ -128,8 +125,8 @@ public class ParserNotizieEngine {
 
 
         //ipotetico elenco di nodi gia' nel db
-        final Set<String> nodeLinksInDB = new TreeSet<>();
-        //   nodeLinksInDB.add("/node/2585");
+        final Set<NotiziaSitoPARSER_URL_NewsPage> nodeLinksInDB = new TreeSet<>();
+        nodeLinksInDB.add(new NotiziaSitoPARSER_URL_NewsPage(__composeUrl(BASE_URL_NEWS, "node/2693")));
 
 
         ArrayList<NotiziaSitoPARSER> pagine = parseFromWeb(nodeLinksInDB, 10);
@@ -139,14 +136,14 @@ public class ParserNotizieEngine {
         //System.out.println("ParserEngine: "+pagine);
     }
 
-    public static ArrayList<NotiziaSitoPARSER> parseFromWeb(Set<String> nodeLinksInDB, int limit) throws IOException {
+    public static ArrayList<NotiziaSitoPARSER> parseFromWeb(Set<NotiziaSitoPARSER_URL_NewsPage> nodeLinksInDB, int limit) throws IOException {
         if (DEBUG)
             System.out.println("ParserEngine: " + "Check Homepage (searching page-index links)");
         //dalla homepage individua tutte le pagine dei link esistenti, compresa la home
-        final ArrayList<String> allIndexLinks = __extractIndexPageUrlFromHomepage(BASE_URL, -1);
+        final ArrayList<NotiziaSitoPARSER_URL_IndexPage> allIndexLinks = __extractIndexPageUrlFromHomepage(-1);
         if (DEBUG) System.out.println("ParserEngine: " + "Found page-index links: " + allIndexLinks.size() + " pages");
         if (DEBUG) System.out.println("ParserEngine: " + "  - " + allIndexLinks);
-        final ArrayList<String> allLinkArticoli = __extractNodeUrlsFromIndexPages(BASE_URL, nodeLinksInDB, allIndexLinks);
+        final ArrayList<NotiziaSitoPARSER_URL_NewsPage> allLinkArticoli = __extractNodeUrlsFromIndexPages(nodeLinksInDB, allIndexLinks);
 
         if (DEBUG) System.out.println("ParserEngine: " + "LINKS");
         if (DEBUG) System.out.println("ParserEngine: " + allLinkArticoli);
@@ -156,7 +153,7 @@ public class ParserNotizieEngine {
         Collections.reverse(allLinkArticoli);
 
 
-        for (String url : allLinkArticoli) {
+        for (NotiziaSitoPARSER_URL_NewsPage url : allLinkArticoli) {
             //se limite, si ignorano altri
             if (limit == 0) break;
             limit--;
@@ -168,9 +165,7 @@ public class ParserNotizieEngine {
             } catch (Exception e) {
                 //ignora le pagine che non vengono caricate
 
-                String urlOriginale = __composeUrl(BASE_URL, url);
-
-                NotiziaSitoPARSER n = new NotiziaSitoPARSER(null, "Pagina non trovata", null, null, urlOriginale, null, url);
+                NotiziaSitoPARSER n = new NotiziaSitoPARSER(null, "Pagina non trovata", null, null, url.absoluteUrl, null);
                 pagine.add(n);
             }
 
@@ -179,20 +174,20 @@ public class ParserNotizieEngine {
     }
 
 
-    private static ArrayList<String> __extractNodeUrlsFromIndexPages(String baseUrl, Set<String> nodeLinksInDB, ArrayList<String> allIndexLinks) throws IOException {
+    private static ArrayList<NotiziaSitoPARSER_URL_NewsPage> __extractNodeUrlsFromIndexPages(Set<NotiziaSitoPARSER_URL_NewsPage> nodeLinksInDB, ArrayList<NotiziaSitoPARSER_URL_IndexPage> allIndexLinks) throws IOException {
         //================================================================
-        final ArrayList<String> allLinkArticoli = new ArrayList<>();
+        final ArrayList<NotiziaSitoPARSER_URL_NewsPage> allLinkArticoli = new ArrayList<>();
         boolean finish = false;
-        for (String pageLink : allIndexLinks) {
+        for (NotiziaSitoPARSER_URL_IndexPage pageLink : allIndexLinks) {
             if (DEBUG)
                 System.out.println("ParserEngine: " + "Checking index-page " + pageLink);
             if (finish) break;
 
 
-            final ArrayList<String> ris = __extractNodeLinksFromPages(baseUrl, pageLink);
+            final ArrayList<NotiziaSitoPARSER_URL_NewsPage> ris = __extractNodeLinksFromPages(pageLink);
             if (DEBUG)
                 System.out.println("ParserEngine: " + "Found " + ris.size() + " nodes: " + ris);
-            for (String x : ris) {
+            for (NotiziaSitoPARSER_URL_NewsPage x : ris) {
                 if (nodeLinksInDB.contains(x)) {
                     finish = true;
                 } else {
@@ -203,16 +198,19 @@ public class ParserNotizieEngine {
         return allLinkArticoli;
     }
 
-    private static ArrayList<String> __extractNodeLinksFromPages(String baseUrl, String pageLink) throws IOException {
-        final ArrayList<String> ris = new ArrayList<>();
-        final Document node = Jsoup.parse(new URL(__composeUrl(baseUrl, pageLink)), 10000);
+    private static ArrayList<NotiziaSitoPARSER_URL_NewsPage> __extractNodeLinksFromPages(NotiziaSitoPARSER_URL_IndexPage indexPage) throws IOException {
+        final ArrayList<NotiziaSitoPARSER_URL_NewsPage> ris = new ArrayList<>();
+        final Document node = Jsoup.parse(new URL(indexPage.absoluteUrl), 10000);
         final Elements elementsByClass = node.getElementsByClass("title");
         for (Element e : elementsByClass) {
 
             final Elements a = e.getElementsByTag("a");
             for (Element ee : a) {
                 final String link = ee.attributes().get("href");
-                ris.add(link);
+                if (link.startsWith("http"))
+                    ris.add(new NotiziaSitoPARSER_URL_NewsPage(link));
+                else
+                    ris.add(new NotiziaSitoPARSER_URL_NewsPage(__composeUrl(BASE_URL_NEWS, link)));
 
 
             }
@@ -223,12 +221,11 @@ public class ParserNotizieEngine {
     /**
      * ritorna le url di tutte le pagine che contengono i link alle notizie
      *
-     * @param baseUrl
      * @return
      * @throws IOException
      */
-    private static ArrayList<String> __extractIndexPageUrlFromHomepage(String baseUrl, int limit) throws IOException {
-        String mainUrl = baseUrl + "node";
+    private static ArrayList<NotiziaSitoPARSER_URL_IndexPage> __extractIndexPageUrlFromHomepage(int limit) throws IOException {
+        String mainUrl = BASE_URL_NEWS + "node";
         final Document parse = Jsoup.parse(new URL(mainUrl), 10000);
 
 
@@ -243,11 +240,11 @@ public class ParserNotizieEngine {
         }
         Collections.sort(linkPage, new SortAscPage());
         int lastPageNumber = linkPage.size() == 0 ? 0 : __extractPageNumber(linkPage.get(linkPage.size() - 1));
-        final ArrayList<String> allPageLinks = new ArrayList<>();
-        allPageLinks.add("/node");//link al primo indice (homepage)
+        final ArrayList<NotiziaSitoPARSER_URL_IndexPage> allPageLinks = new ArrayList<>();
+        allPageLinks.add(new NotiziaSitoPARSER_URL_IndexPage(__composeUrl(BASE_URL_NEWS, "/node")));//link al primo indice (homepage)
         for (int i = 1; i <= lastPageNumber; i++) {
             if (limit > 0 && allPageLinks.size() >= limit) break;
-            allPageLinks.add("/node?page=" + i);
+            allPageLinks.add(new NotiziaSitoPARSER_URL_IndexPage(__composeUrl(BASE_URL_NEWS, "/node?page=" + i)));
 
         }
         return allPageLinks;

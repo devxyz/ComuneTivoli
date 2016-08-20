@@ -1,7 +1,8 @@
 package comune.tivoli.rm.it.ComuneTivoliServer.servlet;
 
-import comune.tivoli.rm.it.ComuneTivoliServer.crawler.NotiziaSitoPARSER;
-import comune.tivoli.rm.it.ComuneTivoliServer.crawler.ParserNotizieEngine;
+import comune.tivoli.rm.it.ComuneTivoliServer.crawler.notizieWWW.NotiziaSitoPARSER;
+import comune.tivoli.rm.it.ComuneTivoliServer.crawler.notizieWWW.NotiziaSitoPARSER_URL_NewsPage;
+import comune.tivoli.rm.it.ComuneTivoliServer.crawler.notizieWWW.ParserNotizieSitoEngine;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.DataLayerBuilder;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.InMemoryCacheLayerNotiziaSitoDB;
 import comune.tivoli.rm.it.ComuneTivoliServer.model.NotiziaSitoSERVERDB;
@@ -43,11 +44,11 @@ public class UpdateExternalDataServlet extends HttpServlet {
         System.out.println("Found " + nodeLinksInDB.size() + " pagine nel db");
 
 
-        NotiziaSitoPARSER pagine = ParserNotizieEngine.parse(node);
+        NotiziaSitoPARSER pagine = ParserNotizieSitoEngine.parse(new NotiziaSitoPARSER_URL_NewsPage(node));
 
 
         for (NotiziaSitoPARSER p : Arrays.asList(pagine)) {
-            System.out.println(" - Found " + p.url + " - " + p.titolo + " nodi");
+            System.out.println(" - Found " + p.absoluteUrl + " - " + p.titolo + " nodi");
             t.token++;
             final NotiziaSitoSERVERDB nv = CopyUtil.convertToDB(p,t.token,false);
             ee.insert(nv);

@@ -21,15 +21,14 @@ public class NotiziaSitoSERVERDB implements Serializable, CacheItem<String>, INo
     public String html;
     public Date data;
     public int version = ServerConfiguration.PERISTENCE_VERSION_NUMBER;
-    @Id
-    public String key;
     /**
      * url pagina originale
      */
+    @Id
     public String url;
     public boolean flagDelete;
 
-    public NotiziaSitoSERVERDB(long token, String titolo, String testo, String categoria, String html, Date data, int version, String key, String url, boolean flagDelete) {
+    public NotiziaSitoSERVERDB(long token, String titolo, String testo, String categoria, String html, Date data, int version, String url, boolean flagDelete) {
         this.token = token;
         this.titolo = titolo;
         this.testo = testo;
@@ -37,7 +36,7 @@ public class NotiziaSitoSERVERDB implements Serializable, CacheItem<String>, INo
         this.html = html;
         this.data = data;
         this.version = version;
-        this.key = key;
+
         this.url = url;
         this.flagDelete = flagDelete;
     }
@@ -72,6 +71,11 @@ public class NotiziaSitoSERVERDB implements Serializable, CacheItem<String>, INo
         this.flagDelete = flagDelete;
     }
 
+
+    @Override
+    public String getKey() {
+        return url;
+    }
 
     @Override
     public long getToken() {
@@ -117,16 +121,6 @@ public class NotiziaSitoSERVERDB implements Serializable, CacheItem<String>, INo
 
     public void setData(Date data) {
         this.data = data;
-    }
-
-
-    @Override
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
     }
 
 

@@ -1,4 +1,4 @@
-package comune.tivoli.rm.it.ComuneTivoliServer.crawler;
+package comune.tivoli.rm.it.ComuneTivoliServer.crawler.notizieWWW;
 
 import java.util.Date;
 
@@ -14,23 +14,17 @@ public class NotiziaSitoPARSER {
     public final Date data;
 
     /**
-     * link assoluto all'articolo (versione stampabile)
+     * link assoluto all'articolo http://xxxxx/node/2576
      */
-    public final String url;
+    public final String absoluteUrl;
 
-    /**
-     * percorso del tipo /node/2576 che identifica l'articolo
-     */
-    public final String keyPath;
-
-    public NotiziaSitoPARSER(String categoria, String titolo, String html, String testo, String url, Date data, String keyPath) {
+    public NotiziaSitoPARSER(String categoria, String titolo, String html, String testo, String absoluteUrl, Date data) {
         this.categoria = categoria;
         this.titolo = titolo;
         this.html = html;
         this.testo = testo;
-        this.url = url;
+        this.absoluteUrl = absoluteUrl;
         this.data = data;
-        this.keyPath = keyPath;
     }
 
     @Override
@@ -40,7 +34,7 @@ public class NotiziaSitoPARSER {
                 ", titolo='" + titolo + '\'' +
                 ", testo='" + testo + '\'' +
                 ", data=" + data +
-                ", keyPath='" + keyPath + '\'' +
+                ", url='" + absoluteUrl + '\'' +
                 '}';
     }
 }

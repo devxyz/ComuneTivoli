@@ -1,7 +1,8 @@
 package comune.tivoli.rm.it.ComuneTivoliServer.servlet;
 
-import comune.tivoli.rm.it.ComuneTivoliServer.crawler.NotiziaSitoPARSER;
-import comune.tivoli.rm.it.ComuneTivoliServer.crawler.ParserNotizieEngine;
+import comune.tivoli.rm.it.ComuneTivoliServer.crawler.notizieWWW.NotiziaSitoPARSER;
+import comune.tivoli.rm.it.ComuneTivoliServer.crawler.notizieWWW.NotiziaSitoPARSER_URL_NewsPage;
+import comune.tivoli.rm.it.ComuneTivoliServer.crawler.notizieWWW.ParserNotizieSitoEngine;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.DataLayerBuilder;
 import comune.tivoli.rm.it.ComuneTivoliServer.datalayer.impl.circolari.InMemoryCacheLayerNotiziaSitoDB;
 import comune.tivoli.rm.it.ComuneTivoliServer.model.NotiziaSitoSERVERDB;
@@ -26,9 +27,9 @@ public class LoadExternalDataServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final InMemoryCacheLayerNotiziaSitoDB ee = DataLayerBuilder.getLoaderNewsSito();
         final List<NotiziaSitoSERVERDB> elencoNotizie = ee.allEntities();
-        Set<String> nodeLinksInDB = new TreeSet<>();
+        Set<NotiziaSitoPARSER_URL_NewsPage> nodeLinksInDB = new TreeSet<>();
         for (NotiziaSitoSERVERDB x : elencoNotizie) {
-            nodeLinksInDB.add(x.getKey());
+            nodeLinksInDB.add(new NotiziaSitoPARSER_URL_NewsPage(x.getUrl()));
         }
 
         MyToken t = new MyToken();
@@ -41,17 +42,17 @@ public class LoadExternalDataServlet extends HttpServlet {
         System.out.println("Found " + nodeLinksInDB.size() + " pagine nel db");
 
 
-        ArrayList<NotiziaSitoPARSER> pagine = ParserNotizieEngine.parseFromWeb(nodeLinksInDB, MAX_NEW_PAGES_AT_TIME);
+        ArrayList<NotiziaSitoPARSER> pagine = ParserNotizieSitoEngine.parseFromWeb(nodeLinksInDB, MAX_NEW_PAGES_AT_TIME);
 
         System.out.println("Found " + pagine.size() + " nodes (limit " + MAX_NEW_PAGES_AT_TIME + ")");
 
 
         for (NotiziaSitoPARSER p : pagine) {
-            System.out.println(" - Found " + p.url + " - " + p.titolo + " nodi");
+            System.out.println(" - Found " + p.absoluteUrl + " - " + p.titolo + " nodi");
 
 
             t.token++;
-            final NotiziaSitoSERVERDB nv = CopyUtil.convertToDB(p,t.token,false);
+            final NotiziaSitoSERVERDB nv = CopyUtil.convertToDB(p, t.token, false);
 
             ee.insert(nv);
         }

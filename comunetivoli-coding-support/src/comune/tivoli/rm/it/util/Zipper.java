@@ -48,8 +48,8 @@ public class Zipper {
 
                 }
 
-                final String name = folder.relativize(file).toString();
-                //System.out.println(name);
+                final String name = "moodle/" + folder.relativize(file).toString();
+                System.out.println(name);
                 zos.putNextEntry(new ZipEntry(name));
                 Files.copy(file, zos);
                 zos.closeEntry();
@@ -58,7 +58,7 @@ public class Zipper {
             }
 
             public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
-                zos.putNextEntry(new ZipEntry(folder.relativize(dir).toString() + "/"));
+                zos.putNextEntry(new ZipEntry("moodle/" + folder.relativize(dir).toString() + "/"));
                 zos.closeEntry();
                 return FileVisitResult.CONTINUE;
             }
